@@ -1,0 +1,269 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="entry point for managing sales, content, data and everything business-related")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(style='padding:10px;margin:0;font-family:Poppins;')
+        style
+          include ../../user ui styling/general.css
+        div
+          select
+            option(class='maillinks' data-name='twitter' style='display:block;padding:5px;')='twitter'
+            option(class='maillinks'  style='display:block;padding:5px;')='facebook'
+            option(class='maillinks'  style='display:block;padding:5px;')='instagram'
+            option(class='maillinks'  style='display:block;padding:5px;')='youtube'
+            option(class='maillinks' style='display:block;padding:5px;')='linkedin'
+            option(class='maillinks' style='display:block;padding:5px;')='Productivity'
+            
+          div(style='padding:5px;')
+            div(style='border-bottom:1px solid silver;')
+              b(data-name='you' class='link' style='display:inline-block;margin-right:5px;outline:1px solid silver;')='you'
+              b(data-name='competitor' class='link' style='display:inline-block;margin-right:5px;outline:1px solid silver;')='competitor'
+              b(data-name='target' class='link' style='display:inline-block;margin-right:5px;outline:1px solid silver;')='target'
+            div(class='socialcontent' data-name='twitter')
+              div(class='socialmarket' data-name='you' style='padding:5px;')
+                
+                h2='tweet analytics and sentiments'
+                div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                  table(style='border-collapse:collapse;')
+                    tr
+                      th='tweet'
+                      th(colspan='5')='datetime'
+                      th='tags/summary'
+                      th(colspan='4')='like(overall,followers,following,competitor)'
+                      th(colspan='4')='retweet'
+                      th(colspan='4')='comment'
+                      th(colspan='4')='clicks'
+                      th(colspan='4')='impression'
+                    tr
+                      th=''
+                      th='year'
+                      th='month'
+                      th='date'
+                      th='day'
+                      th='hour'
+                      th='clicks'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                h2='sentiment and tweet analysis for mentions'
+                div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                  table(style='border-collapse:collapse;')
+                    tr
+                      th='mentions'
+                      th(colspan='5')='datetime'
+                      th='tags/summary'
+                      th(colspan='4')='like'
+                      th(colspan='4')='retweet'
+                      th(colspan='4')='comment'
+                      th(colspan='4')='clicks'
+                      th(colspan='4')='impression'
+                      th='flag'
+                    tr
+                      th=''
+                      th='year'
+                      th='month'
+                      th='date'
+                      th='day'
+                      th='hour'
+                      th='clicks'
+                      th=''
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                h2='followers & profile'
+                div(style='padding:5px;')
+                  div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                    table(style='border-collapse:collapse;')
+                      tr
+                        th='followers name'
+                        th='followers(location,age,gender)'
+                        th='following'
+                        th='following status'
+                        th='tweet activity'
+                        th='verified(location,age,gender)'
+                h2='following'
+                div( style='padding:5px;')
+                  div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                    table(style='border-collapse:collapse;')
+                      tr
+                        th='followers name'
+                        th='followers(location,age,gender)'
+                        th='following'
+                        th='following status'
+                        th='tweet activity'
+                        th='verified(location,age,gender)'
+              div(class='socialmarket' data-name='competitor' style='padding:5px;display:none;')
+                h2='competitor Tweet Activities'
+                div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                  table(style='border-collapse:collapse;')
+                    tr
+                      th='tweet'
+                      th(colspan='5')='datetime'
+                      th='tags/summary'
+                      th(colspan='4')='like'
+                      th(colspan='4')='retweet'
+                      th(colspan='4')='comment'
+                      th(colspan='4')='clicks'
+                      th(colspan='4')='impression'
+                    tr
+                      th=''
+                      th='year'
+                      th='month'
+                      th='date'
+                      th='day'
+                      th='hour'
+                      th='clicks'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                h2='Competitor Mentions'
+                div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                  table(style='border-collapse:collapse;')
+                    tr
+                      th='mentions'
+                      th(colspan='5')='datetime'
+                      th='tags/summary'
+                      th(colspan='4')='like(overall,by followers,by following,your target)'
+                      th(colspan='4')='retweet'
+                      th(colspan='4')='comment'
+                      th(colspan='4')='clicks'
+                      th(colspan='4')='impression'
+                      th='flag'
+                    tr
+                      th=''
+                      th='year'
+                      th='month'
+                      th='date'
+                      th='day'
+                      th='hour'
+                      th='clicks'
+                      th=''
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                      th='gender'
+                      th='total'
+                      th='location'
+                      th='age'
+                h2='competitor followers'
+                div(style='padding:5px;')
+                  div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                    table(style='border-collapse:collapse;')
+                      tr
+                        th='followers name'
+                        th='followers(location,age,gender)'
+                        th='following'
+                        th='following status'
+                        th='tweet activity'
+                        th='verified(location,age,gender)'
+                h2='Competitor Following'
+                div( style='padding:5px;')
+                  div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                    table(style='border-collapse:collapse;')
+                      tr
+                        th='followers name'
+                        th='followers(location,age,gender)'
+                        th='following'
+                        th='following status'
+                        th='tweet activity'
+                        th='verified(location,age,gender)'
+              div(class='socialmarket' data-name='target' style='padding:5px;display:none;')
+                h2='Sentiments on search'
+                div( style='padding:5px;')
+                  div(style='border: 1px solid silver;margin:5px;overflow-x:scroll;')
+                    table(style='border-collapse:collapse;')
+                      tr
+                        th='search'
+                        th='sentiments'
+                        th='summaries'
+                        th='location'
+                        th='gender'
+                        th='likes'
+                        th='comments'
+                        th='retweets'
+                        th='impression'
+                      tr
+                        th='elon musk'
+                        th='elon musk is shit'
+                        th='hate'
+                        th='Nigeria'
+                        th='Male'
+                        th='2000'
+                        th='20%=agree, 80%=disagree'
+                        th='5000'
+                        th='122000'
+                h2='Sentiments on Trends'
+                h2='Sentiments on Keywords'
+                
+             
+    script(src='/javascripts/user/marketing/socialmedia.js' defer)
+                  
+                      
+                    

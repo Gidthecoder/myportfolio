@@ -1,0 +1,270 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/layout1.css')
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(style='padding:5px;')
+    style
+      include ../user ui styling/general.css
+    p(class='close' style='position:fixed;background-color:rgba(0,0,0,0.5);width:100%;height:100%;top:0;z-index:2;display:none;')='.'
+    - var a = {name: 'rice'}
+    - var b = {name: 'semo'}
+    - var c = {name: 'Premium Pack'}
+    div(class='container')
+      div
+            div( style='display:flex;flex-direction:row;border:1px solid green;')
+              div
+                img(src='/images/food1.png' class='image' )
+              
+              div(class='cartqtycontainer' style='display:flex;flex:1;justify-content:flex-end;padding:5px;border:1px solid yellow;')
+               div
+                i(class='fas fa-shopping-cart' style='font-size:25px;')
+                b(style='border:2px solid black;' class='cartqty')=length
+            style(class='overall')=' '
+      div(class='bonus' style='display:flex;border-radius: 10px;border:1px solid silver;margin-top:10px;')
+       img(class='bonus0' src='/images/food1.png' style='height:60vh;')
+       div(class='bonus1' style='')
+         h2(style='text-align:center;')='Premium Pack: Rice, Beans, Semo and Amala'
+         p(style='text-align:center;')='Free Delivery For Customers in Lagos'
+         div(style='display:flex;flex-direction:row;')
+           div(style='width:50%;text-align:center;')
+             p='amount'
+           div(style='width:50%;text-align:center;')
+             p='discount'
+         div(style='text-align:center;')
+           p
+             b(class='buynow')='Buy Now'
+           p
+             b(class='addtocart' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;' data-added=(added[c.name]?'true':'false') data-q=added data-name=c.name data-amount='10000' data-image='/images/food1.png' data-title='Premium')='Add To Cart'
+               b(class='loader' style='display:none;margin-left:5px;')=' '
+           p(class='qtyoptions' data-added=(added[c.name]?'true':'false') data-q=added)
+             button(class='minus' data-name=c.name data-amount='10000' style='' )='-'
+             input(class='qty' value=(added[c.name]? added[c.name].qty: '1') type='number' readonly)
+             button(class='plus' data-name=c.name data-amount='10000' style='' )='+'
+      div
+       div(style='display:none;')
+         a(href='/completeorder0' id='completeorder0')='hey'
+         button(class='clickme')='click me'
+       div(class='catalogue')
+            
+            div(class='prods' style='color:#000000;background-color:#ffffff;border-radius:6px;')
+              h2(class='subtitle' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;border-bottom:1px solid silver;margin:0;')='Rice and Beans'
+              img( src='/images/food1.png' class='image1')
+              p( class='amount')='4000'
+              p
+                b(class='buynow')='Buy Now'
+              
+              p
+                b(class='addtocart' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;' data-added=(added[a.name]?'true':'false') data-q=added data-name=a.name data-amount='4000' data-image='/images/food1.png' data-title='Rice and Beans')='Add To Cart'
+                  b(class='loader' style='display:none;margin-left:5px;')=' '
+              p(class='qtyoptions' data-added=(added[a.name]?'true':'false') data-q=added)
+                button(class='minus' data-name=a.name data-amount='4000' style='' )='-'
+                input(class='qty' value=(added[a.name]? added[a.name].qty: '1') type='number' readonly)
+                button(class='plus' data-name=a.name data-amount='4000' style='' )='+'
+            div(class='prods' style='color:#000000;background-color:#ffffff;border-radius:6px;')
+              h2(style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;border-bottom:1px solid silver;margin:0;')='Semo'
+              img( src='/images/food1.png' class='image1')
+              p( class='amount')='2000'
+              p
+                b(class='buynow')='Buy Now'
+              p
+                b(class='addtocart' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;' data-added=(added[b.name]?'true':'false') data-q=added data-name=b.name data-amount='2000' data-image='/images/food1.png' data-title='Semo')='Add To Cart'
+                  b(class='loader' style='display:none;margin-left:5px;')=' '
+              p(class='qtyoptions' data-added=(added[b.name]?'true':'false') )
+                button(class='minus' data-name=b.name data-amount='2000' style='')='-'
+                input(class='qty' value=(added[b.name]?added[b.name].qty:'1') type='number' readonly)
+                button(class='plus' data-name=b.name data-amount='2000' style='')='+'
+            style(class='overall')=''
+      div()
+            div
+              div(style='padding:5px;')
+                h2='Contact'
+                p
+                  a(href='#' style='display:inline-block;margin-right:10px;color:black;')='About us'
+                  a(href='#' style='display:inline-block;margin-right:10px;color:black;')='Terms Of Services'
+                  a(href='#' style='display:inline-block;margin-right:10px;color:black;')='Refund policy'
+                  a(href='#' style='display:inline-block;margin-right:10px;color:black;')='Privacy Policy'
+              
+      div(class='cartcontainer' style='')
+        div(style='display:none;')
+          b
+           div(class='addtocartdetails' style='display:flex;flex-direction:row;flex-wrap:wrap;padding:5px;margin-bottom:5px;border:1px solid silver;')
+            div(style='width:50px;')
+              img(class='cartimg' src='/images/food1.png' style='width:100%;height:100%;')
+            div(style='flex:1;width:200px;margin-left:5px;padding-left:3px;border-left:1px solid silver;border-right:1px solid silver;')
+              p(class='carttitle' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;margin:2px;margin-bottom:8px;')=' Men shoes'
+              p(style='margin:2px;')
+                button(class='removefromitem' style='' )='-'
+                input(class='qty' value='1' type='number' readonly)
+                button(class='additem' style='' )='+'
+            div(style='padding:4px;text-align:center;')
+              p(class='removeitem' style='margin: 2px;margin-bottom:8px;background-color:silver;border-radius:50%;padding:0;display:inline-block;width:20px;height:20px;padding-bottom:3px;font-weight:900;cursor:pointer;' title='removetheitem')='x'
+              p(class='cartamount' style='margin: 2px;')='10000'
+        div(class='emptycart' style='text-align:center;')
+          i(class='fas fa-shopping-cart' style='display:inline-block;')=''
+          b(style='border:2px solid black;')='0'
+        div(class='innercartcontainer')
+          if cart.length >= 1
+           each item in cart
+             div(class='addtocartdetails' data-name=item.name style='display:flex;flex-direction:row;flex-wrap:wrap;padding:5px;margin-bottom:5px;border:1px solid silver;')
+               div(style='width:50px;')
+                 img(class='cartimg' src='/images/food1.png' style='width:100%;height:100%;')
+               div(style='flex:1;width:200px;margin-left:5px;padding-left:3px;border-left:1px solid silver;border-right:1px solid silver;')
+                 p(class='carttitle' style='white-space:nowrap;overflow:hidden;text-overflow: ellipsis;margin:2px;margin-bottom:8px;')=item.title
+                 p(style='margin:2px;')
+                   button(class='removefromitem' data-name=item.name data-amount=item.amount style='' )='-'
+                   input(class='qty' value=item.qty type='number' readonly)
+                   button(class='additem' data-name=item.name data-amount=item.amount style='' )='+'
+               div(style='padding:4px;text-align:center;')
+                 p(class='removeitem' data-name=item.name data-amount=item.amount style='margin: 2px;margin-bottom:8px;background-color:silver;border-radius:50%;padding:0;display:inline-block;width:20px;height:20px;padding-bottom:3px;font-weight:900;cursor:pointer;' title='removetheitem')='x'
+                 p(class='cartamount' style='margin: 2px;')=item.qty * item.amount
+        div(class='totalcart')
+            table(style='width:100%;border-collapse:collapse;border:0px;')
+              tr(style='border:0px;')
+                th(style='border:0px;')='Subtotal: '
+                th(class='subtotalamount')='7000'
+              tr
+                th(colspan='2' style='text-align:center;')
+                  button(class='toinformation' style='width:60%;')='proceed to checkout'
+                    b(class='loader toinformationloader' style='display:none;')=''
+        div(class='information' style='display:none;')
+          div(style='display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:5px;')
+            b(style='cursor:pointer;' class='tocheckout') &larr;
+            div(style='flex:1;text-align:center;')
+              b(style='cursor:pointer;' class='toinformation')='information'
+              b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+              b(style='color:silver;')='shipping'
+              b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+              b(style='color:silver;')='payment'
+          div
+           
+           p='Contact Information'
+           div(style='display:flex;flex-direction:row;flex-wrap:wrap;')
+             div(style='position:relative;width:48%;margin-right:2%;margin-left:1%;')
+               input(class='firstname' type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='first name'
+               style='div input:focus + floating, div input:not(:placeholder-shown)+ .floating{color:red;font-size:10px;top:5px;} .floating{position:absolute;pointer-events:none;left:5px;top:10px;color:black;transition: 0.2s ease all;}'
+             div(style='position:relative;width:48%;')
+               input(class='lastname' type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='last name'
+             div(style='position:relative;margin-top:5px;width:98%;margin-left:1%;margin-bottom:10px;')
+               input(class='firstemail' type='email' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='email'
+             div(style='position:relative;margin-top:5px;width:98%;margin-left:1%;margin-bottom:10px;')
+               input(class='firstphoneno' type='number' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='phone no'
+           button(class='toshipping' style='display:inline-block;width:60%;margin-left:20%;padding:5px;') Shipping &rarr;
+             b(class='loader toshippingloader' style='display:none;')=''
+        div(style='display:none;' class='shipping')
+          div(style='display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:5px;')
+            b(style='cursor:pointer;' class='toinformation') &larr;
+            div(style='flex:1;text-align:center;')
+              b(class='toinformation')='information'
+              b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+              b(class='toshipping')='shipping'
+              b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+              b(style='color:silver;')='payment'
+          div
+           
+           p='Shipping Method'
+           div(style='border:1px solid silver;')
+             p(style='display:flex;flex-direction:row;flex-wrap:wrap;margin:0;border-bottom:1px solid silver;')
+               input(type='radio' name='method' class='method' data-name='pickup')
+               b(style='flex:1;text-align:center;')='local pickup'
+             div(class='method' data-name='pickup' style='overflow-x:scroll;display:none;')
+               table(style='width:100%;')
+                 caption='choose pickup location'
+                 tr
+                   th='choose'
+                   th='Country'
+                   th='State'
+                   th='City'
+                   th='Address'
+                   th='name'
+                   th='phoneno'
+                   th='pics'
+                   th='openingtime'
+                   th='closingtime'
+                 each item in shipping.pickup
+                   tr
+                     th: input(type='radio' class='choosepickup' data-country=item.country data-state=item.state data-city=item.city data-address=item.address name='choosepickup' checked )
+                     th=item.country
+                     th=item.state
+                     th=item.city
+                     th=item.address
+                     th=item.name
+                     th=item.phoneno
+                     th=item.pics
+                     th=item.openingtime
+                     th=item.closingtime
+             p(style='display:flex;flex-direction:row;flex-wrap:wrap;')
+               input(type='radio' name='method' class='method' data-name='local' checked)
+               b(style='flex:1;text-align:center;')='local delivery'
+             div(class='method' data-name='local')
+               
+               div(style='display:flex;flex-direction:row;flex-wrap:wrap;')
+                 div(style='position:relative;width:48%;margin-right:2%;margin-left:1%;')
+                   input( type='search' class='country' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+                   span(class='floating')='country'
+                   style='div input:focus + floating, div input:not(:placeholder-shown)+ .floating{color:red;font-size:10px;top:5px;} .floating{position:absolute;pointer-events:none;left:5px;top:10px;color:black;transition: 0.2s ease all;}'
+                 div(style='position:relative;width:48%;')
+                   input( type='search' class='state' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+                   span(class='floating')='state'
+                 div(style='position:relative;margin-top:5px;width:98%;margin-left:1%;margin-bottom:10px;')
+                   input( type='search' class='city' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+                   span(class='floating')='city'
+               p(style='text-align:center;')
+                 b(class='deliveryoptions' data-name='fast' data-selected='true' style='color:white;background-color:blue;display:inline-block;margin-right:10px;padding:3px;cursor:pointer;')='Fast'
+                 b(class='deliveryoptions' data-name='faster' data-selected='false' style='display:inline-block;margin-right:10px;padding:3px;cursor:pointer;')='Faster'
+                 b(class='deliveryoptions' data-name='fastest' data-selected='false' style='display:inline-block;margin-right:10px;padding:3px;cursor:pointer;')='Fastest'
+               div
+                div(class='deliverycontent' data-name='fast' style='outline:3px solid blue;background-color:rgb(245,245,245);')
+                  h2='N500'
+                  p='*Delivery Within 1-7 days*'
+                div(class='deliverycontent' data-name='faster' style='display:none;outline:3px solid blue;background-color:rgb(245,245,245);')
+                  h2='N750'
+                  p='*Delivery Within 1-4 days*'
+                div(class='deliverycontent' data-name='fastest' style='display:none;outline:3px solid blue;background-color:rgb(245,245,245);')
+                  h2='N1000'
+                  p='*Delivery Within 1-2 days*'
+                style='b.deliveryoptions:hover {color:white;background-color:blue;}'
+           button(class='topayment' style='display:inline-block;width:60%;margin-left:20%;padding:5px;') Payment &rarr;
+             b(class='loader topaymentloader' style='display:none;')=''
+        div(class='payment' style='display:none;')
+            div(style='display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:5px;')
+              b(style='cursor:pointer;' class='toshipping') &larr;
+              div(style='flex:1;text-align:center;border:1px solid green;')
+                b(style='cursor:pointer;' class='toinformation')='information'
+                b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+                b(style='cursor:pointer;' class='toshipping')='shipping'
+                b(style='display:inline-block;margin-left:5px;margin-right:5px;')='/'
+                b(style='cursor:pointer;' )='payment'
+            div
+              p(style='text-align:center;')
+               b='summary: '
+               b='7000 '
+               b &or;
+            p='Payment Information'
+            p='All transactions are secured'
+            div(style='display:flex;flex-direction:row;flex-wrap:wrap;')
+             div(style='position:relative;width:98%;margin-bottom:10px;margin-left:1%;')
+               input( type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='Card Number'
+               style='div input:focus + floating, div input:not(:placeholder-shown)+ .floating{color:red;font-size:10px;top:5px;} .floating{position:absolute;pointer-events:none;left:5px;top:10px;color:black;transition: 0.2s ease all;}'
+             div(style='position:relative;width:98%;margin-bottom:10px;margin-left:1%;')
+               input( type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='Card Name'
+             div(style='position:relative;margin-top:5px;width:48%;margin-right:2%;margin-left:1%;')
+               input( type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='MM/YY'
+             div(style='position:relative;margin-top:5px;width:48%;')
+               input( type='search' style='width:100%;height:40px;padding-top:7px;' placeholder=' ')
+               span(class='floating')='CCV'
+             
+            p='by placing order you agree to our terms of services'
+            button(class='completeorder' style='display:inline-block;width:60%;margin-left:20%;padding:5px;') Complete order &rarr;
+              b(class='loader tocompleteorder' style='display:none;')=''
+      code(class='result' )
+        script(src='/javascripts/layout/layout.js') 
+        

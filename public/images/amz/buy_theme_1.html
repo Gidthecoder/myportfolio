@@ -1,0 +1,579 @@
+<DOCTYPE html>
+	<html lang="en-US">
+		<head>
+			<title>Amazon Homepage</title>
+			<meta charset="UTF-8">
+			<meta name="author" content="Gideon Akinsanmi">
+			<meta name="description" content=''>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type="text/css" href="/Users/user/Documents/servicoshomall/themes/font/font/css/font-awesome.css">
+			<link rel="stylesheet" href="all.css">
+			<style>
+			  header {
+			  	background-color: rgb(42, 41, 46);
+				width: 100%;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				margin: 0;
+			  }
+			  a {
+			     
+				 padding: 1%;
+				 padding-bottom: 1%;
+				 color: white;
+				 text-decoration: none;
+			  }
+			  header a.head1:hover {
+			     outline: 2px solid white;
+				 
+			  }
+			  header.header2 {
+			  	background-color: hsl(210, 25%, 25%);
+				width: 100%;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				margin: 0;
+			  }
+			  #dropdown p:hover {
+			    background-color: blue;
+			  }
+			  #pos {
+			   z-index: 2;
+			   animation-name: div;
+			   animation-delay: 4s;
+			   animation-duration: 1s;
+			   animation-fill-mode: forwards;
+			  }
+			  @keyframes div {
+				from {
+					left: 100%;
+					animation-timing-function: ease-out;
+				}
+				to {
+					left: 0%;
+				}
+			  }
+			  @keyframes div0 {
+				from {
+					left: 0%;
+					animation-timing-function: ease-out;
+				}
+				to {
+					left: 100%;
+				}
+			  }
+			  #pos1 {
+			   z-index: 3;
+			   animation-name: div1;
+			   animation-duration: 1s;
+			   animation-delay: 8s;
+			   animation-fill-mode: backwards;
+			  }
+			  @keyframes div1 {
+				from {
+					left: 100%;
+					animation-timing-function: ease-out;
+				}
+				to {
+					left: 0%;
+				}
+			  }
+			  @keyframes div2 {
+				from {
+					left: 0%;
+					animation-timing-function: ease-out;
+				}
+				to {
+					left: 100%;
+				}
+			  }
+			  
+			  
+			  #whitegold {
+				appearance: none;
+				border: 2px solid black;
+				padding: 8px;
+				border-radius: 50%;
+			  }
+			  #whitegold:checked {
+				border: 2px solid gold;
+			  }
+			  #whitegoldiv {
+				appearance: none;
+				border: 2px solid black;
+				padding: 8px;
+				border-radius: 50%;
+			  }
+			  #whitegoldiv:checked {
+				border: 2px solid gold;
+			  }
+			  #blackgold {
+				appearance: none;
+				border: 2px solid gold;
+				padding: 8px;
+				border-radius: 50%;
+			  }
+			  #blackgold:checked {
+				background-color: black;
+			  }
+			  #blackgoldiv {
+				appearance: none;
+				border: 2px solid gold;
+				padding: 8px;
+				border-radius: 50%;
+			  }
+			  #blackgoldiv:checked {
+				background-color: black;
+			  }
+			</style>
+			
+		</head>
+		<body style="margin: 0;padding: 0;width: 100%;" >
+		  <section class='control' style='display: grid;'>
+		   <button style='grid-column: 1;'>edit</button>
+		   <button style='grid-column: 2;'>metadata</button>
+		   <button style='grid-column: 3;'>responsive</button>
+		  </section>
+		  <div style='position: relative;'>
+		   <section id='edit1' style='display: grid;'>
+		    <button style='grid-column: 1;' id='colors'>colors<i class='fa fa-caret-down'></i></button>
+		    <button style='grid-column: 2;' id='fonts'>fonts<i class='fa fa-caret-down'></i></button>
+		    <button style='grid-column: 3;' id='nav'>nav<i class='fa fa-caret-down'></i></button>
+		    <button style='grid-column: 4;' id='nav'>hover<i class='fa fa-caret-down'></i></button>
+		    <button style='grid-column: 5;' id='nav'>box properties<i class='fa fa-caret-down'></i></button>
+		   </section>
+		   <section id='colors1edit' style='position: absolute;height: 300px;width:300px;background-color: white;z-index:11;'>
+		    <h2 style='color: black;width:100%;font-weight:400;'>color themes</h2>
+			<label style='display: block;font-weight:700;margin: 10px;'>white-gold <input type='radio' name='color' id='whitegold' style='margin-right: 30px;'> inversion <input type='radio' name='color' id='whitegoldiv'></label>
+			<label style='display: block;font-weight:700;margin: 10px;'>black-gold <input type='radio' name='color' id='blackgold' style='margin-right: 30px;'> inversion <input type='radio' name='color' id='blackgoldiv'></label>
+		   </section>
+		  </div>
+		  <header id='header1' style='position: relative;display: grid;grid-gap: 0px 15px;padding-top: 10px;grid-template-columns: repeat(30, 1fr);'>
+		    <button id='button1' style='position: absolute;top: 0;right: 0;display: none;'>edit</button>
+		    <a href='#' class='head1' style='margin-left: 10px;grid-column: 1/span 2;'>BuyBly</a>
+			<a href='#' class='head1' style='grid-column: 3/span 2;'>delivery to nigeria</a>
+			<form id='search111' style='margin: 0;grid-column: 5/ span 17;position: relative;padding: 0;'>
+			  <input type='text' style='display: inline-block;width: 100%;padding-left: 50px;padding-right: 35px;font-size: 20px;padding-top: 3px;padding-bottom: 3px;'>
+			  <a href='#' style='display: inline-block;position: absolute;left: 0;top: 0;font-size: 13px;width: 50px;background-color: #F7EEEE;border-right: 1px solid black;padding-top: 8px;padding-bottom: 8px;text-align: center;color:black;' onclick='let a = document.getElementById("dropdown"); if(a.style.display == "block"){a.style.display = "none"} else {a.style.display = "block"};'>All<i class='fa fa-caret-down' style='padding: 0;margin: 0;'></i></a>
+			  <a style='display: inline-block;position: absolute;right: 0;top: 0;font-size: 23px;width: 35px;background-color: #F19D3B;padding-top: 3px;padding-bottom: 4px;text-align: center;'>&nbsp;<i class='fa fa-search' style='padding: 0;margin: 0;'></i></a>
+			</form>
+			<a href='#' class='head1' style='margin: 0;grid-column: 22/span 2;'>flag</a>
+			<a href='#' class='head1' style='margin: 0;grid-column: 24/ span 3;'>hello sign in, Account and list</a>
+			<a href='#' class='head1' style='margin: 0;grid-column: 27/ span 2;'>returns and order</a>
+			<a href='#' class='head1' style='margin: 0;grid-column: 29/span 2;margin-right: 10px;'>cart</a>
+		  </header>
+		  <section id='dropdown' style='padding:2px;display: none;position: absolute;left: 13.5%;background-color: white;height: 60%;overflow-y: scroll;width: 15%;z-index: 10;'>
+		   <p style='margin: 0;padding: 0;'>All Departments</p>
+		   <p style='margin: 0;padding: 0;'>Arts and craft</p>
+		   <p style='margin: 0;padding: 0;'>Automotive</p>
+		   <p style='margin: 0;padding: 0;'>Baby</p>
+		   <p style='margin: 0;padding: 0;'>Beauty and personal care</p>
+		   <p style='margin: 0;padding: 0;'>Books</p>
+		   <p style='margin: 0;padding: 0;'>computers</p>
+		   <p style='margin: 0;padding: 0;'>digital music</p>
+		   <p style='margin: 0;padding: 0;'>electronics</p>
+		   <p style='margin: 0;padding: 0;'>kindle store</p>
+		   <p style='margin: 0;padding: 0;'>prime video</p>
+		   <p style='margin: 0;padding: 0;'>women's fashion</p>
+		   <p style='margin: 0;padding: 0;'>men's fashion</p>
+		   <p style='margin: 0;padding: 0;'>girl's fashion</p>
+		   <p style='margin: 0;padding: 0;'>boy's fashion</p>
+		   <p style='margin: 0;padding: 0;'>deals</p>
+		   <p style='margin: 0;padding: 0;'>health and household</p>
+		   <p style='margin: 0;padding: 0;'>home and kitchen</p>
+		   <p style='margin: 0;padding: 0;'>industrial and scientific</p>
+		   <p style='margin: 0;padding: 0;'>luggages</p>
+		   <p style='margin: 0;padding: 0;'>movies and tv</p>
+		   <p style='margin: 0;padding: 0;'>music</p>
+		   <p style='margin: 0;padding: 0;'>pet supplies</p>
+		   <p style='margin: 0;padding: 0;'>software</p>
+		   <p style='margin: 0;padding: 0;'>sport and outdoors</p>
+		   <p style='margin: 0;padding: 0;'>tools and home improvement</p>
+		   <p style='margin: 0;padding: 0;'>toys and games</p>
+		   <p style='margin: 0;padding: 0;'>video games</p>
+		  </section>
+		  <header class='header2'>
+		    <a href='#' class='head1' style='display: inline-block;margin: 0;margin-left:1%;'>All</a>
+			<a href='#' class='head1' style='display: inline-block;margin: 0'>today's deal</a>
+			<a href='#' class='head1' style='display: inline-block;margin: 0'>customer service</a>
+			<a href='#' class='head1' style='display: inline-block;margin: 0'>gift cards</a>
+			<a href='#' class='head1' style='display: inline-block;margin: 0'>registry</a>
+			<a href='#' class='head1' style='display: inline-block;margin: 0'>sell</a>
+		  </header>
+		  <article>
+		    <section style='width: 100%;background-color: rgb(240, 240, 240);'>
+			  <article style='height: 45%;position: relative;width:100%;padding:0;overflow: hidden;'>
+			   <a style='position: absolute;top:0;left:0;display: block;height: 100%;width:100%;padding:0;margin-top: 0;margin-bottom: 0;background-image: url(amz1.png);background-size: 100% 100%;' >&nbsp;</a>
+			   <a id='pos' style='position: absolute;top:0;left:100%;display: block;height: 100%;width:100%;padding:0;margin-top: 0;margin-bottom: 0;background-image: url(shop.png);background-size: 100% 100%;' >&nbsp;</a>
+			   <a id='pos1' style='position: absolute;top:0;left:100%;display: block;height: 100%;width:100%;padding:0;margin-top: 0;margin-bottom: 0;background-image: url(game.png);background-size: 100% 100%;' >&nbsp;</a>
+			   <i style='position: absolute;top: 0;left: 0;font-size: 50px;height: 100%;display: flex;align-items: center;background-color: red;color:white;z-index:10;'>left</i>
+			   <i style='position: absolute;top: 0;right: 0;font-size: 50px;height: 100%;display: flex;align-items: center;background-color: red;color:white;z-index:10;'>right</i>
+			  </article>
+			  <div style='background-color: silver;height: 130%;display: grid;grid-template-rows: 50% 50%;grid-template-columns: 1fr 1fr 1fr 1fr;gap: 7px 10px;width: 97%;margin-left:1.3%;margin-right: 1%;margin-bottom: 0;margin-top: 0;margin-bottom: 0;padding:0;'>
+			   <div style='grid-column: 1;background-color: white;'>
+			    <section style='margin: 5%;display: grid;width: 90%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>shop by category</h2>
+				 <a href='#' style='grid-row: 2;grid-column: 1;background-image: url(as.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 2;grid-column: 2;background-image: url(as1.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 1;background-image: url(as2.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 2;background-image: url(as3.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color:blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 2;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>beauty picks</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(beauty.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color: blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 3;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>BuyBly basics</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(basic.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color: blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 4;'>
+			    <section style='display: grid;gap: 10px 0px;background-color: silver;width: 100%;height: 100%;grid-template-columns: 1fr 1fr; grid-template-rows: 2fr 5fr;'>
+			     <div style='margin: 0;padding: 0;width: 90%;padding-left: 5%;padding-right: 5%;grid-row: 1;grid-column: 1/ span 2;background-color: white;'><p>sign in for the best experience</p>
+				  <a style='display: block;color: black;background-color: orange;text-align: center;'>sign in securely</a>
+				 </div>
+				 <div style='width: 90%;padding-left: 5%;padding-right: 5%;border: 1px solid black;margin: 0;grid-row: 2;grid-column: 1/ span 2;background-image: url(ship.png);background-size: 100% 100%;'>sign in for the best experience
+				 </div>
+				</section>
+			   </div>
+			   <div style='grid-row: 2;grid-column: 1;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>Oculus</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(oculus.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color:blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-row: 2;grid-column: 2;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>find your ideal tv</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(find_your_ideal_tv.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color: blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 3;grid-row:2;background-color: white;'>
+			    <section style='margin: 5%;display: grid;width: 90%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>gaming accessories</h2>
+				 <a href='#' style='grid-row: 2;grid-column: 1;background-image: url(headset.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 2;grid-column: 2;background-image: url(keyboard.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 1;background-image: url(mice.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 2;background-image: url(chairs.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color: blue;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-row: 2;grid-column: 4;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>computer accessories</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(computer.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;color: blue;'>shop now</a>
+				</section>
+			   </div>
+			  </div>
+			 
+			  <div style='width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;background-color: white;'>
+			   <h2 style='padding: 0;margin: 2px;'>Top beauty and personal care product&nbsp;<a style='font-size:15px;color:blue;text-decoration: none;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow-x: scroll;height: 90%'>
+			   <a href='#' style='background-image: url(beauty1.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty9.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty10.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty11.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty12.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(beauty13.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+			  <div style='width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;background-color: white;'>
+			   <h2 style='padding: 0;margin: 2px;'>our favourite toys&nbsp;<a style='color:blue;text-decoration: none;font-size:15px;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow: scroll;height: 90%'>
+			   <a href='#' style='background-image: url(toy1.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy9.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy10.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy11.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy12.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy13.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy14.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy15.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy16.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy17.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy18.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy19.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(toy20.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+			  <div style='background-color: silver;height: 65%;display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr 1fr 1fr 1fr;gap: 7px 10px;width: 97%;margin-left:1.3%;margin-right: 1%;margin-bottom: 0;margin-top: 50px;margin-bottom: 0;padding:0;'>
+			   <div style='grid-column: 1;background-color: white;'>
+			    <section style='margin: 5%;display: grid;width: 90%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>comfy styles for her</h2>
+				 <a href='#' style='grid-row: 2;grid-column: 1;background-image: url(sweatshirt.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 2;grid-column: 2;background-image: url(joggers.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 1;background-image: url(cardigans.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 2;background-image: url(easytees.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 2;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>shop laptops and tablet</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(laptops.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 3;background-color: white;'>
+			    <section style='display: grid;width: 90%;margin: 5%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>Explore home bedding</h2>
+				 <a href='#' style='grid-row: 2/ span 2;grid-column: 1/ span 2;background-image: url(basic.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;'>shop now</a>
+				</section>
+			   </div>
+			   <div style='grid-column: 4;background-color: white;'>
+			    <section style='margin: 5%;display: grid;width: 90%;height: 90%;grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 3.5fr 3.5fr 1fr;'>
+			     <h2 style='margin: 0;padding: 0;grid-row: 1;grid-column: 1/ span 2;'>gaming merchandise</h2>
+				 <a href='#' style='grid-row: 2;grid-column: 1;background-image: url(apparel.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 2;grid-column: 2;background-image: url(hats.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 1;background-image: url(action.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 3;grid-column: 2;background-image: url(mugs.png);background-size: 100% 100%;'>vv</a>
+				 <a href='#' style='grid-row: 4;grid-column: 1/ span 2;color: black;padding: 10px;justify-self: left;align-self: start;'>shop now</a>
+				</section>
+			   </div>
+			  </div>
+			  
+			  <div style='background-color: white;width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;'>
+			   <h2 style='padding: 0;margin: 2px;'>amazon top seller&nbsp;<a style='color:blue;text-decoration: none;font-size:15px;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow: scroll;border: 1px solid black;height: 90%'>
+		 	    <a href='#' style='background-image: url(top.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top1.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(top9.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+			  <div style='background-color: white;width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;'>
+			   <h2 style='padding: 0;margin: 2px;'>everday essentials to explore&nbsp;<a style='font-size:15px;color:blue;text-decoration: none;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow: scroll;height: 90%'>
+			    <a href='#' style='background-image: url(explore.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore1.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(explore8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+			  <div style='background-color: white;width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;'>
+			   <h2 style='padding: 0;margin: 2px;'>Best sellers in baby&nbsp;<a style='color:blue;text-decoration: none;font-size:15px;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow: scroll;height: 90%'>
+			    <a href='#' style='background-image: url(baby0.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby1.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			    <a href='#' style='background-image: url(baby8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+		      
+			  <div style='background-color: white;width: 97%;margin-left:1.3%;margin-right: 1%;margin-top: 3%;height: 50%;'>
+			   <h2 style='padding: 0;margin: 2px;'>best sellers in kitchen&nbsp;<a style='color:blue;text-decoration: none;font-size:15px;'>shop now</a></h2>
+			   <div style='white-space: nowrap;overflow: scroll;height: 90%'>
+			   <a href='#' style='background-image: url(kitchen.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen1.png);display: inline-block;width: 25%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen2.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen3.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen4.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen5.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen6.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen7.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   <a href='#' style='background-image: url(kitchen8.png);display: inline-block;width: 19%;height: 100%;padding: 0;background-size: 100% 100%;'>cool</a>
+			   </div>
+			  </div>
+			</section>
+		  </article>
+		  <footer style='width: 100%;background-color:#232F3E;color: white;padding:0;' >
+			<p style='background-color:hsl(210, 25%, 25%);text-align: center;margin:0;padding:12px;'>back to top</p>
+			<div style='width: 100%;'>
+			 <section style='width: 20%;display: inline-block;margin:0;margin-left:4%;padding: 0;text-align:left;'>
+			 <h2 style='font-size: 20px;'>get to know us</h2>
+			 <p>careers blog</p>
+			 <p>blog</p>
+			 <p>about amazon</p>
+			 <p>investor relations</p>
+			 <p>amazon devices</p>
+			 <p style='visibility: hidden;'>a</p>
+			 <p style='visibility: hidden;'>a</p>
+			 <p style='visibility: hidden;'>a</p>
+			 </section>
+			 <section style='width: 25%;display: inline-block;margin:0;padding: 0;text-align:left;'>
+			  <h2 style='font-size: 20px;'>Make Money with Us</h2>
+			  <p>Sell products on Amazon</p>
+			  <p>Sell on Amazon Business</p>
+			  <p>Sell apps on Amazon</p>
+			  <p>Become an Affiliate</p>
+			  <p>Advertise Your Products</p>
+			  <p>Self-Publish with Us</p>
+			  <p>Host an Amazon Hub</p>
+			  <p>See More Make Money with Us</p>
+			 </section>
+			 <section style='width: 25%;display: inline-block;margin:0;padding: 0;text-align:left;'>
+			  <h2 style='font-size: 20px;'> Amazon Payment Products</h2>
+			  <p>Amazon Business Card</p>
+			  <p>Shop with Points</p>
+			  <p>Reload Your Balance</p>
+			  <p>Amazon Currency Converter</p>
+			  <p style='visibility: hidden;'>a</p>
+			  <p style='visibility: hidden;'>a</p>
+			  <p style='visibility: hidden;'>a</p>
+			  <p style='visibility: hidden;'>a</p>
+			 </section>
+			 <section style='width: 25%;display: inline-block;margin:0;padding: 0;text-align:left;'>
+			  <h2 style='font-size: 20px;'>Let Us Help You</h2>
+			  <p>Amazon and COVID-19</p>
+			  <p>your Account</p>
+			  <p>Your Orders</p>
+			  <p>Shipping Rates & Policies</p>
+			  <p>Returns & Replacements</p>
+			  <p>Manage Your Content and Devices</p>
+			  <p>Amazon Assistant</p>
+			  <p>Help</p>
+			 </section>
+			 <p style='height: 10%;border-bottom:1px solid white;'></p>
+			 <p><a href='#' style='display: inline-block;margin-left:40%;text-align: right;padding:0;'>amazon</a> <a href='#' style='display: inline-block;border: 1px solid white;border-radius; 1px;width:10%;padding: 0;text-align: center;'>english</a> <a href='#' style='display: inline-block;border: 1px solid white;border-radius; 1px;width:10%;padding: 0;text-align: center;'>USD - U.S. dollar</a><a href='#' style='display: inline-block;border: 1px solid white;border-radius; 1px;width:10%;padding: 0;text-align: center;margin-left: 3px;'>united states</a></p>  
+			</div>
+			<div style='background-color: hsl(210, 9%, 13%);'>
+			 <div style='font-size: 9px;width:90%;margin-left:5%;margin-right:4%;'>
+			  <section style='width: 14%;display: inline-block;'>
+			  <a><h2>Amazon music</h2><p>stream millions of song</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Amazon advertising</h2><p>Find, attract, andengage customers</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Amazon Drive</h2><p>Cloud storage from Amazon</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>6pmS</h2><p>core deals on fashion brands </p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>AbeBooks</h2><p>Books, arts and collection</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>ACX</h2><p>Audiobook Publishing Made Easy</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Alexa</h2><p>Actionable Analytics for the Web</p></a>
+			  </section>
+			 </div>
+			 <div style='width:90%;margin-left:5%;margin-right:4%;font-size: 9px;'>
+			  <section style='width: 14%;display: inline-block;'>
+			  <a><h2>sell on Amazon</h2><p>Start a Selling Account</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Amazon business</h2><p>Everything For Your Business</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>AmazonGlobal</h2><p>Ship Orders Internationally</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>home services</h2><p>Experienced Pros Happiness Guarantee</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>amazon ignites</h2><p>Sell your original Digital Educational Resources</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>amazon web services</h2><p>Scalable Cloud Computing Services</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Audible</h2><p>Listen to Books & Original Audio Performances</p></a>
+			  </section>
+			 </div>
+			 <div style='width:90%;margin-left:5%;margin-right:4%;font-size: 9px;'>
+			  <section style='width: 14%;display: inline-block;'>
+			  <a><h2>Book depository</h2><p>Books With Free Delivery Worldwide</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>Box office Mojo</h2><p>Find Movie Box Office Data	</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>ComiXology</h2><p>Thousands of Digital Comics</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>DPReview</h2><p>Digital Photography</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>East Dane</h2><p>Designer Men's Fashion</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>fabric</h2><p>Sewing, Quilting & Knitting</p></a>
+			  </section>
+			  <section style='width: 14%;display: inline-block;'>
+			   <a><h2>GoodReads</h2><p>Book reviews & recommendations</p></a>
+			  </section>
+			 </div>
+			</div>
+		  </footer>
+
+		  
+		 <script>
+			 let input = document.getElementById('search111');
+			 input.addEventListener('click', function() {
+			  input.style.outline = '3px solid #F19D3B';
+			 })
+			 
+			 let a = document.getElementById('pos1');
+			 let b = document.getElementById('pos');
+			  a.addEventListener('animationend', function() {
+			  a.style.animationName = "div2";
+			  b.style.animationName = "div0";
+			  b.style.animationDelay = '12s';
+			  b.style.animationFillMode = 'backwards';
+			})
+			b.addEventListener('animationend', function() {
+			  if(a.style.animationName == 'div2') {
+			   a.style.animationName = "div1";
+			   b.style.animationName = "div";
+			   b.style.animationDelay = '1s'
+			   b.style.animationFillMode = 'forwards';
+			  }
+			})
+			
+			//controls
+			let header1 = document.getElementById('header1');
+			let header1button = document.getElementById('button1');
+			header1.addEventListener('mouseover', function() {
+			 header1button.style.display = 'block';
+			})
+			header1.addEventListener('mouseout', function() {
+			 header1button.style.display = 'none';
+			})
+		 </script>
+		 
+
+		</body>
+	</html>

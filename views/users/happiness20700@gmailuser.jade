@@ -1,0 +1,679 @@
+doctype html
+html(lang='en')
+  head
+    title=title
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="entry point for managing sales, content, data and everything business-related")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(id='body' data-nav=nav style='overflow:hidden;')
+    p(class='closeit' style='display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgb(0,0,0,0.5);z-index:2;margin:0;').
+    p(class='closequestion' style='display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgb(0,0,0,0.5);z-index:2;margin:0;').
+    style
+      include ../user ui styling/general.css
+    style
+      include ../user ui styling/responsive.css
+     style
+      include ../user ui styling/content.css
+    article
+      
+      header
+        div( class='backtomenu' style='text-align:center;background-color:white')
+          
+          a(href='/' style='text-decoration:none;'): img(src='/images/newshop.png' height='50' width='50')
+            
+          button(class='changeuser'): i(class='far fa-user changeuser' style='border-radius: 50%;')
+        
+        p(class='nav' id='account' data-name='account')='Account'
+        p(class='nav' id='content' data-name='content')='Page'
+        p(class='nav' id='data' data-name='data')='Analytics'
+        p(class='nav' id='product' data-name='product')='Product'
+        p(class='nav' id='delivery' data-name='delivery')='Shipping'
+        p(class='nav' id='marketing' data-name='marketing')='Marketing'
+        p(class='nav' id='order' data-name='order')='Order'
+        p(class='nav' id='customer' data-name='customer')='Customer'
+        p(class='nav' id='finance' data-name='finance')='Finance'
+        p(class='nav' id='assistant' data-name='assistant')='Assistant'
+      section
+        div( class='newheader' style='border-bottom:1px solid silver;')
+          i(class='fas fa-bars menubars' style='')
+          
+          a(href='#' style='padding:14px;text-decoration:none;'): img(class='rmelogo' src='/images/newshop.png' style='')
+          button(class='changeuser' style='float:right;border-radius: 50%;padding:2px;'): i(class='far fa-user changeuser' style='font-size:20px;')
+
+        div(class='changinguser only' style='display:none;')
+          button(class='changeuserpassword' style='display:block;padding:5px;width:100%;')
+            b(class='loader' style='display:none;')=''
+            i(class='fas fa-key changepassword only' title='change password' style='border:1px solid black;border-radius:50%;display:inline-block;padding:5px;margin-right:5px;')
+            b='Change Password'
+          a(href='/users/logout')
+            button(style='display:block;padding:5px;width:100%;')
+              i(class='fas fa-user only' title='Log Out' style='border:1px solid black;border-radius:50%;display:inline-block;padding:5px;margin-right:5px;')
+              b='Logout'
+
+        //-question tag-//
+        div(class='questionmanual' style='display:none;position:fixed;z-index:3;background-color:white;width:50%;height:30%;top:30%;left:25%;border-radius:10px;')
+          p(class='manual' style='margin-top:30px;margin-bottom:30px;border-top:2px solid silver;border-bottom:2px solid silver;width:100%;height:75%;overflow-y:scroll;')='welcome to your question manual'
+
+        
+        div(class='contentaccount sections' data-name='account' style='display:none;width:100%;height:100vh;background-color:white;overflow-y:scroll;')
+          ul(class='intro')
+            li(class='accinfo' data-name='bus-info')='Business Information'
+              b(style='float:right;') &or;
+              b(style='float:right;display:none;') &Hat;
+            div(class='businessinfo accinformation' data-name='bus-info' style='font-family:Poppins;display:none;background-color:rgb(245,245,245)')
+                div(class='business' style='font-size:14px;')
+                  label(style='margin-bottom:10px;')=' Name: '
+                    input(type='search' value=user.businessname class='bsinfo bsname')
+                  label(style='margin-bottom:10px;')=' Country: '
+                    input(type='search' value=user.country class='bsinfo bscountry')
+                  label(style='margin-bottom:10px;')=' Email: '
+                    input(type='search' value=user.email readonly class='bsinfo bsemail')
+                  label(style='margin-bottom:10px;')=' Phone No: '
+                    input(type='search' value=user.phoneno class='bsinfo bsphoneno')
+                p(style='background-color:violet;color:white;margin:0;display:none;padding:5px;cursor:pointer;' class='bsinfosubmit')='submit'
+                  b(class='loader' style='display:none;')=''
+
+            li(class='accinfo' data-name='billing-info')='Billing'
+              b(style='float:right;') &or;
+              b(style='float:right;display:none;') &Hat;
+            div(class='billing accinformation' data-name='billing-info' style='font-family:Poppins;padding:5px;display:none;font-size:16px;background-color:rgb(245,245,245);')
+              div()
+                select(class='billhistory')
+                  option='current month'
+                  each item in dd
+                    option=item
+                b(class='loader tobillhistory' style='display:none;width:100px;height:100px;')=''
+                div(class='billinginner' style='outline: 3px solid violet;background-color:white;')
+                  p(style='color:white;background-color:violet;nargin:0;padding:9px;text-align:center;') Billing For The Month #{date.month} Of Year #{date.year}
+                  div(style='display:flex;flex-direction:row;flex-wrap:wrap;padding:7px;')
+                    div
+                      b(style='color:silver;')='TO:'
+                      div
+                        p=user.businessname
+                    div(style='display:flex;flex:1;justify-content:flex-end;')
+                      div
+                        b(style='color:silver;')='TOTAL:'
+                        h2(class='billtotal')=''
+                  div(style='overflow-x:Scroll;')
+                    table(style='border-top:2px solid blue;width:100%;border-collapse:collapse;')
+                      tr
+                        th='feature'
+                        th='rate'
+                        th='qty'
+                        th='amount($)'
+                      each item in date.features
+                        tr
+                          th=item.feat
+                          th=item.rate
+                          th=item.qty
+                          th(class='billamount')=item.amount
+                  div(style='display:flex;justify-content:flex-end;')
+                    div(style='margin:5px;')
+                      p='subtotal: '
+                        b(class='billsubtotal')=''
+                      p='tax: '
+                        b(class='taxtotal')=date.tax
+                      p='total: '
+                        b(class='billtotal')=''
+                  div(style='overflow-x:Scroll;')
+                    table(style='width:100%;border-collapse:collapse;')
+                      tr
+                        th='Deposit'
+                        th='Owing'
+                        th='Net Deposit'
+                      tr
+                        th(class='deposit')=user.billing.deposit
+                        th(class='billtotal')=''
+                        th(class='netdeposit')=''
+                      tr
+                        th(colspan='3')
+                          button(style='width:60%;')='Add Deposit'
+                div( style='outline: 3px solid violet;display:none')
+
+            li(class='accinfo' data-name='payment')='Payment'
+              b(style='float:right;') &or;
+              b(style='float:right;display:none;') &Hat;
+            div(class='payment accinformation' data-name='payment' style='display:none;font-family:Poppins;padding:5px;background-color:rgb(245,245,245);')
+              div(style='margin:0;padding:0;')
+                p='Total Cash:'
+                  b='0'
+                p='Payment Methods: '
+                  select
+                    option='None'
+              div
+                h3(style='text-align:center;')='Most People Requested For:'
+                button(class='request')='Change Secret Key'
+                button(class='request')='Integrate Payment Method'
+                
+            li(class='accinfo' data-name='accsecurity-info')='Account Security'
+              b(style='float:right;') &or;
+              b(style='float:right;display:none;') &Hat;
+            div(class='accsecurity accinformation' data-name='accsecurity-info' style='display:none;font-family:Poppins;padding:5px;background-color:rgb(245,245,245)')
+              b(class='loader sqloader' style='display:none;')=''
+              p(class='sec')
+                b='activate 2FA  '
+                input(type='radio' name='sec' class='activate2fasq' data-type='twoFA' checked=(user.twoFA.permission == true?true:false))
+              p(class='sec')
+                b='security questions'
+                input(type='radio' name='sec' class='activate2fasq' data-type='securityQ' checked=(user.securityQ.permission == true?true:false))
+              p(class='sec')
+                b='Disable'
+                input(type='radio' name='sec' class='activate2fasq' data-type='Disable' checked=(user.securityQ.permission == false && user.twoFA.permission == false?true:false))
+              div(class='SQcontainer' data-permission=(user.securityQ.permission == true?'true':'false') style='background-color: rgb(245,245,245);width:90%;margin-left:3%;')
+                p(style='text-align:center;' class='sec')
+                  
+                  b(class='editableqs' )=user.securityQ.question[0].q
+                  button(class='editsquestion')='edit question/answer'
+                div(class='otpcontainer' style='display:none;')
+                  input(class='otpsq' type='search' value=user.securityQ.question[0].q style='display:inline-block;width:60%;padding:3px;border-radius: 5px;margin-right:5px;' placeholder='new question')
+                  input(class='otpans' type='search' style='display:inline-block;width:60%;padding:3px;border-radius: 5px;margin-right:5px;' placeholder='new answer')
+                  p(class='submitotpforSQ sec' data-type='sqotp' style='display:inline-block;padding:3px;color:white;border-radius: 5px;cursor:pointer;')='submit'
+          div(style='background-color:khaki;color:black;border: 1px solid violet;border-radius: 10px;padding: 8px;font-family:Poppins;margin:5px;')
+                p="Welcome To The Team. Here's A Brief Help Introduction:"
+                p 
+                  b INFORMATION:&nbsp;
+                  This Dropdown Shows Your Account Information'
+                p
+                  b BILLING:&nbsp;
+                  This Dropdown Shows Your Bills.'
+                p
+                  b PAYMENT:&nbsp; 
+                  This Dropdown Shows The Total Cash Withdrawn From Your Account. It Also Has Options For Changing Your Secret Key And Integrating Your Payment Method.'
+                p
+                  b SECURITY:&nbsp; 
+                  This Dropdown Shows Options For Enhancing Your Account Security. Whether Disabling Extra Security, Activating 2FA or Providing Security Keys' 
+        
+        div(class='contentbody sections' data-name='content' style='display:block;font-family:Poppins;width:99%;height:90vh;background-color:white;padding:5px;margin:0;overflow-y:scroll;')
+          div(style='padding-left:10px;padding-right:10px;')
+            h2(class='projectsdemo' style='cursor:pointer;text-align:center;background-color:rgba(245,214,61,0.4);margin:0;border-bottom:1px solid black;padding:5px;')
+              b='Projects'
+              b(style='float:right;') &or;
+              b(style='float:right;display:none;') &Hat;
+            div(style='margin-top: 10px;display:none;background-color: rgb(245,245,245);height:50vh;overflow-y:scroll;')
+              - var a = {name: 'jon'}
+              if a.name == 'john'
+                div(style='height: 50vh;background-color: rgb(245,245,245);')
+                  p='No Projects Yet'
+              else 
+                div(class='demos' style='display:inline-block;width:48%;border: 1px solid silver;background-color:white;border-radius:5px;margin-left:10px;margin-right:10px;margin-bottom:10px;')
+                  iframe( src='/#url' id='iframes' style='width:100%;height:30vh;overflow-y:scroll;')
+                  p(style='padding: 6px;')
+                    b(style='display:inline-block;margin-left:20px;')='${project}'
+                    a(href='#' title='more') 
+                      b(style='float:right;') &rarr;
+            
+              
+          div
+              h2(style='text-align:center;')='Most People Requested For:'
+              h3(style='text-align:center;border-bottom:1px solid silver;')='Project'
+              button(class='request')='New Project'
+              button(class='request')='Data-Driven App'
+              button(class='request')='Mobile App'
+              button(class='request')='Desktop App'
+              button(class='request')='Blog'
+              button(class='request')='Ecommerce Store'
+              button(class='request')='Ordering System'
+              button(class='request')='MPA'
+              button(class='request')='Graphics-Driven App'
+              button(class='request')='Web Portal'
+              button(class='request')='Dynamic App'
+              button(class='request')='Web App'
+              button(class='request')='IOT App'
+              button(class='request')='Data Science Website'
+              button(class='request')='Industry-Specific App'
+              button(class='request')='Enterprise Software'
+              button(class='request')='ERP Software'
+              button(class='request')='Analytical Software'
+              button(class='request')='Others'
+              h3(style='text-align:center;border-bottom:1px solid silver;')='Functionality'
+              button(class='request')='Monetization'
+              button(class='request')='Data Visualization'
+              button(class='request')='3rd-party Integration'
+              button(class='request')='AI integration'
+              button(class='request')='Predictive Analytics'
+              button(class='request')='Product Recommendation'
+              button(class='request')='Internationalization'
+              button(class='request')='PWA'
+              button(class='request')='Others'
+              h3(style='text-align:center;border-bottom:1px solid silver;')='Page Edit'
+              button(class='request')='New page'
+              button(class='request')='Update Metadata'
+              button(class='request')='Update Content'
+              button(class='request')='Update Web Design'
+              button(class='request')='Update page Tag'
+              button(class='request')='Update Domain Name'
+              button(class='request')='Animation: static,dynamic and interactive'
+              button(class='request')='Update Feature'
+              button(class='request')='Others'
+              h3(style='text-align:center;border-bottom:1px solid silver;')='Services'
+              button(class='request')='Copywriter'
+              button(class='request')='SEO expert'
+              button(class='request')='Content Creator'
+              button(class='request')='Graphics Designer'
+              button(class='request')='Animator'
+              button(class='request')='Digital Marketer'
+              button(class='request')='Customer Service'
+              button(class='request')='Data Analyst'
+              button(class='request')='Business Analyst'
+              button(class='request')='Financial Analyst'
+              button(class='request')='Virtual Assistant'
+              button(class='request')='Others'
+              h3(style='text-align:center;border-bottom:1px solid silver;')='Project Migration'
+              button(class='request')='Immigrate Ecommerce Store From Shopify'
+              button(class='request')='Emmigrate Ecommerce Store From Gigagon'
+              
+              div(style='background-color:khaki;color:black;border: 1px solid violet;border-radius: 10px;padding: 8px;')
+                p="Welcome To The Team. Here's A Brief Help Introduction:"
+                p 
+                  b PROJECT:&nbsp;'
+                  This Dropdown Displays All The Projects Being Managed By Our Teams At Gigagon. When You See "No Project Yet", It Means You Have No Project Currently Being managed By Gigagon. '
+                p
+                  b DEMO:&nbsp; 
+                  This Dropdown Shows Demos Of The Few Of The Many Projects We Can Do For You.'
+                p
+                  b MOST PEOPLE REQUESTED FOR:&nbsp; 
+                  Though Every Clients Requests Are Unique This Section Assists You In Describing Your Request
+                p(style='padding-left:20px;')
+                  b Project:&nbsp;
+                  Shows Few Of The Endless Projects We Can Accomplish eg Blogs, Ordering System,...
+                p(style='padding-left:20px;')
+                  b Functionality:&nbsp;
+                  Shows Few Of The Endless Features That Can Be Added To Your Project eg Social Logins, Internationalization, Shipping, CRM modification, Analytics...
+                p(style='padding-left:20px;')
+                  b Page Edit:&nbsp;
+                  Shows Few Of The Endless Features That Can Be Added To Your Page eg Updating Page Content, Product Page Update, Changing/Adding Images Or Video, Restyling Pages,...
+              
+              style='button.request {margin: 3px;} @media screen and (max-width: 429px) {button.request {font-size: 13px;}}'
+        div(class='data sections' data-name='data' style='width:100%;height:98vh;display:none;position:relative;overflow-y:scroll;')
+          style="table, tr, th, td {border:1px solid black;} th{padding:10px} @font-face {font-family: 'Poppins';src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');} @font-face {font-family: 'Poppins-b';src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');}@font-face {font-family: 'Poppins-eb';src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');}@font-face {font-family: 'Roboto';src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');}"
+          style='div.datact{margin:10px;} div.datact .datachild{background-color:white;width:31%;margin:auto;position:relative;} div.datact .datachild0{background-color:white;width:98%;margin:5px;position:relative;overflow-x:scroll;}'
+          style='div.rawdatalink i.dtlink{font-size:200px;padding:20px;} .datanav {padding:0;padding-left:2px;border-bottom:1px solid silver;width:99%;background-color:white;position:sticky;z-index:1;;top:0;} .datacontent {background-color:white;margin-top:0px;}'
+          style='.datanav p {cursor:pointer;border:2px solid rgb(245,245,245);padding:5px;display:inline-block;background-color:white;text-align:center;font-family:Poppins-eb;margin:2px;font-size:15px;}'
+          style='.analyticsbody {width:99%;margin:0;margin-left:0.5%;font-family:Poppins;font-size:12px;} .analyticsbody div {background-color:white;border:1px solid silver;border-radius:5px;text-align:center;} .analyticsbody h2 {background-color: blue;color:white;margin:0;}'
+          style='@media screen and (max-width: 929px) {div.datact .datachild{width:47%;margin:2px;font-size:10px;} div.datact{margin:0px} }'
+          style='@media screen and (max-width: 455px){.datanav p{font-size: 12px;} div.datact{margin:0;} div.datact .datachild{width:98%;margin:2px;font-size:10px;} div.rawdatalink i.dtlink{font-size:100px;padding:10px;}}'
+          style='@media screen and (max-width: 300px){div.rawdatalink i.dtlink{font-size:50px}}'
+          div(class='datanav' )
+            p(class='analytics' data-name='dashboard' style='background-color:rgb(245,245,245);')='dashboard'
+            p(class='analytics' data-name='web')='Raw Data'
+          div(class='datacontent' data-name='dashboard' )
+        
+            section(class='analyticsbody' data-name='dashboard' style='')
+              h2( style='cursor:pointer;text-align:center;background-color:rgba(245,214,61,0.4);color:black;margin:0;margin-bottom:5px;border-bottom:1px solid black;padding:5px;')
+                b='Demos'
+                b(style='float:right;') &Hat;
+              select
+               option='today'
+               option='yesterday'
+               option='last week'
+              b(class='loader dataloader' style='')=''
+              div
+               b='datamap'
+               div(style='overflow:scroll;')
+                 table(style='width:100%;')
+                   tr
+                     th(class='datamap' data-name='datasales')='Sales'
+                     th(class='datamap' data-name='dataorder')='Orders'
+                     th(class='datamap' data-name='dataminsales')='Min Sales'
+                     th(class='datamap' data-name='datamaxsales')='Max Sales'
+                     th(class='datamap' data-name='dataavgsales')='Avg Sales'
+                     th(class='datamap' data-name='datauniquesession')='Unique Sessions'
+                     th(class='datamap' data-name='datasession')='Sessions'
+                     th(class='datamap' data-name='datasessiontraffic')='Sessions(Traffic)'
+                     th(class='datamap' data-name='datasessionlocation')='Sessions(Location)'
+                     th(class='datamap' data-name='datasessionaddedtocart')='Added-To-Cart Sessions'
+                     th(class='datamap' data-name='datasessionaddedtocarttraffic')='Added-To-Cart Sessions(Traffic)'
+                     th(class='datamap' data-name='datasessionaddedtocartlocation')='Added-To-Cart Sessions(Location)'
+                     th(class='datamap' data-name='datasessioncheckedout')='Checked-Out Sessions'
+                     th(class='datamap' data-name='datasessioncheckedouttraffic')='Checked-Out Sessions(Traffic)'
+                     th(class='datamap' data-name='datasessioncheckedoutlocation')='Checked-Out Sessions(Location)'
+                     th(class='datamap' data-name='datasales')='Sales'
+                     th(class='datamap' data-name='datasalestraffic')='Sales(Traffic)'
+                     th(class='datamap' data-name='datasaleslocation')='Sales(Location)'
+                     th(class='datamap' data-name='datasalesinv')='Sales By Inventory'
+                     th(class='datamap' data-name='datasalesinvtra')='Sales By Inventory(Traffic)'
+                     th(class='datamap' data-name='datasalesinvtra')='Sales By Inventory(Location)'
+                     th(class='datamap' data-name='datalandingpage')='Landing Page'
+                     th(class='datamap' data-name='datalandingpagetra')='Landing Page(Traffic)'
+                     th(class='datamap' data-name='datalandingpageloc')='Landing Page(Location)'
+                     th(class='datamap' data-name='datapage')=' Page'
+                     th(class='datamap' data-name='datapagetra')=' Page(Traffic)'
+                     th(class='datamap' data-name='datapageloc')=' Page(Location)'
+                     th(class='datamap' data-name='datapageview')=' Page Views'
+                     th(class='datamap' data-name='datapageviewtra')=' Page Views(Traffic)'
+                     th(class='datamap' data-name='datapageviewloc')=' Page Views(Location)'
+                     th(class='datamap' data-name='datapagetag')=' Page Tags'
+                     th(class='datamap' data-name='datapagetagtra')=' Page Tags(Traffic)'
+                     th(class='datamap' data-name='datapagetagloc')=' Page Tags(Location)'
+                     th(class='datamap' data-name='datalandingpagetag')='Landing Page Tags'
+                     th(class='datamap' data-name='datalandingpagetagtra')='Landing Page Tags(Traffic)'
+                     th(class='datamap' data-name='datalandingpagetagloc')='Landing Page Tags(Location)'
+                     th(class='datamap' data-name='datapagetagview')=' Page Tags Views'
+                     th(class='datamap' data-name='datapagetagviewtra')=' Page Tags Views(Traffic)'
+                     th(class='datamap' data-name='datapagetagviewloc')=' Page Tags Views(Location)'
+              div(class='analyticscontainer' )
+                
+              
+              div(class='datact' style='border:none;padding:0px;display:flex;flex-direction:row;flex-wrap:wrap;')
+                    div(class='datachild')
+                      h2=' average time(mins):chart,timeseries,zoom'
+                      p(style='font-size:25px;')='1.03'
+                    
+              
+              
+            section(class='analyticsbody' data-name='web' style='display:none;')
+              p='data quality, asynchronous, features(filters,events,visuals,nested)'
+              div(style='text-align:left;border:none;')
+                div(class='rawdatalink' data-src='/page' style='cursor:pointer;border:2px solid silver;display:inline-block;margin:5px;')
+                  h2='Page'
+                  i(class='fas fa-file dtlink' style='')
+                div(class='rawdatalink' data-src='/web/customer' style='cursor:pointer;border:2px solid silver;display:inline-block;margin:5px;')
+                  h2='Sessions'
+                  i(class='fas fa-user dtlink' style='')
+              div(class='rawdata' style='display:none;text-align:left;border: 0px solid silver;')
+                b(class='backtoraw' style='display:inline-block;padding:3px;background-color:blue;color:white;cursor:pointer;') &larr; back
+                iframe( src='' style='height:90vh;width:100%;')
+              div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Hire Data Analyst/Interpreter'
+                  button(class='request')='Hire Finance Analyst'
+                  button(class='request')='Hire Business Analyst'
+                  button(class='request')='Filtered Data'
+                  button(class='request')='Request Data Science, ML, AI features'
+                  button(class='request')='Request Finance Stats'
+                  button(class='request')='More Analytics'
+                  button(class='request')='Advanced Data Visualization'
+                  button(class='request')='Animated Data Visualization'
+                  button(class='request')='Import Other data'
+                  button(class='request')='Export Data'
+                  button='Request More Features'
+              
+           
+        div(class='product sections' data-name='product' style='height:95vh;overflow-y:scroll;;font-family:Poppins;width:100%;display:none;')
+          div(style='font-family:Poppins-b;width:99%;padding:7px;')
+            b(class='loader fufillloader')=''
+            div
+              table(class='productlist' style='width:100%;border-collapse:collapse;')
+                tr(style='color:white;background-color:green;')
+                  th='Name'
+                  th='tag'
+                  th='Variant'
+          div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Add Product'
+                  button(class='request')='Update Product'
+                  button(class='request')='Update Inventory'
+                  button(class='request')='Product Pricing'
+                  button(class='request')='Set Up WareHouse location'
+                  button(class='request')='Request More Features'
+              
+
+        div(class='delivery sections' data-name='delivery' style='height:95vh;width:98%;overflow-y:scroll;display:none;font-family:Poppins;padding:5px;')
+          b(class='loader shippingloader')=''
+          h2(style='text-align:center;')='Fufillment methods'
+          div
+            div
+              p(style='text-align:center;')
+                b='local/3rd-party delivery'
+              div
+                table(class='shippinglist' style='width:100%;border-collapse:collapse;')
+                  tr(style='color:white;background-color:green;')
+                    th='product'
+                    th='location'
+                    th='Carrier'
+                    th='strategy'
+            
+            p(style='text-align:center;')
+              b='local pickup'
+            div(class='localpickup')
+              table(class='pickuptable' style='border:1px solid black;border-collapse:collapse;width:100%;')
+                tr(style='color:white;background-color:green;')
+                  th='location'
+                  th='store pics'
+                  th='opening time'
+                  th='closing time'
+                  th='country'
+                  th='state'
+                  th='city'
+                  th='address'
+                  th='phone no'
+                  th='pickup information'
+            div
+              h2(style='text-align:center;')='Most People Requested For:'
+              button(class='request')='Update Local Delivery Information'
+              button(class='request')='Pickup Information Update'
+              button(class='request')='Set Up Gigagon shipping'
+        div(class='marketing sections' data-name='marketing' style='width:98%;display:none;font-family:Poppins;padding:5px;')
+          div(style='padding-bottom:5px;border-bottom:1px solid silver;white-space:nowrap;overflow-x:scroll;')
+            b(class='marketlinks' data-name='dashboard' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;background-color:rgb(245,245,245);')='dashboard'
+            b(class='marketlinks' data-name='email' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='Email'
+            b(class='marketlinks' data-name='social media' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='Social Media'
+            b(class='marketlinks' data-name='discount' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='Discount'
+            b(class='marketlinks' data-name='affiliatemarketing' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='Affliate Marketing & Microstore'
+            b(class='marketlinks' data-name='ads' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='Ads'
+            b(class='marketlinks' data-name='seo' style='display:inline-block;margin-right:5px;cursor:pointer;border:1px solid black;')='SEO'
+          div(class='marketcontent' data-name='dashboard')
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='email sent'
+              p(style='text-align:center;font-size:35px;margin:0;')='10'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='social media followers'
+              p(style='text-align:center;font-size:35px;margin:0;')='10000'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='interaction rate'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='complaining customer'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Hire Virtual Assistant'
+                  button='Request More Features'
+              
+          div(class='marketcontent' data-name='email' style='display:none;')
+            i(class='fas fa-envelope' style='display:block;font-size:100px;margin-auto;text-align:center;')
+            div
+              h2(style='text-align:center;')='Most People Requested For:'
+              button='set up Email'
+              button(class='request')='Bulk Email'
+              button(class='request')='Personalized Email'
+              button(class='request')='Calendar'
+              button(class='request')='Email Assistant'
+              button(class='request')='Email Analytics'
+            
+          div(class='marketcontent' data-name='social media' style='flex-direction:row;display:none;')
+            iframe( src='/socialmedia' style='width:100%;height:400px;overflow-y:scroll;')
+            div
+                h2(style='text-align:center;')='Most People Requested For:'
+                button(class='request')='Hire Social Media Analyst'
+                button(class='request')='leads generator'
+                button(class='request')='Sales Rep'
+                button(class='request')='Digital Marketer'
+                button(class='request')='Customer Service'
+                button(class='request')='Marketing Software'
+                button='Request More Features'
+              
+          div(class='marketcontent' data-name='discount' style='flex-direction:row;display:none;')
+            div(style='')
+              table(style='width:100%;border-collapse:collapse;')
+                tr(style='color:white;background-color:green;')
+                  th='value(% or $)'			
+                  th='qualified session'   
+                tr
+                 th='$10'
+                 th='Sales >= $10000'
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Update Discount'
+                  button='Request More Features'
+              
+          div(class='marketcontent' data-name='affiliatemarketing' style='flex-direction:row;display:none;')
+            div(style='')
+              table(style='width:100%;border-collapse:collapse;')
+                tr(style='color:white;background-color:green;')
+                   th='User'
+                   th='Source'
+                   th='Date'
+                   th='Session'
+                   th='Sales'
+                   th='cash(owed,sent,total)'
+                tr
+                   th='James' 
+                   th='james.com' 
+                   th='25-01-2022'
+                   th='400'
+                   th='$30000'
+                   th='700000(200000,500000,700000)'
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Set Up Affiliate Marketing'
+                  button(class='request')='Setup Microstore'
+                  button(class='request')='Request More Features'
+                  
+              
+          div(class='marketcontent' data-name='ads' style='flex-direction:row;display:none;')
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Setup Google Ads'
+                  button(class='request')='Setup Facebook Ads'
+                  button='Request More Features'
+              
+          div(class='marketcontent' data-name='seo' style='flex-direction:row;display:none;')
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button(class='request')='Set Up Site Audit'
+                  button(class='request')='Competitor Research'
+                  button(class='request')='Keyword Research'
+                  button(class='request')='SERP'
+                  button(class='request')='Google Search Console'
+                  button(class='request')='Plagiarism Checker'
+              
+          
+        div(class='order sections' data-name='order' style='width:98%;display:none;font-family:Poppins;padding:5px;')
+          div(style='padding-bottom:5px;border-bottom:1px solid silver;')
+            b(class='orderfeatures' style='display:inline-block;margin-right:5px;border:1px solid black;' data-name='a' )='dashboard'
+            b(class='orderfeatures' style='display:inline-block;margin-right:5px;border:1px solid black;' data-name='b' )='order'
+          div
+           div(class='orderfeaturescontent' data-name='a')
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='total orders'
+              p(style='text-align:center;font-size:35px;margin:0;')='10'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='order value'
+              p(style='text-align:center;font-size:35px;margin:0;')='10000'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='time of orders'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='max order value'
+              p(style='text-align:center;font-size:35px;margin:0;')='10000'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='min order value'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+            div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='cart weight'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+            div
+              h2(style='text-align:center;')='Most People Requested For:'
+              button(class='request')='More Data Features'
+           div(class='orderfeaturescontent' data-name='b' style='display:none;')
+            div(style='overflow:scroll;')
+              table(class='orderlist' style='border:1px solid black;border-collapse:collapse;width:100%;')
+                    
+            div
+              h2(style='text-align:center;')='Most People Requested For:'
+              button(class='request')='Set Up POS'
+              button(class='request')='Set Up Map'
+              button(class='request')='Set Up WorkFlow'
+              button='Set Up More Features'
+            
+    
+
+        div(class='customer sections' data-name='customer' style='width:98%;display:none;font-family:Poppins;padding:5px;')
+          iframe( src='/customer' style='width:100%;height:600px;overflow-y:scroll;')
+        div(class='finance sections' data-name='finance' style='width:98%;height:98vh;display:none;font-family:Poppins;padding:5px;')
+          div
+            h2='Welcome to Finance'
+            i(class='fas fa-money-bill' style='display:block;text-align:center;font-size:300px;')=''
+
+          div
+            h2(style='text-align:center;')='Most People Requested For:'
+            button(class='request')='Payroll Management'
+            button(class='request')='Ledger'
+            button(class='request')='Budgeting'
+            button(class='request')='Statement'
+            button(class='request')='Invoice'
+            button(class='request')='Modelling'
+            button(class='request')=' More Features'
+            style='button.request {margin: 10px;}'
+        div(class='assistant sections' data-name='assistant' style='height:95vh;overflow-y:scroll;width:100%;margin:0;font-family:Roboto;display:none;padding:2px;')
+                div(style='display:flex;flex-direction:column;flex-wrap:wrap;font-size:16px;')
+                  div(style='padding:10px;border:1px solid silver;border-radius: 10px;background-color:rgb(245,245,245);margin:10px;')
+                    h1='EMAIL'
+                    p='Send Your Ideas, Proposals, Complaint And Inquiries Any Of These Emails:'
+                    ul
+                      li: a(href='mailto:akinsanmi20700@gmail.com') customerservice @gigagon.com
+                      li: a(href='mailto:ideas@gmail.com')  ideas gigagon.com
+                  div(style='padding:10px;border:1px solid silver;border-radius: 10px;background-color:rgb(245,245,245);margin:10px;')
+                    h1='Phone Number'
+                    p='Send Your Ideas, Proposals, Complaint And Inquiries Either Through SMS Or Calls To Any Of Our Phone Number:'
+                    ul
+                      li='07014728658'
+                  div(style='padding:10px;border:1px solid silver;border-radius: 10px;background-color:rgb(245,245,245);margin:10px;')
+                    h1='INFORMAL'
+                    p='Send Your Ideas, Proposals, Complaint And Inquiries Any Of Our Channels:'
+                    ul
+                      li='Slack'
+                      li='Zoom'
+                      li='Telegram'
+                      li='Whatsapp'
+                div(style='display:flex;flex-direction:row;align-items:center;background-color:rgb(245,245,245);color:black;border:1px solid silver;text-align:center;width:50%;text-align:left;margin:10px;margin-left:24%;') 
+                  div(style='flex:1;') 
+                    input(type='search' class='inputtype' data-name='Text' list='question' style='padding:3px;border-radius:4px;width:100%;margin:3px;font-size:20px;')
+                    datalist(id='question')
+                      option='New Page'
+                      option='Update Metadata'
+                      option='Update Content'
+                      option='New Project'
+                      option='Update Web Design'
+                      option='Domain Name'
+                      option='SEO expert'
+                      option='Page Monetization'
+                      option='3rd Party Integration'
+                      option='AI Integration'
+                      option='Project Emmigration'
+                      option='Update Feature'
+                      option='Content Creator'
+                      option='Graphics Designer'
+                      option='Animation'
+                      option='Internationalization'
+                      option='Hire Data Analyst'
+                      option='Hire Finance Analyst'
+                      option='Hire Business Analyst'
+                      option='Request Dynamic Stats'
+                      option='Request Data Science, ML, AI features'
+                      option='Request Finance Stats'
+                      option='Request Static Stats'
+                      option='Store More Data'
+                      option='Add Product'
+                      option='Update Product'
+                      option='Update Inventory'
+                      option='Product Pricing'
+                    
+                  select(class='convotype' style='display:inline-block;padding:2px;padding-top:5px;margin:5px;color:white;font-size:20px;cursor:pointer;background-color:green;text-align:center;')
+                    option='Email'
+                    option='CALL'
+                    option='SMS'
+                    option='Slack'
+                    option='Telegram'
+                    option='Whatsapp'
+                  a(class='sendconvo' style='display:inline-block;padding:5px;margin:5px;color:white;font-size:20px;cursor:pointer;height:30px;width:30px;border-radius:50%;background-color:green;text-align:center;') &rarr;
+        script(src='/javascripts/svgcanvas.js' defer)
+        script(src='/javascripts/user/general.js' defer)
+        script(src='/javascripts/user/account.js' defer)
+        script(src='/javascripts/user/data/data.js' defer)
+        script(src='/javascripts/user/marketing.js' defer)
+        script(src='/javascripts/user/content.js' defer)
+        

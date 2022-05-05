@@ -1,0 +1,73 @@
+@media screen and (max-width: 1129px) {
+	article header {top:0;left:0;display:none;width:30%;}
+	
+	article section {width: 100%;position: relative;margin-left: 0%;}
+	article section div.contentmeta{position: relative;}
+	article section div.contentmeta p {width:30%;margin:0;text-align:center;}
+	article section div.contentbody {margin-top:0px;}
+	.backtomenu {display: none}
+	.newheader {display:block}
+	
+	
+	button.logopicschange {width:100%;}
+	.billingleft span.billingspan{font-size:35px;}
+	
+	
+	.productpics {display:block;}
+	div.otherproductpics {width:100%;}
+	.responsiveanalytics {display:block;}
+	.datanav p {cursor:pointer;padding:5px;}
+}
+
+@media screen and (max-width: 929px) {
+	article header {width:40%;}
+	article section div.contentmeta p {font-size:15px;padding:2px;}
+	.menubars {font-size:20px}
+	
+	.businessinfo div.business label input, .businessinfo div.owner label input {font-size:15px;}
+	.businessinfo div.owner label {width:100%;font-size:15px;}
+	table.stafftable {font-size:13px;}
+	
+	.changinguser {width:99%;position:fixed;bottom:0;left:0;bottom:0%;font-size:15px;}
+	
+}
+
+@media screen and (max-width: 650px) {
+	article header {width:70%;}
+	.intro {font-size:20px}
+	ul.intro li {padding:10px;}
+	.billingleft span.billingspan{font-size:30px;padding:5px;}
+	.billingleft span{font-size:10px;}
+	.userproducts {width:30%;height:30%;}
+	.userproducts p{font-size:12px;}
+	
+	.headerimages {width:47%;}
+	
+	.businessinfo div.business label {width:100%;font-size:15px;}
+	.billingheaders {font-size:13px;}
+	.payorchangeplan {font-size:12px;}
+	.poptions{width:98%;}
+	.demos {width:93%;}
+}
+
+@media screen and (max-width: 479px) {
+	.billinginner {font-size: 14px}
+	div.payment {font-size: 13px}
+	ul.intro li {font-size: 14px}
+	article section div.contentmeta p {font-size:13px;}
+	.rmelogo {width:35px;height:22px;}
+	.intro {font-size:17px}
+	.sec {font-size:15px;}
+	.otpans {margin-left: 5%;}
+	.fromtill {display:block;}
+	img.logopics {height:130px;}
+	div.pageoptions {left:5%;width:89%;}
+}
+@media screen and (max-width: 299px) {
+	.menubars {margin-right:20%;}
+	.userproducts p{font-size:10px;}
+	.userproducts {width:45%;height:45%;}
+	.sec {font-size:13px;}
+	.otpans {margin-left: 0%;}
+	.billinginner {font-size: 13px}
+}

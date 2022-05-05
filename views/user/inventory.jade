@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="entry point for managing sales, content, data and everything business-related")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(style='padding:10px;margin:0;font-family:Poppins;')
+        style
+          include ../user ui styling/general.css
+        div
+          b(style='display: inline-block;margin:5px;' class='inventorylinks' data-name='dashboard')='dashboard'
+          b(style='display: inline-block;margin:5px;' class='inventorylinks' data-name='materials')='materials'
+          b(style='display: inline-block;margin:5px;' class='inventorylinks' data-name='locations')='locations'
+        div
+           div(style='padding: 7px;' class='inventorycontent' data-name='dashboard')
+             p='dashboard'
+           div(style='padding: 7px;display:none;' class='inventorycontent' data-name='materials')
+             p='RM'
+             div
+                table(style='width:100%;')
+                  tr(style='background-color: black;color: white;')
+                     th='RM'
+                     th='total qty'
+                     th='delete'
+                  tr
+                     th='Garri'
+                     th='5000 cups'
+                     th: button='delete'
+             p 
+               button='add'
+             
+           div(class='inventorycontent' data-name='locations' style='background-color:rgb(245,245,245);padding: 7px;display:none;')
+             div
+               input(type='search' style='padding:3px;width:60%;margin-left:20%;border-radius: 4px 4px;display:inline-block;margin-right: 5px;')
+               button='add location'
+             div(style='border: 1px solid black;background-color:white;border-radius: 4px 4px;display:inline-block;width:400px;height:400px;')
+               h2(style='color:white;background-color: black;margin:0;')='BARIGA'
+               div
+                 p='fufilled 10 orders using the following raw materials'
+                 p='view usage overtime'
+                 div
+                   table(style='width:100%;')
+                     tr(style='background-color: black;color: white;')
+                       th='product'
+                       th='qty'
+                       th='RM used'
+                 p='remaining RM'
+                 div
+                   table(style='width:100%;')
+                     tr(style='background-color: black;color: white;')
+                       th='RM'
+                       th='qty'    
+        script(src='/javascripts/user/inventory.js' defer)
+                     

@@ -1,0 +1,63 @@
+ h2.title{text-align:center;} 
+ img.image{width:100px;height:50px;margin-left:10px;padding:0;}
+ div.catalogue{display:flex;flex-direction:row;flex-wrap:wrap;background-color:white;} 
+ h2.title{text-align:center;} 
+ .qtyoptions{display:none;} 
+ .prods{display:block;width:300px;margin:6px;border:1px solid black;text-align:center;}
+ b.buynow{background-color: red;color:white;padding:3px;font-size:20px;width:60%;display:inline-block;} 
+ b.addtocart{background-color: green;color:white;padding:3px;font-size:20px;width:60%;display:inline-block;} 
+ input.qty{outline:0px;border:0px;border-bottom:1px solid black;font-size:20px;width:50%;text-align:center;}
+ .image1 {width:100%;height:200px;}
+ .cartcontainer {overflow-y:scroll;width:50%;border:1px solid silver;background-color:white;font-size:20px;padding:4px;position:fixed;height:100%;top:0;right:0;display:none;z-index:3;}
+ button {font-size:20px;}
+ .emptycart i{font-size:300px;}
+ .emptycart b{font-size:100px;}
+ .prods {animation: none 10s linear infinite;}
+ .bonus {flex-direction:row;}
+ .bonus0{width:60%;margin-left:10px;}
+ .bonus1{width:39%;}
+ @keyframes spin {
+	0% {
+		transform: rotate(0deg)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
+}
+ @media screen and (max-width: 900px) {
+	 .prods {width:200px;}
+	 .image1 {height:150px;}
+	 b.addtocart, b.buynow {font-size:17px;}
+	 p {margin:3px;}
+	 .cartcontainer {width:70%;}
+ }
+ @media screen and (max-width: 700px) {
+	 .bonus {flex-direction:column;}
+	 .bonus0, .bonus1 {width: 99%;margin-left:0px;}
+	 img.image{width:50px;}
+	 .prods {width: 150px}
+	 .image1 {height:100px;}
+	 h2, p {font-size:18px;}
+	 b.addtocart, b.buynow {font-size:15px;}
+     .emptycart i{font-size:200px;}
+	 .emptycart b{font-size:70px;}
+ }
+ 
+  @media screen and (max-width: 500px) {
+	  .prods {width: 45%}
+	  h2, p {font-size: 15px;}
+	  b.addtocart, b.buynow {font-size:13px;width:80%;}
+	  .cartcontainer {width:85%;}
+	  button,b {font-size: 13px;padding:2px;}
+	  .emptycart i{font-size:150px;}
+	  .emptycart b{font-size:50px;}
+  }
+  
+   @media screen and (max-width: 300px) {
+	  .prods {width: 43%}
+	  .image1 {height: 80px;}
+	  h2, p {font-size: 15px;}
+	  b.addtocart, b.buynow {font-size:13px;}
+	  .emptycart i{font-size:100px;}
+	  .emptycart b{font-size:30px;}
+  }

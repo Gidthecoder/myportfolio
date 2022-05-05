@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    title=user.business.businessname
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="Two-factor authentication for shopsidy user account")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+    link(rel="stylesheet" href="/stylesheets/2FA.css" type="text/css")
+  body(id='body' data-otp=otp data-email=user.owner.ownercontact.mail data-type=type)
+    article
+      h1(style='text-align:center;' class='user')=user.business.businessname
+      if type == '2FA'
+        div
+          input(type='color')
+          p='enter the OTP sent to your email'
+          label=''
+            input(type='search' class='otp')
+          a(class='submit' )='submit'
+            i(class='loader' style='display:none;')=''
+          
+      else if type == 'SQ'
+        div(class='sq')
+          each question in questions
+            p question: #{question.q}
+            p(class='q' contenteditable='true' style='outline:1px solid black;')='answer:'
+            a(class='submit' )='submit'
+              i(class='loader' style='display:none;')=''
+    script(src='/javascripts/2fa.js')
+    

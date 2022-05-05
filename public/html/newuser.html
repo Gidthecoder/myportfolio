@@ -1,0 +1,233 @@
+<DOCTYPE html>
+ <html lang='en-US'>
+  <head>
+    <title>New User</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Gideon Akinsanmi">
+	<meta name="description" content="make friends, connect with people, show your works and have fun">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+	<style>
+	  @font-face {
+	    font-family: 'Poppins';
+		src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+	  }
+	  @font-face {
+	    font-family: 'Poppins-b';
+		src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+	  }@font-face {
+	    font-family: 'Poppins-eb';
+		src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+	  }
+	</style>
+  </head>
+  
+  <body id='body'>
+	<style>
+	  #body {margin:0;padding:0;background-color: rgb(132,51,119);width:100%;}
+	  .article {width:70%;height: 80%;margin-left:15%;margin-top:20px;;position:relative;}
+	  .article div{width:100%;height:100%;background-color:white;display:inline-block;overflow: scroll;}
+	  .article div h1 {text-align: center;font-family:Poppins-b;}
+	  .article div label {width:45%;display:inline-block;margin:auto;margin-bottom:20px;font-family:Poppins;position:relative;background-color:white;}
+	  #submitinfo {background-color:violet;}
+	  #submitinfo:hover { background-color: rgb(132,51,119); }
+	  .article div label input[type='search'],  .article div label input[type='number'], .article div label input[type='password']{border: 1px solid black;display: inline-block;width:100%;padding:7px;border-radius: 5px;outline: none;}
+	  .article div label input:focus {outline: none;border: 1px solid rgb(221, 14, 203);}
+	  
+	  @media screen and (max-width: 1100px) {
+	    .article {width:80%;margin-left:10%;}
+	  }
+	  @media screen and (max-width: 900px) {
+	    .article {width:90%;margin-left:5%;}
+	    
+	  }
+	  @media screen and (max-width: 700px) {
+	    .article {width:98%;margin-left:1%;font-size:14px;}
+		.article div label {width:70%;}
+	  }
+	  .loader {
+		display:inline-block;width:10px;height:10px;
+		border: 4px solid white;
+		border-top: 4px solid violet;
+		border-bottom: 4px solid violet;
+		border-radius: 50%;
+		animation: spin 0.5s linear infinite;
+	  }
+
+	  @keyframes spin {
+		0% {
+			transform: rotate(0deg)
+		}
+		100% {
+			transform: rotate(360deg)
+		}
+	  }
+	</style>
+   <article class='article'>
+     <h2 style='color:white;font-family:Poppins-eb;text-align:center;'><a href='/' style='text-decoration:none;color:white;'>GIGAGON</a></h2>
+     <div id='businessinfo' style='display:flex;flex-direction:column;'>
+       <h1 style='width:100%;'>About Your business</h1>
+	   <label>
+	     <b>Business Name:</b> 
+		 <input type='search' class='businessname '> 
+	   </label>
+	   
+	   
+	   <label>
+	     <b> phone no:*</b>
+		 <select id='phone' class='ownercountrycode'>
+		   <option value='nigeria' name='+234'>(+234)nigeria</option>
+		   
+		 </select>
+		 <input type='number' name='phone' autocomplete=false class='ownerphone'>
+	   </label>
+	   <label>
+	     <b> Email:*</b>
+		 <input type='search' class='owneremail compulsory'> 
+	   </label>
+	   
+	   <label>
+	     <b>country:</b>
+		 <input type='search' name='country' class='country' readonly value='nigeria'/>
+	   </label>
+	   
+	   <label>
+	     <b>password*</b>
+		 <input type='password' name='password' placeholder='' class='password compulsory'>
+		 <i class='fas fa-question' title='show' style='position:absolute;top:0px;right:5px;padding:5px;cursor:pointer;background-color:white;'></i>
+		 
+	   </label>
+	   <label>
+	     <b>reenter password*</b>
+		 <input type='password' name='reenterpassword' class='reenterpassword compulsory'>
+		 <i class='fas fa-question' title='show' style='position:absolute;top:0px;right:5px;padding:5px;cursor:pointer;background-color:white;'></i>
+	   </label>
+	   <p style='text-align:center;'> 
+	     <a id='submitinfo' style='display: inline-block;cursor:pointer;transition:all ease 0.5s;margin-left:1%;padding:5px;color:white;text-decoration:none;font-family:Poppins-b;'>submit<b class='loader' style='display:none;'></b></a>
+	     <a id='enterotp' style='display:none' href='#otp'>enter the otp sent to your email</a>
+	   </p>
+	 </div>
+	 <script>
+	   let country = document.querySelector('.country')
+	  
+	   //password strength validation
+	   let password = document.querySelector('.password')
+	   let strength = document.querySelector('.strength')
+	   let reenterpassword = document.querySelector('.reenterpassword')
+	   let strongpassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+		 let mediumpassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
+		 
+	   password.oninput = function(e){
+	     
+		 
+		 if(e.target.value.length !== 0){
+		   e.target.style.borderColor = 'red'
+		   if(strongpassword.test(e.target.value)){
+		     e.target.style.borderColor = 'green'
+			 
+		   } else if(mediumpassword.test(e.target.value)){
+		     e.target.style.borderColor = 'blue'
+		   } else {
+		     e.target.style.borderColor = 'red'
+		   }
+		 } else {
+		   //do nothing
+		 }
+		 
+	   }
+	   
+	   reenterpassword.oninput = function(e){
+	     if(e.target.value == password.value && password.value.length > 0){
+		   e.target.style.borderColor = 'green'
+		 } else {
+		   e.target.style.borderColor = 'red'
+		 }
+	   }
+	   
+	   //email validator
+	   let useremail = document.querySelector('input.owneremail')
+	   useremail.oninput = function(e) {
+	     let emailvalidate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		 if(!e.target.value.match(emailvalidate) ) {
+		    useremail.style.borderColor = 'red'
+			
+		 } else {
+			useremail.style.borderColor = 'green'
+			
+		 }
+	   }
+	   //show/hide password
+	   let fas = document.querySelectorAll('.fas')
+	   for(let i=0; i<fas.length; i++){
+	       fas[i].onclick = function(e){
+		     if(e.target.style.backgroundColor == 'white'){
+			   e.target.style.backgroundColor = 'silver'
+			   e.target.previousElementSibling.type = 'search'
+			 } else {
+			   e.target.previousElementSibling.type = 'password'
+			    e.target.style.backgroundColor = 'white'
+			 }
+		   }
+	   }
+	 </script>
+	 
+	 <div id='otp' style='display:none;text-align:center;'>
+	  <form method='POST' action='/users/otp/verification'>
+	    <label>
+	     <p style=''><b>OTP:</b></p>
+		 <input type='search' name='otp' class='otpnumber'> 
+	    </label>
+		 
+		<input type='submit' value='submit'>
+	  </form>
+	 </div>
+	 <p style='text-align:center;color:white;'><a href='/terms' style='color:white;'>terms and condition</a></p>
+	 <script>
+	   
+	   let submit = document.getElementById('submitinfo')
+	   submit.onclick = function(e) {
+		 e.target.children[0].style.display = 'inline-block'
+	     let compulsory = document.querySelectorAll('.compulsory')
+		 for(let i = 0; i < compulsory.length; i++){
+		   if(compulsory[i].value.length == 0) {
+		      alert('check that you have filled the compulsory inputs')
+			  return
+		   }
+		 }
+	     if(useremail.style.borderColor == 'red') {
+		      alert('your email is in the wrong format')
+			  return
+		   }
+		 //check if email was entered correctly
+		 
+	     //alert('data received check your email to complete the registration')
+		 //send a fetch request to the server with an object containing all necessary info
+		 
+		 let info = {
+			     businessname: document.querySelector('.businessname').value, 
+				 businesspassword: document.querySelector('.reenterpassword').value,
+				 country: document.querySelector('.country').value, 
+			     email: document.querySelector('.owneremail').value,
+				 phoneno:document.querySelector('.ownerphone').value
+		  }  
+		  //console.log(info)
+		 fetch('/users/newuser', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info) })
+			  .then(res => res.text())
+			  .then(resp => {
+			    e.target.children[0].style.display = 'none'
+			    if(resp.length <= 30){
+				  alert(resp)
+				} else if(resp.length > 30){
+				  //change the text to 'we sent a response to your email  check the ode to complete
+				  alert(resp)
+				  document.querySelector('#otp').style.display = 'block'
+				  document.querySelector('#businessinfo').style.display = 'none'
+				  //enterotp.click()
+				}
+			  })
+	   }
+	 </script>
+   </article>
+
+  </body>
+  </html>

@@ -1,0 +1,148 @@
+<DOCTYPE html>
+ <html lang='en-US'>
+  <head>
+    <title>CMS</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Gideon Akinsanmi">
+	<meta name="description" content="make friends, connect with people, show your works and have fun">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+	<style>
+	  @font-face {
+	    font-family: 'Poppins';
+		src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+	  }
+	  @font-face {
+	    font-family: 'Poppins-b';
+		src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+	  }@font-face {
+	    font-family: 'Poppins-eb';
+		src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+	  }
+	  @font-face {
+	    font-family: 'Roboto';
+		src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+	  }
+	</style>
+  </head>
+  
+  <body id='body'>
+	<style>
+	  #body {margin:0;padding:0;background-color: rgb(242, 242, 242);width:100%;background-color:rgb(64,20,67);}
+	  .article {width:50%;margin-left:25%;margin-top:10%;;position:relative;}
+	  .article div{width:100%;padding:15px;background-color:white;display:inline-block;}
+	  
+	  
+	  
+	  .article div h1 {text-align: center;font-family:Poppins-b;}
+	  .article div label {width:90%;display:inline-block;margin-bottom:20px;padding-left:5%;font-family:Poppins;}
+	  
+	  .article div  input  {border: 1px solid black;display: inline-block;width:98%;padding:7px;border-radius: 5px;outline: none;margin-top:5px;}
+	  .article div input:focus {outline: none;border: 1px solid rgb(221, 14, 203);}
+	  
+	  @media screen and (max-width: 1009px) {
+	    .article {width:60%;margin-left:20%;margin-top:10%;}
+	  }
+	  
+	  @media screen and (max-width: 800px) {
+	    .article {width:70%;margin-left:15%;margin-top:10%;}
+	  }
+	  
+	  @media screen and (max-width: 600px) {
+	    .article {width:85%;margin-left:7%;margin-top:10%;}
+		#businessinfo h1 {font-size: 18px;}
+		#businessinfo label {font-size: 14px;}
+	  }
+	  @media screen and (max-width: 500px) {
+	    .article {width:78%;margin-left:0%;font-size: 13px;}
+		h1 {font-size: 16px;}
+		
+	  }
+	</style>
+   <article class='article'>
+     <h2 style='color:white;font-family:Poppins-eb;text-align:center;'><a href='/' style='text-decoration:none;color:white;'>GIGAGON</a></h2>
+     <div id='businessinfo'>
+       <section class='login' style='transition: all ease 1s;'>
+	     <h3 style='text-align:center'>Login to your Gigagon Account</h3>
+	     <label class='email'>
+	       <b>Email:</b> 
+		   <input type='search' class='email' placeholder='Your Email'> 
+	     </label>
+	     <label class='password'>
+	       <b>Password:</b> 
+		   <input type='password' class='password' placeholder='Your Password'> 
+	     </label>
+	     
+	     <a class='login' style='display: inline-block;padding:5px;text-decoration:none;font-family:Poppins-b;margin-left:10px;margin-bottom:10px;' href='#'>
+		   login
+		   <b class='loader loginloader' style='display:none;'></b>
+		 </a>
+	     <a class='submithref' style='display:none;'>submit</a>
+	     <a class='forgotpass' style='display:block;text-decoration:underline;color:blue;'>forgot password</a>
+       </section>
+	   <section class='securitykey' style='display:none;transition: all ease 1s;'>
+         <b class='back' style='padding:3px;background-color:blue;color:white;font-size:25px;cursor:pointer;'>&larr;</b>
+         <label class='sqkey' style=''>
+	       <b>Security Key:</b>
+           <b class='securityq'></b>
+		   <input type='search' class='sqkey' placeholder='Your Security Answer'> 
+	     </label>
+         <button class='key' style='width:60%;margin-left:20%;margin-top:20px;'>
+		   Submit
+		   <b class='loader sqloader' style='display:none;'></b>
+		 </button>	 
+	   </section>
+	   <section class='otp' style='display:none;transition: all ease 1s;'>
+         <b class='back' style='padding:3px;background-color:blue;color:white;font-size:25px;cursor:pointer;'>&larr;</b>
+         <label class='otp' style=''>
+	       <b>OTP Key:</b>
+		   <input type='search' class='otp' placeholder='Your OTP Key'> 
+	     </label>
+         <button class='otpkey' style='width:60%;margin-left:20%;margin-top:20px;'>
+		   Submit
+		   <b class='loader otploader' style='display:none;'></b>
+		 </button>	 
+	   </section>
+       <section class='passwordrecover' style='display:none;transition: all ease 1s;'>
+         <b class='back' style='padding:3px;background-color:blue;color:white;font-size:25px;cursor:pointer;'>&larr;</b>
+	     <input type='search' class='recoverypassword' placeholder='enter your email address'>
+         <button class='recoverykey' style='width:60%;margin-left:20%;margin-top:20px;'>Send</button>	 
+       </section>		 
+	 </div>
+	 <p style='text-align:center;color:white;'><a href='/terms' style='color:white;'>terms and condition</a></p>
+	 <style>
+	   #businessinfo {font-family: Roboto;}
+	   a.login {border:1px solid silver;color:black;}
+	   a.login:hover {background-color: rgb(245,245,245)}
+	   input[class='recoverypassword']  {border: 1px solid black;width:90%;margin-left:3%;padding:7px;border-radius: 5px;outline: none;}
+	   .loader {
+			display:inline-block;width:10px;height:10px;
+			border: 4px solid white;
+			border-top: 4px solid violet;
+			border-bottom: 4px solid violet;
+			border-radius: 50%;
+			animation: spin 0.5s linear infinite;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg)
+			}
+			100% {
+				transform: rotate(360deg)
+			}
+		}
+
+	 </style>
+	 
+	 
+	 
+	 <script type='module'>
+	   import {log } from '/javascripts/userlogin.js'
+	   log()
+	   //use chromium developers' code spliting method
+	 </script>
+   </article>
+
+  </body>
+  </html>

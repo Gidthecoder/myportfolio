@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    title=name
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="enjoy variety of foods from different culture")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+    link(rel="stylesheet" href="/stylesheets/superuser.css" type="text/css")
+  body(id='body')
+    article
+      p(class='nav')
+        b(data-name='message')='Messages'
+        b(data-name='stats')='Stats'
+        b='user'
+        style='p.nav b{padding: 5px;box-shadow: 0px 0px 5px black;margin-right: 15px;cursor:pointer;transition: all ease 0.5s;}'
+      div(class='content' data-name='message' style='display:flex;flex-direction:row;')
+        div(style='background-color:khaki;width:20%;height: 80vh;overflow-y:scroll;')
+          p(style='border-bottom: 2px solid silver;margin:0;padding:7px;')='happiness@gmail.com'
+            b(style='display:inline-block;color:green;background-color:green;float:right;height:20px;width:20px;font-size: 20px;border-radius:50%;')='.'
+          input(type='color')
+        div(style='background-color:rgba(171,153,219,0.5);width:80%;padding: 7px;position:relative;overflow-y:scroll;')
+          p(style='background-color: rgb(137, 122, 209);padding: 20px;display: inline-block;width: 50%;border-radius: 10px;')='Hello, I Need An Upgrade'
+          p(style='background-color: rgb(137, 122, 209);padding: 20px;display: inline-block;width: 50%;border-radius: 10px;float:right;')='Hi James, What Type Of Upgrade'
+          p(style='background-color: rgb(137, 122, 209);padding: 20px;display: inline-block;width: 50%;border-radius: 10px;')='Hello, I Need A Damn Upgrade'
+          p(style='background-color: rgb(137, 122, 209);padding: 20px;display: inline-block;width: 50%;border-radius: 10px;float:right;')='Yo You Got Some Wool StuckIn Your Brain MuthaF**ker?'
+          div(style='position:absolute;bottom:0;width:100%;')
+            input(type='search' style='width: 99%;padding: 10px;padding-right: 160px;')
+            select(style='padding:10px;color:black;outline:2px dashed green;position:absolute;top:0;right:60px;')
+              option='File'
+            b(style='padding:10px;color:black;outline:2px dashed green;position:absolute;top:0;right:10px;')='>'
+      div(style='hoverflow-y:scroll;')
+        table(style='border:1px solid black;border-collapse:collapse;width:100%;')
+          tr
+            th(style='border:1px solid silver;width:15%;')='user'
+            th(style='border:1px solid silver;width:15%;')='mail'
+            th(style='border:1px solid silver;width:15%;')='paid'
+            th(style='border:1px solid silver;width:15%;')='payment date'
+            th(style='border:1px solid silver;width:15%;')='domain'
+            th(style='border:1px solid silver;width:15%;')='download resource'
+          
+          
+        script(src='/javascripts/superuser.js')

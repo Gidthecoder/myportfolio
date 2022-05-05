@@ -1,0 +1,31 @@
+[
+	{
+		"info":{
+			"firstname":"Akinsanmi",
+			"lastname":"Gideon",
+			"email":"akinsanmi20700@gmail.com",
+			"phoneno":"07025672897"
+		},"cart":[
+		{
+			"name":"semo",
+			"title":"Semo",
+			"amount":"2000","qty":1
+		},{
+			"name":"rice",
+			"title":"Rice and Beans",
+			"amount":"4000","qty":1
+		}],"delivery":{
+			"type":"pickup",
+			"info":{
+				"country":"Nigeria",
+				"state":"lagos",
+				"city":"Bariga",
+				"address":"3,kayode adebiyi street"
+			}
+		}, "date": {
+			"year":"2022",
+			"month":"4",
+			"date":"15"
+		}, "value":"6000"
+	}
+]

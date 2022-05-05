@@ -1,0 +1,4 @@
+{
+	"local": [{"product":"All", "location":{"country":"NIGERIA","state":"LAGOS","city":"all"}, "carrier":"local", "rate":"2000"}],
+	"pickup": [{"name":"justrite lagos", "pics":"pics.png","openingtime":"12:40","closingtime":"23:10","country":"Nigeria","state":"lagos","city":"Bariga","address":"3,kayode adebiyi street","phoneno":"07014728658","pickupinfo":"scream 'GIDDY' when you reach the alley."}]
+}

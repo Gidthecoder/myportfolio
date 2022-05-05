@@ -1,0 +1,112 @@
+doctype html
+html(lang='en')
+  head
+    title rme's data
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="enjoy variety of foods from different culture")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(id='body')
+    p(class='closequestion' style='display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgb(0,0,0,0.5);z-index:2;margin:0;').
+    //-question tag-//
+    div(class='questionmanual' style='display:none;position:fixed;z-index:3;background-color:white;width:50%;height:30%;top:30%;left:25%;border-radius:10px;')
+        div(class='manual' style='margin-top:30px;margin-bottom:30px;border-top:2px solid silver;border-bottom:2px solid silver;width:100%;height:75%;overflow-y:scroll;')
+          h3='search functionalities'
+          
+          
+    style
+      include ../../user ui styling/general.css
+    
+           
+    section(class='analyticsbody' data-name='web' )
+              div(style='overflow-x:scroll;')
+                table(style='border:1px solid black;border-collapse:collapse;width:100%;')
+                    tr(style='background-color: black;color:white;')
+                      th(style='border: 1px solid white;')='page'
+                      th(style='border: 1px solid white;')='tag'
+                      th(style='border: 1px solid white;')='year'
+                      th(style='border: 1px solid white;')='month'
+                      th(style='border: 1px solid white;')='date'
+                      th(style='border: 1px solid white;')='day'
+                      th(style='border: 1px solid white;')='sessions created'
+                      th(style='border: 1px solid white;')='views'
+                      th(style='border: 1px solid white;')='views/session'
+                      th(style='border: 1px solid white;')='sessions'
+                      th(style='border: 1px solid white;')='location'
+                      th(style='border: 1px solid white;')='traffic source'
+                      th(style='border: 1px solid white;')='average time'
+                      th( style='border: 1px solid white;')='webhooks'
+                    each item in pages
+                      tr
+                        th=item.url
+                        th
+                          each source in item.tag
+                            b=source
+                        th=item.year
+                        th=item.month
+                        th=item.date
+                        th=item.day
+                        th=item.sessioncreated
+                        th=item.views
+                        th=item.viewspersession
+                        th=item.session
+                        th
+                          div(style='height:100px;overflow-y:scroll;')
+                            table(style='width:100%;border-collapse:collapse;')
+                              tr
+                                th='source'
+                                th='sessions'
+                              each source in item.location
+                                tr
+                                  th=source.name
+                                  th=source.qty
+                        th
+                          div(style='height:100px;overflow-y:scroll;')
+                            table(style='width:100%;border-collapse:collapse;')
+                              tr
+                                th='source'
+                                th='sessions'
+                              each source in item.trafficsource
+                                tr
+                                  th=source.name
+                                  th=source.qty
+                        th=item.avgtime
+                        th
+                         div(style='height:140px;overflow-y:scroll;')
+                          each source in item.webhook
+                            if source.name == 'sales'
+                              div(style='border: 1px solid silver;margin-bottom:10px;')
+                                p(style='background-color:silver;margin:0;')=source.name
+                                p=source.qty
+                            else if source.name == 'addedtocart'
+                              div(style='border: 1px solid silver;margin-bottom:10px;')
+                                p(style='background-color:silver;margin:0;')=source.name
+                                if source.qty.length > 0
+                                  each stuff in source.qty
+                                    p(style='display:flex;flex-direction:row;margin:0;')
+                                      b=stuff.name + ':'
+                                      b(style='flex:1;')=stuff.qty
+                                else 
+                                  p=''
+                            else if source.name == 'removedfromcart'
+                              div(style='border: 1px solid silver;margin-bottom:10px;')
+                                p(style='background-color:silver;margin:0;')=source.name
+                                if source.qty.length > 0
+                                  each stuff in source.qty
+                                    p(style='display:flex;flex-direction:row;margin:0;')
+                                      b=stuff.name + ':'
+                                      b(style='flex:1;')=stuff.qty
+                                else 
+                                  p=''
+                            else if source.name == 'checkedout'
+                              div(style='border: 1px solid silver;margin-bottom:10px;')
+                                p(style='background-color:silver;margin:0;')=source.name
+                                if source.qty.length > 0
+                                  each stuff in source.qty
+                                    p(style='display:flex;flex-direction:row;margin:0;')
+                                      b=stuff.name + ':'
+                                      b(style='flex:1;')=stuff.qty
+                                else 
+                                  p=''
+    script(src='/javascripts/user/data/web.js' defer)

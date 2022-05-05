@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="author" content="Gideon Akinsanmi")
+    meta(name="description" content="entry point for managing sales, content, data and everything business-related")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css")
+  body(style='padding:10px;margin:0;font-family:Poppins;')
+        style
+          include ../user ui styling/general.css
+        div(style='padding-bottom:5px;border-bottom:1px solid silver;')
+          b(class='cusslink' data-name='dashboard' style='display:inline-block;margin-right:5px;')='dashboard'
+          b(class='cusslink' data-name='customer' style='display:inline-block;margin-right:5px;')='customers'
+        div(class='cusscontent' data-name='dashboard')
+           div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='leads'
+              p(style='text-align:center;font-size:35px;margin:0;')='10'
+           div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='sales pipeline'
+              p(style='text-align:center;font-size:35px;margin:0;')='10000'
+           div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='sales funnel'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+           div(style='display:inline-block;width:30%;height:30%;border:1px solid silver;border-radius:5px;margin:7px;')
+              p(style='color:white;background-color:blue;text-align:center;')='highest ranked customer'
+              p(style='text-align:center;font-size:35px;margin:0;')='chart'
+           div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button='Request More Features'
+              style='button.request {margin: 10px;}'
+        div(class='cusscontent' data-name='customer' style='display:none;')
+           div
+            div(style='overflow:scroll;')
+              table(style='border:1px solid black;border-collapse:collapse;width:100%;')
+                    tr(style='background-color: black;color:white;')
+                      th='name'
+                      th='email'
+                      th='location'
+                      th='sales'
+                      th='orders'
+                      th='interaction'
+                      th='web activities'
+                    tr
+                      th='James'
+                      th='james@gmail.com'
+                      th='Nigeria'
+                      th='20000'
+                      th: button='view orders'
+                      th: button='view interactions'
+                      th: button='view activities'
+            div
+                  h2(style='text-align:center;')='Most People Requested For:'
+                  button='Workflow'
+                  button='Sales Pipeline'
+                  button='Request More Features'
+              style='button.request {margin: 10px;}'
+        script(src='/javascripts/user/customer.js' defer)
+           
