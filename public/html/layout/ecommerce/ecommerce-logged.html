@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(245,245,245);'>
+			
+			<header>
+				<style>
+					header {display:flex;flex-direction:row;padding:5px;background-color:white;margin-bottom:10px;}
+					header div {flex:1;margin-right:5px;padding-right:15px;}
+					header div.menu {display:none;}
+					header div b {font-size:22px;}
+					
+					@media screen and (max-width: 900px) {
+						header b.user {float:right;}
+						header div.menu {display:inline-block;}
+					}
+				</style>
+				<div class='menu'>
+					<b class='menubar'>Menu</b>
+				</div>
+				<div>
+					<b>logo</b>
+					<b class='user'>user</p>
+				</div>
+				<div>
+				  <i class='fas fa-shopping-cart'></i>
+				</div>
+			</header>
+			
+			<article>
+				<style>
+					article {display:flex;flex-direction:row;flex-wrap:nowrap;}
+					article section.firstcontainer {width:18%;margin-right:2%;padding:5px;}
+					article section.firstcontainer p {padding:5px;border-radius:5px;cursor:pointer;}
+					article section.firstcontainer p:hover {background-color: silver;}
+					
+					article section.secondcontainer {width:50%;background-color:white;}
+					article section.secondcontainer h2 {border-bottom:1px solid silver;}
+					article section.secondcontainer div.saved {display:flex;flex-direction:row;flex-wrap:wrap;}
+					article section.secondcontainer div.saved img {width:100%;height:200px;}
+					article section.secondcontainer div.saved p {padding:5px;color:white;text-align:center;}
+					article section.secondcontainer div.saved p.add {background-color:blue;}
+					article section.secondcontainer div.saved p.remove {background-color:red;}
+					
+					article section.thirdcontainer {width:28%;margin-left:2%;height:100vh;overflow-y:scroll;}
+					article section.thirdcontainer div.msg {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;padding:10px;margin-bottom:10px;}
+					article section.thirdcontainer div.msg img {width:80px;height:80px;}
+					article section.thirdcontainer div.msg div.text {width:calc(100% - 100px);margin-left:20px;}
+					article section.thirdcontainer div.msg div.text p.desc {white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+					
+					@media screen and (max-width: 900px) {
+						article section.firstcontainer {display: none;}
+						article section.firstcontainer {position:absolute;background-color:white;}
+						
+						article section.secondcontainer {width: 100%;}
+						article section.thirdcontainer {display: none;}
+					}
+				</style>
+				<section class='checkoutinfo' style='display:none;'>
+					<style>
+						article section.checkoutinfo {position:fixed;width:80%;left:18%;height:80vh;overflow-y:scroll;background-color:white;box-shadow:0px 0px 5px;}
+						article section.checkoutinfo p.back b {display:inline-block;padding:5px;margin-left:10px;border:1px solid silver;}
+						article section.checkoutinfo section.infos {display:flex;flex-direction:row;flex-wrap:wrap;}
+						
+						article section.checkoutinfo section.infos input {width: 100%;padding:5px;background-color: rgb(245,245,245);border-radius:7px;outline:none;margin-bottom:20px;}
+						
+						article section.checkoutinfo section.infos button {padding: 5px;}
+					</style>
+					<p class='back'> <b>&larr; back</b> </p>
+					<section class='infos'>
+						<div style='width:45%;margin:auto;margin-top:0px;border:1px solid silver;padding:5px;'>
+							<h3>Personal Information</h3>
+							<label>Name:</label>
+							<input type='search'>
+							<label>Email:</label>
+							<input type='search'>
+							<label>Phone No:</label>
+							<input type='number'>
+							<p><button>SAVE</button></p>
+						</div>
+						<div style='width:45%;margin:auto;border:1px solid silver;padding:5px;'>
+							<h3>Shipping Information</h3>
+							<label>Country:</label>
+							<input type='search'>
+							<label>State:</label>
+							<input type='search'>
+							<label>City:</label>
+							<input type='search'>
+							<label>Zip Code:</label>
+							<input type='number'>
+							<label>Address:</label>
+							<input type='search'>
+							<p><button>SAVE</button></p>
+						</div>
+						<div style='width:45%;margin-left:2%;border:1px solid silver;padding:5px;'>
+							<h3>Payment Information</h3>
+							<label>Card Number:</label>
+							<input type='search' value='**** **** **** 2492'>
+							<label>Exp/Date:</label>
+							<input type='search' value='**/**'>
+							<label>CSV:</label>
+							<input type='search' value='***'>
+							<label>Pin:</label>
+							<input type='number' value='****'>
+							
+							<p><button>SAVE</button></p>
+						</div>
+					</section>
+				</section>
+				
+				
+				<section class='firstcontainer menubarcontainer'>
+					<p class='checkout'>checkout info</p>
+					<p>become a seller</p>
+				</section>
+				<section class='secondcontainer'>
+					<h2>Saved product</h2>
+					<div class='saved'>
+						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
+							<img src='/images/amz/kitchen.png'>
+							<p class='add'>Add To Cart</p>
+							<p class='remove'>Remove</p>
+						</div>
+						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
+							<img src='/images/amz/kitchen.png' >
+							<p class='add'>Add To Cart</p>
+							<p class='remove'>Remove</p>
+						</div>
+						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
+							<img src='/images/amz/kitchen.png' >
+							<p class='add'>Add To Cart</p>
+							<p class='remove'>Remove</p>
+						</div>
+						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
+							<img src='/images/amz/kitchen.png'>
+							<p class='add'>Add To Cart</p>
+							<p class='remove'>Remove</p>
+						</div>
+					</div>
+					<h2>Purchase History</h2>
+				</section>
+				<section class='thirdcontainer'>
+					<div class='msg'>
+						<img src='/images/g.jpg'>
+						<div class='text'>
+							<p><b>Seller</b></p>
+							<p class='desc'>description description description description</p>
+						</div>
+					</div>
+					<div class='msg'>
+						<img src='/images/g.jpg'>
+						<div class='text'>
+							<p><b>Seller</b></p>
+							<p class='desc'>description description description description</p>
+						</div>
+					</div>
+					<div class='msg'>
+						<img src='/images/g.jpg'>
+						<div class='text'>
+							<p><b>Seller</b></p>
+							<p class='desc'>description description description description</p>
+						</div>
+					</div>
+					<div class='msg'>
+						<img src='/images/g.jpg'>
+						<div class='text'>
+							<p><b>Seller</b></p>
+							<p class='desc'>description description description description</p>
+						</div>
+					</div>
+					
+				</section>
+				<script>
+					let checkout = document.querySelector('.checkout');
+					let checkoutinfo = document.querySelector('.checkoutinfo');
+					
+					checkout.onclick = function(){
+						if(checkoutinfo.style.display == 'none'){
+							checkoutinfo.style.display = 'block'
+						} else {
+							checkoutinfo.style.display = 'none'
+						}
+					}
+					
+					let menubar = document.querySelector('.menubar');
+					let menubarcontainer = document.querySelector('.menubarcontainer');
+					
+					menubar.onclick = function(){
+						if(menubarcontainer.style.display == 'none'){
+							menubarcontainer.style.display = 'block'
+						} else {
+							menubarcontainer.style.display = 'none'
+						}
+					}
+				</script>
+				
+				<section class='fourthcontainer'>
+					<style>
+						section.fourthcontainer {position:fixed;bottom:0;display:flex;flex-direction:row;width:100%;flex-wrap:nowrap;background-color:silver;}
+						section.fourthcontainer p {width: 50%;text-align:center;transition:all 0.5s ease;}
+						section.fourthcontainer p:hover {background-color:black;color:white;}
+					</style>
+					<p>orders</p>
+					<p>messages</p>
+				</section>
+			</article>
+			
+			<style>
+				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+  </body>
+</html>

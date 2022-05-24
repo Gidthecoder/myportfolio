@@ -1,0 +1,629 @@
+<html>
+  <head>
+    <style>
+	  b.pjdesc:hover {background-color:silver;}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+  </head>
+  <body style='padding:0;margin:0;background-color: white;'>
+		
+			<article>
+				<section>
+					<style>
+						header.firstcontainera b.cart i	{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera b.cart i:hover {background-color:rgb(245,245,245);}
+						header.firstcontainera b.cart i:active {background-color: silver;}
+						header.firstcontainera 	{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;}
+						header.firstcontainera b.firstchild 		{display:none;flex:1;text-align:left;color: rgb(50,111,210);}
+						
+						
+						header.firstcontainera b.thirdchild 		{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+						header.firstcontainera nav.fourthchild 		{flex:1;text-align:right;padding:0;margin:0;padding-right:50px;}
+						header.firstcontainera nav.fourthchild b.register 		{color:white;background-color: rgb(50,111,210)}
+						header.firstcontainera nav.fourthchild b 		{cursor: pointer;}
+						
+						
+					</style>
+					<header class='firstcontainera'>
+						<b class='firstchild'> <i class='fas fa-bars'></i></b>
+						<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40'> 
+						<b class='thirdchild'>PETAL</b>
+						<nav class='fourthchild'>
+							<a href='/demo/ecommerce/login'><b>login</b></a>
+							<a href='/demo/ecommerce/register'><b class='register'>Register</b></a>
+						</nav>
+						<b class='cart'>  <i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></b>
+					</header>
+					<section class='firstcontainerb'>
+					    <style>
+							section.firstcontainerb {display:none;position:absolute;width:50%;right:5px;box-shadow:0px 0px 5px black;background-color:white;}
+							
+						
+						    section.firstcontainerb div.secondchild {border-top:1px solid silver;border-bottom:1px solid silver;flex:1;text-align:right;padding-right:10px;}
+							section.firstcontainerb div.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+							section.firstcontainerb div.thirdchild {margin:5px;}
+							section.firstcontainerb div.firstchild {overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;}
+							
+							section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;margin:5px;display:inline-block;float:right;}
+							
+							section.firstcontainerb div.firstchild div.items img {width:50px;height:50px;background-color:red;}
+						    section.firstcontainerb div.firstchild div.items div.secondchild {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:red;}
+							section.firstcontainerb div.firstchild div.items div.secondchild section {background-color:white;padding:5px;width:50%;} 
+							
+							section.firstcontainerb div.fourthchild {padding:10px;}
+							section.firstcontainerb h3 {font-size:17px;}
+							section.firstcontainerb p,button,input {font-size:14px;}
+							section.firstcontainerb img {margin:10px;}
+							section.firstcontainerb button {border-radius: 50%}
+							section.firstcontainerb input {width:50px;padding:5px;}
+							
+							@media screen and (max-width: 900px) {
+								section.firstcontainerb div.firstchild {height: 50vh;}
+								section.firstcontainerb {width: 80%;}
+								section.firstcontainerb h3 {font-size:14px;}
+								section.firstcontainerb p,button,input {font-size:13px;}
+							}
+							@media screen and (max-width: 500px) {
+								section.firstcontainerb div.firstchild {height: 70vh;}
+								section.firstcontainerb div.firstchild div.items div.secondchild {flex-direction:column;}
+								section.firstcontainerb div.firstchild div.items div.secondchild section {width: auto;}
+								section.firstcontainerb input {width:30px;padding:5px;}
+								section.firstcontainerb {width: 99%;right:0px;}
+								section.firstcontainerb h3 {font-size:13px;}
+								section.firstcontainerb p,button,input {font-size:12px;}
+								section.firstcontainerb p.remove {font-size: 10px;}
+							}
+						</style>
+						<div class='firstchild' >
+							
+						</div>
+						<div class='secondchild'>
+							
+						</div>
+						<p class='thirdchild'></p>
+						<script>
+							let cart = document.querySelector('header.firstcontainera b.cart i')
+							let cartdetails = document.querySelector('.firstcontainerb');
+							
+							cart.onclick = function(){
+								if(cartdetails.style.display == 'none'){
+									cartdetails.style.display = 'block'
+									//fetch request to update server
+									fetch('/demo/ecommerce/cartdetails')
+										.then(res => res.json() )
+										.then(resp => {
+											
+											let checkout = document.querySelector('section.firstcontainerb p.thirdchild');
+											
+											if(resp.status == '400'){
+												return document.querySelector('section.firstcontainerb div.firstchild').innerHTML = '<h1>EMPTY CART</h1>'
+
+											}
+											document.querySelector('section.firstcontainerb div.secondchild').innerHTML = resp.total
+											
+											document.querySelector('section.firstcontainerb div.firstchild').innerHTML = resp.cart
+											
+											checkout.innerHTML = resp.checkout
+											
+										})
+								} else {
+									cartdetails.style.display = 'none'
+								}
+							}
+							setTimeout(function(){
+								fetch('/demo/ecommerce/cartlength')
+									.then(res => res.text() )
+									.then(resp => {
+										document.querySelector('span.cartlength').textContent = resp
+									})
+							}, 1000)
+						</script>
+					</section>
+					<header class='secondcontainer' >
+						<style>
+							header.secondcontainer 		{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;padding:10px;}
+							header.secondcontainer div.firstchild 		{flex:1;overflow-y:hidden;overflow-x:Scroll;display:block;white-space:nowrap;margin-right:20px;}
+							header.secondcontainer div.firstchild a 		{cursor:pointer;display:inline-block;text-decoration:none;padding:2px;border: 1px solid white;transition: all 0.5s ease;color: rgb(50,111,210);}
+							header.secondcontainer div.firstchild a:hover 		{border: 1px solid rgb(50,111,210);}
+							header.secondcontainer div.secondchild 		{flex:1;}
+							header.secondcontainer a 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+							
+							header.secondcontainer input.search 		{width:100%;padding:5px;display:inline-block;font-size:18px;border-radius:14px;outline:none;border: 5px solid rgb(50,111,210);}
+							
+							@media screen and (max-width: 900px) {
+								header.secondcontainer div.firstchild 		{display:none;}
+								header.firstcontainera nav.fourthchild 		{display:none;}
+								header.firstcontainera b.cart 		{flex:1;text-align:right;}
+								header.firstcontainera b.firstchild 		{display:inline-block;}
+							}
+						</style>
+						<div class='firstchild'> 
+							<a href='/demo/ecommerce/cat'><b>Electronic</b></a>
+							<a href='/demo/ecommerce/cat'><b>Children</b></a>
+							<a href='/demo/ecommerce/cat'><b>Skincare</b></a>
+							<a href='/demo/ecommerce/cat'><b>Clothing</b></a>
+							<a href='/demo/ecommerce/cat'><b>Entertainment</b></a>
+							<a href='/demo/ecommerce/cat'><b>Cleaning</b></a>
+						</div>
+						<div class='secondchild'>
+							<input class='search' list='suggest' type='search' placeholder="i'm looking for"/>
+							<datalist id='suggest'>
+								<option>Jacket</option>
+							</datalist>
+						</div>
+					</header>
+				</section>
+		  
+				<section class='thirdcontainer'>
+					<style>
+					    section.thirdcontainer {display:none;}
+						section.thirdcontainer p.link01 		{cursor:pointer;background-color: rgb(50,111,210);color:white;border-radius:14px;text-align:center;}
+						section.thirdcontainer 		{display:none;background-color:white;padding-left:10px;padding-right:10px;}
+						section.thirdcontainer p.link11		{cursor:pointer;border-bottom: 1px solid silver;padding-left:20px;}
+						section.thirdcontainer p.link11:hover		{padding-left:40px;background-color:silver;}
+					</style>
+					<a href='/demo/ecommerce/register'><p class='link01' >sign up</p></a>
+					<a href='/demo/ecommerce/login'><p class='link01' >login</p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Electronic</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Children</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Skincare</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Clothing</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Entertainment</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Cleaning</b></p></a>
+			
+					<script>
+						let menu = document.querySelector('.firstchild')
+						let othernav = document.querySelector('.thirdcontainer')
+			  
+						function open(x) {
+							if(x.matches) {
+								othernav.style.display = 'none'
+							} 
+						}
+						let x = window.matchMedia("(min-width: 901px)")
+						open(x)
+						x.addListener(open)
+			
+						menu.onclick = function (){
+							if(othernav.style.display == 'none'){
+								othernav.style.display = 'block'
+							} else {
+								othernav.style.display = 'none'
+							}
+						}
+					</script>
+				</section>
+				
+				<section class='fourthcontainer'>
+					<style>
+						section.fourthcontainer {display:flex;flex-direction:row;height:50vh;padding-top:40px;padding-left:10%;padding-right:10%;background-image: linear-gradient(to bottom right, rgb(50,111,210), rgb(51,132,142) )}
+						section.fourthcontainer div {width:50%;}
+						section.fourthcontainer div.firstchild {color:white;}
+						section.fourthcontainer div.firstchild b.add {transition: all 0.5s ease;cursor:pointer;background-color:white;color:rgb(50,111,210);display:inline-block;margin-right:20px;padding:5px;}
+						section.fourthcontainer div.firstchild b.add:hover {color:white;background-color:rgb(50,111,210);border: 1px solid white;}
+						section.fourthcontainer div.firstchild b.add:active {background-color:white;color:rgb(50,111,210);}
+						
+						section.fourthcontainer div.secondchild img{width:100%;height:70%;}
+						@media screen and (max-width: 900px) {
+							section.fourthcontainer {flex-direction:column;height:auto;}
+							section.fourthcontainer div {width:100%;}
+							section.fourthcontainer div.firstchild {order:2;}
+							section.fourthcontainer div.secondchild {order:1;}
+						}
+						@media screen and (max-width: 600px) {
+							section.fourthcontainer {padding-left:5%;padding-right:5%;}
+						}
+						@media screen and (max-width: 400px) {
+							section.fourthcontainer {padding-left:2%;padding-right:2%;}
+						}
+						
+						button.minusplus {display:inline-block;padding:5px;padding-left:10px;padding-right:10px;font-size:20px;margin:0;}
+						input.minusplus {display:inline-block;padding:5px;font-size:20px;margin:0;width:100px;outline:none;}
+					</style>
+					
+					<div class='firstchild'>
+						<h1>TEETH WHITENING PASTE</h1>
+						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
+						<h3>$8000</h3>
+						<p> 
+							<b class='add' data-name='Teeth Whitening' data-amount='8000' data-pics='/images/amz/beauty11.png'>Add To Cart</b>
+							<b style='display:none;' class='modify' data-name='Teeth Whitening' data-amount='8000' data-pics='/images/amz/beauty11.png'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
+							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
+						</p>
+					</div>
+					<div class='secondchild'>
+						<img src='/images/amz/beauty11.png'>
+					</div>
+					
+				</section>
+		  
+		  
+				<section class='fifthcontainer'>
+					<style>
+						section.fifthcontainer {padding-left:20%;padding-right:20%;}
+						section.fifthcontainer h2 {text-align:center;}
+						section.fifthcontainer div.secondchild{display:flex;flex-direction:row;flex-wrap:wrap;}
+						section.fifthcontainer div.secondchild div.kitchen {width: 25%;margin-right:8%;}
+						section.fifthcontainer div.secondchild div.kitchen p.amount {color:rgb(50,111,210);}
+						section.fifthcontainer div.secondchild div.kitchen img {width:100%;height:250px;}
+						section.fifthcontainer div.secondchild div.kitchen b.add {transition: all 0.5s ease;cursor:pointer;color:white;background-color: rgb(50,111,210);padding:5px;}
+						section.fifthcontainer div.secondchild div.kitchen b.add:hover {background-color:white;color: rgb(50,111,210);border: 1px solid rgb(50,111,210);}
+						section.fifthcontainer div.secondchild div.kitchen b.add:active {color:white;background-color: rgb(50,111,210);}
+						section.fifthcontainer div.secondchild div.align {padding:10px;}
+						@media screen and (max-width: 900px) {
+							section.fifthcontainer div.secondchild div.kitchen {width: 45%;margin-right:5%;}
+						}
+						@media screen and (max-width: 600px) {
+							section.fifthcontainer {padding-left:10%;padding-right:10%;}
+						}
+						@media screen and (max-width: 400px) {
+							section.fifthcontainer {padding-left:2%;padding-right:2%;}
+						}
+					</style>
+					<h2>TOP KITCHEN DEALS</h2>
+					<div class='secondchild'>
+						<div class='kitchen'>
+							<img src='/images/amz/kitchen.png'>
+							<div class='align'>
+								<h3>Title</h3>
+								<p class='amount'>$200</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+						<div class='kitchen'>
+							<img src='/images/amz/kitchen7.png'>
+							<div class='align'>
+								<h3>Title</h3>
+								<p class='amount'>$500</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Kitchen Item 1' data-amount='500' data-pics='/images/amz/kitchen7.png'>Add To Cart</b></p>
+								<p style='display:none;'class='modify' data-name='Kitchen Item 1' data-amount='500' data-pics='/images/amz/kitchen7.png'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+						<div class='kitchen'>
+							<img src='/images/amz/kitchen3.png'>
+							<div class='align'>
+								<h3>Title</h3>
+								<p class='amount'>$900</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Kitchen Item 2' data-amount='900' data-pics='/images/amz/kitchen3.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Kitchen Item 2' data-amount='900' data-pics='/images/amz/kitchen3.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+					</div>
+				</section>
+		  
+				<section class='sixthcontainer'>
+					<style>
+						section.sixthcontainer {display:flex;flex-direction:row;padding-top:40px;padding-left:10%;padding-right:10%;background-image: linear-gradient(to bottom right, rgb(51,132,142), rgb(50,111,210) )}
+						section.sixthcontainer div {width:48%;margin-right:2%;color:white;}
+						section.sixthcontainer div img {width:100%;height:300px;}
+						section.sixthcontainer div b.add {transition: all 0.5s ease;cursor:pointer;background-color:white;color:rgb(50,111,210);display:inline-block;margin-right:20px;padding:5px;}
+						section.sixthcontainer div b.buy {transition: all 0.5s ease;cursor:pointer;background-color:black;color:white;display:inline-block;margin-right:20px;padding:5px;}
+						section.sixthcontainer div b.add:hover {color:white;background-color:rgb(50,111,210);border: 1px solid white;}
+						section.sixthcontainer div b.add:active {background-color:black;color:white;}
+						section.sixthcontainer div b.buy:hover {color:black;background-color:white;border: 1px solid white;}
+						section.sixthcontainer div b.buy:active {background-color:black;color:white;}
+						
+						@media screen and (max-width: 900px) {
+							section.sixthcontainer {flex-direction:column;height:auto;}
+							section.sixthcontainer div {width:100%;}
+						}
+						@media screen and (max-width: 600px) {
+							section.sixthcontainer {padding-left:5%;padding-right:5%;}
+						}
+						@media screen and (max-width: 400px) {
+							section.sixthcontainer {padding-left:2%;padding-right:2%;}
+						}
+					</style>
+					<div>
+						<img src='/images/amz/beauty4.png'>
+						<h3>TEETH WHITENING PASTE</h3>
+						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
+						<p> 
+							<b class='add' data-name='Teeth Whitening 1' data-amount='8000' data-pics='/images/amz/beauty4.png'>Add To Cart</b> 
+							<b style='display:none;'  class='modify' data-name='Teeth Whitening 1' data-amount='8000' data-pics='/images/amz/beauty4.png'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></b>
+							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
+						</p>
+					</div>
+					<div >
+						<img src='/images/amz/toy2.png' >
+						<h3>TEETH WHITENING PASTE</h3>
+						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
+						<p> 
+							<b class='add' data-name='Teeth Whitening 2' data-amount='8000' data-pics='/images/amz/toy2.png'>Add To Cart</b> 
+							<b style='display:none;' class='modify' data-name='Teeth Whitening 2' data-amount='8000' data-pics='/images/amz/toy2.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
+							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
+						</p>
+					</div>
+				</section>
+		  
+				<section class='seventhcontainer'>
+					<style>
+						section.seventhcontainer {padding-left:20%;padding-right:20%;}
+						section.seventhcontainer h2 {text-align:center;}
+						section.seventhcontainer div.secondchild {display:flex;flex-direction:row;flex-wrap:wrap;}
+						section.seventhcontainer div.secondchild div.cats {cursor:pointer;width: 25%;margin-right:8%;}
+						section.seventhcontainer div.secondchild div.cats div {padding:10px;}
+						section.seventhcontainer div.secondchild div.cats img {width:100%;height:250px;}
+						@media screen and (max-width: 900px) {
+							section.seventhcontainer div.secondchild div.cats {width: 45%;margin-right:5%;}
+						}
+						@media screen and (max-width: 600px) {
+							section.seventhcontainer {padding-left:10%;padding-right:10%;}
+						}
+						@media screen and (max-width: 400px) {
+							section.seventhcontainer {padding-left:2%;padding-right:2%;}
+						}
+					</style>
+					<h2 >CATEGORIES</h2>
+					<div class='secondchild'>
+						<div class='cats' >
+							<img src='/images/amz/computer.png' >
+							<div>
+								<h3>Electronics</h3>
+							</div>
+						</div>
+						<div class='cats'>
+							<img src='/images/amz/toy6.png' >
+							<div>
+								<h3>Children</h3>
+							</div>
+						</div>
+						<div class='cats'>
+							<img src='/images/amz/beauty.png' >
+							<div>
+								<h3>Skincare</h3>
+							</div>
+						</div>
+						<div class='cats'>
+							<img src='/images/amz/apparel.png' >
+							<div style='padding:10px;'>
+								<h3>Clothing</h3>
+							</div>
+						</div>
+						<div class='cats'>
+							<img src='/images/amz/headset.png' >
+							<div>
+								<h3>Entertainment</h3>
+							</div>
+						</div>
+						<div class='cats'>
+							<img src='/images/amz/beauty9.png'>
+							<div>
+								<h3>Cleaning</h3>
+							</div>
+						</div>
+						<p style='margin:0;'><a href='#'>see more</a></p>
+					</div>
+				</section>
+		  
+				<section class='eightcontainer product4' >
+					<style>
+						section.eightcontainer {padding-left:10%;padding-right:10%;}
+						section.eightcontainer h2.firstchild {text-align:left;}
+						section.eightcontainer div.secondchild {display:flex;flex-direction:row;flex-wrap:wrap;}
+						section.eightcontainer div.secondchild div.deals {width: 25%;margin-right:8%;}
+						section.eightcontainer div.secondchild div.deals p.amount {color:rgb(50,111,210);}
+						section.eightcontainer div.secondchild div.deals div {padding:10px;}
+						section.eightcontainer div.secondchild div.deals img {width:100%;height:250px;}
+						section.eightcontainer div.secondchild div.deals b.add {transition: all 0.5s ease;cursor:pointer;color:white;background-color: rgb(50,111,210);padding:5px;}
+						section.eightcontainer div.secondchild div.deals b.add:hover {background-color:white;color: rgb(50,111,210);border: 1px solid rgb(50,111,210);}
+						section.eightcontainer div.secondchild div.deals b.add:active {color:white;background-color: rgb(50,111,210);}
+						
+						@media screen and (max-width: 900px) {
+							section.eightcontainer div.secondchild div.deals {width: 45%;margin-right:5%;}
+						}
+						@media screen and (max-width: 600px) {
+							section.eightcontainer {padding-left:5%;padding-right:5%;}
+						}
+						@media screen and (max-width: 400px) {
+							section.eightcontainer {padding-left:2%;padding-right:2%;}
+						}
+					</style>
+					<h2 class='firstchild'>DEALS UNDER $50</h2>
+					<div class='secondchild'>
+						<div class='deals'>
+							<img src='/images/amz/toy1.png'>
+							<div>
+								<h3>Title</h3>
+								<p class='amount'>$200</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Deals 1' data-amount='200' data-pics='/images/amz/toy1.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Deals 1' data-amount='200' data-pics='/images/amz/toy1.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+						<div class='deals'>
+							<img src='/images/amz/top2.png'>
+							<div>
+								<h3>Title</h3>
+								<p class='amount'>$200</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Deals 2' data-amount='200' data-pics='/images/amz/top2.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Deals 2' data-amount='200' data-pics='/images/amz/top2.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+						<div class='deals'>
+							<img src='/images/amz/top4.png'>
+							<div>
+								<h3>Title</h3>
+								<p class='amount'>$200</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Deals 3' data-amount='200' data-pics='/images/amz/top4.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Deals 3' data-amount='200' data-pics='/images/amz/top4.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+						<div class='deals' >
+							<img src='/images/amz/top1.png'>
+							<div>
+								<h3>Title</h3>
+								<p class='amount'>$200</p>
+								<p>Description</p>
+								<p><b class='add' data-name='Deals 4' data-amount='200' data-pics='/images/amz/top1.png'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Deals 4' data-amount='200' data-pics='/images/amz/top1.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+			<style>
+				h1 {font-size: 35px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+			<footer class='ninthcontainer'>
+				<style>
+					footer {background-color:black;color:white;}
+					footer p {text-align:center;}
+					footer b.terms {cursor:pointer;}
+					footer p.copy {margin:0;padding:5px;text-align:center;}
+				</style>
+				<p> 
+					<b>terms |</b>
+					<b>privacy policy |</b>
+					<b>refund policy</b>
+				</p>
+				<p class='copy'>copyright &copy; 2022</p>
+			</footer>
+			<script>
+				let addtocart = document.querySelectorAll('.add')
+				let cartlength = document.querySelector('.cartlength')
+				
+				for(let i=0; i<addtocart.length; i++){
+					addtocart[i].onclick = function(e){
+						
+						let obj = {name:e.target.dataset.name, amount:e.target.dataset.amount, pics: e.target.dataset.pics, qty:1}
+						fetch('/demo/ecommerce/cartadd', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+							.then(res => res.text() )
+							.then(resp => {
+								cartlength.textContent = Number(cartlength.textContent) + 1
+								let sibling = (e.target.nextElementSibling? e.target.nextElementSibling: e.target.parentElement.nextElementSibling)
+								sibling.style.display = 'inline-block'
+								e.target.style.display = 'none'
+								
+								let qty = sibling.querySelector('input.minusplus')
+								let plus = sibling.querySelector('button.plus');
+								let minus = sibling.querySelector('button.minus');
+								qty.value = 1
+								
+										
+							})
+					}
+				}
+				
+				//send fetch request to update the display, qty
+				let minusqtyplus = document.querySelectorAll('.modify');
+				setTimeout(function(){
+					fetch('/demo/ecommerce/getcart')
+						.then(res => res.json() )
+						.then(resp => {
+							
+							
+							console.log(resp)
+							for(let i=0; i<minusqtyplus.length; i++){
+								let filter = resp.filter(cart => {return minusqtyplus[i].dataset.name == cart.name})
+								if(filter.length == 0){
+									//do nothing
+								} else {
+									console.log( minusqtyplus[i] )
+									minusqtyplus[i].style.display = 'inline-block'
+									minusqtyplus[i].previousElementSibling.style.display = 'none'
+									
+									minusqtyplus[i].querySelector('input').value = filter[0].qty
+								}
+							}
+							
+						})
+				}, 1000)
+				
+				let plus = document.querySelectorAll('.modify button.plus');
+				let qty = document.querySelectorAll('.modify input');
+				let minus = document.querySelectorAll('.modify button.minus');
+				for(let i=0; i<plus.length; i++){
+					plus[i].onclick = function(e){
+						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+						fetch('/demo/ecommerce/cartincrease', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+								.then(res => res.text() )
+								.then(resp => {
+										cartlength.textContent = Number(cartlength.textContent) + 1
+										
+										qty[i].value = Number(qty[i].value) + 1
+										
+						})
+					}
+					
+					minus[i].onclick = function(e){
+						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+						fetch('/demo/ecommerce/cartremove', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+								.then(res => res.text() )
+								.then(resp => {
+										cartlength.textContent = Number(cartlength.textContent) - 1
+										if( Number(qty[i].value) < 2 ){
+												minusqtyplus[i].previousElementSibling.style.display = 'inline-block'
+												e.target.parentElement.style.display = 'none'
+												
+												
+												console.log(e.target.parentElement)
+												console.log(e.target.parentElement.previousElementSibling)
+												qty[i].value = 0
+										} else {
+												qty[i].value = Number(qty.value) - 1
+										}
+						})
+					}
+				}
+				
+				
+			</script>
+  </body>
+</html>

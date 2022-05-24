@@ -1,0 +1,94 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(50,111,210);'>
+			
+			<article>
+				<style>
+					article {display:flex;flex-direction:row;flex-wrap:nowrap;height:100vh;}
+					article section.firstchild {width:50%;margin-right:5%;background-color:white;}
+					article section.secondchild {width: 45%;background-color:white;padding:20px;}
+					article section.secondchild input {width:100%;padding:10px;margin-bottom:20px;border-radius:7px;outline:none;border:0px solid black;background-color: rgb(245,245,245);}
+					article section.secondchild button {padding:10px;background-color:rgb(50,111,210);color:white; }
+					
+					@media screen and (max-width: 700px) {
+						article section.firstchild {display:none;}
+						article section.secondchild {width: 60%;margin:auto;}
+					}
+					
+					@media screen and (max-width: 500px) {
+						article section.secondchild {width: 80%;}
+					}
+				</style>
+				<section class='firstchild'>
+					<img src='/images/plant.jpg' style='width:100%;height:100%;'>
+				</section>
+				<section class='secondchild'>
+					<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40' style='display:block;margin:auto;'> 
+					<h2 style='text-align:center;color:rgb(50,111,210);'>Create An Account</h2>
+					<form action='/demo/ecommerce/newuser' method='POST'>
+						<label>Name:</label>
+						<input class='name' name='name' >
+						<label>Email:</label>
+						<input type='email'name='email'  >
+						<label>Country:</label>
+						<input type='search' name='country' list='country' class='country'>
+						<datalist>
+							<option>Nigeria</option>
+						</datalist>
+						<label>Phone No:</label>
+						<input type='Number' name='phoneno'>
+						<label>Password:</label>
+						<input type='password' name='password'>
+						<p style='text-align:center;'><button class='signup'>Sign Up</button></p>
+					</form>
+					
+				</section>
+			</article>
+			
+			<style>
+				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+  </body>
+</html>

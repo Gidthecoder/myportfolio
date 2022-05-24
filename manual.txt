@@ -1,0 +1,186 @@
+//machine learning algorithms that codes
+//html,css and js layout
+//command defines the ops(supervised,unsupervised) to perform eg css layouts,popular js functions, svg, canvas, webgl
+
+//step
+//give labels(top & nested) to group of related ops: navigation, body, footer for selection purpose
+//modify the labels through functions while letting the arguments be the new content
+//let a = new Document(), a.nav(type,length, css, js) a.footer(tyranus) a.body.add(cart, 1)
+//let backend = new Backend(), backend.carts(), backend.login()
+
+
+//questions: nodejs speed, html speed, security, paradigm, marketing, successful business
+//ROADMAP
+//ui: 
+	ontent,
+		copywriting
+		figures of speech writing
+		content writing
+		technical writing
+		book inspos
+	layouts,
+		General,
+		Graphics,
+		app,
+		desktop,
+		Games,
+		Books,
+		OS,
+		Movies,
+		Console,
+		TVs
+		Decoder
+	webapis
+		PWA,
+		drag and drop,
+		svg
+		feature,
+			convert the idea to text
+			list all possible tools and choose the best one based on specific criteria
+			code
+	animation,
+		feature
+			convert the idea to text
+			list all possible tools and choose the best one based on specific criteria
+			code
+		canvas,
+		svg,
+		css,
+		webgl
+	page optimization
+	
+//graphics:
+	image/icon,
+	audio,
+		audio processing
+		FFMPEG
+	video,
+		animated video
+		video processing
+			filters
+			effects
+	animation,
+		event-driven
+			steps:
+				concept and design inspos from css animation,cartoon, motion graphics,...
+				modelling with inkscape
+				texturing with inkscape
+				migration to vanilla
+				rigging with vanilla
+				animation with animation library eg animejs,gsap,threejs,...
+				lighting, camera setting, rendering, compositing
+				editing and final output
+	VR,
+	AR,
+	Software,
+	2d/3d simulation,
+		printer
+			printing receipt
+	2d/3d games,
+	2d/3d illustration
+		map
+		visualization
+		
+//backend: 
+	feature,
+		convert the idea to text
+		list all possible tools and choose the best one based on specific criteria
+		code
+	scaling, 
+	app optimization,
+	security,
+		Reverse Proxy
+	maintainance and monitoring cycle,
+		logging
+		API gateway
+	automated testing
+	devops,
+		file versioning
+		AGILE
+		CI/CD
+		
+	backend apis
+	
+//AI:
+	predictive analytics
+	data mining
+	data analytics App
+	Recommendation system
+	Image processing
+	Speech recognition
+	Computer Vision
+	Audio Processing
+	problem solving
+		convert the idea to text
+		list all possible tools and choose the best one based on specific criteria
+		code
+		
+//marketing: 
+	website, prooft of work and proof of trust
+		pics of yourself on website,social platform,...anywhere
+		portfolios and clients
+		gamification analytics
+			current sessions viewing
+		live communication
+			audio,
+			video,
+			text
+		in-store experience
+			music
+	networking with targets on social and physical platforms, 	
+		social media: facebook, twitter
+		forums: reddit, quora
+			ask questions
+			answer questions
+			share links to your site
+		video sharing: youtube, tiktok
+			create amazing video
+		image sharing: instagram
+		content: medium
+		professional: linkedin
+			profile phone and background
+			headline more than a job title
+			connections
+			list skills
+			get endorsement,
+			skills test,
+			recommendation,
+			targeted post,
+			targeted comment,
+			
+			describe your services
+		links to site
+	events and communities,
+		slack QAs
+		developers summit
+		charity
+		womens events
+		what majority likes
+			climate change
+			charity
+	ads and sponsoring, 
+		sponsor events
+		pay news websites to write a good article about your company
+		social media ads
+		webinar
+		pay influencers
+	Referrals,
+	Promo,
+	customer support,
+	SEO,
+	Email Marketing,
+	local marketing,
+	affiliate marketing
+	
+//business consultant
+	market research
+	PESTLE
+	SWOT
+	competitive analysis
+	advisor
+	
+//competitor research on the above
+//others: pm2(branded packages,iot camera analytics)
+
+
+//color, typography, alignment, consistency, layout

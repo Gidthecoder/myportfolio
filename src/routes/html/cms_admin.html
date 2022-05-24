@@ -1,0 +1,224 @@
+<DOCTYPE html>
+ <html lang='en-US'>
+  <head>
+    <title>CMS</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Gideon Akinsanmi">
+	<meta name="description" content="make friends, connect with people, show your works and have fun">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+  </head>
+  <body id='body'>
+   <header class='header1'>
+   <input type='color'>
+    <h1 style=''>shopsidy RME</H1>
+	<i class='fas fa-user' style='float: right;font-size:25px;color:white;margin-right: 30px;'></i>
+	<style>
+	  @font-face {
+	    font-family: 'Poppins';
+		src: url('./fonts/poppins/Poppins-Light.ttf') format('truetype');
+	  }
+	  @font-face {
+	    font-family: 'Poppins-b';
+		src: url('./fonts/poppins/Poppins-Black.ttf') format('truetype');
+	  }@font-face {
+	    font-family: 'Poppins-eb';
+		src: url('./fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+	  }
+	  
+	  #body {margin:0;padding:0;background-color: white;width:100%;}
+	  .header1 h1 {color: white;padding:0;margin:0;display: inline-block;font-size:25px;font-family: Poppins}
+	  .header1 {width:99%;padding:2px;padding-right:5px;padding-left:5px;margin:0;font-size: 14px;border: 1px solid black;position: fixed;background-color: rgb(105, 7, 94);z-index: 2;font-family: Poppins-eb;}
+	  .article, div, section, header {padding:0;margin:0;}
+	</style>
+	
+   </header>
+   <article class='article'>
+     <nav>
+	   
+	   <p>Content</p>
+	   <p id='data'>Data</p>
+	   <p>Tools And Apps</p>
+	   
+	   <p style='border-top: 2px solid black;'>Theme</p>
+	   <p>Content Type Builder</p>
+	   <p>Subscription</p>
+	   <p>Permission</p>
+	   <p style='border-top: 2px solid black;'>Help</p>
+	   <p>Expert</p>
+	   <p style='border-top: 2px solid black;'>Favourite</p>
+	   <p style='border-top: 2px solid black;'>Our Services</p>
+	   
+	   <style>
+	     nav {order: 1;width: 20%;border: 1px solid black;height:600px;position:fixed;background-color: black;}
+		 nav p {font-size: 22px;padding:0;margin:10;padding-left:10px;font-family: Poppins;color:white;cursor:pointer;}
+		 nav p:hover {background-color: rgb(79,79,79)}
+	   </style>
+	 </nav>
+	 <section>
+	   
+	   <!--iframes-->
+	   <div class='framescontainer' style=''>
+	    <!--second header-->
+	      <header class='header2'>
+	        <b class='pages'>
+		      <label>pages:</label> <select name='pages' id='pages'><option value='/users/1'>home</option><option value='/users/2'>category</option><option value='addpage'>addpage</option> </select>
+		    </b>
+		    <span class='responsive'>
+		      <label>responsive:</label> <select name='responsive' id='responsive'><option value='desktop'>desktop</option><option value='mobile'>mobile</option><option value='tablet'>tablet</option> </select>
+		    </span>
+		    <b class='postcontent'>post +</b>
+		    <b>edit metadata</b>
+		    <b>social shares</b>
+	      </header>
+		    <section id='contentform' style='background-color:white;position:absolute;width:300px;height:300px;'>
+			  <label style='display: block;font-size:30px;'>label:<select name='labels'><option value='popular'>popular</option><option value='others'>others</option> </select> </label>
+			  <form>
+			    <label style='display: block;'>img:<input type='file'></label>
+				<label style='display: block;'>name:<input type='search'></label>
+				<label style='display: block;'>amount:<input type='search'></label>
+				<label style='display: block;'>url:<input type='search'></label>
+				<input type='submit' value='submit'>
+			  </form>
+			</section>
+	    <iframe id='iframes' src="/users/1" > </iframe>
+		<style>
+		  .framescontainer {background-color: rgba(0,0,0,0.5);height: 600px;width:100%;position:relative;}
+		  
+		  .header2 {background-color: white;font-family: Poppins}
+		  .header2 .pages {background-color: rgb(220, 231, 218)}
+		  .header2 .pages:hover {background-color: rgb(161, 236, 180)}
+		  .header2 .responsive {display: inline-block;outline: 1px solid silver;padding:0;}
+		  .responsive i {display: inline-block;padding-left:5px;padding-right:5px;color:blue;padding:7px;}
+		  .responsive i:hover {color: white;background-color: blue}
+		  .header2 .edit {outline: 1px solid silver;}
+		  .header2 b, .header2 span {display: inline-block;font-size: 22px;border-bottom: 2px solid transparent;padding:5px;margin-right: 10px;cursor:pointer;}
+		  .header2 option,.header2 select {font-size: 22px;}
+		  
+		  section {order: 2;width: 80%;height:600px;position: relative;margin-left: 20%;}
+		 .header2 {padding: 0px;position:fixed;width:100%;}
+		 #iframes {margin-top: 40px;height: 600px;width:100%;background-color:white;}
+		</style>
+	   </div>
+	   <script>
+	     //content category
+	     pages.onclick = function(e) {
+		   if(e.target.value != 'addpage'){
+		     iframes.src = e.target.value
+		   } else {
+		   alert(e.target.value)
+		   }
+		 }
+		 
+		 responsive.onclick = function(e) {
+		   if(e.target.value == 'mobile') {
+		     iframes.style.width = '500px'
+			 iframes.style.height = '500px'
+			 iframes.style.marginLeft = '20%'
+		   } else if(e.target.value == 'tablet') {
+		     iframes.style.width = '800px'
+			 iframes.style.height = '500px'
+			 iframes.style.marginLeft = '20%'
+		   } else if (e.target.value == 'desktop') {
+		     iframes.style.width = '100%'
+			 iframes.style.height = '600px'
+			 iframes.style.marginLeft = '0%'
+		   }
+
+
+		 }
+	   </script>
+	   
+	   <script>
+		 //iframes and data category
+		 
+		 let iframes = document.getElementById('iframes');
+		 console.log(iframes)
+		 iframes.onload= function() {
+		   let frame = iframes.contentDocument;
+		   frame.designMode = 'on'
+		   let popularmeals = frame.querySelectorAll('.popularmeals');
+		   for(let i = 0; i < popularmeals.length; i++) {
+		     popularmeals[i].onmouseover = function(e) {console.log(e.currentTarget)}
+		   }
+		   let postcontent = document.querySelector('.postcontent');
+		   postcontent.onclick = function() {
+		     alert('cool')
+			 let labels = frame.querySelectorAll('.label');
+			 for(let i = 0; i < labels.length; i++) {
+			   labels[i].style.display = 'inline' 
+			 }
+			 //contentform.style.display = 'block'
+		   }
+		  }
+		  
+		  /*fetch(`http://localhost:1337/Meals/`)
+		  .then(res => res.json())
+		  .then(data => console.log(data))
+		  .catch(e => console.log(e))*/
+		  
+		  data.onclick = function() {
+		    let framescontainer = document.querySelector('.framescontainer')
+		    let content = ''
+			content += `<div style="margin-top:50px">
+						  <input type='color'>
+						  <div class='datanav'>
+						    <p>sales</p>
+							<p>web</p>
+							<p>inventory<!--(price increase,days remaining for product to finish,online vs brick & mortar...)--></p>
+							<p>management<!--(customer) and finance--></p>
+							<p>industry <!--import,(delivery,maths,worker management,...)--></p>
+							<p>other data<!--import,grid tables, analysis--></p>
+						  </div>
+						  <section class='datacontent'>
+						    <div style='grid-row:1;grid-column:1/6;background-color:white;'>
+							  today's sales(sales per day,...) show more(table, sales per hour,analyze: best hour,best day,monday sales)
+							  <b>chart of previous sales</b><i>10,000 (20% up from yesterday)</i>
+							</div>
+							<div style='grid-row:2;grid-column:1/6;background-color:white;'>
+							   week's sales(sales per week,...) show more(table, sales per day,analyze: best day,best week,project sales)
+							  <b>chart of previous sales</b><i>10,000 (20% up from last week)</i>
+							</div>
+							<div style='grid-row:1/3;grid-column:6/13;background-color:white;'>
+							   weekly,monthly,yearly analysis(profitable day, worst day)
+							</div>
+							<div style='grid-row:3;grid-column:1/7;background-color:white;'>sales per region</div>
+							<div style='grid-row:3;grid-column:7/13;background-color:white;'>customers that bought more than once</div>
+							<div style='grid-row:4;grid-column:1/5;background-color:white;'>..</div>
+							<div style='grid-row:4;grid-column:5/9;background-color:white;'>..</div>
+							<div style='grid-row:4;grid-column:9/13;background-color:white;'>..</div>
+							<div style='grid-row:5;grid-column:1/13;background-color:white;'>..</div>
+						  </section>
+					      <input type="color">
+						  <style>
+						     .framescontainer {background-color: rgb(241,239,239);height: 600px;width:100%;overflow:scroll;z-index:5}
+							 .datanav p {cursor:pointer;border:1px solid blue;padding:20px;display:inline-block;background-color:white;width:12%;font-family:Poppins-eb}
+							 .datanav p:hover {color: white;background-color: rgb(105, 7, 94); }
+							 .datacontent {
+							   display: grid;grid-gap:10px;width:97%;
+							   grid-template-columns:repeat(12, 1fr);
+							   grid-template-row:repeat(12, 1fr);
+							   margin:0;margin-left:1%;height:700px
+							 }
+							 .datacontent div {font-family:Poppins-eb}
+							 section {order: 2;width: 80%;height:600px;position: relative;margin-left: 20%;}
+						  </style>
+						</div>
+						`
+		    framescontainer.innerHTML = content
+		  }
+	   </script>
+	 </section>
+	 
+	 
+     <style>
+	   
+	   .article {display: flex;flex-direction: row;width:100%;position: relative;top: 39px;}
+	  
+      </style>
+   </article>
+   
+   <input type='color'>
+
+  </body>
+  </html>

@@ -1,15 +1,328 @@
 <html>
   <body>
      <section>
-	    <svg width='500' height='500' style='margin:auto;display:block;'>
-		  <rect x='0' y='0' width='500' height='500' fill='blue'> </rect>
-		  <g>
-		    <polyline points='50,200 200,200 250,100 300,200 450,200 350,300 450,400 250,350' stroke='black' fill='none'/>
-		  </g>
-		  
-		</svg>
+	    <script>
+			let data = [{name:'james', sales:300}, {name:'john', sales:1000}];
+			
+			function total(array){
+				let a = 0;
+				for(let i=0; i<array.length; i++){
+					a += array[i].sales
+				}
+				return a
+			}
+			console.log( total( data ) )
+			
+			function min(array){
+				let a = []
+				let b;
+				for(let i=0; i<array.length; i++){
+					a.push( Number(array[i].sales) )
+				}
+				b = Math.min(...a)
+				return b;
+			}
+			console.log( min( data ) )
+			
+			function max(array){
+				let a = []
+				let b;
+				for(let i=0; i<array.length; i++){
+					a.push( Number(array[i].sales) )
+				}
+				b = Math.max(...a)
+				return b
+			}
+			console.log( max( data ) )
+			
+			function mean(array){
+				let a = []
+				let b = 0;
+				let c;
+				for(let i=0; i<array.length; i++){
+					a.push( Number(array[i].sales) )
+				}
+				for(let i=0; i<a.length; i++){ b += Number(a[i]) } 
+				c = b/a.length
+				return c
+			}
+			console.log( mean( data ) ) 
+			
+			function freq(array){
+				let freq = {}
+				for(let i=0; i<array.length; i++){
+					if(freq[array[i].sales]){
+						freq[array[i].sales]++
+					} else {
+						freq[array[i].sales] = 1
+					}
+				}
+				return freq
+			}
+			console.log( freq( data ) )
+			
+			
+			
+			function relativefreq(array, total){
+				let freq = {}
+				for(let i=0; i<array.length; i++){
+					freq[array[i].sales] = Number(array[i].sales)/Number(total)
+				}
+				return freq
+			}
+			console.log( relativefreq( data, 1300 ) )
+			
+			function SD(array){
+				let mean = mean(array)
+				let d = []
+				for(let i=0; i<array.length; i++){
+					d.push(array[i].sales)
+				}
+				let a = Math.sqrt( d.map(x => Math.pow(x - mean, 2) ).reduce( (a, b) => a + b)/ d.length )
+				return a
+			}
+			console.log( SD(data) )
+			
+			function median(array){
+				let arr = []
+				for(let i=0; i<array.length; i++){
+					arr.push(array[i].sales )
+				}
+				arr.sort(function(a, b){
+					return a - b;
+				})
+				let mid = arr.length / 2;
+				let median = ( mid%1 ? arr[mid - 0.5]: (arr[mid - 1] + arr[mid]) )/2
+				return median;
+			}
+			console.log( median(data) )
+			
+			function mode(arr){
+				if(!arr.length) {return [];}
+				let array = []
+				for(let i=0; i<arr.length; i++){
+					array.push(arr[i].sales)
+				}
+				
+				let modeMap = {}
+				let maxCount = 1;
+				let modes = [ ]
+				
+				
+				array.forEach(function(val){
+					if(!modeMap[val]){
+						modeMap[val] = 1
+					} else {
+						modeMap[val]++
+					}
+					
+					if(modeMap[val] > maxCount){
+						modes = [val]
+						maxCount = modeMap[val]
+					} else if (modeMap[val] == maxCount){
+						modes.push(val)
+						maxCount = modeMap[val];
+					}
+				})
+				return modes;
+			}
+			console.log( mode(data) ) 
+			
+			function percentile(arr, q){
+				let array = []
+				for(let i=0; i<arr.length; i++){
+					array.push(arr[i].sales)
+				}
+				array.sort(function(a, b){
+					return a - b;
+				})
+				let pos = ( array.length - 1 )* q;
+				let base = Math.floor(pos);
+				let rest = pos - base;
+				if(array[base + 1] !== undefined){
+					return array[base] + rest * (array[base + 1] - array[base])
+				} else {
+					return array[base];
+				}
+			}
+			console.log( percentile(data, .50) )
+			
+			
+			function IQR(array){
+				return percentile(array, .75) - percentile(array, .25)
+			}
+			console.log( IQR(data) )
+			
+			function singlefilter(array, sign, field, value){
+				let filtered = []
+				if( sign == '==' ){
+					let filter = array.filter(item => {return item[field] == value})
+					return filter
+				} else if ( sign == '<=' ){
+					let filter = array.filter(item => {return item[field] <= value})
+					return filter
+				} else if ( sign == '>=' ){
+					let filter = array.filter(item => {return item[field] >= value})
+					return filter
+				
+				} else if ( sign == '<' ){
+					let filter = array.filter(item => {return item[field] < value})
+					return filter
+				
+				} else if ( sign == '>' ){
+					let filter = array.filter(item => {return item[field] > value})
+					return filter
+				}
+			}
+			
+			function multifilter(array, sign1, field1, value1, sign2, field2, value2){
+				if( sign1 == '==' ){
+					if( sign2 == '==' ){
+						let filter = array.filter(item => {return item[field1] == value1 && item[field2] == value2})
+						return filter
+					} else if ( sign2 == '<=' ){
+						let filter = array.filter(item => {return item[field1] == value1 && item[field2] <= value2})
+						return filter
+					} else if ( sign2 == '>=' ){
+						let filter = array.filter(item => {return item[field1] == value1 && item[field2] >= value2})
+						return filter
+				
+					} else if ( sign2 == '<' ){
+						let filter = array.filter(item => {return item[field1] == value1 && item[field2] < value2})
+						return filter
+				
+					} else if ( sign2 == '>' ){
+						let filter = array.filter(item => {return item[field1] == value1 && item[field2] > value2})
+						return filter
+					}
+				} else if ( sign1 == '<=' ){
+					if( sign2 == '==' ){
+						let filter = array.filter(item => {return item[field1] <= value1 && item[field2] == value2})
+						return filter
+					} else if ( sign2 == '<=' ){
+						let filter = array.filter(item => {return item[field1] <= value1 && item[field2] <= value2})
+						return filter
+					} else if ( sign2 == '>=' ){
+						let filter = array.filter(item => {return item[field1] <= value1 && item[field2] >= value2})
+						return filter
+				
+					} else if ( sign2 == '<' ){
+						let filter = array.filter(item => {return item[field1] <= value1 && item[field2] < value2})
+						return filter
+				
+					} else if ( sign2 == '>' ){
+						let filter = array.filter(item => {return item[field1] <= value1 && item[field2] > value2})
+						return filter
+					}
+				} else if ( sign1 == '>=' ){
+					if( sign2 == '==' ){
+						let filter = array.filter(item => {return item[field1] >= value1 && item[field2] == value2})
+						return filter
+					} else if ( sign2 == '<=' ){
+						let filter = array.filter(item => {return item[field1] >= value1 && item[field2] <= value2})
+						return filter
+					} else if ( sign2 == '>=' ){
+						let filter = array.filter(item => {return item[field1] >= value1 && item[field2] >= value2})
+						return filter
+				
+					} else if ( sign2 == '<' ){
+						let filter = array.filter(item => {return item[field1] >= value1 && item[field2] < value2})
+						return filter
+				
+					} else if ( sign2 == '>' ){
+						let filter = array.filter(item => {return item[field1] >= value1 && item[field2] > value2})
+						return filter
+					}
+				
+				} else if ( sign1 == '<' ){
+					if( sign2 == '==' ){
+						let filter = array.filter(item => {return item[field1] < value1 && item[field2] == value2})
+						return filter
+					} else if ( sign2 == '<=' ){
+						let filter = array.filter(item => {return item[field1] < value1 && item[field2] <= value2})
+						return filter
+					} else if ( sign2 == '>=' ){
+						let filter = array.filter(item => {return item[field1] < value1 && item[field2] >= value2})
+						return filter
+				
+					} else if ( sign2 == '<' ){
+						let filter = array.filter(item => {return item[field1] < value1 && item[field2] < value2})
+						return filter
+				
+					} else if ( sign2 == '>' ){
+						let filter = array.filter(item => {return item[field1] < value1 && item[field2] > value2})
+						return filter
+					}
+				
+				} else if ( sign1 == '>' ){
+					if( sign2 == '==' ){
+						let filter = array.filter(item => {return item[field1] > value1 && item[field2] == value2})
+						return filter
+					} else if ( sign2 == '<=' ){
+						let filter = array.filter(item => {return item[field1] > value1 && item[field2] <= value2})
+						return filter
+					} else if ( sign2 == '>=' ){
+						let filter = array.filter(item => {return item[field1] > value1 && item[field2] >= value2})
+						return filter
+				
+					} else if ( sign2 == '<' ){
+						let filter = array.filter(item => {return item[field1] > value1 && item[field2] < value2})
+						return filter
+				
+					} else if ( sign2 == '>' ){
+						let filter = array.filter(item => {return item[field1] > value1 && item[field2] > value2})
+						return filter
+					}
+				}
+			}
+			
+			function benchmark(array, filtered, stats){
+				let stat = 'total:total';
+				let accepted = ['total','mean','min','max','freq','relativefreq','median','mode','SD','percentile','quartile','IQR'];
+				let obj = {};
+				
+				//how a value perform with respect to filtered value: year
+				if(!array || !filtered || !stats){
+					return "Your Data Isn't Complete"
+				}
+				
+				if(stats == 'total'){
+					obj = {array: total(array), filtered: total(filtered)}
+					return obj
+				} else if (stats == 'mean'){
+					obj = {array: mean(array), filtered: mean(filtered)}
+					return obj
+				} else if (stats == 'median'){
+					obj = {array: median(array), filtered: median(filtered)}
+					return obj
+				} else if(stats == 'mode'){
+					obj = {array: mode(array), filtered: mode(filtered)}
+					return obj
+				} else if (stats == 'min'){
+					obj = {array: min(array), filtered: min(filtered)}
+					return obj
+				} else if (stats == 'max'){
+					obj = {array: max(array), filtered: max(filtered)}
+					return obj
+				} else if (stats == 'freq'){
+					obj = {array: freq(array), filtered: freq(filtered)}
+					return obj
+				} else if (stats == 'relativefreq'){
+					obj = {array: relativefreq(array), filtered: relativefreq(filtered)}
+					return obj
+				} else if(stats == 'SD'){
+					obj = {array: SD(array), filtered: SD(filtered)}
+					return obj
+				} else if (stats == 'IQR'){
+					obj = {array: IQR(array), filtered: IQR(filtered)}
+					return obj
+				}
+			}
+			
+		</script>
 	   
 	 </section>
+	 
      <div>
        <b class='prods'>static css animation: hospital->heartbeat</b>
 	  
@@ -62,10 +375,7 @@
   <div class='animechart' style='display:inline-block;overflow:Scroll;width:500px;'> </div>
   <script src='svgcanvas.js'></script>
   <script>
-     let spincycle0 = document.querySelector('.spincycle0')
-	 spincycle0.onanimationend = function(e){
-	   e.target.style.display = 'none'
-	 }
+    
 	 let a = new Svg()
 	 a.v3barchart({name: {age:1000, year:2002, fam: 6000, bb: 990}, game: {sea: 200} }, document.querySelector('.multichart'), 400 )
 	 a.vbarchart({name: 200, age:1000, year:2002, fam: 6000, bb: 990}, document.querySelector('.animechart'), 400 )
@@ -74,52 +384,7 @@
   <script src='public/javascripts/d3/dist/d3.min.js'></script>
   <script>
     
-    //vertical barchart	 
-	let barchartdata = [10, 20, 30, 40, 50];
-	let vbarchart = d3.select('div.vbarchart')
-	   .append('svg')
-	   .attr('width', 100 * barchartdata.length)
-	   .attr('height', 500)
-	
-	vbarchart.append('rect')
-	  .attr('x', 0)
-	  .attr('y', 0)
-	  .attr('width', 500)
-	  .attr('height', 500)
-	  .attr('stroke', 'blue')
-	  .attr('fill', 'orange')
-	
-	let vbar = vbarchart.selectAll('g')
-	  .data(barchartdata)
-	  .enter()
-	  .append('g')
-	  .attr('transform', function(d, i){
-	    return 'translate(' + 100 * i + ',0)'
-	  })
-	  
-	vbar.append('rect')
-	  .attr('width', function(d, i){
-	    return 80
-	  })
-	  .attr('height', function(d, i){
-	    return  500 * (d/Math.max(...barchartdata))
-	  })
-	  .attr('y', function(d, i){
-	  let a = 500 -( 500 * (d/Math.max(...barchartdata)) )
-	  
-	    return a
-	  })
-	  .attr('fill', 'green')
-	
-	vbar.append('text')
-	  .attr('x', function(d, i){
-	    return 30
-	  })
-	  .attr('y', function(d, i){
-	    return 500 -( 500 * (d/Math.max(...barchartdata)) ) + 20
-	  })
-	  .text(function(d){ return d;})
-	  
+    
 	  //horizontal barchart	 
 	let hbarchartdata = [1360, 6200, 3380, 4000, 8000];
 	let hbarchart = d3.select('div.hbarchart')
@@ -223,5 +488,50 @@
 		 }
 	  }
   </script>
-  
+  <script>
+    //OOP paradigm -- encapsulation, abstraction,inheritance, polymorphism
+	class Person {
+	  constructor(name, age){
+	    this.name = name
+		this.age = age
+	  }
+	  //statics
+	  static friend = 'paul'
+	  static friendAge(){
+	    return 30
+	  }
+	  //getter
+	  get tenYears(){
+	  let f = 5;
+	    return this.totalYear() * 5
+	  }
+	  //method 
+	  totalYear(){
+	    return this.age * 10
+	  }
+	}
+	let p = new Person('james', 20)
+	console.log(p.tenYears)
+	console.log(p.totalYear() )
+	console.log(Person.friend)
+	console.log(Person.friendAge())
+	//inheriting
+	class Animal extends Person {
+	  constructor(name, age){
+	    super(name, age)
+	  }
+	  animalAge(){
+	    return this.tenYears
+	  }
+	}
+	let aa = new Animal('phillip', 20)
+	console.log(aa.animalAge())
+	
+	//functional programming-- immutable, noloops only higherorder like map,filter,reduce,recursion higher order function, no conditionals instead use ternary,switch 
+	function functional(a, b){
+	const ab = a
+	  return a*b
+	}
+	//procedural-- uses statements and function
+  </script>
 </html>

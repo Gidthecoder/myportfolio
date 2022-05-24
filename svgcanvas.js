@@ -95,7 +95,7 @@ function line(containerg, yscale, data, height){
 				circle[i].setAttribute('cy', `${form}`)
 				circle[i].setAttribute('r', `10`)
 				circle[i].setAttribute('fill', `green`)
-				text[i].textContent = form
+				text[i].textContent = data[i]
 				text[i].setAttribute('x', `${20 + (i * 80) - 10}`)
 				text[i].setAttribute('y', `${form - 10} `)
 				text[i].setAttribute('stroke', `blue `)
@@ -198,6 +198,30 @@ function textx(containerg, txt, height ){
 			}
 }
 
+function linex(containerg, txt, yscale, height){
+			let line = [];
+			for(let i=0; i<yscale.data.length; i++){
+				line.push(document.createElementNS('http://www.w3.org/2000/svg', 'line') )
+			}
+			let gline = []
+			for(let i=0; i<yscale.data.length; i++){
+				gline.push(document.createElementNS('http://www.w3.org/2000/svg', 'g')  )
+			}
+			let l = txt.length 
+			for(let i=0; i<yscale.data.length; i++){
+				line[i].setAttribute('stroke', 'silver')
+				line[i].setAttribute('x1', '0')
+				line[i].setAttribute('y1', `${(height - 100) - ( (height - 100) * (yscale.data[i]/yscale.content) )}`) 
+				line[i].setAttribute('x2', `${l * 80}`)
+				line[i].setAttribute('y2', `${(height - 100) - ( (height - 100) * (yscale.data[i]/yscale.content) )}`)
+				
+				gline[i].append(line[i])
+				
+				containerg.append(gline[i])
+				
+			}
+}
+
 
 
 
@@ -249,6 +273,9 @@ Svg.prototype.vbarchart = function(data, container, ht){
 		//y scale legend
 		labely(containerg, ske(d), bar1, txt, height)
 		
+		//y scale line
+		linex(containerg, txt, ske(d), height)
+				
 	  //hover 
 	  for(let i=0; i<bar1.length; i++){
 		  let text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
@@ -317,6 +344,9 @@ Svg.prototype.linechart = function(data, container, ht){
 		textx(containerg, txt, height)
 		
 		
+		//y scale line
+		linex(containerg, txt, ske(d), height)
+		
 		return svg
 	} catch (e) {
 		console.log(e)
@@ -372,6 +402,9 @@ Svg.prototype.v3barchart = function(data, container, ht){
 		
 				//y scale legend
 				labely(containerg, ske(d), bar1, txt, height)
+				
+				//y scale line
+				linex(containerg, txt, ske(d), height)
 		
 				//hover 
 				for(let i=0; i<bar1.length; i++){

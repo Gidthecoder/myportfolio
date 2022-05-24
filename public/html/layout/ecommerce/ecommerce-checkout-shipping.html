@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+	  b.pjdesc:hover {background-color:silver;}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<style>
+		h1 {font-size:30px;font-family:Poppins-b;}
+		h3 {font-size:25px;font-family:Poppins-eb;}
+		p, label {font-size:20px;font-family:Poppins;}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(245,245,245);height:100vh;'>
+			
+			<article>
+				<header class='firstcontainer'>
+					<style>
+						header.firstcontainer {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;padding:10px;padding-bottom:0px;}
+						header.firstcontainer b.arrow {font-size: 15px;display:inline-block;margin-left:20px;margin-right:20px;}
+						header.firstcontainer a {font-size:22px;font-family:Roboto;color: silver;}
+					</style>
+					<a style='color: black;'><b>Personal</b></a>
+					<b class='arrow'>></b>
+					<a style='color: rgb(50,111,210);border-bottom: 2px solid rgb(50,111,210);'><b>Shipping</b></a>
+					<b class='arrow'>></b>
+					<a><b>Payment</b></a>
+				</header>
+				<section class='secondcontainer'>
+					<style>
+						section.secondcontainer {display:flex;flex-direction:row;margin-top:50px;padding-left:20%;padding-right:20%;padding-bottom:50px;}
+						section.secondcontainer div.firstchild {height:70vh;overflow-y:scroll;background-color:white;width:49%;padding:10px;border-radius: 20px 0px 0px 20px;box-shadow:-10px 10px 10px;}
+						section.secondcontainer div.firstchild button {padding:5px;}
+						section.secondcontainer div.firstchild input {width:100%;padding:10px;outline:none;margin-bottom:10px;background-color:rgb(245,245,245);border:0px solid black;border-radius:7px;}
+						
+						section.secondcontainer div.secondchild {background-color:white;width:49%;border-radius: 0px 20px 0px 0px;}
+						
+						section.secondcontainer div.secondchild section.finalcart {height:50vh;overflow-y:scroll;box-shadow:0px 10px 10px;}
+						section.secondcontainer div.secondchild section.finalcart div.product {padding:10px;display:flex;flex-direction:row;flex-wrap:nowrap;margin-bottom:10px;}
+						section.secondcontainer div.product a, section.secondcontainer div.product p {flex:1;text-align:right;}
+					</style>
+					<div class='firstchild' style='border-right:20px solid black;'>
+						<h1 style='text-align:center;'>ENTER YOUR SHIPPING INFORMATION</h1>
+						<label>Country:</label>
+						<input type='search'>
+						<label>State:</label>
+						<input type='search'>
+						<label>Zip code:</label>
+						<input type='number'>
+						<label>City:</label>
+						<input type='search'>
+						<label>Address:</label>
+						<input type='search'>
+						<a href='/demo/ecommerce/checkout/payment'><button>Continue To payment</button></a>
+					</div>
+					<div class='secondchild'>
+						<div style='background-color:khaki;margin:0;padding:10px;border-radius: 0px 20px 0px 0px;'>
+							<p>Cart Amount: <b>$17000</b> </p>
+							<p>Tax: <b>$10</b> </p>
+						</div>
+						<section class='finalcart'>
+							<div class='product'>
+								<img src='/images/food2.png' width='50' height='50'>
+								<p>Title</p>
+								<p>Amount</p>
+								<p><a href='#'>Edit</a></p>
+							</div>
+							<div class='product'>
+								<img src='/images/food2.png' width='50' height='50'>
+								<p>Title</p>
+								<p>Amount</p>
+								<p><a href='#'>Edit</a></p>
+							</div>
+							<div class='product'>
+								<img src='/images/food2.png' width='50' height='50'>
+								<p>Title</p>
+								<p>Amount</p>
+								<p><a href='#'>Edit</a></p>
+							</div>
+							<div class='product'>
+								<img src='/images/food2.png' width='50' height='50'>
+								<p>Title</p>
+								<p>Amount</p>
+								<p><a href='#'>Edit</a></p>
+							</div>
+						</section>
+					</div>
+				</section>
+			</article>
+			
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body style='padding:0px;margin:0;'>
+		<article>
+			<style>
+				@font-face {
+					font-family: 'Poppins';
+					src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+				}
+				@font-face {
+					font-family: 'Poppins-b';
+					src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+				}
+				@font-face {
+					font-family: 'Poppins-eb';
+					src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+				}
+				@font-face {
+					font-family: 'Roboto';
+					src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+				}
+			</style>
+			<style>
+				h1 {font-size:30px;font-family:Poppins-eb;}
+				h2 {font-size:25px;font-family:Roboto;}
+				h3 {font-size:20px;font-family:Poppins-b;}
+				p, table {font-size:15px;font-family:Poppins;}
+				
+				
+				article {display:flex;flex-direction:column;background-color: white;}
+				header b {font-size: 22px;padding:5px;}
+				article header {display:flex;flex-direction:row;border:2px solid silver;padding-bottom:5px;background-color:rgba(227,229,123,1);}
+			</style>
+			<header>
+				
+				<b>LOGO</b>
+				<nav style='flex:1;text-align:right;padding-right:10px;'>
+					<input type='search' style='padding:5px;outline:none;border-radius:10px;width:60%;'>
+					<b>Login/Register</b>
+					<b style='border: 1px solid aqua;'><i class='fas fa-shopping-cart' style='color:black;background-color:aqua;padding:5px;padding-left:15px;padding-right:15px;'></i> 0</b>
+				</nav>
+				<b style='display:none;'>MENU</b>
+			</header>
+			
+			<section class='secondcontainer'>
+				<style>
+					section.secondcontainer {display:flex;flex-direction:row;flex-wrap:nowrap;}
+					section.secondcontainer div.firstchild {width:20%;padding:5px;margin:5px;border:1px solid black;margin-right:5%;overflow-y:scroll;height:80vh;background-color:white;}
+					section.secondcontainer div.firstchild b.nav {border: 1px solid black;border-radius:7px;padding:10px;display:block;}
+					section.secondcontainer div.firstchild p.nav1 {border-bottom:3px solid black;margin-left:50px;margin-right:50px;}
+					section.secondcontainer div.secondchild {width:75%;padding:5px;margin:5px;border:1px solid black;}
+					
+					@media screen and (max-width: 900px) {
+						section.secondcontainer div.firstchild {display:none;}
+						section.secondcontainer div.secondchild {width:100%;}
+					}
+				</style>
+				<div class='firstchild'>
+					<b class='nav'>FAST FOOD </b> 
+					<p class='nav1'> </p>
+					<b class='nav' >PASTRIES </b> 
+					<p class='nav1'> </p>
+					<b class='nav' >VEGAN </b> 
+					<p class='nav1' > </p>
+					<b class='nav' >MEAT FEST</b> 
+					<p class='nav1'> </p>
+					
+				</div>
+				
+				<div class='secondchild'>
+					<section class='thirdcontainer'>
+						<style>
+							section.thirdcontainer div.suggestcontainer {display:flex;flex-direction:row;flex-wrap:wrap;padding:10px;}
+							section.thirdcontainer div.suggestcontainer div.suggested {display:inline-block;width:25%;margin:auto;border:5px solid rgba(227,229,123,1);}
+					
+							section.thirdcontainer div.suggestcontainer div.suggested div.product {width:100%;padding:10px;background-color:white;position:relative;left:20px;top:20px;border:1px solid rgba(227,229,123,1);}
+							section.thirdcontainer div.suggestcontainer div.suggested div.product p.title {border-radius:7px;border:1px solid pink;margin:2px;margin-bottom:5px;padding:5px;text-align:center;color:white;background-color:rgb(123,124,95);}
+							section.thirdcontainer div.suggestcontainer div.suggested div.product div.imgcontainer {background-color:rgba(227,229,123,1);;padding:2px;border-radius:7px;}
+							section.thirdcontainer div.suggestcontainer div.suggested div.product div.imgcontainer img.img {width: 80%;height:200px;display:block;margin:auto;margin-top:20px;margin-bottom:20px;border-radius:7px;}
+					
+							@media screen and (max-width: 900px) {
+								section.thirdcontainer div.suggestcontainer div.suggested {width:40%;margin-left:0px;}
+							}
+							@media screen and (max-width: 600px) {
+								section.thirdcontainer div.suggestcontainer div.suggested {width:80%;}
+							}
+						</style>
+						<h3>Fast Food</h3>
+						<div class='suggestcontainer'>
+							<div class='suggested left' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg'>
+									</div>
+								</div>
+							</div>
+							<div class='suggested ' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+							<div class='suggested left'>
+								<div class='product' >
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<h3>Pastries</h3>
+						<div class='suggestcontainer'>
+							<div class='suggested left' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg'>
+									</div>
+								</div>
+							</div>
+							<div class='suggested ' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+							<div class='suggested left'>
+								<div class='product' >
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<h3>Vegan</h3>
+						<div class='suggestcontainer'>
+							<div class='suggested left' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg'>
+									</div>
+								</div>
+							</div>
+							<div class='suggested ' >
+								<div class='product'>
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+							<div class='suggested left'>
+								<div class='product' >
+									<p class='title'>food 1</p>
+									<div class='imgcontainer'>
+										<img class='img' src='/images/fog.jpg' >
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				
+				
+				</div>
+			</section>
+			
+		</article>
+	</body>
+</html>

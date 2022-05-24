@@ -1,0 +1,23 @@
+<html>
+	
+	<script>
+		let cd = [1,2,3,4,5].reduce(function(prev, current,index) {
+			return prev + current
+		} )
+		console.log(cd)
+		
+		function recur(n, sum){
+			if(n.length == 0){ //condition
+				
+				return sum
+			} else {
+			    let newsum = sum
+				let newind = n.splice(0, 1)[0]
+				return recur(n, newsum + newind) //increment
+			}
+		}
+		let a = recur([1,2,3,4,5], 0) //initial value
+		
+		//DSA
+	</script>
+</html>

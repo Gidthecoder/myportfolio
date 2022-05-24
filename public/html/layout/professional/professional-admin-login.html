@@ -1,0 +1,103 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<style>
+	     /* typography styling */
+		h1 {font-size: 35px;Font-family:Poppins-eb;}
+		h2 {font-size: 30px;Font-family:Poppins-eb;}
+		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;}
+		p, header,footer {font-size:16px;Font-family:Roboto;}
+		@media screen and (max-width: 400px) {
+			h1 {font-size: 20px;Font-family:Poppins-eb;}
+			h2 {font-size: 25px;Font-family:Poppins-eb;}
+			h3 {font-size: 18px;font-weight:400;Font-family:Poppins;}
+			p, header, footer {font-size:15px;Font-family:Roboto;}
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body id='body'>
+	    <article>
+			<section>
+				<style>
+					body {padding:0;margin:0;background-color: violet;background-image: url(/images/fog.jpg);background-size:100% 100%;}
+					
+					a {color: black;text-decoration:none;}
+				
+					
+					
+					.secondcontainer {display:flex;margin-top:50px;margin-bottom:50px;padding-top:10px;padding-bottom:10px;}
+					.secondcontainer .child1 {width:50%;margin:auto;background-color:white;padding-left:50px;padding-right:50px;}
+					.secondcontainer .child1 .firstchild {color: violet;margin:0;text-align:center;}
+					.secondcontainer .child1 label {display:block;}
+					.secondcontainer .child1 input[type=search], .secondcontainer .child1 input[type=email] {padding-top:10px;padding-bottom:10px;margin-bottom:10px;background-color:rgb(245,245,245);border-radius:7px;outline:none;border:0px solid white;width:100%;}
+					
+					.firstalignment {padding-left:60px;padding-right:60px;}
+					
+					.flexattribute {flex-direction:row;}
+					
+					
+					@media screen and (max-width: 800px) {
+						 
+						.firstalignment {padding-left:30px;padding-right:30px;}
+					}
+					
+					@media screen and (max-width: 600px) {
+						 .firstalignment {padding-left:30px;padding-right:30px;} 
+						
+						.flexattribute {flex-direction:column;}
+						
+						.secondcontainer .child1 {border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;margin-right:0%;width: calc(100% - 30px);padding-left:10px;padding-right:10px;}
+						
+					}
+			  
+					@media screen and (max-width: 600px) {
+						 .firstalignment {padding-left:5px;padding-right:5px;} 
+					}
+				</style>
+				
+				<section class='secondcontainer firstalignment flexattribute'>
+					<div class='child1' >
+						<h1 class='firstchild'>LOGIN</h1>
+						<form class='data' method='post' action='/'>
+							<label for='name'>Email:</label>
+							<input  type='email'/>
+							<label>Password:</label>
+							<input type='search' />
+					
+							<p>
+								<button style='color:white;background-color:violet;padding:5px;padding-left:10px;padding-right:10px;'>LOGIN</button>
+							</p>
+						</form>
+					</div>
+					
+				</section>
+			</section>
+			
+			
+			
+			
+			
+		</article>
+		
+		
+  </body>
+</html>

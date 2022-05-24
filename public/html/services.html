@@ -1,339 +1,410 @@
-<DOCTYPE html>
- <html lang='en-US'>
+<html>
   <head>
-    <title>ShOPSIDY(ux, content map, copywriting, ui for layout and typography and color)</title>
-	<meta charset="UTF-8">
-	<meta name="author" content="Gideon Akinsanmi">
-	<meta name="description" content="Get an online store accompanied with tools that’ll make your nigerian business stay ahead of every competition, build brands and make great product.">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+	  b.pjdesc:hover {background-color:silver;}
+	</style>
 	<style>
-	  @font-face {
-	    font-family: 'Poppins';
-		src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
-	  }
-	  @font-face {
-	    font-family: 'Roboto';
-		src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
-	  }
-	  @font-face {
-	    font-family: 'Poppins-b';
-		src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
-	  }@font-face {
-	    font-family: 'Poppins-eb';
-		src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
-	  }
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
 	</style>
   </head>
-  
-  <body id='body'>
-   <p class='close' style='z-index:2;display:none;position:fixed;height:100%;width:100%;top:0;left:0;padding:0px;margin:0;background-color:rgba(0,0,0,0.5);'></p>
-   <header class='header1'>
-    <i class='menubar fas fa-bars bar' style='border: 1px dashed rgb(132,51,119);cursor:pointer;'>Menu</i>
-	<a class=' logo' href='' style='outline: 1px dashed violet;font-family:Poppins-eb;color:white;background-color: rgb(132,51,119);'>Gigagon</a>
-	<a class='nav res' href='/static-dynamic-site'>Blog </a>
-	<a class='nav res' href='/ecommerce'>Ecommerce </a>
-	<a class='nav res' href='/enterprise'>Enterprise </a>
-	<a class='nav res' href='/webapp'>Webapp </a>
-	<a class='nav res' href='/pricing'>pricing</a>
-	
-	<div style='flex:1;text-align:right;'>
-	  <a class=' userx' href='/users/login'>login</a> 
-	  <a class='nav start' href='/users/newuser'>Get Started</a>
-	</div>
-	<style>
-	  #body {margin:0;padding:0;background-color: yellow;width:100%;position:relative;}
-	  .header1 {display:flex;flex-direction:row;flex-wrap:wrap;width:100%;padding:0;margin:0;font-size: 14px;background-color:rgb(245,245,245);font-family:Roboto;border-bottom: 1px solid black;}
-	  .nav, .bar, .userx, .logo {display: inline-block;font-size:17px;padding: 5px;color: black;width:auto;text-decoration: none;border-bottom: 2px dashed transparent;transition: all 0.5s ease-out;}
-	  .black {width: 5%;background-color: black;padding:10px;margin:0}
-	  .start {background-color: violet;color: white;font-size:20px;}
-	  .nav:hover {color: rgb(132,51,119);border-bottom: 3px solid rgb(132,51,119);}
-	  .start:hover{background-color: rgb(132,51,119);color: white;}
-	  .logo {margin-right: 21%;font-size:18px;}
-	  .res{font-family:Poppins-b}
-	  .logo img {width: 30px;height: 45px;}
-	  .userx{font-size:23px;background-color: violet;color: white;border-radius: 50%;}
-	  .userx:hover {background-color:rgb(132,51,119);}
-	  .help {margin-right: 27%}
-	  
-	  /*responsive */
-	  .menubar {display: none}
-	  
-	  @media screen and (max-width: 1129px) {
-		.logo{margin-right: 20%}
-		.header1 {font-size: 13px}
-		.help {margin-right: 20%}
-		.userx, .logo, .start {font-size:20px;}
-	  }
-	  
-	  @media screen and (max-width: 990px) {
-	    .logo{margin-right: 15%}
-		.help {margin-right: 20%}
-		.userx, .logo, .start {font-size:18px;}
-		.header1 {font-size: 12px}
-	  }
-	  
-	  @media screen and (max-width: 900px) {
-	    
-		.menubar{display: inline-block;margin-right: 12%;font-size:17px;}
-		.res {display: none}
-		.header1 {font-size: 17px}
-		.logo{margin-left: 29%}.logo img {width: 25px;height: 35px;}
-		.black {display: none}
-	  }
-	  @media screen and (max-width: 750px) {
-	    .logo{margin-right: 19%}
-		.menubar {margin-right: 10%}
-	  }
-	  
-	  @media screen and (max-width: 680px) {
-		.logo{margin-right: 1%}
-		.menubar {margin-right: 1%}
-		.header1 {font-size: 13px}
-	  }
-	  @media screen and (max-width: 520px) {
-		.logo{margin-right: 8%}
-		.menubar {margin-right: 5%}
-		.header1 {font-size: 5px}
-		.userx, .logo, .start {font-size:13px;}
-	  }
-	  @media screen and (max-width: 450px) {
-		.logo{margin-right: 7%}
-		.menubar {margin-right: 1%;font-size:15px;}
-		.header1 {font-size: 13px}
-	  }
-	  @media screen and (max-width: 400px) {
-		.logo{margin-right: 1%;margin-left:25%;}
-		.menubar {margin-right: 1%}
-		.header1 {font-size: 13px}
-	  }
-	  @media screen and (max-width: 350px) {
-	    .header1 {font-size: 2px}
-		.logo {margin-left:15%;}
-	  }
-	  @media screen and (max-width: 300px) {
-	    .header1 {font-size: 10px}
-		.logo {margin-left:10%;}
-		.userx, .logo, .start {font-size:10px;padding:3px;}
-	  }
-	</style>
-	
-   </header>
-   <article class='article' style='background-color:rgb(245,245,245)'>
-     
-	 <section class='main'>
-	   <div class='menu' style='font-family:Roboto;z-index:3;position:fixed;background-color:white;height:100%;outline:1px solid silver;top:0;display:none;'>
-	     <h2 style='text-align:center;border-bottom: 2px solid silver;'>GIGAGON</h2>
-		 <div style='padding-left: 10px;font-size: 25px;text-align:center;'>
-		   <a href='/static-dynamic-site'>Static And Dynamic </a>
-	       <a href='/ecommerce'>Ecommerce</a>
-		   <a href='/enterprise'>Enterprise Software</a>
-		   <a href='/webapp'>WebApp</a>
-		   <a href='/pricing'>Pricing</a>
-		 </div>
-		 <div style='border-top: 1px solid black;text-align:center;'>
-		   <a href='/terms' style='color:silver;'>Terms And Condition</a>
-		 </div>
-		 <style>
-		   div.menu {width:50%;}
-		   div.menu a {color:black;display:block;text-decoration:none;margin-bottom:10px;padding:5px;}
-		   div.menu a:hover {text-decoration:underline;}
-		   @media screen and (max-width: 500px) {
-				 div.menu {width:70%;}
-		   }
-		 </style>
-	   </div>
-	   <script>
-	  let menubar = document.querySelector('.menubar')
-	  let close = document.querySelector('.close')
-	  let menu = document.querySelector('.menu');
-	  
-	  menubar.onclick = function() { 
-		menu.style.display = 'block'
-		close.style.display = 'block'
-		
-	  }
-	  
-	  close.onclick = function() {
-	    menu.style.display = 'none'
-		close.style.display = 'none'
-		
-	  }
-	</script>
-	   <div class='whatwedo' style='font-family:Poppins;padding:0px;'>
-	     <div style='background-color:aqua;padding-left:2%;'>
-		   <h2 style='font-size:30px;margin:0;'>Running A Business Without Help Isn't An Easy Task. Let's lighten Some Of Your Load.</h2>
-		   <p>Successfully Run Your Business Without Managing In-House Teams. Instead Let's Share Our Team's Expertise With You Remotely.</p>
-		   <p><code>Reserved For Customers Only</code></p>
-		   <button style='padding:5px;margin:10px;'>&rarr; Get Started &larr;</button>
-		 </div>
-		 <img style='margin:0;background-color:green;height:50vh;;' src='/images/food1.png'>
-		 <style>
-		    div.whatwedo {display:flex;flex-direction:row;}
-			div.whatwedo div {width:58%;}
-			div.whatwedo img {width:48%;}
-			@media screen and (max-width: 850px) {
-			  div.whatwedo {display:block;}
-			  div.whatwedo div {width:98%;}
-			  div.whatwedo img {width:100%;}
+  <body style='padding:0;margin:0;'>
+    <div style=''>
+	  <div class='suji' style='background-color: white;'>
+		<article style=''>
+		  <section style='background-color: pink;background-size:200px 200px;'>
+		    <header style='display:flex;flex-direction:row;color:black;'>
+			  <img src='/images/mylogo.svg' width='60' height='50' >
+		      <b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>LOOP</b>
+		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
+		        <style>
+			      .suji nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				  .suji nav.navi b:hover {color: rgb(132,51,119);}
+			      .suji b.logo, b.menubar {padding: 10px;font-size:22px;}
+				  .suji b.menubar {display:none;font-family:Poppins-eb;}
+				  .suji .small {width:60%;margin:auto;}
+				  @media screen and (max-width: 900px) {
+				     .suji b.menubar {display: inline-block;flex:1;text-align:right;}
+					 .suji nav.navi {display:none;}
+					 .suji .small {width:80%;margin:auto;}
+					 
+				  }
+				  @media screen and (max-width: 450px) {
+				     .suji .small {width:90%;margin:auto;}
+				  }
+			    </style>
+		        
+			    <b><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></b>
+			    <b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
+			    <b><a href='/services' style='color:black;text-decoration:none;'>Services</a></b>
+				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
+				<a href='/users/newuser'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</b></a>
+			    <a href='/users/login'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</b></a>
+		      </nav>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class='img' src='/images/menubar.svg'  style='color:green;width:40px;height:40px;'></p></b>
+		    </header>
+			<section class='othernav' style='background-color:white;display:none;transition: all 0.5s ease;background-color: rgb(187,183,58)'>
+			  <style>
+			    
+			    .othernav .p {margin:5px;padding:5px;font-family:Poppins;cursor:pointer;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
+				
+			  </style>
+			  <p class='p'><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></p>
+			  <p class='p'><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></p>
+			  <p class='p'><a href='/services' style='color:black;text-decoration:none;'>Services</a></p>
+			  <p class='p'><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></p>
+			  <a href='/users/newuser'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</p></a>
+			  <a href='/users/login'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</p></a>
+			</section>
+			<script>
+			  let menu = document.querySelector('.menubar')
+			  let othernav = document.querySelector('.othernav')
 			  
-			}
-		 </style>
-	   </div>
-	   
-	   <style>
-	     div.whatwedo0 {width:80%;margin-left:10%;border: 4px solid silver;box-shadow: 0px 0px 5px;}
-		 div.whatwedo00 {display:flex;}
-		 div.whatwedo00 div {width:40%;margin-left:10%;}
-		 div.whatwedo00 img {width:48%;height:50vh;margin:0;}
-		 @media screen and (max-width: 650px) {
-		   div.whatwedo0 {width:95%;margin:auto;}
-		 }
-		 @media screen and (max-width: 650px) {
-			  div.whatwedo0 {width:98%;margin:auto;border: 0px solid silver;box-shadow: 0px 0px 0px;}
-			  div.whatwedo00 {display:block;border-bottom: 2px solid red;,margin-bottom: 10px;}
-			  div.whatwedo00 div {width:98%;margin-left:0%;}
-			  div.whatwedo00 img {width:80%;margin:auto;display:block;}
-			}
-	   </style>
-	   <div class='whatwedo0' style='padding:5px;border-radius: 10px;margin-top:10px;'>
-	     <h2 style='border-left: 3px solid red;border-right: 3px solid red;text-align:center;background-color:green;color:white;padding:5px;margin:0;'>AVAILABLE TEAMS:</h2>
-		 <div style='background-color:rgba(123,101,236,0.5);font-family:Poppins;margin:0;'>
-		   <div class='whatwedo00' style='flex-direction:row;'>
-              <div style='padding-left:2%;margin-right:10%;padding-top:10px;'>
-				<h2 style='margin:0;'>Marketing</h2>
-				<p>Need Someone To Send Targeted Email? Manage Social Media Platforms? Need A CoyWriter? Need An SEO Specialist?</p>
-			  </div>
-			  <img style='background-color:green;' src='/images/food1.png'>
-		   </div>
-		   <div class='whatwedo00' style='flex-direction:row;'>
-			  <img style='background-color:green;' src='/images/food1.png'>
-			  <div style='padding-left:2%;'>
-				<h2>Data Analyst</h2>
-				<p>Need Someone To Make Sense Of Your Data And Aid Your Decision Making. Need Someone To Answer Your Business Questions? Big Data Analysis? Business Analysis? Product Recommendation?</p>
-			  </div>
-		   </div>
-		   <div class='whatwedo00' style='flex-direction:row;'>
-              <div style='padding-left:2%;margin-right:10%;'>
-				<h2>Customer Service</h2>
-				<p>Need Someone To Help Answer Your Emails? Help With PR?</p>
-			  </div>
-			  <img style='background-color:green;' src='/images/food1.png'>
-		   </div>
-		   <div class='whatwedo00' style='flex-direction:row;'>
-			  <img style='background-color:green;' src='/images/food1.png'>
-			  <div style='padding-left:2%;'>
-				<h2>Finance</h2>
-				<p>You Got Endless Amount Of Finance Data That Needs To Be Made Sense Of? Need An Auditor? Need A Financial Modeller? </p>
-			  </div>
-		   </div>
-		   <div class='whatwedo00' style='flex-direction:row;'>
-              <div style='padding-left:2%;margin-right:10%;'>
-				<h2>Others</h2>
-				<p>If There's Any Service You Need From Our Dedicated Team. Whether Remote Manager Or Virtual Assistant. Sign Up And Send A Mail</p>
-			  </div>
-			  <img style='background-color:green;' src='/images/food1.png'>
-		   </div>
+			  function open(x) {
+				if(x.matches) {
+					othernav.style.display = 'none'
+				} 
+			  }
+			  let x = window.matchMedia("(min-width: 901px)")
+			  open(x)
+			  x.addListener(open)
+			
+			  menu.onclick = function (){
+				if(othernav.style.display == 'none'){
+				  othernav.style.display = 'block'
+				} else {
+				  othernav.style.display = 'none'
+				}
+			  }
+			</script>
+			<section style='padding:10px;padding-top:50px;padding-bottom:50px;color:black;'>
+			  <style>
+			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;cursor:pointer;}
+			    b.start:hover {background-color: rgba(132,51,119,0.5);color:white;}
+			  </style>
+			  <h1 style=''>WHATEVER TYPE YOUR BUSINESS IS WE HAVE A SOFTWARE SOLUTION FOR YOU.</h1>
+			  <p style=''>We Create Softwares And Websites That Makes Your Business Operations Easier, Make More Sales, Have Loyal Customers</p>
+			  <h2 ><a href='/users/newuser' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>GET STARTED</b></a></h2>
+			</section>
+		  </section>
+		  <section class='small' style='margin-top:20px;position:relative;'>
+		    <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;'>
+			<b style='position:absolute;top:45%;left:50%;margin:auto;padding:10px;padding-left:12px;padding-right:12px;border-radius:10px;border:1px solid white;font-size:25px;background-color:rgba(245,245,245,0.3);color:white;'>  </b> 
+		  </section>
+		  <section class='small' style='margin-top:20px;position:relative;'>
+		     <style>
+			   .suji nav {font-family: Poppins;}
+			   .suji p {font-size: 18px;font-family:Poppins-eb;}
+			   .suji h1 {font-size:35px;font-family:Roboto;}
+			   .suji h2 {font-size: 30px;font-family:Poppins-b;}
+			   .suji h3 {font-size: 20px;font-family:Poppins;}
+			  @media screen and (max-width: 800px) {
+				 .suji p {font-size: 15px;}
+			     .suji h1 {font-size:32px;}
+			     .suji h2 {font-size: 27px;}
+			     .sujih3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 600px) {
+				 .suji p {font-size: 15px;}
+			     .suji h1 {font-size:28px;}
+			     .suji h2 {font-size: 23px;}
+			     .suji h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 400px) {
+				 .suji p {font-size: 15px;}
+			     .suji h1 {font-size:26px;}
+			     .suji h2 {font-size: 21px;}
+			     .suji h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 300px) {
+				 .suji p {font-size: 13px;}
+			     .suji h1 {font-size:22px;}
+			     .suji h2 {font-size: 19px;}
+			     .suji h3 {font-size: 15px;}
+			  }
+			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
+			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
+			   
+			   
+			 </style>
+		     <p style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>HOW WE WORK</b></p>
+			 <ul style='padding-left:30px;'>
+			   <li><p>SIGN IN</p></li>
+			   <li><p>WE'LL GIVE YOU A CALL WITHIN 5 MINUTES TO DISCUSS ABOUT THE JOB</p></li>
+			   <li><p><CODE>PS: No Upfront Payment Required. Payment is After You're Satisfied With The Job. If You're Not Interested In Continuing The Project, We Wont Charge You. </CODE></p></li>
+			 </ul>
+			 <a href='/pricing'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'>VIEW PRICING </p></a>
+		  </section>
 		  
-		 </div>
-       </div>
-	   
-	  
-	    <div style='background-color:rgb(64,20,67);color:white;font-family:Roboto;padding:5px;text-align:center;margin-bottom: 10px;'>
-	     <h1 style='font-size: 35px;'>Transparency</h1>
-		 <p style='border-bottom:1px solid silver;'>Our Operations Are Centered At Your Best Interest. Bid Farewell To Intransparency-induced Anxiety.</p>
-		 <button style='padding:5px;'>Sign Up</button>
-	   </div>
-	   <div style='background-color:rgb(64,20,67);color:white;font-family:Roboto;padding:5px;text-align:center;margin-bottom: 10px;'>
-	     <h1 style='font-size: 35px;'>Confidentiality</h1>
-		 <p style='border-bottom:1px solid silver;'>Your Data Is Safe And Secured. Not Even The Adminstration Can Use Them.</p>
-		 <button style='padding:5px;'>Sign Up</button>
-	   </div>
-	   <div style='background-color:rgb(64,20,67);color:white;font-family:Roboto;padding:5px;text-align:center;margin-bottom: 10px;'>
-	     <h1 style='font-size: 35px;'>Cost-Friendly</h1>
-		 <p style='border-bottom:1px solid silver;'>Spend Less On Marketing And Finance. Maximize Your Profit By Hiring Our Dedicated Teams.</p>
-		 <button style='padding:5px;'>Sign Up</button>
-	   </div>
-	   <div style='background-color:rgba(64,20,67,0.5);color:white;font-family:Roboto;padding:5px;text-align:center;margin-bottom: 10px;'>
-	     <h1 style='font-size: 35px;'>Requirement</h1>
-		 <p style='border-bottom:1px solid silver;'>Service Teams Are Reserved For Shopsidites With Websites</p>
-		 <button style='padding:5px;'>Sign Up</button>
-	   </div>
-	   <div style='background-color:rgb(64,20,20);color:white;font-family:Roboto;padding:5px;text-align:center;margin-bottom: 10px;'>
-	     <h1 style='font-size: 35px;'>Your User Journey</h1>
-		 <p>HERE'S WHAT YOU NEED TO DO?</p>
-		 <div>
-		   <p>Join Or Login.</p>
-		   <p>Communicate With Us through THe Assistant Tab.</p>
-		   <p>Bi-Directional Communication Between Both Parties: You Telling Us What Service You Need.</p>
-		 </div>
-		 <button style='padding:5px;'>Sign Up</button>
-	   </div>
-	   
-	   <div style='background-color: khaki;'>
-	     <h2 style='text-align:center;'>FAQ</h2>
-		 <div style='padding: 10px;padding-top: 0;font-size: 25px;'>
-		   <p style='border-bottom: 1px solid silver;'>
-		     <b>Does Every Business Need A Dedicated Team?</b>
-			 <b style='float:right;font-weight:900;'>+</b>
-		   </p>
-		   <div style='margin: 10px;border: 1px solid silver;'>
-		     <p>No Business Can Survive and Be Managed By One Man. It's A Complex Interaction Of Multiple Teams.</p>
-		   </div>
-		   
-		 </div>
-	   </div>
-	   
-	   <p style='margin:0;'>greta</p>
-	   
-	   
-   </article>
-   <footer class='footer' style=''>
-     <div>
-	   <h1 style='margin:0;'>Solutions</h1>
-	   <p>
-	     <a>Blog</a>
-		 <a>Ecommerce</a>
-		 <a>Enterprise Software</a>
-		 <a>WebApp</a>
-	   </p>
-	   
-	 </div>
-	 <div>
-	   <h1>Company</h1>
-	   <p>
-	     <a>help</a>
-		 <a>contact</a>
-		 <a>Terms And Condition</a>
-		 <a>Privacy Policy</a>
-	   </p>
-	 </div>
-	 <div style='width:100%;font-family:Roboto;border-top:1px solid white;'>
-	     <a href='#'><i class='fab fa-google' style='color:white;'></i></a>
-		 <a href='#'><i class='fab fa-twitter' style='color:white'></i></a>
-		 <a href='#'><i class='fab fa-facebook' style='color:white;'></i></a>
-	   </div>
-	   <div style='width:100%;font-family:Poppins;'>
-	     copyright 2021
-	   </div>
-	 <style>
-	   .footer {background-color: rgb(132,51,119);color:white;margin:0;}
-	   .footer div{font-family:Poppins;text-align:center;}
-	   .footer div h1 {font-size: 22px;font-family:Roboto;}
-	   
-	   @media screen and (max-width: 850px) {
-	     .footer div h1 {font-size: 18px}
-		 .footer div p {font-size: 15px;margin:5px;}
-	   }
-	   @media screen and (max-width: 700px) {
-	     .footer div h1 {font-size: 14px}
-		 .footer div p {font-size: 13px;margin:5px;}
-	   }
-	  
-	 </style>
-   </footer>
-   
-   <input type='color'>
-   
-   
+		  <section class='small' style='margin-top:20px;'>
+		    <h3 style='border-bottom: 1px solid black;padding-bottom: 10px;color: rgb(132,51,119);'><b>OUR SERVICES</b></h3>
+			<div>
+			  <table style='width:100%;'>
+			    <tr>
+				  <th style='width:50%;'> <a href='#website' style='text-decoration:none;'><p class='aboutus'> Website </p></a></th>
+				  <th style='width:50%;'> <a href='#ecommerce' style='text-decoration:none;'><p class='aboutus'> E-Commerce </p></a> </th>
+				</tr>
+				<tr>
+				  <th style='width:50%;'> <a href='#enterprise' style='text-decoration:none;'><p class='aboutus'> Enterprise Software </p></a> </th>
+				  <th style='width:50%;'> <a href='#webapp' style='text-decoration:none;'><p class='aboutus'> WebApp </p></a> </th>
+				</tr>
+			  </table>
+			</div>
+		  </section>
+		  
+		  <section id='website' style='margin:auto;margin-top:20px;background-color:khaki;'>
+		     <img src='/images/fog.jpg' style='width:100%;height:50vh;display:block;'>
+			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;'>
+			   <style>
+			     div.feat {flex-direction:row;}
+				 div.feat1 {margin-right:5%;}
+				 div.feat div {padding-left:10px;padding-right:10px;}
+				 div.feat h3 {color: rgb(132,51,119)}
+				 @media screen and (max-width: 900px) {
+				   div.feat {flex-direction:column;}
+				   div.feat1 {margin-right:0%;}
+				 }
+			   </style>
+			   <div>
+			     <h1>Website Development</h1>
+			     <p>Let's build Your Website According To Your Specification. Payment Isn't Mandatory Before Service.</p>
+				 <p>Dont miss out on the chance to have your business in front on Billions Of Potential Customers.</p>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CONVENIENCE</h3>
+					 <p>Add any feature to your website without even learning to code or hiring third-party expert.</p>
+				   </div>
+				   <div style='flex:1;background-color: rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>RELIABILITY</h3>
+					 <p> No need To worry About Security Or Managing Database Or Analyzing Your Logs Or Optimizing Your Page.  </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>MIGRATION</h3>
+					 <p>If you're previously using wordpress, or wix, or weebly or any other CMS. We Have A Migration Solution For You</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CENTRALIZATION</h3>
+					 <p> Add any feature to your software without having struggles with third-party integration. </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>SCALABLE</h3>
+					 <p> No need to worry about scaling infrstructure during high traffic periods. We have multiple teams working tireless to manage your website</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CUSTOMER SUPPORT</h3>
+					 <p>We have Multiple communication channels: Email, Instant Messaging, Phone Call</p>
+				   </div>
+				 </div>
+				 
+			   </div>
+			   
+			 </div>
+			 
+		  </section>
+		  <style>
+		    img.img {width:300px;height:190px;}
+			@media screen and (max-width: 400px) {
+			  img.img {width:200px;height:190px;}   
+			}
+		  </style>
+		  <section id='ecommerce' style='margin:auto;margin-top:20px;background-color:rgb(132,51,119);'>
+		     <img src='/images/a.jpg' style='width:100%;height:50vh;display:block;'>
+			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;color:white;'>
+			   <div>
+			     <input type='color'>
+			     <h1>Ecommerce Development</h1>
+			     <p>Compared to brick and mortal, ecommerce store has the ability to reach a wider range of audience. </p>
+				 <p>We'll create every neccessary software to make your ecommerce operations a success</p>
+				 <p>Whatever products you want to sell whether electronics, food, digital assets, skincare product,... we've got you covered</p>
+			     <p>Don't spend hours trying to market ypur prouct on Marketplaces like amazon,jumia,... are great, because you have a <a>greater level of competition</a>, might deals with bias algorithms and can have your account blocked when you violate their policy</p>
+			     <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CONVENIENCE</h3>
+					 <p>Add any feature to your website without even learning to code or hiring third-party expert.</p>
+				   </div>
+				   <div style='flex:1;background-color: rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>RELIABILITY</h3>
+					 <p> No need To worry About Security Or Managing Database Or Analyzing Your Logs Or Optimizing Your Page.  </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>MIGRATION</h3>
+					 <p>If you're previously using Shopify, or Woocommerce, or Magneto or any other Ecommerce CMS. We Have A Migration Solution For You</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CENTRALIZATION</h3>
+					 <p> Add any feature to your software without having struggles with third-party integration. </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>SCALABLE</h3>
+					 <p> No need to worry about scaling infrstructure during high traffic periods. We have multiple teams working tireless to manage your website</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CUSTOMER SUPPORT</h3>
+					 <p>We have Multiple communication channels: Email, Instant Messaging, Phone Call</p>
+				   </div>
+				 </div>
+				 
+			   </div>
+			 </div>
+		  </section>
+		  
+		  <section id='enterprise' style='margin:auto;margin-top:20px;background-color: rgb(53,25,154);'>
+		     <input type='color'/>
+		     <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;'>
+			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;color:white;'>
+			   <div>
+			     <h1>Enterprise Software Development</h1>
+			     <p>A single software solution can't solve the different, ever-complex problems of various businesses. </p>
+				 <p>why spend time trying to learn a software when you can have one built for you.</p>
+				 <p>Whether you need a software for managing inventory, finance, marketing,HR,BI,productivity,ERP... we are the best person for the job</p>
+			     <p>Enterprise Softwares from Salesforce, hubspot doesn't give you the customization and experience we give</p>
+			     <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CONVENIENCE</h3>
+					 <p>Add any feature to your website without even learning to code or hiring third-party expert.</p>
+				   </div>
+				   <div style='flex:1;background-color: rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>RELIABILITY</h3>
+					 <p> No need To worry About Security Or Managing Database Or Analyzing Your Logs Or Optimizing Your Page.  </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>MIGRATION</h3>
+					 <p>If you're previously using SalesForce, or Hubspot, or any other Enterprise Software. We Have A Migration Solution For You</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CENTRALIZATION</h3>
+					 <p> Add any feature to your software without having struggles with third-party integration. </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>SCALABLE</h3>
+					 <p> No need to worry about scaling infrstructure during high traffic periods. We have multiple teams working tireless to manage your website</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CUSTOMER SUPPORT</h3>
+					 <p>We have Multiple communication channels: Email, Instant Messaging, Phone Call</p>
+				   </div>
+				 </div>
+				 
+			   </div>
+			 </div>
+		  </section>
+		  
+		  <section id='webapp' style='margin:auto;margin-top:20px;background-color: rgb(33,130,123);'>
+		     <img src='/images/j.jpg' style='width:100%;height:50vh;display:block;'>
+			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;color:white;'>
+			    <div>
+			     <h1>Webapp Development</h1>
+			     <p>Webapp, the highest and most complex product of the web ecosystem can change your business for good. </p>
+				 <p>creating a webapp for you industry not only sets you apart but can be your best path to make millions of dollar</p>
+				 <p>Creating An Industry-Specific webapp like Ride-hailing-UBER, Home Rentals-Airbnb, Logistics-FedEx, Healthcare, Finance, Entertainment, Ecommerce,Food,Real State...  is already in our DNA. you have nothing to worry about.</p>
+			     <p>WebApps like uber, facebook are great but your data isn't have and dont forget of antitrust issue</p>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CONVENIENCE</h3>
+					 <p>Add any feature to your website without even learning to code or hiring third-party expert.</p>
+				   </div>
+				   <div style='flex:1;background-color: rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>RELIABILITY</h3>
+					 <p> No need To worry About Security Or Managing Database Or Analyzing Your Logs Or Optimizing Your Page.  </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CENTRALIZATION</h3>
+					 <p> Add any feature to your software without having struggles with third-party integration. </p>
+				   </div>
+				 </div>
+				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);color:black;border-radius:5px;'> 
+				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>SCALABLE</h3>
+					 <p> No need to worry about scaling infrstructure during high traffic periods. We have multiple teams working tireless to manage your website</p>
+				   </div>
+				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
+				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CUSTOMER SUPPORT</h3>
+					 <p>We have Multiple communication channels: Email, Instant Messaging, Phone Call</p>
+				   </div>
+				 </div>
+				 
+			   </div>
+			 </div>
+		  </section>
+		  
+		  
+		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
+			  <p>make money while referring clients to our channel.</p>
+			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
+		  </section>
+
+		</article>
+		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
+		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > LOOP</h1>
+			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
+		  </div>
+		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
+		    <div class='foot foot0'>
+		      <h3>USEFUL LINKS</h3>
+			  <p><a href='/help' style='color:white;text-decoration:none;'>Help</a></p>
+			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
+			  <p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
+			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>
+		    </div>
+		    <div class='foot' style=''>
+		      <h3>SERVICES </h3>
+			  <p><a href='/services' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/services' style='color:white;text-decoration:none;'>Ecommerce</a></p>
+			  <p><a href='/services' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
+			  <p><a href='/services' style='color:white;text-decoration:none;'>Webapp</a></p>
+		    </div>
+		  </div>
+		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
+		      <h3>Contact</h3>
+			  <p>akinsanmi20700@gmail.com  |  07014728658</p>
+			  <p> facebook  |  twitter  |  slack  |  linkedin  </p>
+		</div>
+		  <p style='text-align:center;margin:0;'>&copy;2022 LOOP. All Rights Reserved</p>
+		  <style>
+			  .suji div.foot {width:45%;}
+			  .sujidiv.foot0 {margin-left:5%;}
+			  @media screen and (max-width: 450px) {
+			    .suji div.foot {width:100%;}
+			    .suji div.foot0 {margin-left:0%;}
+			  }
+		  </style>
+		</footer>
+	  </div>
+
+	</div>
+	
+	
   </body>
-  </html>
+</html>

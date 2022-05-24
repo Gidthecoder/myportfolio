@@ -1,0 +1,305 @@
+<html>
+	<head>
+	</head>
+	<body style='margin:0;padding:0;'>
+		<article style='display:flex;flex-direction:column;flex-wrap:wrap;height:100vh;'>
+			<style>
+					@font-face {
+						font-family: 'Poppins';
+						src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Poppins-b';
+						src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Poppins-eb';
+						src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Roboto';
+						src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+					}
+					h1 {font-size:30px;font-family:Poppins-eb;}
+					h2 {font-size:25px;font-family:Poppins-b;}
+					h3 {font-size:20px;font-family:Poppins;}
+					p {font-size:15px;font-family:Roboto;}
+			</style>
+		    <style>
+				header.firstcontainer {display:flex;flex-direction:row;border-bottom:1px solid silver;padding-left:10px;padding-right:10px;}
+				header.firstcontainer b {padding:5px;margin:0;font-size:25px;font-family:Poppins;}
+				header.firstcontainer nav {flex:1;display:flex;flex-direction:row;padding:5px;justify-content:flex-end;}
+				header.firstcontainer nav div.navoptions {position:absolute;display:none;width:200px;padding-top:20px;padding-bottom:20px;background-color:rgb(245,245,245);}
+				header.firstcontainer nav div.navoptions p {margin:0;padding-left:50px;padding-right:10px;}
+				header.firstcontainer nav div.navoptions p:hover {background-color:orange;}
+				header.firstcontainer .menubar {display:none;}
+				@media screen and (max-width: 900px) {
+					header.firstcontainer nav {display:none;}
+					header.firstcontainer .menubar {display: inline-block;flex:1;text-align:right;}
+				}
+				
+			</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<header class='firstcontainer'>
+			  <b>logo</b>
+			  <nav>
+				<div>
+					<b class='toplink'>Finance</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Culture</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Entertainment</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Sport</b>
+					<div class='navoptions' style='right:0px;'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+			  </nav>
+			  <b class='menubar' > <img src='/images/menubar.svg' width='30' height='30'></b>
+			  <script>
+				let toplink = document.querySelectorAll('b.toplink')
+				for(let i=0; i<toplink.length; i++){
+					toplink[i].onmouseover = function(e){
+						e.target.nextElementSibling.style.display = 'block'
+					}
+					toplink[i].onmouseout = function(e){
+						e.target.nextElementSibling.style.display = 'none'
+					}
+				}
+			  </script>
+			</header>
+			
+			
+			<header class='secondcontainer'>
+				<style>
+					header.secondcontainer {display:block;padding-left:10px;padding-right:10px;border-bottom:1px solid silver;white-space:nowrap;overflow-x:scroll;width:90%;}
+					header.secondcontainer p {display:inline-block;margin:0;margin-right:5px;background-color:silver;padding:5px;font-size:15px;}
+					header.secondcontainer b {color:white;background-color:orange;display:inline-block;padding-left:3px;padding-right:3px;font-size:13px;}
+				</style>
+				<p class='offline' title='home'>home <b>x</b></p>
+				<p class='offline' title='about'>about <b>x</b></p>
+				<p class='offline' title='policy'>policy <b>x</b></p>
+				<p class='offline' title='ads'>ads <b>x</b></p>
+				<p class='offline' title='james'>james <b>x</b></p>
+			</header>
+			
+			
+			
+			<section class='fourthcontainer'>
+				<style>
+					section.fourthcontainer {flex:1;border: 2px inset black;overflow-y:scroll;}
+					section.fourthcontainer img {border-radius:10px;}
+					section.fourthcontainer div.container {padding:10px;display:flex;flex-direction:row;}
+					section.fourthcontainer div.container div.one {width:30%;margin-right:3%;margin-left:2%;}
+					section.fourthcontainer div.container div.two {width:30%;margin-right:3%;}
+					section.fourthcontainer div.container div.three {width:30%;}
+					section.fourthcontainer div.container img.img1 {width:100%;height: 30vh;}
+					section.fourthcontainer div.container img.img2 {width:100%;height: 60vh;}
+					section.fourthcontainer div.container div.textlink {background-color: rgba(240,150,0,0.6);border-radius:10px;padding-top:10px;padding-bottom:10px;}
+					section.fourthcontainer div.container div.textlink p {border-bottom: 2px solid rgb(240,150,0);padding-left:10px;padding-right:10px;}
+					section.fourthcontainer h2 {background-color: rgb(245,245,245);outline: 2px solid orange;margin:0;padding:10px;}
+					section.fourthcontainer h2 a {font-size:15px;}
+					@media screen and (max-width: 900px) {
+						section.fourthcontainer div.container {flex-direction:column;}
+						section.fourthcontainer div.container div.one {width:98%;margin-right:0%;margin-bottom:10px;}
+						section.fourthcontainer div.container div.two {width:98%;margin-left:2%;margin-right:0%;margin-bottom:10px;}
+						section.fourthcontainer div.container div.three {width:98%;margin-left:2%;margin-right:0%;margin-bottom:10px;}	
+						section.fourthcontainer div.container div.single {order:1;}
+						section.fourthcontainer div.container div.list {order:2;}
+						section.fourthcontainer div.container div.stack {order:3;}
+					}
+				</style>
+				<section>
+					<h2>For You <a href='#' >show all</a> </h2>
+					<div class='container'>
+						<div class='one stack'>
+						    <div>
+								<img class='img1' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+							<div>
+								<img class='img1' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+						<div class='two single'>
+							<div>
+								<img class='img2' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+						<div class='three list'>
+							<h3>ALSO YESTERDAY</h3>
+							<div class='textlink'>
+							  <p>How We Scales From 1 to 100 million users </p>
+							  <p>How We Scales From 1 to 100 million users </p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							  <p>How We Scales From 1 to 100 million users</p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Finance <a href='#' >show all</a> </h2>
+					<div class='container'>
+						<div class='one single'>
+							<div>
+								<img class='img2' src='/images/fog.jpg' style='width:100%;height: 60vh;'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+						<div class='two list'>
+							<h3>ALSO YESTERDAY</h3>
+							<div class='textlink'>
+							  <p>How We Scales From 1 to 100 million users</p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							  <p>How We Scales From 1 to 100 million users</p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							</div>
+						</div>
+						
+						<div class='three stack'>
+						    <div>
+								<img class='img1' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+							<div>
+								<img class='img1' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+				<section>
+					<h2>Entertainment <a href='#' >show all</a> </h2>
+					<div class='container'>
+						<div class='one list'>
+							<h3>ALSO YESTERDAY</h3>
+							<div class='textlink'>
+							  <p>How We Scales From 1 to 100 million users</p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							  <p>How We Scales From 1 to 100 million users</p>
+							  <p>best recipe for summer</p>
+							  <p>Elon Musk: I want to buy twitter</p>
+							</div>
+						</div>
+						<div class='two stack'>
+						    <div>
+								<img class='img1' src='/images/fog.jpg'>
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+							<div>
+								<img class='img1' src='/images/fog.jpg' >
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+						<div class='three single'>
+							<div>
+								<img class='img2' src='/images/fog.jpg' >
+								<div>
+									<p>cool</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class='fourthchild'>
+					<style>
+						section.fourthcontainer section.fourthchild div.firstchild {padding-left:2%;padding-right:2%;margin-top:10px;display:flex;flex-direction:row;flex-wrap:wrap;}
+						section.fourthcontainer section.fourthchild div.firstchild div.wrapper {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;width:45%;margin:auto;}
+						section.fourthcontainer section.fourthchild div.firstchild div.wrapper div {width:50%;height:100px;padding:40px;border:1px solid red;}
+						section.fourthcontainer section.fourthchild div.firstchild div.wrapper img {width:calc(50% + 80px);height:180px;position:relative;top:40px;right:40px;box-shadow:5px 0px 10px black;}
+						@media screen and (max-width: 600px) {
+							section.fourthcontainer section.fourthchild div.firstchild div.wrapper {width: 95%;}
+							section.fourthcontainer section.fourthchild div.firstchild div.wrapper div {padding:20px;}
+							section.fourthcontainer section.fourthchild div.firstchild div.wrapper img {width:calc(50% + 100px);right:20px;}
+						}
+						@media screen and (max-width: 300px) {
+							section.fourthcontainer section.fourthchild div.firstchild div.wrapper img {width:calc(50%);}
+						}
+					</style>
+					<h2>For You <a href='#' >show all</a> </h2>
+					<div class='firstchild'>
+						<div class='wrapper'>
+							<div>
+								<h3>cool borsef</h3>
+							</div>
+							<img src='/images/fog.jpg' >
+						</div>
+						<div class='wrapper'>
+							<div>
+								<h3>cool borsef</h3>
+							</div>
+							<img src='/images/fog.jpg' >
+						</div>
+						<div class='wrapper'>
+							<div>
+								<h3>cool borsef</h3>
+							</div>
+							<img src='/images/fog.jpg' >
+						</div>
+						<div class='wrapper'>
+							<div>
+								<h3>cool borsef</h3>
+							</div>
+							<img src='/images/fog.jpg' >
+						</div>
+					</div>
+				</section>
+				
+			</section>
+			
+			<section class='status'>
+				<style>
+					section.status {background-color: rgb(245,245,245);}
+					section.status p {margin:0;font-size:17px;}
+				</style>
+				<p>views </p>
+			</section>
+		</article>
+	</body>
+</html>

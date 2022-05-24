@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <style>
+	  b.pjdesc:hover {background-color:silver;}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(50,111,210);'>
+			
+			<article>
+				<style>
+				    article h2 {margin-top:20vh;text-align:center;color:white;}
+					section.firstcontainer {width:400px;padding:20px;background-color: white;margin:auto;border-radius:10px;box-shadow:0px 0px 10px black;}
+					section.firstcontainer form input {padding:5px;width:100%;outline:none;border:0px solid black;border-bottom:1px solid black;margin-bottom:20px;}
+					section.firstcontainer form button {padding:5px;border: 1px solid rgb(50,111,210);background-color:white;color:rgb(50,111,210);border-radius:5px; }
+					
+					@media screen and (max-width: 800px) {
+						section.firstcontainer {width:60%;}
+					}
+					
+					@media screen and (max-width: 500px) {
+						article h2 {margin-top:10vh;}
+						section.firstcontainer {width:80%;}
+					}
+				</style>
+				<p>.</p>
+				<h2>ECOMMERCE LOGO</h2>
+				<section class='firstcontainer'>
+					
+					<form action='/demo/ecommerce/log' method='POST'>
+						<label for='username'><p>email:</p></label>
+						<input id='username' type='email' name='email'>
+						<label for='username'><p>Password:</p></label>
+						<input id='Password' type='password' name='password'>
+						<button><h3>submit</h3></button>
+					</form>
+				</section>
+				<p style='color:white;text-align:center;'>terms and condition</p>
+			</article>
+			
+			<style>
+				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+  </body>
+</html>

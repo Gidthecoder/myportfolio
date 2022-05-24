@@ -95,7 +95,7 @@ function line(containerg, yscale, data, height){
 				circle[i].setAttribute('cy', `${form}`)
 				circle[i].setAttribute('r', `10`)
 				circle[i].setAttribute('fill', `green`)
-				text[i].textContent = form
+				text[i].textContent = data[i]
 				text[i].setAttribute('x', `${20 + (i * 80) - 10}`)
 				text[i].setAttribute('y', `${form - 10} `)
 				text[i].setAttribute('stroke', `blue `)
@@ -198,10 +198,34 @@ function textx(containerg, txt, height ){
 			}
 }
 
+function linex(containerg, txt, yscale, height){
+			let line = [];
+			for(let i=0; i<yscale.data.length; i++){
+				line.push(document.createElementNS('http://www.w3.org/2000/svg', 'line') )
+			}
+			let gline = []
+			for(let i=0; i<yscale.data.length; i++){
+				gline.push(document.createElementNS('http://www.w3.org/2000/svg', 'g')  )
+			}
+			let l = txt.length 
+			for(let i=0; i<yscale.data.length; i++){
+				line[i].setAttribute('stroke', 'silver')
+				line[i].setAttribute('x1', '0')
+				line[i].setAttribute('y1', `${(height - 100) - ( (height - 100) * (yscale.data[i]/yscale.content) )}`) 
+				line[i].setAttribute('x2', `${l * 80}`)
+				line[i].setAttribute('y2', `${(height - 100) - ( (height - 100) * (yscale.data[i]/yscale.content) )}`)
+				
+				gline[i].append(line[i])
+				
+				containerg.append(gline[i])
+				
+			}
+}
 
 
 
-Svg.prototype.vbarchart = function(data, container, ht){
+
+Svg.prototype.vbarchart = function(data, container, ht, legend){
 	try {
 		let txt = Object.keys(data);
 		let d = Object.values(data);
@@ -214,7 +238,7 @@ Svg.prototype.vbarchart = function(data, container, ht){
 		c.innerHTML = ''
 		c.append(svg)
 	    
-		let width = 100 * d.length + 100;
+		let width = (d.length < 3? 500: 100 * d.length + 100);
 		let height = ht
 		svg.setAttribute('width', width)
 		svg.setAttribute('height', height)
@@ -225,13 +249,25 @@ Svg.prototype.vbarchart = function(data, container, ht){
 		rect.setAttribute('y', 0)
 		rect.setAttribute('width', width)
 		rect.setAttribute('height', height)
-		rect.setAttribute('stroke', 'red')
-		rect.setAttribute('fill', 'khaki')
+		rect.setAttribute('fill', 'white')
+		
+		//legend
+		let legendText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		legendText.textContent = legend
+		let legendContainer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+		legendContainer.setAttribute('transform', 'translate(50,30)')
+		legendContainer.append(legendText)
+		svg.append(legendContainer)
+		legendText.style.fontSize = '30px'
+		legendText.style.fontFamily = 'Roboto'
 		
 		//for padding
 		let containerg = document.createElementNS('http://www.w3.org/2000/svg', 'g')
 		containerg.setAttribute('transform', 'translate(100,50)')
 		svg.append(containerg)
+		
+		//y scale line
+		linex(containerg, txt, ske(d), height)
 		
 		//bar area
 		let bar1 = bar(containerg, ske(d), d, height)
@@ -249,6 +285,8 @@ Svg.prototype.vbarchart = function(data, container, ht){
 		//y scale legend
 		labely(containerg, ske(d), bar1, txt, height)
 		
+		
+				
 	  //hover 
 	  for(let i=0; i<bar1.length; i++){
 		  let text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
@@ -273,7 +311,7 @@ Svg.prototype.vbarchart = function(data, container, ht){
 	}
 }
 
-Svg.prototype.linechart = function(data, container, ht){
+Svg.prototype.linechart = function(data, container, ht, legend){
 	try {
 		let txt = Object.keys(data);
 		let d = Object.values(data);
@@ -286,7 +324,7 @@ Svg.prototype.linechart = function(data, container, ht){
 		c.append(svg)
 		
 	    let height = ht;
-		let width = 100 * d.length + 100;
+		let width = (d.length < 3? 500: 100 * d.length + 100);
 		svg.setAttribute('width', width)
 		svg.setAttribute('height', height)
 	
@@ -296,13 +334,26 @@ Svg.prototype.linechart = function(data, container, ht){
 		rect.setAttribute('y', 0)
 		rect.setAttribute('width', width)
 		rect.setAttribute('height', height)
-		rect.setAttribute('stroke', 'red')
-		rect.setAttribute('fill', 'khaki')
+		
+		rect.setAttribute('fill', 'white')
+		
+		//legend
+		let legendText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		legendText.textContent = legend
+		let legendContainer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+		legendContainer.setAttribute('transform', 'translate(50,30)')
+		legendContainer.append(legendText)
+		svg.append(legendContainer)
+		legendText.style.fontSize = '30px'
+		legendText.style.fontFamily = 'Roboto'
 		
 		//for padding
 		let containerg = document.createElementNS('http://www.w3.org/2000/svg', 'g')
 		containerg.setAttribute('transform', 'translate(100,50)')
 		svg.append(containerg)
+		
+		//y scale line
+		linex(containerg, txt, ske(d), height)
 		
 		//bar area
 		let line1 = line(containerg, ske(d), d, height)
@@ -315,7 +366,6 @@ Svg.prototype.linechart = function(data, container, ht){
 		
 		//x scale label
 		textx(containerg, txt, height)
-		
 		
 		return svg
 	} catch (e) {
@@ -372,6 +422,9 @@ Svg.prototype.v3barchart = function(data, container, ht){
 		
 				//y scale legend
 				labely(containerg, ske(d), bar1, txt, height)
+				
+				//y scale line
+				linex(containerg, txt, ske(d), height)
 		
 				//hover 
 				for(let i=0; i<bar1.length; i++){

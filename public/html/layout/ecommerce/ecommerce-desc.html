@@ -1,0 +1,417 @@
+<html>
+  <head>
+    <style>
+	  b.pjdesc:hover {background-color:silver;}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(245,245,245);'>
+		
+			<article>
+				<section>
+					<style>
+						header.firstcontainera b.cart i	{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera b.cart i:hover {background-color:rgb(245,245,245);}
+						header.firstcontainera b.cart i:active {background-color: silver;}
+						header.firstcontainera 	{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;}
+						header.firstcontainera b.firstchild 		{display:none;flex:1;text-align:left;color: rgb(50,111,210);}
+						
+						
+						header.firstcontainera b.thirdchild 		{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+						header.firstcontainera nav.fourthchild 		{flex:1;text-align:right;padding:0;margin:0;padding-right:50px;}
+						header.firstcontainera nav.fourthchild b.register 		{color:white;background-color: rgb(50,111,210)}
+						header.firstcontainera nav.fourthchild b 		{cursor: pointer;}
+						
+						
+					</style>
+					<header class='firstcontainera'>
+						<b class='firstchild'> <i class='fas fa-bars'></i></b>
+						<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40'> 
+						<b class='thirdchild'>PETAL</b>
+						<nav class='fourthchild'>
+							<b>login</b>
+							<b class='register'>Register</b>
+						</nav>
+						<b class='cart'>  <i class='fas fa-shopping-cart' title='0 items'></i></b>
+					</header>
+					<section class='firstcontainerb'>
+					    <style>
+							section.firstcontainerb {display:none;position:absolute;width:50%;right:5px;box-shadow:0px 0px 5px black;background-color:white;}
+							section.firstcontainerb div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+						
+						    section.firstcontainerb div.secondchild {border-top:1px solid silver;border-bottom:1px solid silver;flex:1;text-align:right;padding-right:10px;}
+							section.firstcontainerb div.thirdchild {text-align:right;margin:5px;}
+							section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;display:inline-block;}
+						    section.firstcontainerb div.firstchild div.items div.secondchild {flex:1;align-item:center;}
+							section.firstcontainerb div.thirdchild {padding:10px;}
+							section.firstcontainerb div.fourthchild {padding:10px;}
+							section.firstcontainerb h3 {font-size:17px;}
+							section.firstcontainerb p,button,input {font-size:14px;}
+							section.firstcontainerb img {margin:10px;}
+							section.firstcontainerb button {border-radius: 50%}
+							section.firstcontainerb input {width:50px;padding:5px;}
+							
+							@media screen and (max-width: 900px) {
+								section.firstcontainerb {width: 80%;}
+								section.firstcontainerb h3 {font-size:14px;}
+								section.firstcontainerb p,button,input {font-size:13px;}
+							}
+							@media screen and (max-width: 500px) {
+								section.firstcontainerb {width: 99%;right:0px;}
+								section.firstcontainerb h3 {font-size:13px;}
+								section.firstcontainerb p,button,input {font-size:12px;}
+							}
+						</style>
+						<div class='firstchild' style='overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;'>
+							<div class='items'>
+								<img src='/images/amz/kitchen.png' style='width:50px;height:50px;'>
+								<div class='secondchild'>
+									<h3>Title</h3>
+									<p>size</p>
+								</div>
+								<div class='thirdchild'>
+									<p>
+										<button>-</button>
+										<input type='number' value='1'>
+										<button>+</button>
+									</p>
+								</div>
+								<div class='fourthchild'>
+									<h3>$23</h3>
+									<p style='text-decoration:underline;'>remove</p>
+								</div>
+							</div>
+							<div class='items'>
+								<img src='/images/amz/kitchen.png' width='50' height='50'>
+								<div class='secondchild'>
+									<h3>Title</h3>
+									<p>size</p>
+								</div>
+								<div class='thirdchild'>
+									<p>
+										<button>-</button>
+										<input type='number' value='1'>
+										<button>+</button>
+									</p>
+								</div>
+								<div class='fourthchild'>
+									<h3>$23</h3>
+									<p style='text-decoration:underline;'>remove</p>
+								</div>
+							</div>
+							<div class='items'>
+								<img src='/images/amz/kitchen.png' width='50' height='50'>
+								<div class='secondchild'>
+									<h3>Title</h3>
+									<p>size</p>
+								</div>
+								<div class='thirdchild'>
+									<p>
+										<button>-</button>
+										<input type='number' value='1'>
+										<button>+</button>
+									</p>
+								</div>
+								<div class='fourthchild'>
+									<h3>$23</h3>
+									<p style='text-decoration:underline;'>remove</p>
+								</div>
+							</div>
+						</div>
+						<div class='secondchild'>
+							<p><b>subtotal:</b> $69</p>
+							<p><b>tax:</b> $10</p>
+						</div>
+						<p class='thirdchild'> <b>checkout</b> </p>
+						<script>
+							let cart = document.querySelector('header.firstcontainera b.cart i')
+							let cartdetails = document.querySelector('.firstcontainerb')
+							
+							cart.onclick = function(){
+								if(cartdetails.style.display == 'none'){cartdetails.style.display = 'block'}
+								else {cartdetails.style.display = 'none'}
+								
+							}
+						</script>
+					</section>
+					<header class='secondcontainer' >
+						<style>
+							header.secondcontainer 		{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;padding:10px;}
+							header.secondcontainer div.firstchild 		{flex:1;overflow-y:hidden;overflow-x:Scroll;display:block;white-space:nowrap;margin-right:20px;}
+							header.secondcontainer div.firstchild b 		{cursor:pointer;border: 1px solid white;transition: all 0.5s ease;}
+							header.secondcontainer div.firstchild b:hover 		{border: 1px solid rgb(50,111,210);}
+							header.secondcontainer div.secondchild 		{flex:1;}
+							header.secondcontainer b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+							
+							header.secondcontainer input.search 		{width:100%;padding:5px;display:inline-block;font-size:18px;border-radius:14px;outline:none;border: 5px solid rgb(50,111,210);}
+							
+							@media screen and (max-width: 900px) {
+								header.secondcontainer div.firstchild 		{display:none;}
+								header.firstcontainera nav.fourthchild 		{display:none;}
+								header.firstcontainera b.cart 		{flex:1;text-align:right;}
+								header.firstcontainera b.firstchild 		{display:inline-block;}
+							}
+						</style>
+						<div class='firstchild'> 
+							<b>Electronic</b>
+							<b>Shoe</b>
+							<b>Children</b>
+							<b>Skincare</b>
+							<b>Health</b>
+							<b>Tools</b>
+							<b>Books</b>
+							<b>Software</b>
+							<b>Movies</b>
+							<b>Kitchen</b>
+							<b>Cleaning</b>
+						</div>
+						<div class='secondchild'>
+							<input class='search' list='suggest' type='search' placeholder="i'm looking for"/>
+							<datalist id='suggest'>
+								<option>Jacket</option>
+							</datalist>
+						</div>
+					</header>
+				</section>
+		  
+				<section class='thirdcontainer'>
+					<style>
+					    section.thirdcontainer {display:none;background-color:white;}
+						section.thirdcontainer p.link01 		{cursor:pointer;background-color: rgb(50,111,210);color:white;border-radius:14px;text-align:center;}
+						section.thirdcontainer 		{display:none;background-color:white;padding-left:10px;padding-right:10px;}
+						section.thirdcontainer p.link11		{cursor:pointer;border-bottom: 1px solid silver;padding-left:20px;}
+						section.thirdcontainer p.link11:hover		{padding-left:40px;background-color:silver;}
+					</style>
+					<p class='link01' >sign up</p>
+					<p class='link01' >login</p>
+					<p class='link11'><b>Electronic</b></p>
+					<p class='link11'><b>Shoe</b></p>
+					<p class='link11'><b>Children</b></p>
+					<p class='link11'><b>Skincare</b></p>
+					<p class='link11'><b>Health</b></p>
+					<p class='link11'><b>Tools</b></p>
+					<p class='link11'><b>Books</b></p>
+					<p class='link11'><b>Software</b></p>
+					<p class='link11'><b>Movies</b></p>
+					<p class='link11'><b>Kitchen</b></p>
+					<p class='link11'><b>Cleaning</b></p>
+			
+					<script>
+						let menu = document.querySelector('header.firstcontainera b.firstchild')
+						let othernav = document.querySelector('.thirdcontainer')
+			  
+						function open(x) {
+							if(x.matches) {
+								othernav.style.display = 'none'
+							} 
+						}
+						let x = window.matchMedia("(min-width: 901px)")
+						open(x)
+						x.addListener(open)
+			
+						menu.onclick = function (){
+							if(othernav.style.display == 'none'){
+								othernav.style.display = 'block'
+							} else {
+								othernav.style.display = 'none'
+							}
+						}
+					</script>
+				</section>
+				
+				<section class='fourthcontainer'>
+					<style>
+						section.fourthcontainer {width:60%;margin:auto;margin-top:15px;margin-bottom:15px;box-shadow: 0px 0px 5px silver;background-color:white;}
+						section.fourthcontainer section.firstchild {white-space:nowrap;overflow-x:scroll;}
+						section.fourthcontainer div.secondchild div.firstchild h3 {border-bottom: 1px solid silver;}
+						
+						@media screen and (max-width: 900px) {
+							section.fourthcontainer {width:80%;}
+						}
+						
+						@media screen and (max-width: 500px) {
+							section.fourthcontainer {width:95%;}
+						}
+					</style>
+					<section class='firstchild'>
+						<img src='/images/amz/kitchen.png' width='400' height='400' style='border:1px solid silver;'>
+						<img src='/images/amz/kitchen.png' width='400' height='400' style='border:1px solid silver;'>
+						<img src='/images/amz/kitchen.png' width='400' height='400' style='border:1px solid silver;'>
+					</section>
+					
+					<div class='secondchild'>
+						<div class='firstchild'>
+							<p style='margin:0;'><b>seller:</b> james <b style='border-radius:50%;border:1px solid silver;float:right;padding-left:10px;padding-right:10px;'>&or;</b></p>
+							<h3>product name</h3>
+							<p>specification</p>
+							<h3>Description</h3>
+							<p>This is a Tobisha-branded blender directly imported from China. It has four blades, 40hp and is suitable for blending any edible food</p>
+							<h3>Delivery</h3>
+							<p>We deliver to any location across Europe, Asia And Africa</p>
+						</div>
+					</div>
+					<div class='thirdchild'>
+						
+						</section>
+					</div>
+				</section>
+				<section class='fifthcontainer'>
+					<style>
+						section.fifthcontainer {width:60%;margin:auto;margin-top:15px;margin-bottom:15px;box-shadow: 0px 0px 5px silver;background-color:white;}
+						section.fifthcontainer section.firstchild {white-space:nowrap;overflow-x:scroll;}
+						section.fifthcontainer div.reviews {display:inline-block;width:200px;background-color:rgb(245,245,245);box-shadow:0px 0px 5px silver;white-space:normal;margin:10px;padding:20px;}
+						section.fifthcontainer section.firstchild div.firstchild {display:flex;flex-direction:row;}
+						section.fifthcontainer section.firstchild div.firstchild b.icon {background-color:blue;color:white;font-family:Roboto;padding:5px;padding-left:15px;padding-right:15px;border-radius:50%;}
+						section.fifthcontainer section.firstchild div.firstchild div.content {flex:1;margin-left:5px;}
+						
+						@media screen and (max-width: 900px) {
+							section.fifthcontainer {width:80%;}
+						}
+						
+						@media screen and (max-width: 500px) {
+							section.fifthcontainer {width:95%;}
+						}
+					</style>
+					<h2>Product reviews</h2>
+					<section class='firstchild' style=''>
+						<div class='reviews'>
+							<div class='firstchild'>
+								<p ><b class='icon'>I</b></p>
+								<div class='content'>
+									<p>cool product. will use it again and again</p>
+								</div>
+							</div>
+						</div>
+						<div class='reviews'>
+							<div class='firstchild' >
+								<p><b class='icon'>I</b></p>
+								<div class='content'>
+									<p>great customers. even though i bought the product since last week,they answered all my questions regarding the returning of some of the products.</p>
+								</div>
+							</div>
+						</div>
+						<div class='reviews'>
+							<div class='firstchild'>
+								<p><b class='icon'>I</b></p>
+								<div class='content'>
+									<p>ordered a product since yesterday but havent seen product</p>
+								</div>
+							</div>
+						</div>
+						<div class='reviews'>
+							<div class='firstchild'>
+								<p><b class='icon'>I</b></p>
+								<div class='content'>
+									<p>work on your damn customer service</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				
+				<section class='sixthcontainer'>
+					<style>
+						section.sixthcontainer {width:60%;margin:auto;margin-top:15px;margin-bottom:15px;box-shadow: 0px 0px 5px silver;background-color:white;}
+						section.sixthcontainer section.secondchild {display:flex;flex-direction:row;flex-wrap:wrap;}
+						section.sixthcontainer section.secondchild  div {width:45%;border:1px solid silver;margin:auto;margin-bottom:10px;}
+						
+						@media screen and (max-width: 900px) {
+							section.sixthcontainer {width:80%;}
+						}
+						
+						@media screen and (max-width: 500px) {
+							section.sixthcontainer {width:95%;}
+						}
+					</style>
+					<h3 style='border-bottom:1px solid silver;'>Related Products</h3>
+					<section class='secondchild'>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+							<div>
+								<img src='/images/amz/kitchen.png' style='width:100%;height:200px;'>
+								<p>product name</p>
+							</div>
+					</section>
+			</article>
+			<style>
+				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+			<footer class='ninthcontainer'>
+				<style>
+					footer {background-color:black;color:white;}
+					footer p {text-align:center;}
+					footer b.terms {cursor:pointer;}
+					footer p.copy {margin:0;padding:5px;text-align:center;}
+				</style>
+				<p> 
+					<b>terms |</b>
+					<b>privacy policy |</b>
+					<b>refund policy</b>
+				</p>
+				<p class='copy'>copyright &copy; 2022</p>
+			</footer>
+  </body>
+</html>

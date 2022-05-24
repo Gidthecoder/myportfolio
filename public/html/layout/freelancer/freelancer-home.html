@@ -1,0 +1,278 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style='padding:0;margin:0;background-color: white;'>
+		<article>
+			<section class='firstalignment firstcontainer'>
+				<style>
+					section.firstcontainer {padding-bottom:30px;background-image: url(/images/h.jpg);background-size:100px 100px;color:white;}
+					header.secondcontainer {display:flex;flex-direction:row;border-bottom:1px solid black;}
+					
+					.menubar {display:none;flex:1;text-align:right;}
+					
+					.firstalignment {padding-left:60px;padding-right:60px;}
+					
+					header b {display:inline-block;padding: 10px;font-size: 22px;font-family:Roboto;cursor:pointer;}
+					@media screen and (max-width: 900px) {
+						header.secondcontainer nav {display:none;}
+						.menubar {display:inline-block;}
+						.firstalignment {padding-left:30px;padding-right:30px;}
+					}
+					@media screen and (max-width: 600px) {
+						.firstalignment {padding-left:15px;padding-right:15px;}
+					}
+					@media screen and (max-width: 450px) {
+						.firstalignment {padding-left:7px;padding-right:7px;}
+					}
+				</style>
+				
+				<header class='secondcontainer'>
+					<img src='/images/logo2.svg' width='60' height='50' >
+					<b style='padding-left:0px;'>Phils</b>
+					<nav style='flex:1;text-align:right;'>
+						<b style='color: rgb(65,221,8);'>Home</b>
+						<b>Hire</b>
+						<b>Jobs</b>
+						<b>Blog</b>
+						<b style='border-bottom: 1px solid rgb(65,221,8);'>Login</b>
+						<b style='border-bottom: 1px solid rgb(65,221,8);'>Register</b>
+					</nav>
+					<b class='menubar'>menu</b>
+				</header>
+				<section class='thirdcontainer'>
+					<style>
+						section.thirdcontainer form {width:100%;position:relative;width:100%;display:block;font-family:Roboto;}
+						section.thirdcontainer form input {display:inline-block;width:100%;padding:10px;padding-right:70px;font-size:15px;border-radius: 15px;}
+						.thirdcontainer {width:70%;margin-top:30px;margin-bottom:90px;}
+					
+						section.fourthcontainer {background-color:transparent;color:black;position:relative;left:0;bottom:90;}
+						section.fourthcontainer  .firstchild {flex-direction:row;display:flex;flex-wrap:nowrap;box-shadow:0px 0px 5px;background-color:white;}
+						section.fourthcontainer .firstchild div {width:33%;padding:10px;margin:auto;}
+						section.fourthcontainer .firstchild img {display:block;margin:auto;width:100%;height:200px;background-color: rgba(0,255,0,0.5);}
+					
+						@media screen and (max-width: 600px) {
+							.thirdcontainer {width:80%;}
+							section.fourthcontainer .firstchild {flex-direction:column;}
+							section.fourthcontainer .firstchild div {width:100%;padding:10px;}
+							section.fourthcontainer .firstchild img {width: calc(100% - 20px);margin:0;}
+						}
+						
+						@media screen and (max-width: 450px) {
+							.thirdcontainer {width:100%;}
+						}
+					</style>
+					<h1>Lorep ipsum dolor sit amet</h1>
+					<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiut alliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidadat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					<form>
+						<input type='search'>
+						<b style='position:absolute;top:0;bottom:0;right:0;padding:10px;font-size:15px;color:white;background-color:rgb(65,221,8);border-top-right-radius: 15px;border-bottom-right-radius: 15px;'>search</b>
+					</form>
+				</section>
+			</section>
+			
+			<section class='firstalignment fourthcontainer'>
+				<div class=' firstchild'>
+					<div>
+						<img src='/images/uni.svg'>
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+					<div>
+						<img src='/images/uni.svg'>
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+					<div>
+						<img src='/images/uni.svg'>
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+				</div>
+				<style>
+					h1 {font-size: 30px;font-family:Poppins-eb;}
+					h2 {font-size: 27px;font-family:Roboto;}
+					h3 {font-size: 22px;font-family:Poppins-b;}
+					p {font-size: 18px;font-family:Poppins;}
+			  
+					@media screen and (max-width: 900px) {
+						h1 {font-size: 25px;}
+						h2 {font-size: 22px;}
+						h3 {font-size: 18px;}
+						p {font-size: 15px;}
+					}
+					@media screen and (max-width: 600px) {
+						h1 {font-size: 22px;}
+						h2 {font-size: 19px;}
+						h3 {font-size: 16px;}
+						p {font-size: 14px;}
+					}
+				</style>
+			</section>
+			
+			<section class='fifthcontainer firstalignment'>
+				<style>
+					section.fifthcontainer {border-bottom: 2px solid black;border-top: 2px solid black;}
+					section.fifthcontainer div.fourthchild {display:flex;flex-direction:row;padding-bottom:10px;justify-content:flex-start;}
+					section.fifthcontainer div.fourthchild img {width:30%;height:200px;}
+					
+				</style>
+				<h3>LOREP IPSUM DOLOR ET</h3>
+				<h1>LOREP IPSUM DOLOR</h1>
+				<p>lorep ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+				<div class='fourthchild'>
+					<img src='/images/snack03.png' style='margin-right:1%;'>
+					<img src='/images/h.jpg' style='box-shadow:10px 10px 30px black;z-index:1;'>
+					<img src='/images/snacks04.png' style='margin-left:1%;'>
+				</div>
+			</section>
+			
+			<section class='sixthcontainer firstalignment'>
+				<style>
+					section.sixthcontainer {display:flex;flex-direction:row;flex-wrap:nowrap;padding-top:20px;padding-bottom:20px;border-bottom: 2px solid black;}
+					section.sixthcontainer img {width:40%;margin-right:10%;height:40vh;}
+					section.sixthcontainer div {width:40%;}
+					section.sixthcontainer div p b {color:white;padding:5px;background-color:rgb(65,221,8);}
+					
+					@media screen and (max-width: 400px) {
+						section.sixthcontainer {flex-direction: column;}
+						section.sixthcontainer img {width:100%;margin-right:0;}
+						section.sixthcontainer div {width:100%;}
+					}
+				</style>
+				<img src='/images/h.jpg'>
+				<div>
+					<h3>LOREP IPSUM</h3>
+					<p>lorep ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<p> <b>Get Started</b> </p>
+				</div>
+			</section>
+			
+			<section class='sixthcontainer firstalignment'>
+				<img src='/images/h.jpg'>
+				<div>
+					<h3>LOREP IPSUM</h3>
+					<p>lorep ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<p> <b>Get Started</b> </p>
+				</div>
+			</section>
+			
+			<section class='sixthcontainer firstalignment'>
+				<img src='/images/h.jpg'>
+				<div>
+					<h3>LOREP IPSUM</h3>
+					<p>lorep ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<p> <b>Get Started</b> </p>
+				</div>
+			</section>
+			
+			<section class='ninthcontainer firstalignment'>
+				<style>
+					section.ninthcontainer {border-bottom: 2px solid black;}
+					section.ninthcontainer div.fourthchild {display:flex;flex-direction:row;padding-bottom:10px;justify-content:flex-start;}
+					section.ninthcontainer div.fourthchild img {width:30%;height:200px;}
+					
+				</style>
+				<h3>LOREP IPSUM DOLOR ET</h3>
+				<h1>LOREP IPSUM DOLOR</h1>
+				<p>lorep ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+				<div class='fourthchild'>
+					<img src='/images/snack03.png' style='margin-right:1%;'>
+					<img src='/images/h.jpg' style='box-shadow:10px 10px 30px black;z-index:1;'>
+					<img src='/images/snacks04.png' style='margin-left:1%;'>
+				</div>
+			</section>
+			
+			<section class='firstalignment tenthcontainer'>
+				<style>
+					section.tenthcontainer {background-color:transparent;color:black;}
+					section.tenthcontainer  .firstchild {flex-direction:row;display:flex;flex-wrap:nowrap;box-shadow:0px 0px 5px;background-color:white;}
+					section.tenthcontainer .firstchild div {width:33%;padding:10px;margin:auto;}
+					section.tenthcontainer .firstchild img {display:block;margin:auto;width:100%;height:200px;background-color: rgba(0,255,0,0.5);}
+					
+					@media screen and (max-width: 600px) {
+							section.tenthcontainer .firstchild {flex-direction:column;}
+							section.tenthcontainer .firstchild div {width:100%;padding:10px;}
+							section.tenthcontainer .firstchild img {width: calc(100% - 20px);margin:0;}
+					}
+				</style>
+				<h2 style='width:100%;text-align:center;margin-top:10px;margin-bottom:10px;'>LOREP IPSUM</h2>
+				<div class=' firstchild'>
+					<div>
+						<img src='/images/uni.svg' >
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+					<div>
+						<img src='/images/chart.svg' >
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+					<div>
+						<img src='/images/heart.svg' >
+						<h3><b>Certificate</b></h3>
+						<p>Loprep ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+					</div>
+				</div>
+			</section>
+		</article>
+		<footer>
+			<style>
+				footer {background-color: rgb(65,221,8);color:white;}
+				footer div.top, footer div.bottom {padding:10px;background-color: rgb(83,143,66);}
+				footer div.body {display:flex;flex-direction:row;}
+				footer div.body div {width:50%;color:white;}
+			</style>
+			
+			<div class='top'>
+				<h3 style='color:white;text-align:center;'> LOGO </h3>
+			</div>
+			
+			<div class='body firstalignment'>
+				<div>
+					<h2>Services</h2>
+					<div>
+						<p>Find Work</p>
+						<p>Hire Freelancer</p>
+					</div>
+				</div>
+				<div>
+					<h2>About</h2>
+					<div>
+						<p>About</p>
+						<p>Company</p>
+						<p>terms and condition</p>
+						<p>privacy policy</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class='bottom'>
+				<p style='color:white;text-align:center;'>&copy; copyright 2022</p>
+			</div>
+			
+		</footer>
+	  
+	
+	
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<html>
+	<head>
+	</head>
+	<body style='margin:0;padding:0;'>
+		<article style='display:flex;flex-direction:column;flex-wrap:wrap;height:100vh;'>
+			<style>
+					@font-face {
+						font-family: 'Poppins';
+						src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Poppins-b';
+						src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Poppins-eb';
+						src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+					}
+					@font-face {
+						font-family: 'Roboto';
+						src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+					}
+					h1 {font-size:30px;font-family:Poppins-eb;}
+					h2 {font-size:25px;font-family:Poppins-b;}
+					h3 {font-size:20px;font-family:Poppins;}
+					p {font-size:15px;font-family:Roboto;}
+			</style>
+		    <style>
+				header.firstcontainer {display:flex;flex-direction:row;border-bottom:1px solid silver;padding-left:10px;padding-right:10px;}
+				header.firstcontainer b {padding:5px;margin:0;font-size:25px;font-family:Poppins;}
+				header.firstcontainer nav {flex:1;display:flex;flex-direction:row;padding:5px;justify-content:flex-end;}
+				header.firstcontainer nav div.navoptions {position:absolute;display:none;width:200px;padding-top:20px;padding-bottom:20px;background-color:rgb(245,245,245);}
+				header.firstcontainer nav div.navoptions p {margin:0;padding-left:50px;padding-right:10px;}
+				header.firstcontainer nav div.navoptions p:hover {background-color:orange;}
+				header.firstcontainer .menubar {display:none;}
+				@media screen and (max-width: 900px) {
+					header.firstcontainer nav {display:none;}
+					header.firstcontainer .menubar {display: inline-block;flex:1;text-align:right;}
+				}
+				
+			</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<header class='firstcontainer'>
+			  <b>logo</b>
+			  <nav>
+				<div>
+					<b class='toplink'>Finance</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Culture</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Entertainment</b>
+					<div class='navoptions'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+				<div>
+					<b class='toplink'>Sport</b>
+					<div class='navoptions' style='right:0px;'>
+						<p>Nigeria </p>
+						<p>US stocks</p>
+						<p>Bond Market</p>
+					</div>
+				</div>
+			  </nav>
+			  <b class='menubar' > <img src='/images/menubar.svg' width='30' height='30'></b>
+			  <script>
+				let toplink = document.querySelectorAll('b.toplink')
+				for(let i=0; i<toplink.length; i++){
+					toplink[i].onmouseover = function(e){
+						e.target.nextElementSibling.style.display = 'block'
+					}
+					toplink[i].onmouseout = function(e){
+						e.target.nextElementSibling.style.display = 'none'
+					}
+				}
+			  </script>
+			</header>
+			
+			
+			<header class='secondcontainer'>
+				<style>
+					header.secondcontainer {display:block;padding-left:10px;padding-right:10px;border-bottom:1px solid silver;white-space:nowrap;overflow-x:scroll;width:90%;}
+					header.secondcontainer p {display:inline-block;margin:0;margin-right:5px;background-color:silver;padding:5px;font-size:15px;}
+					header.secondcontainer b {color:white;background-color:orange;display:inline-block;padding-left:3px;padding-right:3px;font-size:13px;}
+				</style>
+				<p class='offline' title='home'>home <b>x</b></p>
+				<p class='offline' title='about'>about <b>x</b></p>
+				<p class='offline' title='policy'>policy <b>x</b></p>
+				<p class='offline' title='ads'>ads <b>x</b></p>
+				<p class='offline' title='james'>james <b>x</b></p>
+			</header>
+			
+			
+			
+			<section class='fourthcontainer'>
+				<style>
+					section.fourthcontainer {flex:1;border: 2px inset black;overflow-y:scroll;}
+					section.fourthcontainer h2 {background-image: url(/images/fog.jpg);background-size:100% 100%;padding:50px;text-align:center;color:white;margin:0;}
+					section.fourthcontainer section.details {display:flex;flex-direction:row;flex-wrap:nowrap;padding:5px;}
+					
+					section.fourthcontainer section.details div.news {width:32%;display:flex;flex-direction:row;margin:auto;margin-top:10px;}
+					
+					section.fourthcontainer section.details div.news div.link {width:50%;height:50vh;border:2px solid black;border-radius: 50px 0px 0px 50px;}
+					section.fourthcontainer section.details div.news img {width:50%;height:50vh;border:2px solid black;border-radius: 0px 50px 50px 0px;}
+					
+					@media screen and (max-width: 800px) {
+						section.fourthcontainer section.details {flex-wrap:wrap;}
+						section.fourthcontainer section.details div.news {width:40%;}
+					}
+					
+					@media screen and (max-width: 400px) {
+						section.fourthcontainer section.details div.news {width:80%;}
+					}
+				</style>
+				<h2>FINANCE</h2>
+				<section class='details'>
+					<div class=' news'>
+						<div class='link'>
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					<div class=' news'>
+						<div class='link' >
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					<div class=' news'>
+						<div class='link' >
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					
+				</section>
+				<section class='details'>
+					<div class=' news'>
+						<div class='link'>
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					<div class=' news'>
+						<div class='link' >
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					<div class=' news'>
+						<div class='link' >
+							<h3>color</h3>
+						</div>
+						<img src='/images/fog.jpg'>
+					</div>
+					
+				</section>
+			</section>
+			
+			<section class='status'>
+				<style>
+					section.status {background-color: rgb(245,245,245);}
+					section.status p {margin:0;font-size:17px;}
+				</style>
+				<p>views </p>
+			</section>
+		</article>
+	</body>
+</html>

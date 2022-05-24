@@ -1,0 +1,59 @@
+<DOCTYPE html>
+ <html lang='en-US'>
+  <head>
+    <title>CMS</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Gideon Akinsanmi">
+	<meta name="description" content="make friends, connect with people, show your works and have fun">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+  </head>
+  <body id='body'>
+   
+   <article class='article'>
+     
+	   <p id='content'>add  <b>new</b> post</p>
+	 
+     <p id='para'>the content of these element is editable</p>
+	 <script>
+	 
+	    fetch('/update') 
+		  .then(res => res.json())
+		  .then (resp => {
+		    //console.log(resp)
+			for(let i = 0; i < resp.popular.length; i++) {
+			  para.innerHTML = resp.popular[i]
+			  //save the array index
+			  para.dataset.id = i
+			}
+		  })
+		  para.setAttribute('contenteditable', true)
+		  content.setAttribute('contenteditable', true)
+		  
+		  
+		  //editing text content when the user presses ctrl
+		  para.onkeyup = function(e) {
+		    //alert(e.keyCode)
+		    if(e.keyCode === 17) {
+			  alert('sent')
+			  console.log(para.innerHTML)
+		      /*fetch('/update', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({html: para.innerHTML, id: para.dataset.id}) })
+			  .then(res => res.text())
+			  .then(resp => alert(resp))*/
+			}
+		  }
+		  
+		  //adding content
+		  content.onkeyup = function(e) {
+		    if(e.keyCode === 17) {
+			  alert('sent')
+			  console.log(content.innerHTML)
+			  /*fetch('/addcontent', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({html: content.innerHTML}) })
+			  .then(res => res.text())
+			  .then(resp => alert(resp))*/
+			}
+		  }
+	 </script>
+   </article>
+  </body>
+  </html>

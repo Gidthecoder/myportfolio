@@ -1,0 +1,292 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<style>
+	     /* typography styling */
+		h1 {font-size: 35px;Font-family:Poppins-eb;}
+		h2 {font-size: 30px;Font-family:Poppins-eb;}
+		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;}
+		p, header,footer {font-size:16px;Font-family:Roboto;}
+		@media screen and (max-width: 400px) {
+			h1 {font-size: 30px;Font-family:Poppins-eb;}
+			h2 {font-size: 25px;Font-family:Poppins-eb;}
+			h3 {font-size: 18px;font-weight:400;Font-family:Poppins;}
+			p, header, footer {font-size:15px;Font-family:Roboto;}
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body id='body'>
+	    <article>
+			<section>
+				<style>
+					body {font-family: sans-serif;padding:0;margin:0;}
+					article {background-color: white;}
+					
+					a {color: black;text-decoration:none;}
+				
+					.contactus {display:inline-block;padding:5px;background-image: linear-gradient(to bottom right, violet, aqua);cursor:pointer;}
+					
+					.firstcontainer {display:flex;flex-direction:row;}
+					.firstcontainer a {padding:10px;display:inline-block;cursor:pointer;transition: all 0.5s ease;}
+					.firstcontainer .firstchild {width:60px;height:45px;}
+					.firstcontainer .secondchild {padding-left:0px;height:30px;}
+					.firstcontainer .thirdchild {flex:1;text-align:right;}
+					
+					.firstcontainer .thirdchild a {border-bottom: 1px solid white;}
+					.firstcontainer .thirdchild a:hover {border-bottom: 1px solid violet;}
+					.firstcontainer .fourthchild {display:none;flex:1;text-align:right;padding-right:0px;}
+					
+					.secondcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
+					.secondcontainer .child1 {width:50%;margin-right:15%;}
+					.secondcontainer .child1 .firstchild {color: violet;}
+					
+					.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+					.secondcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+					
+					.thirdcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
+					.thirdcontainer .child1 {width:35%;height:50vh;}
+					.thirdcontainer .child1 .child1 {width: 100%;height:100%;}
+					.thirdcontainer .child2 {width:50%;margin-left:10%;}
+					.thirdcontainer .child2 .firstchild {color: violet;}
+					
+					.fourthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
+					.fourthcontainer .child1 {width:35%;height:50vh;}
+					.fourthcontainer .child1 .child1 {width: 100%;height:100%;}
+					.fourthcontainer .child2 {width:50%;margin-left:10%;}
+					.fourthcontainer .child2 .firstchild {color: violet;}
+					
+					.fifthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
+					.fifthcontainer .child1 {width:50%;margin-right:15%;}
+					.fifthcontainer .child1 .firstchild {color: violet;}
+					.fifthcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+					.fifthcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+					
+					.firstalignment {padding-left:60px;padding-right:60px;}
+					.secondalignment {padding-left:200px;padding-right:200px;}
+					.thirdalignment {padding-left: 120px;padding-right:120px;}
+					
+					.flexattribute {flex-direction:row;}
+					
+					
+					@media screen and (max-width: 800px) {
+						.firstcontainer .thirdchild {display:none;}
+						 
+						.firstcontainer .fourthchild {display:inline-block;}
+						 
+						.firstalignment {padding-left:30px;padding-right:30px;}
+						.secondalignment {padding-left:100px;padding-right:100px;}
+						.thirdalignment {padding-left:60px;padding-right:60px;}
+					}
+					
+					@media screen and (max-width: 600px) {
+						.secondalignment, .firstalignment {padding-left:30px;padding-right:30px;} 
+						
+						.flexattribute {flex-direction:column;}
+						
+						.firstcontainer .secondchild {font-size: 22px;}
+						
+						.secondcontainer .child1 {width:100%;margin-right:0%;}
+						.secondcontainer .child2 {width:100%;height:50vh;}
+						
+						.thirdcontainer .child1 {width:100%;}
+						.thirdcontainer .child2 {width:100%;margin-left:0%;}
+						
+						.fourthcontainer .child1 {width:100%;}
+						.fourthcontainer .child2 {width:100%;margin-left:0%;}
+						
+						.fifthcontainer .child1 {width:100%;margin-right:0%;}
+						.fifthcontainer .child2 {width:100%;height:50vh;}
+					}
+			  
+					@media screen and (max-width: 600px) {
+						.secondalignment, .firstalignment, .thirdalignment {padding-left:10px;padding-right:10px;} 
+					}
+				</style>
+				<header class='firstcontainer firstalignment'>
+					<img class='firstchild' src='/images/professional/logo3.svg' >
+					<b class='secondchild'>Sports</b>
+					<nav class='thirdchild'>
+						<a href='/demo/pro' style='color:violet;height:20px;'><b>HOME</b></a>
+						<a href='/demo/pro/about'><b>ABOUT</b></a>
+						<a href='#'><b>SERVICES</b></a>
+						<a href='#'><b>PORTFOLIO</b></a>
+						<a href='/demo/pro/contact'><b>CONTACT</b></a>
+					</nav>
+					<b class='fourthchild'><img class='img' src='/images/professional/menubar.svg'  style='color:green;width:40px;height:40px;'></b>
+				</header>
+				<header class='firstcontainerb'>
+					<style>
+						header.firstcontainerb {display:none;transition:all 0.5s ease;background-color:white;padding:10px;outline:2px solid aqua;position:fixed;top:0;bottom:0;left:0;overflow-y:scroll;}
+						header.firstcontainerb p b.close {transition:all 0.5s ease;float:right;display:inline-block;cursor:pointer;background-color:blue;color:white;padding:5px;}
+						header.firstcontainerb p b.close:hover {background-color:red;}
+						header.firstcontainerb  a {color:black;text-decoration:none;}
+						header.firstcontainerb  a:hover {text-decoration:underline;background-color:rgb(245,245,245);}
+						header.firstcontainerb p.nav {cursor:pointer;padding:5px;background-color:inherit;}
+					</style>
+				    <p>.<b class='close'>X</b></p>
+					<a href='/demo/pro'><p class='nav'>HOME</p></a>
+					<a href='/demo/pro/about'><p class='nav'>ABOUT</p></a>
+					<a href='#'><p class='nav'>SERVICES</P></a>
+					<a href='#'><p class='nav'>PORTFOLIO</p></a>
+					<a href='/demo/pro/contact'><p class='nav'>CONTACT</p></a>
+					<script>
+						let menubar = document.querySelector('.firstcontainer .fourthchild')
+						let othernav = document.querySelector('header.firstcontainerb')
+						menubar.onclick = function(){
+							othernav.style.display = 'block'
+							othernav.style.right = '0'
+							body.style.overflow = 'hidden'
+						}
+						let close = document.querySelector('header.firstcontainerb b.close')
+						close.onclick = function(){
+						  othernav.style.display = 'none'
+							othernav.style.right = 'auto'
+							body.style.overflow = 'scroll'
+						}
+						
+					</script>
+				</header>
+				<section class='secondcontainer firstalignment flexattribute'>
+					<div class='child1' >
+						<h3 class='firstchild'>LOREP IPSUM</h3>
+						<h1>LOPREP IPSUM DOLOR SIT </h1>
+						<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+						<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
+					</div>
+					<div class='child2'>
+						<div class='child1'>.</div>
+					</div>
+				</section>
+			</section>
+			
+			<section class='thirdcontainer secondalignment flexattribute'>
+				<div class='child1'>
+					<img src='/images/professional/dcloud.jpg' class='child1'>
+				</div>
+				<div class='child2'>
+					<h3 class='firstchild'>LOREP IPSUM</h3>
+					<h2>LOPREP IPSUM DOLOR SIT</h2>
+					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+					
+				</div>
+			</section>
+			
+			<section class='fourthcontainer secondalignment flexattribute'>
+				<div class='child1'>
+					<img src='/images/professional/dcloud.jpg' class='child1'>
+				</div>
+				<div class='child2'>
+					<h3 class='firstchild'>LOREP IPSUM</h3>
+					<h2>LOPREP IPSUM DOLOR SIT</h2>
+					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+				</div>
+			</section>
+			
+			<section class='fifthcontainer firstalignment flexattribute'>
+				<div class='child1' >
+					<h3 class='firstchild'>LOREP IPSUM</h3>
+					<h1>LOPREP IPSUM DOLOR SIT </h1>
+					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+					<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
+				</div>
+				<div class='child2'>
+					<div class='child1'>.</div>
+				</div>
+			</section>
+			
+			<section class='sixthcontainer thirdalignment'>
+				<style>
+					.sixthcontainer h1.firstchild {text-align: center;color:violet;}
+					.sixthcontainer section.secondchild {display: flex;flex-wrap:nowrap;}
+					.sixthcontainer section.secondchild div {width:30%;margin-right:2%;padding-left:5px;padding-right:5px;margin-bottom: 10px;}
+				
+					.sixthcontainer section.secondchild img {height:30vh;width:100%;border-radius: 10px;}
+					@media screen and (max-width: 600px) {
+						.sixthcontainer section.secondchild {flex-wrap: wrap;}
+						.sixthcontainer section.secondchild div{width:43%;margin-right:auto;}
+					}
+				</style>
+				<h1 class='firstchild'>LOREP IPSUM</h1>
+				<section class='secondchild'>
+					<div class='firstchild'>
+						<img src='/images/professional/dcloud.jpg'>
+						<h3>LOREP IPSUM</h3>
+						<p>Lorep ipsum dolor ets dallor</p>
+					</div>
+					<div class='secondchild'>
+						<img src='/images/professional/dcloud.jpg'>
+						<h3>LOREP IPSUM</h3>
+						<p>Lorep ipsum dolor ets dallor</p>
+					</div>
+					<div class='thirdchild' >
+						<img src='/images/professional/dcloud.jpg'>
+						<h3>LOREP IPSUM</h3>
+						<p>Lorep ipsum dolor ets dallor</p>
+					</div>
+				</section>
+			</section>
+			
+			<section class='seventhcontainer'>
+				<style>
+					.seventhcontainer {text-align:center;}
+					.seventhcontainer section.firstchild {height:80vh;background-image: url('/images/dcloud.jpg');color:white;background-size:100% 100%;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+					.seventhcontainer section.firstchild div.firstchild {height:80vh;background-color: rgba(0,0,0,0.5);}
+					.seventhcontainer section.firstchild div.firstchild h3.firstchild {margin:0;padding-top:20px;}
+				</style>
+				<section class='firstchild'>
+					<div class='firstchild'>
+						<h3 class='firstchild'>LOREP IPSUM</h3>
+						<h1 >LOREP IPSUM DOLOR ETS SALAR</h1>
+						<p>Lorep ipsum dolor ets salar fess tarr ishn fhewndj jsb e j</p>
+						<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
+					</div>
+				</section>
+			</section>
+		</article>
+		
+		<footer class='eightcontainer'>
+			<style>
+				.eightcontainer {background-color: black;color:white;text-align:center;padding-top:20px;}
+				.eightcontainer div {padding-bottom: 20px;}
+				.eightcontainer div.thirdchild p {margin:0;}
+				.eightcontainer div a {color:white;text-decoration:none;transition:all 0.5s ease;}
+				.eightcontainer div a:hover {text-decoration:underline;}
+			</style>
+			<div class='firstchild'>
+				<b><a href='#'>terms and condition</a> /</b>
+				<b><a href='#'>privacy policy</a> /</b>
+				<b><a href='#'>advertisement</a> </b>
+			</div>
+			
+			<div class='secondchild'>
+				<b><a href='#'>about</a> /</b>
+				<b><a href='#'>services</a> /</b>
+				<b><a href='#'>portfolio</a> /</b>
+				<b><a href='#'>blog</a> </b>
+			</div>
+			
+			<div class='thirdchild'>
+			  <p>&copy Copyright 2022</p>
+			</div>
+		</footer>
+  </body>
+</html>

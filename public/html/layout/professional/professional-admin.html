@@ -1,0 +1,234 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<style>
+	     /* typography styling */
+		h1 {font-size: 35px;Font-family:Poppins-eb;}
+		h2 {font-size: 30px;Font-family:Poppins-eb;}
+		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;}
+		p, header,footer {font-size:16px;Font-family:Roboto;}
+		@media screen and (max-width: 400px) {
+			h1 {font-size: 20px;Font-family:Poppins-eb;}
+			h2 {font-size: 25px;Font-family:Poppins-eb;}
+			h3 {font-size: 18px;font-weight:400;Font-family:Poppins;}
+			p, header, footer {font-size:15px;Font-family:Roboto;}
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body id='body'>
+	    <article>
+			<header class='firstcontainer'>
+				<style>
+					body {padding:0;margin:0;}
+					
+					header {display:flex;flex-direction:row;border-bottom: 1px solid black;padding-left:20px;padding-right:20px;}
+					header nav {flex:1;text-align:center;}
+					header b {padding:5px;border:1px solid red;display:inline-block;}
+					
+					table, tr, th, td {border: 1px solid black;text-align:center;}
+					table {border-collapse: collapse;}
+					th, td {padding:10px;}
+				</style>
+				
+				<b>logo</b>
+				<b>user</b>
+				<nav>
+					<b class='nav' data-name='form'>form</b>
+					<b class='nav' data-name='data'>data</b>
+					
+				</nav>
+				<b>Logout</b>
+			</header>
+			
+			<section class='secondcontainer'>
+				<style>
+					section.secondcontainer h2 {padding:5px;border-bottom:1px solid silver;}
+					section.secondcontainer h2 b {float:right;}
+					section.secondcontainer div.msgcontainer {padding:5px;margin:5px;border:1px solid silver;border-radius:7px;display:flex;flex-direction:row;flex-wrap:wrap;}
+					section.secondcontainer div.msgcontainer div {padding:5px;margin:auto;margin-bottom:10px;margin-top:10px;border:1px solid silver;border-radius:7px;height:200px;width:300px;overflow-y:scroll;background-color:rgb(245,245,245);box-shadow:0px 0px 5px silver;}
+				</style>
+				<div>
+					<h2>DateTime <b>&or;</b></h2>
+					<div class='msgcontainer'>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+						<div>
+							<p>Hi i need a Realtime Marketing Api</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section class='thirdcontainer'>
+				<style>
+					section.thirdcontainer h2 {padding:5px;border-bottom:1px solid silver;}
+					section.thirdcontainer h2 b {float:right;}
+					section.thirdcontainer section.datacontainer {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;}
+					section.thirdcontainer section.datacontainer section.nonchart {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin-bottom:10px;box-shadow:0px 0px 5px silver;}
+				</style>
+				<div>
+					<h2>Today <b>&or;</b></h2>
+					<section class='datacontainer'>
+						<div style='width:50%;margin-right:5%;height:70vh;overflow-y:scroll;'>
+							<section class='nonchart'>
+								<div style='width:48%;'>
+									<p style='margin:0;'>SESSIONS</p>
+									<h1 style='margin:0;' class='session'>$10000</h1>
+								</div>
+								<div style='width:48%;'>
+									<p style='margin:0;'>VIEWS</p>
+									<h1 style='margin:0;' class='views'>$10000</h1>
+								</div>
+								
+							</section>
+							
+							<section class='nonchart vbar' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'> 
+								
+							</section>
+							
+							<script src='/javascripts/svgcanvas.js'></script>
+							<script>
+									
+									let a = new Svg()
+									
+							</script>
+							
+							<section>
+								<div>
+									<table class='urlsession' style='width:100%;'>
+										
+									</table>
+								</div>
+								<div>
+									<table class='urlviews' style='width:100%;'>
+										
+									</table>
+								</div>
+							</section>
+						</div>
+						<div style='width:45%;height:80vh;box-shadow:0px 0px 5px silver;height:70vh;overflow-y:scroll;'>
+							<section class='nonchart line' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'>
+							
+							</section>
+							<section class='nonchart bar' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;background-color:white;'>
+							
+							</section>
+							
+						</div>
+					</section>
+					
+				</div>
+				<script>
+					let nav = document.querySelectorAll('.nav');
+					let secondcontainer = document.querySelector('.secondcontainer');
+					let thirdcontainer = document.querySelector('.thirdcontainer');
+					for(let i=0; i<nav.length; i++){
+						nav[i].onclick = function(e){
+							if(e.target.dataset.name == 'form'){
+								secondcontainer.style.display = 'block'
+								thirdcontainer.style.display = 'none'
+							} else {
+								secondcontainer.style.display = 'none'
+								thirdcontainer.style.display = 'block'
+							}
+						}
+					}
+					
+					fetch('/demo/pro/data')
+						.then(res => res.json())
+						.then(resp => {
+							console.log( resp )
+							
+							//session
+							let session = document.querySelector('h1.session');
+							session.textContent = resp.session.sessions
+							
+							//views
+							let v = 0;
+							for(let i=0; i<resp.page.length; i++){
+								v += Number(resp.page[i].views )
+							}
+							let views = document.querySelector('h1.views')
+							views.textContent = v
+							
+							//table session
+							let urlSession = '<caption>sessions per page</caption><tr><th>page url</th><th>sessions</th></tr>'
+							let urlSessionTable = document.querySelector('table.urlsession');
+							for(let i=0; i<resp.page.length; i++){
+								urlSession += `<tr><th>${resp.page[i].url}</th><td>${resp.page[i].session}</td></tr>`
+							}
+							urlSessionTable.innerHTML = urlSession
+							
+							//table views
+							let urlViews = '<caption>Views per page</caption><tr><th>page url</th><th>Views</th></tr>'
+							let urlViewsTable = document.querySelector('table.urlviews');
+							for(let i=0; i<resp.page.length; i++){
+								urlViews += `<tr><th>${resp.page[i].url}</th><td>${resp.page[i].views}</td></tr>`
+							}
+							urlViewsTable.innerHTML = urlViews
+							
+							//session per trafficsource and location
+							a.linechart(resp.session.trafficSource, document.querySelector('.line'), 400, 'Session per traffic source' )
+							a.vbarchart(resp.session.location, document.querySelector('.bar'), 400, 'Session per location' )
+							
+							let pageTagsFreq = {}
+							for(let i=0; i<resp.page.length; i++){
+								for(let b=0; b<resp.page[i].tags.length; b++){
+									if(pageTagsFreq[resp.page[i].tags[b]]){
+										pageTagsFreq[resp.page[i].tags[b]] += 1
+									} else {
+										pageTagsFreq[resp.page[i].tags[b]] = 1
+									}
+								}
+							}
+							
+							a.vbarchart(pageTagsFreq, document.querySelector('.vbar'), 400 , 'Session Per Page Tags')
+									
+						})
+				</script>
+			</section>
+			
+		</article>
+		
+		
+  </body>
+</html>

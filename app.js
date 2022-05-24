@@ -5,20 +5,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var LokiStore = require('connect-loki')(session)
-let rateLimit = require('express-rate-limit')
+var rateLimit = require('express-rate-limit')
+require('dotenv').config({path: './secrets.env'})
 
-var themes = require('./routes/themes');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var contentUpdate = require('./routes/content');
-var rme = require('./routes/rme');
+var themes = require('./src/routes/themes');
+var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/users');
+var contentUpdate = require('./src/routes/content');
+var demoRouter = require('./src/routes/demo'); 
 
 //use importing and exporting to make the codebase reusable
 var app = express();
 
-
-//environment variables
-var config = require('./config')
 
 
 // view engine setup
@@ -36,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'ckeditor5')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(session({
 				 store: new LokiStore({ttl: 10000}),
-				 secret: [config.sessionsecret, "secret_session"], 
+				 secret: [process.env.SESSION_SECRET, "secret_session"], 
                  resave: false, 
 				 saveUninitialized: true,
 				 name: 'cookie-name',
@@ -50,7 +48,7 @@ app.use('/themes', themes)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', contentUpdate);
-app.use('/', rme)
+app.use('/', demoRouter)
 
 
 // catch 404 and forward to error handler
