@@ -23,170 +23,345 @@
   </head>
   <body style='padding:0;margin:0;background-color: rgb(245,245,245);'>
 			
-			<header>
+			<header class='firstcontainera'>
 				<style>
-					header {display:flex;flex-direction:row;padding:5px;background-color:white;margin-bottom:10px;}
-					header div {flex:1}
-					header div b {font-size:22px;}
+					header.firstcontainera {display:flex;flex-direction:row;flex-wrap:nowrap;padding:5px;background-color:white;margin-bottom: 10px;}
+					header.firstcontainera b{font-size: 25px;display:inline-block;}
+					header.firstcontainera nav {flex:1;}
+					header.firstcontainera b.user {height:30px;border-radius:25%;color:white;background-color: rgb(50,111,210);}
+					header.firstcontainera b.menubar {display:none;}
+					@media screen and (max-width: 900px) {
+						header.firstcontainera b.menubar {display: inline-block;}
+						header.firstcontainera nav {text-align: center;}
+					}
 				</style>
-				<div>
-					<b>logo</b>
-					<b>user</p>
-				</div>
-				<div>
-				  <i class='fas fa-shopping-cart'></i>
-				</div>
+				
+				<b class='menubar' > <i class='fas fa-ellipsis-v'></i></b>
+				<nav>
+					<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40'> 
+					
+				</nav>
+				<b class='user'>UA</b>
+				<b class='cart' style='margin-left:10px;'>  <i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></b>
 			</header>
-			
+			<section class='firstcontainerb'>
+				<style>
+					section.firstcontainerb {display:none;position:absolute;width:50%;right:5px;box-shadow:0px 0px 5px black;background-color:white;}
+							
+					section.firstcontainerb div.secondchild {border-top:1px solid silver;border-bottom:1px solid silver;flex:1;text-align:right;padding-right:10px;}
+					section.firstcontainerb div.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+					section.firstcontainerb div.thirdchild {margin:5px;}
+					section.firstcontainerb div.firstchild {overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;}
+							
+					section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;margin:5px;display:inline-block;float:right;}
+							
+					section.firstcontainerb div.firstchild div.items img {width:50px;height:50px;background-color:red;}
+					section.firstcontainerb div.firstchild div.items div.secondchild {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:red;}
+					section.firstcontainerb div.firstchild div.items div.secondchild section {background-color:white;padding:5px;width:50%;} 
+							
+					section.firstcontainerb div.fourthchild {padding:10px;}
+					section.firstcontainerb h3 {font-size:17px;}
+					section.firstcontainerb p,button,input {font-size:14px;}
+					section.firstcontainerb img {margin:10px;}
+					section.firstcontainerb button {border-radius: 50%}
+					section.firstcontainerb input {width:50px;padding:5px;}
+							
+					@media screen and (max-width: 900px) {
+						section.firstcontainerb div.firstchild {height: 50vh;}
+						section.firstcontainerb {width: 80%;}
+						section.firstcontainerb h3 {font-size:14px;}
+						section.firstcontainerb p,button,input {font-size:13px;}
+					}
+					@media screen and (max-width: 500px) {
+						section.firstcontainerb div.firstchild {height: 70vh;}
+						section.firstcontainerb div.firstchild div.items div.secondchild {flex-direction:column;}
+						section.firstcontainerb div.firstchild div.items div.secondchild section {width: auto;}
+						section.firstcontainerb input {width:30px;padding:5px;}
+						section.firstcontainerb {width: 99%;right:0px;}
+						section.firstcontainerb h3 {font-size:13px;}
+						section.firstcontainerb p,button,input {font-size:12px;}
+						section.firstcontainerb p.remove {font-size: 10px;}
+					}
+				</style>
+				<div class='firstchild' >
+							
+				</div>
+				<div class='secondchild'>
+							
+				</div>
+				<p class='thirdchild'></p>
+				<script>
+					let cart = document.querySelector('header.firstcontainera b.cart i')
+					let cartdetails = document.querySelector('.firstcontainerb');
+							
+					cart.onclick = function(){
+						if(cartdetails.style.display == 'none'){
+							cartdetails.style.display = 'block'
+							//fetch request to update server
+							fetch('/demo/ecommerce/cartdetails')
+								.then(res => res.json() )
+								.then(resp => {
+											
+									let checkout = document.querySelector('section.firstcontainerb p.thirdchild');
+											
+									if(resp.status == '400'){
+										return document.querySelector('section.firstcontainerb div.firstchild').innerHTML = '<h1>EMPTY CART</h1>'
+
+									}
+									document.querySelector('section.firstcontainerb div.secondchild').innerHTML = resp.total
+											
+									document.querySelector('section.firstcontainerb div.firstchild').innerHTML = resp.cart
+											
+									checkout.innerHTML = resp.checkout
+											
+								})
+						} else {
+							cartdetails.style.display = 'none'
+						}
+					}
+					setTimeout(function(){
+						fetch('/demo/ecommerce/cartlength')
+							.then(res => res.text() )
+							.then(resp => {
+								document.querySelector('span.cartlength').textContent = resp
+							})
+					}, 1000)
+				</script>
+			</section>
 			<article>
 				<style>
 					article {display:flex;flex-direction:row;flex-wrap:nowrap;}
-					article section.firstchild {width:18%;margin-right:2%;padding:5px;}
-					article section.firstchild p {padding:5px;border-radius:5px;cursor:pointer;}
-					article section.firstchild p:hover {background-color: silver;}
+					article section.firstcontainer {width:18%;margin-right:2%;padding:5px;}
+					article section.firstcontainer p {padding:5px;border-radius:5px;cursor:pointer;}
+					article section.firstcontainer p:hover {background-color: silver;}
 					
-					article section.secondchild {width:50%;background-color:white;}
-					article section.secondchild h2 {border-bottom:1px solid silver;}
-					article section.secondchild div.saved {display:flex;flex-direction:row;flex-wrap:wrap;}
-					article section.secondchild div.saved img {width:100%;height:200px;}
-					article section.secondchild div.saved p {padding:5px;color:white;text-align:center;}
-					article section.secondchild div.saved p.add {background-color:blue;}
-					article section.secondchild div.saved p.remove {background-color:red;}
+					article section.secondcontainer {width:50%;background-color:white;margin-bottom:40px;}
+					article section.secondcontainer h2 {border-bottom:1px solid silver;}
+					article section.secondcontainer div.saved {display:flex;flex-direction:row;flex-wrap:wrap;}
+					article section.secondcontainer div.saved div {border:1px solid black;border-radius:7px;padding:10px;margin:auto;margin-bottom:10px;width:20%;}
+					article section.secondcontainer div.saved div img {width:100%;height:200px;}
+					article section.secondcontainer div.saved div p {padding:5px;color:white;text-align:center;}
+					article section.secondcontainer div.saved div p.add {background-color:blue;}
+					article section.secondcontainer div.saved div p.remove {color:red;text-decoration:underline;}
 					
-					article section.thirdchild {width:28%;margin-left:2%;height:100vh;overflow-y:scroll;}
-					article section.thirdchild div.msg {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;padding:10px;margin-bottom:10px;}
-					article section.thirdchild div.msg img {width:80px;height:80px;}
-					article section.thirdchild div.msg div.text {width:calc(100% - 100px);margin-left:20px;}
-					article section.thirdchild div.msg div.text p.desc {white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+					article section.thirdcontainer {width:28%;margin-left:2%;height:100vh;overflow-y:scroll;}
+					article section.thirdcontainer div.msg {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;padding:10px;margin-bottom:10px;}
+					article section.thirdcontainer div.msg img {width:80px;height:80px;}
+					article section.thirdcontainer div.msg div.text {width:calc(100% - 100px);margin-left:20px;}
+					article section.thirdcontainer div.msg div.text p.desc {white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+					
+					@media screen and (max-width: 900px) {
+						article section.firstcontainer {display: none;}
+						article section.firstcontainer {position:absolute;background-color:white;width:50%;}
+						
+						article section.secondcontainer {width: 100%;}
+						article section.secondcontainer div.saved div {width: 40%;}
+						
+						article section.thirdcontainer {display: none;width:100%;}
+					}
 				</style>
 				<section class='checkoutinfo' style='display:none;'>
 					<style>
-						article section.checkoutinfo {position:fixed;width:80%;left:18%;height:80vh;overflow-y:scroll;background-color:white;box-shadow:0px 0px 5px;}
+						article section.checkoutinfo {position:fixed;width:80%;display:flex;flex-direction:column;left:18%;height:80vh;background-color:white;box-shadow:0px 0px 5px;}
 						article section.checkoutinfo p.back b {display:inline-block;padding:5px;margin-left:10px;border:1px solid silver;}
-						article section.checkoutinfo section.infos {display:flex;flex-direction:row;flex-wrap:wrap;}
+						article section.checkoutinfo section.infos {height:calc(100% - 50px);display:flex;flex-direction:row;flex-wrap:wrap;}
 						
-						article section.checkoutinfo section.infos input {width: 100%;padding:5px;background-color: rgb(245,245,245);border-radius:7px;outline:none;margin-bottom:20px;}
 						
-						article section.checkoutinfo section.infos button {padding: 5px;}
+						@media screen and (max-width: 500px) {
+							article section.checkoutinfo {left: 10%;}
+							article section.checkoutinfo section.infos div {width:85%;}
+						}
 					</style>
 					<p class='back'> <b>&larr; back</b> </p>
 					<section class='infos'>
-						<div style='width:45%;margin:auto;margin-top:0px;border:1px solid silver;padding:5px;'>
-							<h3>Personal Information</h3>
-							<label>Name:</label>
-							<input type='search'>
-							<label>Email:</label>
-							<input type='search'>
-							<label>Phone No:</label>
-							<input type='number'>
-							<p><button>SAVE</button></p>
+						<div style='height:calc(100%);overflow-y:scroll;'>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
+							<p style='margin:0;'>add product</p>
 						</div>
-						<div style='width:45%;margin:auto;border:1px solid silver;padding:5px;'>
-							<h3>Shipping Information</h3>
-							<label>Country:</label>
+						<div style='flex:1;overflow-y:scroll;height: calc(100%);background-color:rgb(245,245,245);'>
+							<label>Name</label>
 							<input type='search'>
-							<label>State:</label>
+							<label>variant</label>
 							<input type='search'>
-							<label>City:</label>
-							<input type='search'>
-							<label>Zip Code:</label>
-							<input type='number'>
-							<label>Address:</label>
-							<input type='search'>
-							<p><button>SAVE</button></p>
-						</div>
-						<div style='width:45%;margin-left:2%;border:1px solid silver;padding:5px;'>
-							<h3>Payment Information</h3>
-							<label>Card Number:</label>
-							<input type='search' value='**** **** **** 2492'>
-							<label>Exp/Date:</label>
-							<input type='search' value='**/**'>
-							<label>CSV:</label>
-							<input type='search' value='***'>
-							<label>Pin:</label>
-							<input type='number' value='****'>
-							
-							<p><button>SAVE</button></p>
+							<label>pics</label>
+							<label>Description</label>
+							<textarea> </textarea>
+							<label>Delivery</label>
+							<textarea> </textarea>
+							<button>ADD</button>
 						</div>
 					</section>
 				</section>
 				
-				
-				<section class='firstchild'>
-					<p class='checkout'>Sellers Info</p>
-					<p>Sales</p>
-					<p>Inventory</p>
-					<p>Payment</p>
-					<p>Shipping</p>
-					<p>Switch To Buyer</p>
+				<section class='ms'>
+					<style>
+						article section.ms {display:none;position:fixed;width:70%;right:29%;height:80vh;overflow-y:scroll;background-color:white;box-shadow:0px 0px 5px;}
+						article section.ms p.back b {display:inline-block;padding:5px;margin-left:10px;border:1px solid silver;}
+						article section.ms section.infos {display:flex;flex-direction:column;height:60vh;}
+						
+						table {width:100%;border-collapse:collapse;}
+						table, tr, th, td {border: 1px solid silver;}
+						
+						@media screen and (max-width: 500px) {
+							article section.ms {right: 10%;width:80%;}
+							
+						}
+					</style>
+					<p class='back'> <b>&larr; back</b> </p>
+					<section class='infos'>
+						<div>
+							<h3>Buyer</h3>
+						</div>
+						<div style='flex:1;overflow-y:scroll;background-color:silver;'>
+							<p>no messages</p>
+						</div>
+						<div style='display:flex;flex-direction:row;flex-wrap:nowrap;margin-top:10px;'>
+							<input type='search' style='flex:1;padding:5px;outline:none;margin-right:10px;'>
+							<button>SEND</button>
+						</div>
+					</section>
 				</section>
-				<section class='secondchild'>
-					<h2>Sales</h2>
-					<div class='saved'>
-						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
-							<img src='/images/amz/kitchen.png'>
-							<p class='add'>Add To Cart</p>
-							<p class='remove'>Remove</p>
-						</div>
-						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
-							<img src='/images/amz/kitchen.png' >
-							<p class='add'>Add To Cart</p>
-							<p class='remove'>Remove</p>
-						</div>
-						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
-							<img src='/images/amz/kitchen.png' >
-							<p class='add'>Add To Cart</p>
-							<p class='remove'>Remove</p>
-						</div>
-						<div style='border:1px solid black;border-radius:7px;padding:10px;margin:5px;width:20%;'>
-							<img src='/images/amz/kitchen.png'>
-							<p class='add'>Add To Cart</p>
-							<p class='remove'>Remove</p>
+				
+				<section class='firstcontainer menubarcontainer'>
+					<p class='inv'>Inventory</p>
+					<p class='pay'>Payment</p>
+					<p class='ship'>Shipping</p>
+					<p><a href='/demo/ecommerce/logged'>Switch To Buyer</a></p>
+				</section>
+				<section class='secondcontainer'>
+					<h2>Sales <b style='float:right;'>&or;</b></h2>
+					<div>
+						<table>
+							<caption>
+								Total
+							</caption>
+							<tr>
+								<th>product</th>
+								<th>impressions</th>
+								<th>sales</th>
+							</tr>
+						</table>
+					</div>
+					<div style='padding-left: 20px;'>
+						<h3>datetime</h3>
+						<div>
+							<table>
+								<tr>
+									<th> product</th>
+									<th>impressions</th>
+									<th>sales</th>
+								</tr>
+							</table>
 						</div>
 					</div>
 					
 				</section>
-				<section class='thirdchild'>
+				<section class='thirdcontainer'>
 					<div class='msg'>
 						<img src='/images/g.jpg'>
 						<div class='text'>
-							<p><b>Seller</b></p>
+							<p><b>Buyer</b></p>
 							<p class='desc'>description description description description</p>
 						</div>
 					</div>
 					<div class='msg'>
 						<img src='/images/g.jpg'>
 						<div class='text'>
-							<p><b>Seller</b></p>
+							<p><b>Buyer</b></p>
 							<p class='desc'>description description description description</p>
 						</div>
 					</div>
 					<div class='msg'>
 						<img src='/images/g.jpg'>
 						<div class='text'>
-							<p><b>Seller</b></p>
+							<p><b>Buyer</b></p>
 							<p class='desc'>description description description description</p>
 						</div>
 					</div>
 					<div class='msg'>
 						<img src='/images/g.jpg'>
 						<div class='text'>
-							<p><b>Seller</b></p>
+							<p><b>Buyer</b></p>
 							<p class='desc'>description description description description</p>
 						</div>
 					</div>
 					
 				</section>
 				<script>
-					let checkout = document.querySelector('.checkout');
-					let checkoutinfo = document.querySelector('.checkoutinfo');
+					let inv = document.querySelector('.inv');
+					let invinfo = document.querySelector('.checkoutinfo');
 					
-					checkout.onclick = function(){
-						if(checkoutinfo.style.display == 'none'){
-							checkoutinfo.style.display = 'block'
+					inv.onclick = function(){
+						if(invinfo.style.display == 'none'){
+							invinfo.style.display = 'block'
 						} else {
-							checkoutinfo.style.display = 'none'
+							invinfo.style.display = 'none'
 						}
+					}
+					
+					let menubar = document.querySelector('.menubar');
+					let menubarcontainer = document.querySelector('.menubarcontainer');
+					
+					menubar.onclick = function(){
+						if(menubarcontainer.style.display == 'none'){
+							menubarcontainer.style.display = 'block'
+						} else {
+							menubarcontainer.style.display = 'none'
+						}
+					}
+				</script>
+				
+				<section class='fourthcontainer'>
+					<style>
+						section.fourthcontainer {position:fixed;bottom:0;display:flex;flex-direction:row;width:100%;flex-wrap:nowrap;background-color:silver;}
+						section.fourthcontainer p {width: 50%;text-align:center;transition:all 0.5s ease;}
+						
+					</style>
+					<p class='saleslink'>sales</p>
+					<p class='messageslink'>messages</p>
+				</section>
+				<script>
+					let saleslink = document.querySelector('p.saleslink');
+					let messageslink = document.querySelector('p.messageslink');
+					let secondcontainer = document.querySelector('section.secondcontainer');
+					let thirdcontainer = document.querySelector('section.thirdcontainer');
+					
+					saleslink.onclick = function(){
+						saleslink.style.color = 'white'
+						saleslink.style.backgroundColor = 'black'
+						messageslink.style.color = 'black'
+						messageslink.style.backgroundColor = 'transparent'
+						
+						secondcontainer.style.display = 'block'
+						thirdcontainer.style.display = 'none'
+					}
+					
+					messageslink.onclick = function(){
+						saleslink.style.color = 'black'
+						saleslink.style.backgroundColor = 'transparent'
+						messageslink.style.color = 'white'
+						messageslink.style.backgroundColor = 'black'
+						
+						secondcontainer.style.display = 'none'
+						thirdcontainer.style.display = 'block'
 					}
 				</script>
 			</article>
@@ -195,24 +370,24 @@
 				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
 				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
 				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
-				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				p,label {font-size: 20px;display:block;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
 				@media screen and (max-width: 900px) {
 					h1 {font-size: 30px;}
 					h2 {font-size: 25px;}
 					h3 {font-size: 20px;}
-					p {font-size: 18px;}
+					p, label {font-size: 18px;}
 				}
 				@media screen and (max-width: 600px) {
 					h1 {font-size: 25px;}
 					h2 {font-size: 22px;}
 					h3 {font-size: 18px;}
-					p {font-size: 16px;}
+					p, label {font-size: 16px;}
 				}
 				@media screen and (max-width: 400px) {
 					h1 {font-size: 22px;}
 					h2 {font-size: 18px;}
 					h3 {font-size: 14px;}
-					p {font-size: 13px;}
+					p, label {font-size: 13px;}
 				}
 			</style>
   </body>

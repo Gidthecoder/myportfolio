@@ -200,18 +200,18 @@ router.get('/demo/ecommerce/cartdetails', function(req,res,next){
 							<p style='margin:2px;'>size</p>
 						</section>
 						<section>
-							<p style='margin:2px;'><button>-</button><input type='number' value=${sessioncart[i].qty}><button>+</button></p>
+							<p style='margin:2px;' data-name='${sessioncart[i].name}' data-amount='${sessioncart[i].amount}' data-pics='${sessioncart[i].pics}'><button class='minus'>-</button><input type='number' value=${sessioncart[i].qty}><button class='plus'>+</button></p>
 						</section>
 					</div>
 					
 					<div class='fourthchild'>
-						<h3>${sessioncart[i].amount}</h3>
+						<h3>${Number(sessioncart[i].amount) * Number(sessioncart[i].qty) }</h3>
 						<p class='remove' style='text-decoration:underline;'>remove</p>
 					</div>
 				</div>`
 	}
 	let sub = 0
-	let tot = sessioncart.forEach(function(item){ sub += Number(item.amount) } )
+	let tot = sessioncart.forEach(function(item){ sub += Number(item.amount) * Number(item.qty) } )
 	console.log(sub)
 	let total = `<p><b>subtotal:</b> ${sub}</p>
 				<p><b>tax:</b> $10</p>

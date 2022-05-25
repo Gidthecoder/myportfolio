@@ -1,8 +1,6 @@
 <html>
   <head>
-    <style>
-	  b.pjdesc:hover {background-color:silver;}
-	</style>
+    
 	<style>
 		@font-face {
 			font-family: 'Poppins';
@@ -125,6 +123,40 @@
 											
 											checkout.innerHTML = resp.checkout
 											
+											//plus. minus, modify and remove cart
+											let plus = document.querySelector('section.firstcontainerb div.secondchild').querySelectorAll('button.plus');
+											let minus = document.querySelector('section.firstcontainerb div.secondchild').querySelectorAll('button.minus');
+											let qty = document.querySelector('section.firstcontainerb div.secondchild').querySelectorAll('input');
+											
+											for(let i=0; i<plus.length; i++){
+												plus[i].onclick = function(e){
+													let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+													fetch('/demo/ecommerce/cartincrease', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+														.then(res => res.text() )
+														.then(resp => {
+															cartlength.textContent = Number(cartlength.textContent) + 1
+										
+															qty[i].value = Number(qty[i].value) + 1
+										
+														})
+												}
+												minus[i].onclick = function(e){
+													let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+													fetch('/demo/ecommerce/cartremove', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+														.then(res => res.text() )
+														.then(resp => {
+															cartlength.textContent = Number(cartlength.textContent) - 1
+															if( Number(qty[i].value) < 2 ){
+												
+																e.target.parentElement.style.display = 'none'
+															} else {
+																qty[i].value = Number(qty[i].value) - 1
+															}
+														})
+												}
+											}
 										})
 								} else {
 									cartdetails.style.display = 'none'
@@ -609,15 +641,18 @@
 								.then(resp => {
 										cartlength.textContent = Number(cartlength.textContent) - 1
 										if( Number(qty[i].value) < 2 ){
+											if(minusqtyplus[i].previousElementSibling.children.length > 0){
+												minusqtyplus[i].previousElementSibling.children[0].style.display = 'inline-block'
+											} else {
 												minusqtyplus[i].previousElementSibling.style.display = 'inline-block'
+											}
+												
 												e.target.parentElement.style.display = 'none'
 												
 												
-												console.log(e.target.parentElement)
-												console.log(e.target.parentElement.previousElementSibling)
 												qty[i].value = 0
 										} else {
-												qty[i].value = Number(qty.value) - 1
+												qty[i].value = Number(qty[i].value) - 1
 										}
 						})
 					}
