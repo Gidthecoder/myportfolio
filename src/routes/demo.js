@@ -107,11 +107,11 @@ router.get('/demo/ecommerce/login', function(req, res, next) {
 })
 
 router.get('/demo/ecommerce/logged', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-logged.html`));
+	newuser.restricted(req, res, file, path)
 })
 
 router.get('/demo/ecommerce/logged/seller', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-logged-seller.html`));
+	newuser.restrictedS(req, res, file, path)
 })
 
 router.get('/demo/ecommerce/register', function(req, res, next) {
@@ -119,25 +119,68 @@ router.get('/demo/ecommerce/register', function(req, res, next) {
 })
 
 router.get('/demo/ecommerce/checkout/personal', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-personal.html`));
+	if(req.session.cart){
+		if(req.session.cart.length > 0){
+			res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-personal.html`));
+		} else {
+			res.redirect('/demo/ecommerce/carts')
+		}
+	} else {
+			res.redirect('/demo/ecommerce/carts')
+	}
+	
 })
 
-router.get('/demo/ecommerce/checkout/shipping', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-shipping.html`));
+router.post('/demo/ecommerce/checkout/shipping', function(req, res, next) {
+	if(req.body && req.session.cart.length > 0){
+		req.session.personal = req.body
+		console.log(req.session.personal)
+		res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-shipping.html`));
+	} else {
+		res.redirect('/demo/ecommerce/checkout/personal')
+	}
+	
 })
 
-router.get('/demo/ecommerce/checkout/payment', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-payment.html`));
+router.post('/demo/ecommerce/checkout/payment', function(req, res, next) {
+	if(req.body && req.session.cart.length > 0 && req.session.personal){
+		req.session.shipping = req.body
+		console.log(req.session.shipping)
+		res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-checkout-payment.html`));
+	} else {
+		res.redirect('/demo/ecommerce/checkout/shipping')
+	}
+})
+
+router.post('/demo/ecommerce/checkout/complete', function(req, res, next){
+	if(req.body && req.session.cart.length > 0 && req.session.personal && req.session.shipping){
+		req.session.payment = req.body
+		//save data in json, assign tracking number and redirect to tracking number page
+		let body = {
+			personal: req.session.personal,
+			shipping: req.session.shipping,
+			payment: req.session.payment
+		}
+		dataRecorder.checkoutInfo(req, res, body, file, path)
+	} else {
+		res.redirect('/demo/ecommerce/checkout/payment')
+	}
+})
+
+router.get('/demo/ecommerce/carts', function(req, res, next) {
+	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/ecommerce/ecommerce-carts.html`));
 })
 
 router.post('/demo/ecommerce/cartadd', function(req, res, next) {
 	if(req.session.cart) {
 	  req.session.cart.push(req.body)
 	  //req.session.save()
+	  req.session.total += 1
 	  res.send('seen')
 	} else {
 	  req.session.cart = []
 	  req.session.cart.push(req.body)
+	  req.session.total = 0
 	  //req.session.save()
 	  res.send('seen')
 	}
@@ -145,17 +188,7 @@ router.post('/demo/ecommerce/cartadd', function(req, res, next) {
 
 router.post('/demo/ecommerce/cartmodify', function(req, res, next) {
 	let filter = req.session.cart.filter(item => {return item.name == req.body.name});
-	let spliceindexofelem = req.session.cart.indexOf(filter[0]);
-	
-	if(req.body.qty == 0){
-		req.session.cart.splice(spliceindexofelem, 1)
-	} else {
-		req.session.cart[spliceindexofelem].qty = req.body.qty
-	}
-	
-	console.log(spliceindexofelem)
-	console.log(req.session.cart)
-	res.send('deleted successfully')
+	//if req.session.total > computed total, decrease req.session.total
 })
 
 router.post('/demo/ecommerce/cartincrease', function(req, res, next) {
@@ -163,10 +196,14 @@ router.post('/demo/ecommerce/cartincrease', function(req, res, next) {
 	let spliceindexofelem = req.session.cart.indexOf(filter[0]);
 	
 	req.session.cart[spliceindexofelem].qty = Number(req.session.cart[spliceindexofelem].qty) + 1
-	
+	req.session.total += 1
 	console.log(spliceindexofelem)
 	console.log(req.session.cart)
-	res.send('updated successfully')
+	
+	let sub = 0
+	let total = req.session.cart.forEach(function(item){ sub += Number(item.amount) * Number(item.qty) } );
+	
+	res.send(`${sub}`)
 })
 
 router.post('/demo/ecommerce/cartremove', function(req, res, next) {
@@ -178,10 +215,14 @@ router.post('/demo/ecommerce/cartremove', function(req, res, next) {
 	} else {
 		req.session.cart[spliceindexofelem].qty = Number(req.session.cart[spliceindexofelem].qty) - 1
 	}
-	
+	req.session.total -= 1
 	console.log(spliceindexofelem)
 	console.log(req.session.cart)
-	res.send('deleted successfully')
+	
+	let sub = 0
+	let total = req.session.cart.forEach(function(item){ sub += Number(item.amount) * Number(item.qty) } );
+	
+	res.send(`${sub}`)
 })
 
 router.get('/demo/ecommerce/cartdetails', function(req,res,next){
@@ -200,26 +241,22 @@ router.get('/demo/ecommerce/cartdetails', function(req,res,next){
 							<p style='margin:2px;'>size</p>
 						</section>
 						<section>
-							<p style='margin:2px;' data-name='${sessioncart[i].name}' data-amount='${sessioncart[i].amount}' data-pics='${sessioncart[i].pics}'><button class='minus'>-</button><input type='number' value=${sessioncart[i].qty}><button class='plus'>+</button></p>
+							<p class='modify' style='margin:2px;' data-name='${sessioncart[i].name}' data-amount='${sessioncart[i].amount}' data-pics='${sessioncart[i].pics}'><button class='minus'>-</button><input type='number' value=${sessioncart[i].qty}><button class='plus'>+</button></p>
 						</section>
 					</div>
 					
 					<div class='fourthchild'>
-						<h3>${Number(sessioncart[i].amount) * Number(sessioncart[i].qty) }</h3>
-						<p class='remove' style='text-decoration:underline;'>remove</p>
+						<h3 style='margin:2px;' class='amount'>${Number(sessioncart[i].amount) * Number(sessioncart[i].qty) }</h3>
+						
 					</div>
 				</div>`
 	}
 	let sub = 0
 	let tot = sessioncart.forEach(function(item){ sub += Number(item.amount) * Number(item.qty) } )
-	console.log(sub)
-	let total = `<p><b>subtotal:</b> ${sub}</p>
-				<p><b>tax:</b> $10</p>
-				`
-				
-	let checkout = `<b>checkout</b>`
+	console.log(sub)		
+	let checkout = `<b><a href='/demo/ecommerce/checkout/personal' style='color:white;'>checkout ${sub}</a></b>`
 	
-	res.json( {cart:cart, total:total, checkout:checkout} )
+	res.json( {cart:cart, checkout:checkout} )
 })
 
 router.get('/demo/ecommerce/getcart', function(req,res,next){
@@ -244,11 +281,11 @@ router.get('/demo/ecommerce/cartlength', function(req,res,next){
 })
 
 router.post('/demo/ecommerce/newuser', function(req,res,next){
-	newuser.add(req.body, file, path, res, bcrypt)
+	newuser.add(req.body, file, path, req, res, bcrypt)
 })
 
 router.post('/demo/ecommerce/log', function(req,res,next){
-	newuser.log(req.body, file, path, res, bcrypt)
+	newuser.log(req.body, file, path, req, res, bcrypt)
 })
 
 router.get('/demo/ordersystem', function(req, res, next) {

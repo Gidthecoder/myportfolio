@@ -1,0 +1,267 @@
+<html>
+  <head>
+    
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/fonts/font-awesome 5.14/font 5.14/css/all.css" type="text/css">
+  </head>
+  <body style='padding:0;margin:0;background-color: rgb(245,245,245);'>
+		
+			<article>
+				<section>
+					<style>
+						header.firstcontainera a.cart i	{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera a.cart i:hover {background-color:rgb(245,245,245);}
+						header.firstcontainera a.cart i:active {background-color: silver;}
+						header.firstcontainera 	{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;}
+						header.firstcontainera b.firstchild 		{display:none;flex:1;text-align:left;color: rgb(50,111,210);}
+						
+						
+						header.firstcontainera b.thirdchild 		{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera b , 	header.firstcontainera a.cart	{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+						header.firstcontainera nav.fourthchild 		{flex:1;text-align:right;padding:0;margin:0;padding-right:50px;}
+						header.firstcontainera nav.fourthchild b.register 		{color:white;background-color: rgb(50,111,210)}
+						header.firstcontainera nav.fourthchild b 		{cursor: pointer;}
+						
+						
+					</style>
+					<header class='firstcontainera'>
+						<b class='firstchild'> <i class='fas fa-bars'></i></b>
+						<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40'> 
+						<b class='thirdchild'>PETAL</b>
+						<nav class='fourthchild'>
+							<a href='/demo/ecommerce/login'><b>login</b></a>
+							<a href='/demo/ecommerce/register'><b class='register'>Register</b></a>
+						</nav>
+						<a class='cart' href='/demo/ecommerce/carts'><i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></a>
+					</header>
+					
+					</section>
+					<header class='secondcontainer' >
+						<style>
+							header.secondcontainer 		{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;padding:10px;}
+							header.secondcontainer div.firstchild 		{flex:1;overflow-y:hidden;overflow-x:Scroll;display:block;white-space:nowrap;margin-right:20px;}
+							header.secondcontainer div.firstchild a 		{cursor:pointer;display:inline-block;text-decoration:none;padding:2px;border: 1px solid white;transition: all 0.5s ease;color: rgb(50,111,210);}
+							header.secondcontainer div.firstchild a:hover 		{border: 1px solid rgb(50,111,210);}
+							header.secondcontainer div.secondchild 		{flex:1;}
+							header.secondcontainer a 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+							
+							header.secondcontainer input.search 		{width:100%;padding:5px;display:inline-block;font-size:18px;border-radius:14px;outline:none;border: 5px solid rgb(50,111,210);}
+							
+							@media screen and (max-width: 900px) {
+								header.secondcontainer div.firstchild 		{display:none;}
+								header.firstcontainera nav.fourthchild 		{display:none;}
+								header.firstcontainera a.cart 		{flex:1;text-align:right;}
+								header.firstcontainera b.firstchild 		{display:inline-block;}
+							}
+						</style>
+						<div class='firstchild'> 
+							<a href='/demo/ecommerce/cat'><b>Electronic</b></a>
+							<a href='/demo/ecommerce/cat'><b>Children</b></a>
+							<a href='/demo/ecommerce/cat'><b>Skincare</b></a>
+							<a href='/demo/ecommerce/cat'><b>Clothing</b></a>
+							<a href='/demo/ecommerce/cat'><b>Entertainment</b></a>
+							<a href='/demo/ecommerce/cat'><b>Cleaning</b></a>
+						</div>
+						<div class='secondchild'>
+							<input class='search' list='suggest' type='search' placeholder="i'm looking for"/>
+							<datalist id='suggest'>
+								<option>Jacket</option>
+							</datalist>
+						</div>
+					</header>
+				</section>
+		  
+				<section class='thirdcontainer'>
+					<style>
+					    section.thirdcontainer {display:none;background-color:white;}
+						section.thirdcontainer p.link01 		{cursor:pointer;background-color: rgb(50,111,210);color:white;border-radius:14px;text-align:center;}
+						section.thirdcontainer 		{display:none;background-color:white;padding-left:10px;padding-right:10px;}
+						section.thirdcontainer p.link11		{cursor:pointer;border-bottom: 1px solid silver;padding-left:20px;}
+						section.thirdcontainer p.link11:hover		{padding-left:40px;background-color:silver;}
+					</style>
+					<p class='link01' >sign up</p>
+					<p class='link01' >login</p>
+					<p class='link11'><b>Electronic</b></p>
+					<p class='link11'><b>Shoe</b></p>
+					<p class='link11'><b>Children</b></p>
+					<p class='link11'><b>Skincare</b></p>
+					<p class='link11'><b>Health</b></p>
+					<p class='link11'><b>Tools</b></p>
+					<p class='link11'><b>Books</b></p>
+					<p class='link11'><b>Software</b></p>
+					<p class='link11'><b>Movies</b></p>
+					<p class='link11'><b>Kitchen</b></p>
+					<p class='link11'><b>Cleaning</b></p>
+			
+					<script>
+						let menu = document.querySelector('header.firstcontainera b.firstchild')
+						let othernav = document.querySelector('.thirdcontainer')
+			  
+						function open(x) {
+							if(x.matches) {
+								othernav.style.display = 'none'
+							} 
+						}
+						let x = window.matchMedia("(min-width: 901px)")
+						open(x)
+						x.addListener(open)
+			
+						menu.onclick = function (){
+							if(othernav.style.display == 'none'){
+								othernav.style.display = 'block'
+							} else {
+								othernav.style.display = 'none'
+							}
+						}
+					</script>
+				</section>
+				
+				<section class='firstcontainerb'>
+					    <style>
+							section.firstcontainerb {display: block;width:50%;margin:auto;margin-top:20px;background-color:white;}
+							
+							section.firstcontainerb section.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+							section.firstcontainerb section.firstchild div.items img {width: 50px;height: 50px;}
+							input {width:100px;padding:5px;}
+							section.firstcontainerb section.firstchild div.items div.secondchild {flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;}
+							section.firstcontainerb section.firstchild div.items div.secondchild section{width: 50%;text-align:center;}
+							
+							section.firstcontainerb p.thirdchild {text-align: right;margin:10px;}
+							section.firstcontainerb p.thirdchild b{display:inline-block;color:white;background-color:black;padding:5px;margin:5px;}
+							
+							@media screen and (max-width: 900px) {
+								section.firstcontainerb {width: 80%;}
+							}
+							@media screen and (max-width: 550px) {
+								section.firstcontainerb {width: 90%;}
+								input {width:50px;}
+							}
+							@media screen and (max-width: 400px) {
+								section.firstcontainerb section.firstchild div.items div.secondchild {flex-direction:column;}
+								section.firstcontainerb section.firstchild div.items div.secondchild section{width: auto;}
+							}
+						</style>
+						<section class='firstchild' >
+							
+						</section>
+						
+						<p class='thirdchild'></p>
+						<script>
+							
+							fetch('/demo/ecommerce/cartdetails')
+								.then(res => res.json() )
+								.then(resp => {
+									let checkout = document.querySelector('section.firstcontainerb p.thirdchild');
+											
+									if(resp.status == '400'){
+										return document.querySelector('section.firstcontainerb section.firstchild').innerHTML = '<h1>EMPTY CART</h1>'
+									}
+											
+									document.querySelector('section.firstcontainerb section.firstchild').innerHTML = resp.cart
+											
+									document.querySelector('section.firstcontainerb p.thirdchild').innerHTML = resp.checkout
+									
+									
+									let cartlength = document.querySelector('.cartlength')
+				
+									let plus = document.querySelectorAll('.modify button.plus');
+									let qty = document.querySelectorAll('.modify input');
+									let minus = document.querySelectorAll('.modify button.minus');
+									let amount = document.querySelectorAll('h3.amount');
+									for(let i=0; i<plus.length; i++){
+										plus[i].onclick = function(e){
+											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+											fetch('/demo/ecommerce/cartincrease', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+												.then(res => res.text() )
+												.then(resp => {
+													cartlength.textContent = Number(cartlength.textContent) + 1
+										
+													qty[i].value = Number(qty[i].value) + 1
+													
+													console.log(resp)
+													amount[i].textContent = `${qty[i].value * obj.amount}`
+													document.querySelector('section.firstcontainerb p.thirdchild').children[0].children[0].textContent = `checkout: ${resp}`
+													
+												})
+										}
+					
+										minus[i].onclick = function(e){
+											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						
+											fetch('/demo/ecommerce/cartremove', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
+												.then(res => res.text() )
+												.then(resp => {
+													cartlength.textContent = Number(cartlength.textContent) - 1
+													if( Number(qty[i].value) < 2 ){
+														e.target.parentElement.parentElement.parentElement.parentElement.style.display = 'none'
+													} else {
+														qty[i].value = Number(qty[i].value) - 1
+														amount[i].textContent = `${qty[i].value * obj.amount}`
+													}
+													console.log(resp)
+													document.querySelector('section.firstcontainerb p.thirdchild').children[0].textContent = `checkout: ${resp}`
+												})
+										}
+									}
+								})
+							
+							setTimeout(function(){
+								fetch('/demo/ecommerce/cartlength')
+									.then(res => res.text() )
+									.then(resp => {
+										document.querySelector('span.cartlength').textContent = resp
+									})
+							}, 1000)
+						</script>
+				</section>
+				
+				
+				
+			</article>
+			<style>
+				h1 {font-size: 35px;font-family:Poppins-eb;margin:0;margin-top:5px;margin-bottom:5px;}
+				h2 {font-size: 30px;font-family:Poppins-b;margin:0;margin-top:5px;margin-bottom:5px;}
+				h3 {font-size: 25px;font-family:Roboto;margin:0;margin-top:5px;margin-bottom:5px;}
+				p {font-size: 20px;font-family:Poppins;margin:0;margin-top:5px;margin-bottom:5px;}
+				@media screen and (max-width: 900px) {
+					h1 {font-size: 30px;}
+					h2 {font-size: 25px;}
+					h3 {font-size: 20px;}
+					p {font-size: 18px;}
+				}
+				@media screen and (max-width: 600px) {
+					h1 {font-size: 25px;}
+					h2 {font-size: 22px;}
+					h3 {font-size: 18px;}
+					p {font-size: 16px;}
+				}
+				@media screen and (max-width: 400px) {
+					h1 {font-size: 22px;}
+					h2 {font-size: 18px;}
+					h3 {font-size: 14px;}
+					p {font-size: 13px;}
+				}
+			</style>
+			
+			
+  </body>
+</html>

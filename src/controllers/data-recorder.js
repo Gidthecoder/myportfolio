@@ -59,7 +59,17 @@ class Analyze {
 			})
 		}
 		
-		
+		checkoutInfo(req, res, body, file, path){
+			file.readFile(path.join(__dirname, `..`,`/database/checkout.json`), 'utf8', 
+				function(err, checkout) {
+					let d = JSON.parse(checkout);
+					
+					//find sellers for cart product through their sku
+					//send thm their respective orders
+					//redirect user to traking id page
+							
+			})
+		}
 	
 }
 	

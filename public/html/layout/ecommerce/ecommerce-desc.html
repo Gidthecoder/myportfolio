@@ -27,15 +27,15 @@
 			<article>
 				<section>
 					<style>
-						header.firstcontainera b.cart i	{color: rgb(50,111,210);cursor:pointer;}
-						header.firstcontainera b.cart i:hover {background-color:rgb(245,245,245);}
-						header.firstcontainera b.cart i:active {background-color: silver;}
+						header.firstcontainera a.cart i	{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera a.cart i:hover {background-color:rgb(245,245,245);}
+						header.firstcontainera a.cart i:active {background-color: silver;}
 						header.firstcontainera 	{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;}
 						header.firstcontainera b.firstchild 		{display:none;flex:1;text-align:left;color: rgb(50,111,210);}
 						
 						
 						header.firstcontainera b.thirdchild 		{color: rgb(50,111,210);cursor:pointer;}
-						header.firstcontainera b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+						header.firstcontainera b , 	header.firstcontainera a.cart	{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
 						header.firstcontainera nav.fourthchild 		{flex:1;text-align:right;padding:0;margin:0;padding-right:50px;}
 						header.firstcontainera nav.fourthchild b.register 		{color:white;background-color: rgb(50,111,210)}
 						header.firstcontainera nav.fourthchild b 		{cursor: pointer;}
@@ -50,23 +50,22 @@
 							<a href='/demo/ecommerce/login'><b>login</b></a>
 							<a href='/demo/ecommerce/register'><b class='register'>Register</b></a>
 						</nav>
-						<b class='cart'>  <i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></b>
+						<a class='cart' href='/demo/ecommerce/carts'><i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></a>
 					</header>
 					<section class='firstcontainerb'>
 					    <style>
 							section.firstcontainerb {display:none;position:absolute;width:50%;right:5px;box-shadow:0px 0px 5px black;background-color:white;}
 							
 						
-						    section.firstcontainerb div.secondchild {border-top:1px solid silver;border-bottom:1px solid silver;flex:1;text-align:right;padding-right:10px;}
-							section.firstcontainerb div.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+						   section.firstcontainerb div.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
 							section.firstcontainerb div.thirdchild {margin:5px;}
 							section.firstcontainerb div.firstchild {overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;}
 							
 							section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;margin:5px;display:inline-block;float:right;}
 							
-							section.firstcontainerb div.firstchild div.items img {width:50px;height:50px;background-color:red;}
-						    section.firstcontainerb div.firstchild div.items div.secondchild {display:flex;flex-direction:row;flex-wrap:nowrap;background-color:red;}
-							section.firstcontainerb div.firstchild div.items div.secondchild section {background-color:white;padding:5px;width:50%;} 
+							section.firstcontainerb div.firstchild div.items img {width:50px;height:50px;}
+						    section.firstcontainerb div.firstchild div.items div.secondchild {flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;}
+							section.firstcontainerb div.firstchild div.items div.secondchild section {padding:5px;width:50%;} 
 							
 							section.firstcontainerb div.fourthchild {padding:10px;}
 							section.firstcontainerb h3 {font-size:17px;}
@@ -95,39 +94,10 @@
 						<div class='firstchild' >
 							
 						</div>
-						<div class='secondchild'>
-							
-						</div>
+						
 						<p class='thirdchild'></p>
 						<script>
-							let cart = document.querySelector('header.firstcontainera b.cart i')
-							let cartdetails = document.querySelector('.firstcontainerb');
 							
-							cart.onclick = function(){
-								if(cartdetails.style.display == 'none'){
-									cartdetails.style.display = 'block'
-									//fetch request to update server
-									fetch('/demo/ecommerce/cartdetails')
-										.then(res => res.json() )
-										.then(resp => {
-											
-											let checkout = document.querySelector('section.firstcontainerb p.thirdchild');
-											
-											if(resp.status == '400'){
-												return document.querySelector('section.firstcontainerb div.firstchild').innerHTML = '<h1>EMPTY CART</h1>'
-
-											}
-											document.querySelector('section.firstcontainerb div.secondchild').innerHTML = resp.total
-											
-											document.querySelector('section.firstcontainerb div.firstchild').innerHTML = resp.cart
-											
-											checkout.innerHTML = resp.checkout
-											
-										})
-								} else {
-									cartdetails.style.display = 'none'
-								}
-							}
 							setTimeout(function(){
 								fetch('/demo/ecommerce/cartlength')
 									.then(res => res.text() )
@@ -135,6 +105,7 @@
 										document.querySelector('span.cartlength').textContent = resp
 									})
 							}, 1000)
+							
 						</script>
 					</section>
 					<header class='secondcontainer' >
@@ -151,7 +122,7 @@
 							@media screen and (max-width: 900px) {
 								header.secondcontainer div.firstchild 		{display:none;}
 								header.firstcontainera nav.fourthchild 		{display:none;}
-								header.firstcontainera b.cart 		{flex:1;text-align:right;}
+								header.firstcontainera a.cart 		{flex:1;text-align:right;}
 								header.firstcontainera b.firstchild 		{display:inline-block;}
 							}
 						</style>
@@ -250,7 +221,6 @@
 					<div class='secondchild'>
 						<div class='firstchild'>
 							<div class='addchange' style='background-color:rgb(245,245,245);'>
-								<p>cool</p>
 								<p><b class='add' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'>Add To Cart</b></p>
 								<p style='display:none;' class='modify' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
 							</div>

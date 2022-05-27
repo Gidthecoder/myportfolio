@@ -91,34 +91,7 @@
 				</div>
 				<p class='thirdchild'></p>
 				<script>
-					let cart = document.querySelector('header.firstcontainera b.cart i')
-					let cartdetails = document.querySelector('.firstcontainerb');
-							
-					cart.onclick = function(){
-						if(cartdetails.style.display == 'none'){
-							cartdetails.style.display = 'block'
-							//fetch request to update server
-							fetch('/demo/ecommerce/cartdetails')
-								.then(res => res.json() )
-								.then(resp => {
-											
-									let checkout = document.querySelector('section.firstcontainerb p.thirdchild');
-											
-									if(resp.status == '400'){
-										return document.querySelector('section.firstcontainerb div.firstchild').innerHTML = '<h1>EMPTY CART</h1>'
-
-									}
-									document.querySelector('section.firstcontainerb div.secondchild').innerHTML = resp.total
-											
-									document.querySelector('section.firstcontainerb div.firstchild').innerHTML = resp.cart
-											
-									checkout.innerHTML = resp.checkout
-											
-								})
-						} else {
-							cartdetails.style.display = 'none'
-						}
-					}
+					
 					setTimeout(function(){
 						fetch('/demo/ecommerce/cartlength')
 							.then(res => res.text() )

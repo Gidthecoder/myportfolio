@@ -1,8 +1,5 @@
 <html>
   <head>
-    <style>
-	  b.pjdesc:hover {background-color:silver;}
-	</style>
 	<style>
 		@font-face {
 			font-family: 'Poppins';
@@ -45,59 +42,57 @@
 				</header>
 				<section class='secondcontainer'>
 					<style>
-						section.secondcontainer {display:flex;flex-direction:row;margin-top:50px;padding-left:20%;padding-right:20%;}
-						section.secondcontainer div.firstchild {height:auto;background-color:white;width:49%;padding:10px;border-radius: 20px 0px 0px 20px;box-shadow:-10px 10px 10px;}
+						section.secondcontainer {display:flex;flex-direction:row;margin-top:50px;padding-left:20%;padding-right:20%;padding-bottom:50px;}
+						section.secondcontainer div.firstchild {height:70vh;overflow-y:scroll;background-color:white;width:49%;padding:10px;border-radius: 20px 0px 0px 20px;}
 						section.secondcontainer div.firstchild button {padding:5px;}
 						section.secondcontainer div.firstchild input {width:100%;padding:10px;outline:none;margin-bottom:10px;background-color:rgb(245,245,245);border:0px solid black;border-radius:7px;}
 						
-						section.secondcontainer div.secondchild {background-color:white;width:49%;border-radius: 0px 20px 0px 0px;}
+						section.secondcontainer div.secondchild {width:49%;border-radius: 0px 20px 0px 0px;}
 						
-						section.secondcontainer div.secondchild section.finalcart {height:50vh;overflow-y:scroll;box-shadow:0px 10px 10px;}
+						section.secondcontainer div.secondchild section.finalcart {height:50vh;overflow-y:scroll;background-color:white;}
 						section.secondcontainer div.secondchild section.finalcart div.product {padding:10px;display:flex;flex-direction:row;flex-wrap:nowrap;margin-bottom:10px;}
 						section.secondcontainer div.product a, section.secondcontainer div.product p {flex:1;text-align:right;}
 					</style>
-					<div class='firstchild' style='border-right:20px solid black;'>
+					<div class='firstchild' style='margin-right:20px;'>
 						<h1 style='text-align:center;'>ENTER YOUR PERSONAL INFORMATION</h1>
-						<label>Name:</label>
-						<input type='search'>
-						<label>Email:</label>
-						<input type='search'>
-						<label>Phone Number:</label>
-						<input type='number'>
-						<button>Continue To Shipping</button>
+						<form action='/demo/ecommerce/checkout/shipping' method='post'>
+							<label>Name:</label>
+							<input type='search' name='name'>
+							<label>Email:</label>
+							<input type='search' name='email'>
+							<label>Phone Number:</label>
+							<input type='number' name='phoneno'>
+							<button>Continue To Shipping</button>
+						</form>
 					</div>
 					<div class='secondchild'>
 						<div style='background-color:khaki;margin:0;padding:10px;border-radius: 0px 20px 0px 0px;'>
-							<p>Cart Amount: <b>$17000</b> </p>
-							<p>Tax: <b>$10</b> </p>
+							<p>Cart Amount: <b class='totalcart'>$17000</b> </p>
 						</div>
 						<section class='finalcart'>
-							<div class='product'>
-								<img src='/images/food2.png' width='50' height='50'>
-								<p>Title</p>
-								<p>Amount</p>
-								<p><a href='#'>Edit</a></p>
-							</div>
-							<div class='product'>
-								<img src='/images/food2.png' width='50' height='50'>
-								<p>Title</p>
-								<p>Amount</p>
-								<p><a href='#'>Edit</a></p>
-							</div>
-							<div class='product'>
-								<img src='/images/food2.png' width='50' height='50'>
-								<p>Title</p>
-								<p>Amount</p>
-								<p><a href='#'>Edit</a></p>
-							</div>
-							<div class='product'>
-								<img src='/images/food2.png' width='50' height='50'>
-								<p>Title</p>
-								<p>Amount</p>
-								<p><a href='#'>Edit</a></p>
-							</div>
+							
+							
 						</section>
 					</div>
+					<script>
+						fetch('/demo/ecommerce/getcart')
+							.then(res => res.json() )
+							.then(resp => {
+								console.log(resp)
+								
+								let a = ``
+								let total = 0
+								for(let i=0; i<resp.length; i++){
+									a += `<div class='product'><img src='${resp[i].pics}' width='50' height='50'><p><b>${resp[i].name}</b></p><p>${Number(resp[i].amount) * Number(resp[i].qty)}</p><p><a href='#'>Edit</a></p></div>`
+									total += Number(resp[i].amount) * Number(resp[i].qty)
+								}
+								let finalcart = document.querySelector('section.finalcart');
+								document.querySelector('b.totalcart').textContent = total
+								
+								
+								finalcart.innerHTML = a
+							})
+					</script>
 				</section>
 			</article>
 			
