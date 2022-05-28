@@ -9,7 +9,6 @@
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^0.24.0",
-    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "commander": "^8.3.0",
     "connect-loki": "^1.2.0",
