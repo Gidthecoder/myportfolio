@@ -221,8 +221,8 @@
 					<div class='secondchild'>
 						<div class='firstchild'>
 							<div class='addchange' style='background-color:rgb(245,245,245);'>
-								<p><b class='add' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p><b class='add' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png' id='1'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png' id='1'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
 							</div>
 							<p style='margin:0;'><b>seller:</b> james <b style='border-radius:50%;border:1px solid silver;float:right;padding-left:10px;padding-right:10px;'>&or;</b></p>
 							<h3>product name</h3>
@@ -350,7 +350,7 @@
 				for(let i=0; i<addtocart.length; i++){
 					addtocart[i].onclick = function(e){
 						
-						let obj = {name:e.target.dataset.name, amount:e.target.dataset.amount, pics: e.target.dataset.pics, qty:1}
+						let obj = {name:e.target.dataset.name, amount:e.target.dataset.amount, pics: e.target.dataset.pics, id:e.target.dataset.id, qty:1}
 						fetch('/demo/ecommerce/cartadd', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
 							.then(res => res.text() )
 							.then(resp => {
@@ -379,7 +379,7 @@
 							
 							console.log(resp)
 							for(let i=0; i<minusqtyplus.length; i++){
-								let filter = resp.filter(cart => {return minusqtyplus[i].dataset.name == cart.name})
+								let filter = resp.filter(cart => {return minusqtyplus[i].dataset.id == cart.id})
 								if(filter.length == 0){
 									//do nothing
 								} else {
@@ -399,7 +399,7 @@
 				let minus = document.querySelectorAll('.modify button.minus');
 				for(let i=0; i<plus.length; i++){
 					plus[i].onclick = function(e){
-						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, id:e.target.parentElement.dataset.id, qty: 1}
 						
 						fetch('/demo/ecommerce/cartincrease', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
 								.then(res => res.text() )
@@ -412,7 +412,7 @@
 					}
 					
 					minus[i].onclick = function(e){
-						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+						let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, id:e.target.parentElement.dataset.id, qty: 1}
 						
 						fetch('/demo/ecommerce/cartremove', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
 								.then(res => res.text() )

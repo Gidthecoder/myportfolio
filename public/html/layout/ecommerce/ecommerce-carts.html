@@ -188,7 +188,7 @@
 									let amount = document.querySelectorAll('h3.amount');
 									for(let i=0; i<plus.length; i++){
 										plus[i].onclick = function(e){
-											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, id:e.target.parentElement.dataset.id, qty: 1}
 						
 											fetch('/demo/ecommerce/cartincrease', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
 												.then(res => res.text() )
@@ -205,7 +205,7 @@
 										}
 					
 										minus[i].onclick = function(e){
-											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, qty: 1}
+											let obj = {name:e.target.parentElement.dataset.name, amount:e.target.parentElement.dataset.amount, id:e.target.parentElement.dataset.id, qty: 1}
 						
 											fetch('/demo/ecommerce/cartremove', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj) })
 												.then(res => res.text() )

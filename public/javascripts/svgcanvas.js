@@ -48,7 +48,7 @@ function ske(data) {
 			return {content: (10000 * b), data: d}
 		 }
 }
-function bar(containerg, yscale, data, height){
+function bar(containerg, yscale, data, height, color){
 			let g = [];
 			for(let i=0; i<data.length; i++){
 				g.push(document.createElementNS('http://www.w3.org/2000/svg', 'g') )
@@ -67,7 +67,7 @@ function bar(containerg, yscale, data, height){
 			
 				r[i].setAttribute('height',(height - 100) *  Number(r[i].getAttribute('class'))/yscale.content); //console.log((400) *  Number(r[i].getAttribute('class'))/yscale.content)
 				r[i].setAttribute('y', (height - 100) - ((height - 100) * (r[i].getAttribute('class')/yscale.content) ) )
-				r[i].setAttribute('fill', 'red')
+				r[i].setAttribute('fill', color)
 				r[i].style.transition = 'all ease 0.5s'
 				g[i].append(r[i])
 			}
@@ -225,7 +225,7 @@ function linex(containerg, txt, yscale, height){
 
 
 
-Svg.prototype.vbarchart = function(data, container, ht, legend){
+Svg.prototype.vbarchart = function(data, container, ht, legend, color){
 	try {
 		let txt = Object.keys(data);
 		let d = Object.values(data);
@@ -254,6 +254,7 @@ Svg.prototype.vbarchart = function(data, container, ht, legend){
 		//legend
 		let legendText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 		legendText.textContent = legend
+		legendText.setAttribute('fill', (color || 'red') )
 		let legendContainer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 		legendContainer.setAttribute('transform', 'translate(50,30)')
 		legendContainer.append(legendText)
@@ -270,7 +271,7 @@ Svg.prototype.vbarchart = function(data, container, ht, legend){
 		linex(containerg, txt, ske(d), height)
 		
 		//bar area
-		let bar1 = bar(containerg, ske(d), d, height)
+		let bar1 = bar(containerg, ske(d), d, height, color)
 		
 		//y scale line
 		scaley(containerg, height)

@@ -192,7 +192,7 @@ router.post('/demo/ecommerce/cartmodify', function(req, res, next) {
 })
 
 router.post('/demo/ecommerce/cartincrease', function(req, res, next) {
-	let filter = req.session.cart.filter(item => {return item.name == req.body.name});
+	let filter = req.session.cart.filter(item => {return item.id == req.body.id});
 	let spliceindexofelem = req.session.cart.indexOf(filter[0]);
 	
 	req.session.cart[spliceindexofelem].qty = Number(req.session.cart[spliceindexofelem].qty) + 1
@@ -207,7 +207,7 @@ router.post('/demo/ecommerce/cartincrease', function(req, res, next) {
 })
 
 router.post('/demo/ecommerce/cartremove', function(req, res, next) {
-	let filter = req.session.cart.filter(item => {return item.name == req.body.name});
+	let filter = req.session.cart.filter(item => {return item.id == req.body.id});
 	let spliceindexofelem = req.session.cart.indexOf(filter[0]);
 	
 	if(req.session.cart[spliceindexofelem].qty < 2){

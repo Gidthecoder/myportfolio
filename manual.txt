@@ -21,6 +21,7 @@
 	layouts,
 		General,
 		Graphics,
+		infographics,
 		app,
 		desktop,
 		Games,
@@ -80,7 +81,11 @@
 	2d/3d illustration
 		map
 		visualization
-		
+	charts
+		infographics
+		general
+		3d
+		animated
 //backend: 
 	feature,
 		convert the idea to text
@@ -183,4 +188,4 @@
 //others: pm2(branded packages,iot camera analytics)
 
 
-//color, typography, alignment, consistency, layout
+//color, typography, alignment, content consistency, layout, content heterogeneity

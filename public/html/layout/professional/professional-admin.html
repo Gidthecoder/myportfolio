@@ -64,7 +64,7 @@
 					section.secondcontainer h2 {padding:5px;border-bottom:1px solid silver;}
 					section.secondcontainer h2 b {float:right;}
 					section.secondcontainer div.msgcontainer {padding:5px;margin:5px;border:1px solid silver;border-radius:7px;display:flex;flex-direction:row;flex-wrap:wrap;}
-					section.secondcontainer div.msgcontainer div {padding:5px;margin:auto;margin-bottom:10px;margin-top:10px;border:1px solid silver;border-radius:7px;height:200px;width:300px;overflow-y:scroll;background-color:rgb(245,245,245);box-shadow:0px 0px 5px silver;}
+					section.secondcontainer div.msgcontainer div {padding:5px;margin:auto;margin-bottom:10px;margin-top:10px;border:1px solid silver;border-radius:7px;height:200px;width:300px;overflow-y:scroll;background-color:rgb(245,245,245);box-shadow:5px 5px 5px silver;}
 				</style>
 				<div>
 					<h2>DateTime <b>&or;</b></h2>
@@ -100,16 +100,19 @@
 			
 			<section class='thirdcontainer'>
 				<style>
-					section.thirdcontainer h2 {padding:5px;border-bottom:1px solid silver;}
+					section.thirdcontainer {background-color: rgb(245,245,245);padding:0;height:100vh;}
+					section.thirdcontainer h2 {padding:5px;border-bottom:1px solid silver;margin:0;height:50px;background-color:white;}
 					section.thirdcontainer h2 b {float:right;}
-					section.thirdcontainer section.datacontainer {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;}
-					section.thirdcontainer section.datacontainer section.nonchart {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin-bottom:10px;box-shadow:0px 0px 5px silver;}
+					section.thirdcontainer section.datacontainer {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin:0;}
+					section.thirdcontainer section.datacontainer section.nonchart {background-color:white;display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin-bottom:10px;box-shadow:0px 0px 5px silver;}
+					
+					@media screen and (max-width: 900px) {}
 				</style>
 				<div>
 					<h2>Today <b>&or;</b></h2>
 					<section class='datacontainer'>
-						<div style='width:50%;margin-right:5%;height:70vh;overflow-y:scroll;'>
-							<section class='nonchart'>
+						<div style='width:50%;margin-right:5%;height:calc(100vh - 100px);overflow-y:scroll;'>
+							<section class='nonchart' style='background-color: aqua;'>
 								<div style='width:48%;'>
 									<p style='margin:0;'>SESSIONS</p>
 									<h1 style='margin:0;' class='session'>$10000</h1>
@@ -118,7 +121,6 @@
 									<p style='margin:0;'>VIEWS</p>
 									<h1 style='margin:0;' class='views'>$10000</h1>
 								</div>
-								
 							</section>
 							
 							<section class='nonchart vbar' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'> 
@@ -126,13 +128,11 @@
 							</section>
 							
 							<script src='/javascripts/svgcanvas.js'></script>
-							<script>
-									
-									let a = new Svg()
-									
+							<script>	
+									let a = new Svg()	
 							</script>
 							
-							<section>
+							<section style='background-color:white;'>
 								<div>
 									<table class='urlsession' style='width:100%;'>
 										
@@ -145,7 +145,7 @@
 								</div>
 							</section>
 						</div>
-						<div style='width:45%;height:80vh;box-shadow:0px 0px 5px silver;height:70vh;overflow-y:scroll;'>
+						<div style='width:45%;height:calc(100vh - 100px);box-shadow:0px 0px 5px silver;overflow-y:scroll;'>
 							<section class='nonchart line' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'>
 							
 							</section>
@@ -208,7 +208,7 @@
 							
 							//session per trafficsource and location
 							a.linechart(resp.session.trafficSource, document.querySelector('.line'), 400, 'Session per traffic source' )
-							a.vbarchart(resp.session.location, document.querySelector('.bar'), 400, 'Session per location' )
+							a.vbarchart(resp.session.location, document.querySelector('.bar'), 400, 'Session per location', 'violet' )
 							
 							let pageTagsFreq = {}
 							for(let i=0; i<resp.page.length; i++){
@@ -221,7 +221,7 @@
 								}
 							}
 							
-							a.vbarchart(pageTagsFreq, document.querySelector('.vbar'), 400 , 'Session Per Page Tags')
+							a.vbarchart(pageTagsFreq, document.querySelector('.vbar'), 400 , 'Session Per Page Tags', 'violet')
 									
 						})
 				</script>
