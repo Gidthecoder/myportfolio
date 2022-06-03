@@ -1,6 +1,8 @@
 <html>
   <head>
-    
+    <meta charset='utf-8'>
+	<meta name='description' content="Browse through our flexible pricing options created to ease your burden.">
+	<title>GBW's pricing page</title>
 	<style>
 		@font-face {
 			font-family: 'Poppins';
@@ -18,6 +20,14 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
+		@font-face {
+			font-family: 'Roboto-light';
+			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto-regular';
+			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
+		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -25,50 +35,62 @@
     <div style=''>
 	  <div class='suji' style='background-color: white;'>
 		<article style=''>
-		  <section style='background-color: pink;background-size:200px 200px;'>
-		    <header style='display:flex;flex-direction:row;color:black;'>
-			  <img src='/images/mylogo.svg' width='60' height='50' >
-		      <b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>LOOP</b>
+		  <header>
+			  <a href='/' class='lg'>
+				<img src='/images/mylogo.svg' class='headerimg' >
+				<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+			  </a>
 		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
 		        <style>
+					header {background-color:rgb(228,255,153);display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
 			      .suji nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
 				  .suji nav.navi b:hover {color: rgb(132,51,119);}
 			      .suji b.logo, b.menubar {padding: 10px;font-size:22px;}
 				  .suji b.menubar {display:none;font-family:Poppins-eb;}
 				  .suji .small {width:60%;margin:auto;}
+				  .small0 {padding-left:20%;padding-right:20%;}
+				  img.headerimg {width: 40px;height: 40px;}
 				  @media screen and (max-width: 900px) {
-				     .suji b.menubar {display: inline-block;flex:1;text-align:right;}
+				      header a.lg {flex:1;}
+				     .suji b.menubar {display: inline-block;text-align:right;}
 					 .suji nav.navi {display:none;}
 					 .suji .small {width:80%;margin:auto;}
-					 
+					 .small0 {padding-left:10%;padding-right:10%;}
+					 header {padding: 5px;position:relative;}
+					 img.headerimg {width: 30px;height: 30px;}
+					 .suji b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
 				     .suji .small {width:90%;margin:auto;}
+					 .small0 {padding-left:5%;padding-right:5%;}
 				  }
 			    </style>
 		        
-			    <b><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></b>
-			    <b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
-			    <b><a href='/services' style='color:black;text-decoration:none;'>Services</a></b>
+			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
+			    <b><a href='/ecommerce' style='color:black;text-decoration:none;'>Ecommerce</a></b>
+			    <b><a href='/enterprise' style='color:black;text-decoration:none;'>Enterprise </a></b>
+				<b><a href='/webapp' style='color:black;text-decoration:none;'>Webapp </a></b>
 				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
-				<a href='/users/newuser'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</b></a>
-			    <a href='/users/login'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</b></a>
+				<a href='mailto:giddyconnect@outlook.com'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</b></a>
 		      </nav>
-		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class='img' src='/images/menubar.svg'  style='color:green;width:40px;height:40px;'></p></b>
-		    </header>
-			<section class='othernav' style='background-color:white;display:none;transition: all 0.5s ease;background-color: rgb(187,183,58)'>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
+		  </header>
+		  <section style='background-color: khaki;background-size:200px 200px;'>
+		    
+			<section class='othernav' style='width: 0;'>
 			  <style>
-			    
-			    .othernav .p {margin:5px;padding:5px;font-family:Poppins;cursor:pointer;}
-				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
-				
+			    .othernav {transition: all 0.5s ease;background-color: rgb(174,251,111);overflow:hidden;position:absolute;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(228,255,153);padding-left:50px;}
+				.othernav a {color:black;text-decoration:none;}
 			  </style>
-			  <p class='p'><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></p>
-			  <p class='p'><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></p>
-			  <p class='p'><a href='/services' style='color:black;text-decoration:none;'>Services</a></p>
-			  <p class='p'><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></p>
-			  <a href='/users/newuser'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</p></a>
-			  <a href='/users/login'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</p></a>
+			  <a href='/website' ><p class='p'>Website</p></a>
+			  <a href='/ecommerce'><p class='p'>Ecommerce</p></a>
+			  <a href='/enterprise'><p class='p'>Enterprise</p></a>
+			  <a href='/webapp'><p class='p'>Webapp</p></a>
+			  <a href='/pricing'><p class='p'>Pricing</p></a>
+			  <a href='mailto:giddyconnect@outlook.com'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</p></a>
+			  
 			</section>
 			<script>
 			  let menu = document.querySelector('.menubar')
@@ -83,32 +105,89 @@
 			  open(x)
 			  x.addListener(open)
 			
-			  menu.onclick = function (){
-				if(othernav.style.display == 'none'){
-				  othernav.style.display = 'block'
+			  menu.onclick = function (e){
+				if(othernav.style.width == '0px'){
+					e.target.style.backgroundColor = 'white'
+					othernav.style.width = '100%'
+					
 				} else {
-				  othernav.style.display = 'none'
+					e.target.style.backgroundColor = 'transparent'
+					othernav.style.width = '0px'
+					
 				}
 			  }
 			</script>
-			<section style='padding:10px;padding-top:50px;padding-bottom:50px;color:black;'>
+			<section class='firstcontainer'>
 			  <style>
-			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;cursor:pointer;}
-			    b.start:hover {background-color: rgba(132,51,119,0.5);color:white;}
+				section.firstcontainer {padding:10px;padding-top:30px;padding-bottom:30px;color:black;background-color: rgb(228,255,153);}
+			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;display:inline-block;cursor:pointer;}
+			    b.start:hover {background-color: rgba(204,36,142);color:white;}
+				@media screen and (max-width: 450px) {
+					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
+					b.start {width:60%;display:block;margin:auto;text-align:center;}
+				}
 			  </style>
-			  <h1 style=''>DYNAMIC PRICING FOR EVERYONE</h1>
-			  <p style=''>We'll create a pricing plan specifically for you. </p>
-			  <h2 ><a href='/users/newuser' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>SIGN UP</b></a></h2>
+			  <h1 style='margin:2px;'>Our cloud solutions doesn't require upfront payment before building.</h1>
+			  <p>Browse through our pricing plan created to ease your burden.</p>
+			  <p ><a href='mailto:giddyconnect@outlook.com' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Send A Mail</b></a></p>
+			  <p> <a href='tel:+2347014728658' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Call us</b></a></p>
 			</section>
 		  </section>
-		  <section class='small' style='margin-top:20px;position:relative;'>
-		    <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;'>
-			<b style='position:absolute;top:45%;left:50%;margin:auto;padding:10px;padding-left:12px;padding-right:12px;border-radius:10px;border:1px solid white;font-size:25px;background-color:rgba(245,245,245,0.3);color:white;'>  </b> 
+		  
+		  <section class='small' style='background-color: rgb(255,221,173);margin-top:20px;padding:5px;border-radius: 10px;'>
+			<h2 style='text-align:center;'>NO UPFRONT PAYMENT REQUIRED</h2>
+			<p>Our job starts the moment you contact us, share your project details and we've agreed on the possible range of price.</p>
+			<p>we only receive payment when you've reviewed the work and you're satisfied with it.</p>
 		  </section>
+		  
+		  <section class='small' style='background-color: rgb(203,189,255);margin-top:20px;padding:5px;border-radius: 10px;'>
+			<h2 style='text-align:center;'>PRICING METHODS</h2>
+			<h3>Fixed pricing</h3>
+			<p>Projects that uses this pricing method are mostly changes to web designs or adding functionalites to your project's source code</p>
+			<h3>plan-based pricing</h3>
+			<p>This pricing is used for projects where recurring payments are needed for specific functionalites to keep running. eg third-party apis, web hosting and cloud computing.</p>
+		  </section>
+		  
+		  <section class='small howwework' style='margin-top:20px;'>
+				<style>
+					section.howwework p {border-left: 2px solid violet;margin:0;padding:10px 0px 10px 0px;display:flex;flex-direction:row;}
+					section.howwework p b.number {font-size: 25px;font-family:Poppins-eb;position:relative;right:20px;background-color:white;padding:5px 10px 5px 10px;border-radius:50%;border:1px solid violet;}
+					
+					@media screen and (max-width: 450px) {
+						section.howwework.small {width:60%;}
+					}
+				</style>
+				<h2>HOW WE WORK</h2>
+				<p><span><b class='number'>1</b></span> <span>Contact us through our communication channels: emails, phone no, whatsapp, telegram, slack</span> </p>
+				<p><span><b class='number'>2</b></span> <span>We get The neccessary information needed to build/modify your webapp</span> </p>
+				<p><span><b class='number'>3</b></span> <span>We'll continually communicate until you're satisfied</span> </p>
+				<p><span><b class='number'>4</b></span> <span>Make your payment when satisfied with the job</span> </p>
+				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling any of your webapp</span> </p>
+		  </section>
+		  
+		  <section class='small'>
+			<style>
+				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
+				section.demos a {text-decoration:none;margin-right: 10px;}
+				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
+				section.demos h2:hover {background-color: rgb(132,51,119);}
+				@media screen and (max-width: 450px) {
+					section.demos {flex-direction: column;}
+				}
+			</style>
+			<h2 style='text-align:center;'>OUR DEMOS</h2>
+			<section class='demos'>
+				<a href='/demo/pro'><h2>Professional service</h2></a>
+				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
+			</section>
+		  </section>
+		  
+		  
+		  
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
 			   .suji nav {font-family: Poppins;}
-			   .suji p {font-size: 18px;font-family:Poppins-eb;}
+			   .suji p {font-size: 18px;font-family:Roboto-light;}
 			   .suji h1 {font-size:35px;font-family:Roboto;}
 			   .suji h2 {font-size: 30px;font-family:Poppins-b;}
 			   .suji h3 {font-size: 20px;font-family:Poppins;}
@@ -138,135 +217,57 @@
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
-			   
-			   
 			 </style>
-		     <p style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>WHO WE ARE</b></p>
-			 <p>We build:</p>
-			 <ul>
-			   <li><p>Website for you business.</p></li>
-			   <li><p>E-Commerce for you business.</p></li>
-			   <li><p>Enterprise Softwares to lighten your business Ops.</p></li>
-			   <li><p>WebApp to revolutionize your industry.</p></li>
-			 </ul>
-			 <p>No need to scour around for third-party experts for simple Customization.</p>
-			 <p>We follow Every Security Standrds To Make Your Site Secure And fast.</p>
-			 <p>We Do Everything.</p>
-			 <a href='/users/newuser'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'>Get Started</p></a>
 		  </section>
 		  
-		  <section class='small' style='margin-top:20px;'>
-		    <h3 style='border-bottom: 1px solid black;padding-bottom: 10px;color: rgb(132,51,119);'><b>OUR PRICING METHOD</b></h3>
-			<div>
-			  <table style='width:100%;'>
-			    <tr>
-				  <th style='width:50%;'> <a href='#fixed' style='text-decoration:none;'><p class='aboutus'> Fixed </p></a></th>
-				  <th style='width:50%;'> <a href='#ecommerce' style='text-decoration:none;'><p class='aboutus'> Hourly </p></a> </th>
-				</tr>
-				<tr>
-				  <th style='width:50%;'> <a href='#enterprise' style='text-decoration:none;'><p class='aboutus'> Enterprise Software </p></a> </th>
-				  <th style='width:50%;'> <a href='#webapp' style='text-decoration:none;'><p class='aboutus'> WebApp </p></a> </th>
-				</tr>
-			  </table>
-			</div>
-		  </section>
-		  
-		  <section id='fixed' style='margin:auto;margin-top:20px;background-color:khaki;'>
-		     <img src='/images/fog.jpg' style='width:100%;height:50vh;display:block;'>
-			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;'>
-			   <style>
-			     div.feat {flex-direction:row;}
-				 div.feat1 {margin-right:5%;}
-				 div.feat div {padding-left:10px;padding-right:10px;}
-				 div.feat h3 {color: rgb(132,51,119)}
-				 @media screen and (max-width: 900px) {
-				   div.feat {flex-direction:column;}
-				   div.feat1 {margin-right:0%;}
-				 }
-			   </style>
-			   <div>
-			     <h1>Website Development</h1>
-			     <p>Let's build Your Website According To Your Specification. Payment Isn't Mandatory Before Service.</p>
-				 <p>Dont miss out on the chance to have your business in front on Billions Of Potential Customers.</p>
-				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
-				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CONVENIENCE</h3>
-					 <p>Add any feature to your website without even learning to code or hiring third-party expert.</p>
-				   </div>
-				   <div style='flex:1;background-color: rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>RELIABILITY</h3>
-					 <p> No need To worry About Security Or Managing Database Or Analyzing Your Logs Or Optimizing Your Page.  </p>
-				   </div>
-				 </div>
-				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
-				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>MIGRATION</h3>
-					 <p>If you're previously using wordpress, or wix, or weebly or any other CMS. We Have A Migration Solution For You</p>
-				   </div>
-				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CENTRALIZATION</h3>
-					 <p> Add any feature to your software without having struggles with third-party integration. </p>
-				   </div>
-				 </div>
-				 <div class='feat' style='display:flex;padding:20px;background-color: rgba(245,245,245,0.5);border-radius:5px;'> 
-				   <div class='feat1' style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>SCALABLE</h3>
-					 <p> No need to worry about scaling infrstructure during high traffic periods. We have multiple teams working tireless to manage your website</p>
-				   </div>
-				   <div style='flex:1;background-color:rgba(245,245,245,0.5);margin-top:10px;margin-bottom:10px;border-radius:5px;box-shadow: 0px 0px 5px silver;'>
-				     <h3 style='border-bottom: 1px solid silver;text-align:center;'>CUSTOMER SUPPORT</h3>
-					 <p>We have Multiple communication channels: Email, Instant Messaging, Phone Call</p>
-				   </div>
-				 </div>
-				 
-			   </div>
-			   
-			 </div>
-			 
-		  </section>
 		  <style>
 		    img.img {width:300px;height:190px;}
 			@media screen and (max-width: 400px) {
-			  img.img {width:200px;height:190px;}   
+			  img.img {width:200px;height:190px;}
 			}
 		  </style>
 		  
-		  
+		  <section class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
+		    <img src='/images/f.jpg' style='width:100%;height:50vh;display:block;border-radius:30px;'>
+			<h2>MIGRATION</h2>
+			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just contact us.</p>
+			<p><a href='mailto:giddyconnect@outlook.com' style='color:white;text-decoration:none;'><b class='start'>contact</b></a></p>
+		  </section>
 		  
 		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
 			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
 			  <p>make money while referring clients to our channel.</p>
 			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
 		  </section>
-
+		  
+		  
 		</article>
 		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
 		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
-		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > LOOP</h1>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' style='width:50px;height:50px' > GBW</h1>
 			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
 		  </div>
 		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
 		    <div class='foot foot0'>
 		      <h3>USEFUL LINKS</h3>
-			  <p><a href='/help' style='color:white;text-decoration:none;'>Help</a></p>
 			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
-			  <p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
-			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>
+			  <!--<p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
+			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>-->
 		    </div>
 		    <div class='foot' style=''>
 		      <h3>SERVICES </h3>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Websites</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Ecommerce</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Webapp</a></p>
+			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/ecommerce' style='color:white;text-decoration:none;'>Ecommerce</a></p>
+			  <p><a href='/enterprise' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
+			  <p><a href='/webapp' style='color:white;text-decoration:none;'>Webapp</a></p>
 		    </div>
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
-			  <p>akinsanmi20700@gmail.com  |  07014728658</p>
-			  <p> facebook  |  twitter  |  slack  |  linkedin  </p>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>akinsanmi20700@gmail.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
 		</div>
-		  <p style='text-align:center;margin:0;'>&copy;2022 LOOP. All Rights Reserved</p>
+		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
 			  .suji div.foot {width:45%;}
 			  .sujidiv.foot0 {margin-left:5%;}

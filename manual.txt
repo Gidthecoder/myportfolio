@@ -32,18 +32,8 @@
 		TVs
 		Decoder
 	webapis
-		PWA,
-		drag and drop,
-		svg
-		feature,
-			convert the idea to text
-			list all possible tools and choose the best one based on specific criteria
-			code
+		
 	animation,
-		feature
-			convert the idea to text
-			list all possible tools and choose the best one based on specific criteria
-			code
 		canvas,
 		svg,
 		css,
@@ -87,10 +77,6 @@
 		3d
 		animated
 //backend: 
-	feature,
-		convert the idea to text
-		list all possible tools and choose the best one based on specific criteria
-		code
 	scaling, 
 	app optimization,
 	security,
@@ -121,7 +107,8 @@
 		code
 		
 //marketing: 
-	website, prooft of work and proof of trust
+	CRO, 
+		proft of work and proof of trust
 		pics of yourself on website,social platform,...anywhere
 		portfolios and clients
 		gamification analytics
@@ -135,34 +122,16 @@
 	networking with targets on social and physical platforms, 	
 		social media: facebook, twitter
 		forums: reddit, quora
-			ask questions
-			answer questions
-			share links to your site
 		video sharing: youtube, tiktok
-			create amazing video
 		image sharing: instagram
 		content: medium
 		professional: linkedin
-			profile phone and background
-			headline more than a job title
-			connections
-			list skills
-			get endorsement,
-			skills test,
-			recommendation,
-			targeted post,
-			targeted comment,
-			
-			describe your services
-		links to site
 	events and communities,
 		slack QAs
 		developers summit
 		charity
 		womens events
 		what majority likes
-			climate change
-			charity
 	ads and sponsoring, 
 		sponsor events
 		pay news websites to write a good article about your company
@@ -188,4 +157,4 @@
 //others: pm2(branded packages,iot camera analytics)
 
 
-//color, typography, alignment, content consistency, layout, content heterogeneity
+//color, typography, heterogenous alignment(together, far-apart), layout consistency(together, far-apart), content heterogeneity(alignment, content, color)

@@ -1,6 +1,8 @@
 <html>
   <head>
-    
+	<title>GBW homepage</title>
+    <meta charset='utf-8'>
+	<meta name='description' content='We build any cloud solution you need whether website, ecommerce store, software for enterprise or webapp'>
 	<style>
 		@font-face {
 			font-family: 'Poppins';
@@ -18,6 +20,14 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
+		@font-face {
+			font-family: 'Roboto-light';
+			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto-regular';
+			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
+		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -25,50 +35,59 @@
     <div style=''>
 	  <div class='suji' style='background-color: white;'>
 		<article style=''>
-		  <section style='background-color: khaki;background-size:200px 200px;'>
-		    <header style='display:flex;flex-direction:row;color:black;'>
-			  <img src='/images/mylogo.svg' width='60' height='50' >
-		      <b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>LOOP</b>
+		  <header>
+			  <a href='/' class='lg'>
+				<img src='/images/mylogo.svg' class='headerimg' >
+				<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+			  </a>
 		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
 		        <style>
+					header {background-color:khaki;display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
 			      .suji nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
 				  .suji nav.navi b:hover {color: rgb(132,51,119);}
 			      .suji b.logo, b.menubar {padding: 10px;font-size:22px;}
 				  .suji b.menubar {display:none;font-family:Poppins-eb;}
 				  .suji .small {width:60%;margin:auto;}
+				  img.headerimg {width: 40px;height: 40px;}
 				  @media screen and (max-width: 900px) {
-				     .suji b.menubar {display: inline-block;flex:1;text-align:right;}
+				      header a.lg {flex:1;}
+				     .suji b.menubar {display: inline-block;text-align:right;}
 					 .suji nav.navi {display:none;}
 					 .suji .small {width:80%;margin:auto;}
-					 
+					 header {padding: 5px;position:relative;}
+					 img.headerimg {width: 30px;height: 30px;}
+					 .suji b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
 				     .suji .small {width:90%;margin:auto;}
 				  }
 			    </style>
 		        
-			    <b><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></b>
-			    <b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
-			    <b><a href='/services' style='color:black;text-decoration:none;'>Services</a></b>
+			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
+			    <b><a href='/ecommerce' style='color:black;text-decoration:none;'>Ecommerce</a></b>
+			    <b><a href='/enterprise' style='color:black;text-decoration:none;'>Enterprise </a></b>
+				<b><a href='/webapp' style='color:black;text-decoration:none;'>Webapp </a></b>
 				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
-				<a href='/users/newuser'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</b></a>
-			    <a href='/users/login'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</b></a>
+				<a href='mailto:giddyconnect@outlook.com'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</b></a>
 		      </nav>
-		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class='img' src='/images/menubar.svg'  style='color:green;width:40px;height:40px;'></p></b>
-		    </header>
-			<section class='othernav' style='background-color:white;display:none;transition: all 0.5s ease;background-color: rgb(187,183,58)'>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
+		  </header>
+		  <section style='background-color: khaki;background-size:200px 200px;'>
+		    
+			<section class='othernav' style='width: 0;'>
 			  <style>
-			    
-			    .othernav .p {margin:5px;padding:5px;font-family:Poppins;cursor:pointer;}
-				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
-				
+			    .othernav {background-color:white;transition: all 0.5s ease;background-color: rgb(234,226,16);overflow:hidden;position:absolute;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: khaki;padding-left:50px;}
+				.othernav a {color:black;text-decoration:none;}
 			  </style>
-			  <p class='p'><a href='/aboutus' style='color:black;text-decoration:none;'>About</a></p>
-			  <p class='p'><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></p>
-			  <p class='p'><a href='/services' style='color:black;text-decoration:none;'>Services</a></p>
-			  <p class='p'><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></p>
-			  <a href='/users/newuser'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Sign Up</p></a>
-			  <a href='/users/login'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Login</p></a>
+			  <a href='/website' ><p class='p'>Website</p></a>
+			  <a href='/ecommerce'><p class='p'>Ecommerce</p></a>
+			  <a href='/enterprise'><p class='p'>Enterprise</p></a>
+			  <a href='/webapp'><p class='p'>Webapp</p></a>
+			  <a href='/pricing'><p class='p'>Pricing</p></a>
+			  <a href='mailto:giddyconnect@outlook.com'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</p></a>
+			  
 			</section>
 			<script>
 			  let menu = document.querySelector('.menubar')
@@ -83,32 +102,76 @@
 			  open(x)
 			  x.addListener(open)
 			
-			  menu.onclick = function (){
-				if(othernav.style.display == 'none'){
-				  othernav.style.display = 'block'
+			  menu.onclick = function (e){
+				if(othernav.style.width == '0px'){
+					e.target.style.backgroundColor = 'white'
+					othernav.style.width = '100%'
+					
 				} else {
-				  othernav.style.display = 'none'
+					e.target.style.backgroundColor = 'transparent'
+					othernav.style.width = '0px'
+					
 				}
 			  }
 			</script>
-			<section style='padding:10px;padding-top:50px;padding-bottom:50px;color:black;'>
+			<section class='firstcontainer'>
 			  <style>
-			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;cursor:pointer;}
-			    b.start:hover {background-color: rgba(132,51,119,0.5);color:white;}
+				section.firstcontainer {padding:10px;padding-top:50px;padding-bottom:50px;color:black;}
+			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;display:inline-block;cursor:pointer;}
+			    b.start:hover {background-color: rgba(204,36,142);color:white;}
+				@media screen and (max-width: 450px) {
+					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
+					b.start {width:60%;display:block;margin:auto;text-align:center;}
+				}
 			  </style>
 			  <h1 style=''>WE BUILD: WEBSITE, ECOMMERCE STORE, AND ENTERPRISE SOFTWARE</h1>
-			  <p style=''>Get The Best Website For any kind of business within 1 week. Sign Up and We'll give you a call within 5 minutes. We Don't collect payment until you're satisfied.</p>
-			  <h2 ><a href='/users/newuser' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>GET STARTED</b></a></h2>
+			  <p style=''>Get The Best Website For any kind of business within 1 week.No payment until job is completed.</p>
+			  <p ><a href='mailto:giddyconnect@outlook.com' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Send A Mail</b></a></p>
+			  <p> <a href='tel:+2347014728658' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Call us</b></a></p>
 			</section>
 		  </section>
+		  
+		  <section class='small howwework' style='margin-top:20px;'>
+				<style>
+					section.howwework p {border-left: 2px solid violet;margin:0;padding:10px 0px 10px 0px;display:flex;flex-direction:row;}
+					section.howwework p b.number {font-size: 25px;font-family:Poppins-eb;position:relative;right:20px;background-color:white;padding:5px 10px 5px 10px;border-radius:50%;border:1px solid violet;}
+					
+					@media screen and (max-width: 450px) {
+						section.howwework.small {width:60%;}
+					}
+				</style>
+				<h2>HOW WE WORK</h2>
+				<p><span><b class='number'>1</b></span> <span>Contact us through our communication channels: emails, phone no, whatsapp, telegram, slack</span> </p>
+				<p><span><b class='number'>2</b></span> <span>We get The neccessary information needed to build/modify your website</span> </p>
+				<p><span><b class='number'>3</b></span> <span>We'll continually communicate until you're satisfied</span> </p>
+				<p><span><b class='number'>4</b></span> <span>Make your payment when satisfied with the job</span> </p>
+				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling any of your website, webapps and enterprise software</span> </p>
+		  </section>
+		  
+		  <section class='small'>
+			<style>
+				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
+				section.demos a {text-decoration:none;margin-right: 10px;}
+				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
+				section.demos h2:hover {background-color: rgb(132,51,119);}
+				@media screen and (max-width: 450px) {
+					section.demos {flex-direction: column;}
+				}
+			</style>
+			<h2 style='text-align:center;'>OUR DEMOS</h2>
+			<section class='demos'>
+				<a href='/demo/pro'><h2>Professional service</h2></a>
+				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
+			</section>
+		  </section>
+		  
 		  <section class='small' style='margin-top:20px;position:relative;'>
-		    <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;'>
-			<b style='position:absolute;top:45%;left:50%;margin:auto;padding:10px;padding-left:12px;padding-right:12px;border-radius:10px;border:1px solid white;font-size:25px;background-color:rgba(245,245,245,0.3);color:white;'>  </b> 
+		    <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;' alt='picture of building'>
 		  </section>
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
 			   .suji nav {font-family: Poppins;}
-			   .suji p {font-size: 18px;font-family:Poppins-eb;}
+			   .suji p {font-size: 18px;font-family:Roboto-light;}
 			   .suji h1 {font-size:35px;font-family:Roboto;}
 			   .suji h2 {font-size: 30px;font-family:Poppins-b;}
 			   .suji h3 {font-size: 20px;font-family:Poppins;}
@@ -139,62 +202,62 @@
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
 			 </style>
-		     <p style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>WE BRIDGE THE GAP BETWEEN HIRING FREELANCER AND IN-HOUSE EXPERT</b></p>
+		     <h3 style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>WE BRIDGE THE GAP BETWEEN HIRING FREELANCER AND IN-HOUSE DEVELOPER</b></h3>
 			 <p style=''>Freelancers brings skills and expertise to your project for a specified period but:</p>
 			 <ul style='padding-left:30px;'>
-			   <li><p>you'll need to spend hours (days or weeks) screening and finding the right candidate</p></li>
-			   <li><p>There Might Be Communication Problems</p></li>
-			   <li><p>short term</p></li>
+			   <li><p>Requires excessive time in finding and vetting the right candidate</p></li>
+			   <li><p>is subject to communication problems</p></li>
 			 </ul>
-			 <p>in-house brings skills and expertise to your project for a long perios but:</p>
+			 <p>in-house brings skills and expertise to your project for long periods but:</p>
 			 <ul style='padding-left:30px;'>
-			   <li><p>long run cost</p></li>
-			   <li><p>compensations</p></li>
-			   <li><p>They might not have the technical skills </p></li>
+			   <li><p></p></li>
+			   <li><p>Ties down revenue through salaries, compensations and benefits</p></li>
+			   <li><p>They might lack some technical skills </p></li>
 			 </ul>
 			 <p>Why Not Use a Service That will:</p>
 			 <ul style='padding-left:30px;'>
+			   <li><p>Build your project without any upfront payment</p></li>
 			   <li><p>Manage Your Project For As Long As You Like</p></li>
 			   <li><p>Provide 24/7 Support To Your Business Through Multiple Communication Channels</p></li>
 			   <li><p>Develop Any Software You Need Without Sharing Your Ownership Or Requesting Compensation</p></li>
 			 </ul>
-			 <a href='/aboutus'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> ABOUT US </p></a>
+			 <a href='/aboutus'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> About us </p></a>
 		  </section>
 		  <section style='margin:auto;margin-top:20px;background-color:khaki;'>
-		     <img src='/images/fog.jpg' style='width:100%;height:50vh;display:block;'>
+		     <img src='/images/fog.jpg' style='width:100%;height:50vh;display:block;' alt='fog'>
 			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;'>
 			   <h3 style='border-bottom: 1px solid black;padding-bottom: 10px;color: rgb(132,51,119);'><b>OUR SERVICES</b></h3>
 			   <div>
 			     <h1>Website Development</h1>
-			     <p>Having A Website For Your Business/Service Opens You To A Wide Range Of Potential Customer</p>
-				 <p>We use the best and most secure technology(PCI,AWS,MVC) to ensure that your business ahead of its competition and scales with increase in customers</p>
+			     <p>Having a website for your business/service opens it to a wide range of potential customers.</p>
+				 <p>We use the best, most secure technology stack and protocol(PCI,AWS,MVC) to ensure that your business ahead of its competition and scales with increase in customers</p>
 				 <p>Professional Website For Your Services(Construction, Events Planning, Law,..)?, News And Blogs Website? Say No More. Just Sign Up. We'll Give You A Call Within 5 Minutes</p>
-			     <p>Using Website builders like Wix, Squarespace and Wordpress not only waste valuable time but also makes it difficult and costly to find the perfect solution for your business</p>
-			     <a href='/services'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
+			     <p>Why waste time learning to use website builders like wix, wordpress when you can have an entire dedicated team at your control.</p>
+			     <a href='/website'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			   <div>
 			     <h1>Ecommerce Development</h1>
-			     <p>Compared to brick and mortal, ecommerce store has the ability to reach a wider range of audience. </p>
-				 <p>We'll create every neccessary software to make your ecommerce operations a success</p>
-				 <p>Whatever products you want to sell whether electronics, food, digital assets, skincare product,... we've got you covered</p>
-			     <p>Don't spend hours trying to market ypur prouct on Marketplaces like amazon,jumia,... are great, because you have a <a>greater level of competition</a>, might deals with bias algorithms and can have your account blocked when you violate their policy</p>
-			     <a href='/services'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
+			     <p>Compared to brick and mortal, ecommerce store has the potenti; to reach a wider range of audience and bigger amount of sales at lesser cost. </p>
+				 <p>We'll create every neccessary software to make your ecommerce operations a success.</p>
+				 <p>Whatever products you want to sell whether electronics, food, digital assets, skincare product,... we've got you covered.</p>
+			     <p>Don't spend hours trying to market your product on hyper-competitive Marketplaces(amazon,jumia) where you'll deal with biased algorithms, unhealthy competition, lack of control and excessive charges.</p>
+			     <a href='/ecommerce'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			   <div>
 			     <h1>Enterprise Software Development</h1>
 			     <p>A single software solution can't solve the different, ever-complex problems of various businesses. </p>
 				 <p>why spend time trying to learn a software when you can have one built for you.</p>
 				 <p>Whether you need a software for managing inventory, finance, marketing,... we are the best person for the job</p>
-			     <p>Enterprise Softwares from Salesforce, hubspot doesn't give you the customization and experience we give</p>
-			     <a href='/services'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
+			     <p>Enterprise Softwares from Salesforce CRM or hubspot doesn't give you the customization and experience we give</p>
+			     <a href='/enterprise'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			   <div>
 			     <h1>Webapp Development</h1>
 			     <p>Webapp, the highest and most complex product of the web ecosystem can change your business for good. </p>
-				 <p>creating a webapp for you industry not only sets you apart but can be your best path to make millions of dollar</p>
+				 <p>creating a webapp for you industry not only sets you apart but can be your best path to make millions(or tens/hundreds of millions) of dollar.</p>
 				 <p>Creating An Industry-Specific webapp like Ride-hailing-UBER, Home Rentals-Airbnb, Logistics-FedEx,...  is already in our DNA. you have nothing to worry about.</p>
-			     <p>WebApps like uber, facebook are great but your data isn't have and dont forget of antitrust issue</p>
-			     <a href='/services'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
+			     <p>WebApps like uber, facebook are great but you don't have control over your content.</p>
+			     <a href='/webapp'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			 </div>
 			 
@@ -206,7 +269,7 @@
 			}
 		  </style>
 		  <section style='margin:auto;margin-top:20px;background-color:rgb(132,51,119);'>
-		    <input type='color'>
+		    
 		     <div class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
 			   <h3 style='color: white;'>OUR CORE VALUES</h3>
 			   <div>
@@ -254,8 +317,8 @@
 		  <section class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
 		    <img src='/images/f.jpg' style='width:100%;height:50vh;display:block;border-radius:30px;'>
 			<h2>MIGRATION</h2>
-			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just sign up; we'll give you a call within 5 mins</p>
-			<p><a href='/users/newuser' style='color:white;text-decoration:none;'><b class='start'>sign up</b></a></p>
+			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just contact us.</p>
+			<p><a href='mailto:akinsanmi20700@gmail.com' style='color:white;text-decoration:none;'><b class='start'>contact</b></a></p>
 		  </section>
 		  
 		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
@@ -264,43 +327,34 @@
 			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
 		  </section>
 		  
-		  <section>
-		    <div style='background-color:rgb(255,245,245);text-align:center;padding-top:20px;padding-bottom:20px;'>
-		      <h1>Subscribe to our Newsletter</h1>
-			  <p>Get the latest upates about the latest developments and exciting news on how we are shaping the future</p>
-			  <p style='text-align:center;'> <b style='font-size:16px;background-color:rgb(132,51,119);;color:white;border-radius:7px;padding:10px;padding-left:20px;padding-right:20px;cursor:pointer;'>SUBSCRIBE NOW</b> </p>
-			</div>
-			
-			
-		  </section>
+		  
 		</article>
 		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
 		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
-		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > LOOP</h1>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > GBW</h1>
 			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
 		  </div>
 		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
 		    <div class='foot foot0'>
 		      <h3>USEFUL LINKS</h3>
-			  <p><a href='/help' style='color:white;text-decoration:none;'>Help</a></p>
 			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
-			  <p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
-			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>
+			  <!--<p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
+			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>-->
 		    </div>
 		    <div class='foot' style=''>
 		      <h3>SERVICES </h3>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Websites</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Ecommerce</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
-			  <p><a href='/services' style='color:white;text-decoration:none;'>Webapp</a></p>
+			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/ecommerce' style='color:white;text-decoration:none;'>Ecommerce</a></p>
+			  <p><a href='/enterprise' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
+			  <p><a href='/webapp' style='color:white;text-decoration:none;'>Webapp</a></p>
 		    </div>
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
-			  <p>akinsanmi20700@gmail.com  |  07014728658</p>
-			  <p> facebook  |  twitter  |  slack  |  linkedin  </p>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>akinsanmi20700@gmail.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
 		</div>
-		  <p style='text-align:center;margin:0;'>&copy;2022 LOOP. All Rights Reserved</p>
+		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
 			  .suji div.foot {width:45%;}
 			  .sujidiv.foot0 {margin-left:5%;}

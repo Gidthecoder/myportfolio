@@ -30,7 +30,7 @@ router.get('/mail', function(req, res, next) {
 
 
 router.get('/login', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','/public/html/login.html'));
+	res.sendFile(path.join(__dirname, '..', '..', '/public/html/login.html'));
 });
 router.post('/checkauth', function(req, res, next) {
 	//rate limiter algorithm
@@ -158,7 +158,7 @@ router.post('/forgotpassword', function(req, res){
 
 //demos
 router.get('/newuser', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','/public/html/newuser.html') );
+	res.sendFile(path.join(__dirname, '..', '..', '/public/html/newuser.html') );
 })
 
 //updating accounting info
@@ -243,7 +243,7 @@ router.post('/accountinfoupdate', function(req, res, next) {
 		 }
 	  })
 	} else {
-		res.sendFile(path.join(__dirname, '..','/public/html/login.html'));
+		res.sendFile(path.join(__dirname, '..', '..','/public/html/login.html'));
 	}
 })
 

@@ -9,11 +9,7 @@ var d = require(path.join(__dirname, '..',`/controllers/data-recorder.js`) )
 var dataRecorder = new d()
 var newuser = require(path.join(__dirname, '..',`/controllers/newuser.js`) )
 
-router.get('/rme', function(req, res, next) {
-	res.sendFile(path.join(__dirname, '..','..','/public/html/rme menu.html') );
-})
-
-
+//analytics: repeat session, webhooks, page hooks
 
 
 router.get('/demo/pro', function(req, res, next) {
@@ -24,10 +20,10 @@ router.get('/demo/pro', function(req, res, next) {
 	url = '/homepage', 
 	tags = ['homepage'], 
 	date = new Date(), 
-	location = 'nigeria',
+	location = 'nigeria', /*use total api*/
 	trafficSource = (req.headers.referer?req.headers.referer:'Direct'),
 	sessionId = req.sessionID
-	dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
+	//dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
 	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/professional/professional-home.html`));
 })
 
@@ -42,7 +38,7 @@ router.get('/demo/pro/about', function(req, res, next) {
 	location = 'nigeria',
 	trafficSource = (req.headers.referer?req.headers.referer:'Direct'),
 	sessionId = req.sessionID
-	dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
+	//dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
 	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/professional/professional-about.html`));
 })
 
@@ -57,7 +53,7 @@ router.get('/demo/pro/contact', function(req, res, next) {
 	location = 'nigeria',
 	trafficSource = (req.headers.referer?req.headers.referer:'Direct'),
 	sessionId = req.sessionID
-	dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
+	//dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
 	
 	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/professional/professional-form.html`));
 })
@@ -78,7 +74,7 @@ router.get('/demo/pro/admin/login', function(req, res, next) {
 	location = 'nigeria',
 	trafficSource = (req.headers.referer?req.headers.referer:'Direct'),
 	sessionId = req.sessionID
-	dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
+	//dataRecorder.getData(req, res, file, path, initial, ipInfo, url, tags, date, location, trafficSource, sessionId)	
 	res.sendFile(path.join(__dirname, '..','..',`/public/html/layout/professional/professional-admin-login.html`));
 })
 

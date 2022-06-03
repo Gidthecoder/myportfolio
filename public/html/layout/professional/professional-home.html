@@ -18,18 +18,22 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
+		@font-face {
+			font-family: 'Roboto-light';
+			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+		}
 	</style>
 	<style>
 	     /* typography styling */
-		h1 {font-size: 35px;Font-family:Poppins-eb;}
-		h2 {font-size: 30px;Font-family:Poppins-eb;}
-		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;}
-		p, header,footer {font-size:16px;Font-family:Roboto;}
+		h1 {font-size: 35px;Font-family:Poppins-eb;margin:5px;}
+		h2 {font-size: 30px;Font-family:Poppins-eb;margin:5px;}
+		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;margin:5px;}
+		p, header,footer {font-size:16px;Font-family:Roboto-light;margin:5px;}
 		@media screen and (max-width: 400px) {
-			h1 {font-size: 30px;Font-family:Poppins-eb;}
-			h2 {font-size: 25px;Font-family:Poppins-eb;}
-			h3 {font-size: 18px;font-weight:400;Font-family:Poppins;}
-			p, header, footer {font-size:15px;Font-family:Roboto;}
+			h1 {font-size: 30px;}
+			h2 {font-size: 25px;}
+			h3 {font-size: 18px;font-weight:400;}
+			p, header, footer {font-size:15px;}
 		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +47,7 @@
 					
 					a {color: black;text-decoration:none;}
 				
-					.contactus {display:inline-block;padding:5px;background-image: linear-gradient(to bottom right, violet, aqua);cursor:pointer;}
+					.contactus {display:inline-block;padding:5px;margin-top:10px;margin-bottom:10px;background-image: linear-gradient(to bottom right, violet, aqua);cursor:pointer;}
 					
 					.firstcontainer {display:flex;flex-direction:row;}
 					.firstcontainer a {padding:10px;display:inline-block;cursor:pointer;transition: all 0.5s ease;}
@@ -55,70 +59,29 @@
 					.firstcontainer .thirdchild a:hover {border-bottom: 1px solid violet;}
 					.firstcontainer .fourthchild {display:none;flex:1;text-align:right;padding-right:0px;}
 					
-					.secondcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
-					.secondcontainer .child1 {width:50%;margin-right:15%;}
-					.secondcontainer .child1 .firstchild {color: violet;}
-					
-					.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-					.secondcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
-					
-					.thirdcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
-					.thirdcontainer .child1 {width:35%;height:50vh;}
-					.thirdcontainer .child1 .child1 {width: 100%;height:100%;}
-					.thirdcontainer .child2 {width:50%;margin-left:10%;}
-					.thirdcontainer .child2 .firstchild {color: violet;}
-					
-					.fourthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
-					.fourthcontainer .child1 {width:35%;height:50vh;}
-					.fourthcontainer .child1 .child1 {width: 100%;height:100%;}
-					.fourthcontainer .child2 {width:50%;margin-left:10%;}
-					.fourthcontainer .child2 .firstchild {color: violet;}
-					
-					.fifthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
-					.fifthcontainer .child1 {width:50%;margin-right:15%;}
-					.fifthcontainer .child1 .firstchild {color: violet;}
-					.fifthcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-					.fifthcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
-					
 					.firstalignment {padding-left:60px;padding-right:60px;}
-					.secondalignment {padding-left:200px;padding-right:200px;}
-					.thirdalignment {padding-left: 120px;padding-right:120px;}
 					
 					.flexattribute {flex-direction:row;}
 					
-					
 					@media screen and (max-width: 800px) {
 						.firstcontainer .thirdchild {display:none;}
-						 
 						.firstcontainer .fourthchild {display:inline-block;}
-						 
 						.firstalignment {padding-left:30px;padding-right:30px;}
-						.secondalignment {padding-left:100px;padding-right:100px;}
 						.thirdalignment {padding-left:60px;padding-right:60px;}
 					}
 					
 					@media screen and (max-width: 600px) {
 						.secondalignment, .firstalignment {padding-left:30px;padding-right:30px;} 
-						
 						.flexattribute {flex-direction:column;}
-						
 						.firstcontainer .secondchild {font-size: 22px;}
-						
-						.secondcontainer .child1 {width:100%;margin-right:0%;}
-						.secondcontainer .child2 {width:100%;height:50vh;}
-						
-						.thirdcontainer .child1 {width:100%;}
-						.thirdcontainer .child2 {width:100%;margin-left:0%;}
-						
-						.fourthcontainer .child1 {width:100%;}
-						.fourthcontainer .child2 {width:100%;margin-left:0%;}
-						
-						.fifthcontainer .child1 {width:100%;margin-right:0%;}
-						.fifthcontainer .child2 {width:100%;height:50vh;}
 					}
 			  
 					@media screen and (max-width: 600px) {
-						.secondalignment, .firstalignment, .thirdalignment {padding-left:10px;padding-right:10px;} 
+						.firstalignment, .thirdalignment {padding-left:10px;padding-right:10px;} 
+					}
+					
+					@media screen and (max-width: 450px){
+						.contactus {display:block;text-align:center;}
 					}
 				</style>
 				<header class='firstcontainer firstalignment'>
@@ -166,6 +129,19 @@
 					</script>
 				</header>
 				<section class='secondcontainer firstalignment flexattribute'>
+					<style>
+						.secondcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
+						.secondcontainer .child1 {width:50%;margin-right:15%;}
+						.secondcontainer .child1 .firstchild {color: violet;}
+					
+						.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+						.secondcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+					
+						@media screen and (max-width: 600px) {
+							.secondcontainer .child1 {width:100%;margin-right:0%;}
+							.secondcontainer .child2 {width:100%;height:50vh;}
+						}
+					</style>
 					<div class='child1' >
 						<h3 class='firstchild'>LOREP IPSUM</h3>
 						<h1>LOPREP IPSUM DOLOR SIT </h1>
@@ -179,29 +155,64 @@
 			</section>
 			
 			<section class='thirdcontainer secondalignment flexattribute'>
-				<div class='child1'>
-					<img src='/images/professional/dcloud.jpg' class='child1'>
-				</div>
-				<div class='child2'>
-					<h3 class='firstchild'>LOREP IPSUM</h3>
-					<h2>LOPREP IPSUM DOLOR SIT</h2>
-					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+				<style>
+					.secondalignment {padding-left: 100px;padding-right:100px;}
 					
+					.thirdcontainer {padding-top:50px;padding-bottom:50px;background-color:white;}
+					.thirdcontainer div.secondchild {display:flex;flex-direction:row;flex-wrap:nowrap;border: 3px dashed black;padding: 5px;}
+					.thirdcontainer div.secondchild div {width:300px;height:300px;background-color:red;color:white;margin:auto;border-radius:25%;text-align:center;background-image: linear-gradient(to bottom, violet, aqua);}
+				</style>
+				<h2 style='text-align:center;'>LOREP IPSUM </h2>
+				<div class='secondchild'>
+					<div>
+						<p>The first</p>
+					</div>
+					<div>
+						<p>The second</p>
+					</div>
+					<div>
+						<p>The third</p>
+					</div>
 				</div>
 			</section>
 			
 			<section class='fourthcontainer secondalignment flexattribute'>
-				<div class='child1'>
-					<img src='/images/professional/dcloud.jpg' class='child1'>
-				</div>
-				<div class='child2'>
-					<h3 class='firstchild'>LOREP IPSUM</h3>
-					<h2>LOPREP IPSUM DOLOR SIT</h2>
-					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+				<style>
+					.fourthcontainer {padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
+					.fourthcontainer div.secondchild {display:flex;flex-direction:row;}
+					.fourthcontainer div.secondchild div {border: 1px solid black;width:45%;}
+					.fourthcontainer div.secondchild div h3 {text-align:center;padding:5px;margin:0;background-color:violet;}
+					.fourthcontainer div.secondchild div h3 b {border-radius: 25px;padding:5px;border:2px solid white;display:inline-block;}
+					.fourthcontainer div.secondchild div p {padding: 10px;background-color:aqua;margin:0;text-align:center;}
+				</style>
+				<h2>lorep ipsum </h2>
+				<div class='secondchild'>
+					<div style='margin-right:auto;'>
+						<h3> <b style=''> <b style='background-color:white;'>Lorep ipsum</b> </b></h3>
+						<img src='/images/dcloud.jpg' style='width:100%;height:30vh;'>
+						<p>lorep ipsum dolor et</p>
+					</div>
+					<div style='margin-left:auto;'>
+						<h3> <b style=''> <b style='background-color:white;'>Lorep ipsum</b> </b></h3>
+						<img src='/images/dcloud.jpg' style='width:100%;height:30vh;'>
+						<p>lorep ipsum dolor et</p>
+					</div>
 				</div>
 			</section>
 			
 			<section class='fifthcontainer firstalignment flexattribute'>
+				<style>
+					.fifthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
+					.fifthcontainer .child1 {width:50%;margin-right:15%;}
+					.fifthcontainer .child1 .firstchild {color: violet;}
+					.fifthcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+					.fifthcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+					
+					@media screen and (max-width: 600px) {
+						.fifthcontainer .child1 {width:100%;margin-right:0%;}
+						.fifthcontainer .child2 {width:100%;height:50vh;}
+					}
+				</style>
 				<div class='child1' >
 					<h3 class='firstchild'>LOREP IPSUM</h3>
 					<h1>LOPREP IPSUM DOLOR SIT </h1>
@@ -212,13 +223,19 @@
 					<div class='child1'>.</div>
 				</div>
 			</section>
+			<section>
 			
-			<section class='sixthcontainer thirdalignment'>
+			</section>
+			
+			<section class='sixthcontainer'>
 				<style>
-					.sixthcontainer h1.firstchild {text-align: center;color:violet;}
+					.sixthcontainer {background-color: violet;color:white;}
+					.sixthcontainer h1.firstchild {text-align: center;color:white;}
 					.sixthcontainer section.secondchild {display: flex;flex-wrap:nowrap;}
 					.sixthcontainer section.secondchild div {width:30%;margin-right:2%;padding-left:5px;padding-right:5px;margin-bottom: 10px;}
-				
+					
+					.thirdalignment {padding-left: 150px;padding-right:150px;}
+					
 					.sixthcontainer section.secondchild img {height:30vh;width:100%;border-radius: 10px;}
 					@media screen and (max-width: 600px) {
 						.sixthcontainer section.secondchild {flex-wrap: wrap;}
@@ -226,7 +243,7 @@
 					}
 				</style>
 				<h1 class='firstchild'>LOREP IPSUM</h1>
-				<section class='secondchild'>
+				<section class='secondchild thirdalignment' >
 					<div class='firstchild'>
 						<img src='/images/professional/dcloud.jpg'>
 						<h3>LOREP IPSUM</h3>
@@ -245,22 +262,7 @@
 				</section>
 			</section>
 			
-			<section class='seventhcontainer'>
-				<style>
-					.seventhcontainer {text-align:center;}
-					.seventhcontainer section.firstchild {height:80vh;background-image: url('/images/dcloud.jpg');color:white;background-size:100% 100%;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-					.seventhcontainer section.firstchild div.firstchild {height:80vh;background-color: rgba(0,0,0,0.5);}
-					.seventhcontainer section.firstchild div.firstchild h3.firstchild {margin:0;padding-top:20px;}
-				</style>
-				<section class='firstchild'>
-					<div class='firstchild'>
-						<h3 class='firstchild'>LOREP IPSUM</h3>
-						<h1 >LOREP IPSUM DOLOR ETS SALAR</h1>
-						<p>Lorep ipsum dolor ets salar fess tarr ishn fhewndj jsb e j</p>
-						<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
-					</div>
-				</section>
-			</section>
+			
 		</article>
 		
 		<footer class='eightcontainer'>

@@ -103,23 +103,28 @@
 					section.thirdcontainer {background-color: rgb(245,245,245);padding:0;height:100vh;}
 					section.thirdcontainer h2 {padding:5px;border-bottom:1px solid silver;margin:0;height:50px;background-color:white;}
 					section.thirdcontainer h2 b {float:right;}
-					section.thirdcontainer section.datacontainer {display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin:0;}
+					section.thirdcontainer section.datacontainer {display:flex;flex-direction:row;flex-wrap:wrap;padding:10px;margin:0;background-color: rgb(245,245,245);}
 					section.thirdcontainer section.datacontainer section.nonchart {background-color:white;display:flex;flex-direction:row;flex-wrap:nowrap;padding:10px;margin-bottom:10px;box-shadow:0px 0px 5px silver;}
+					section.thirdcontainer section.datacontainer div.firstchild {width:50%;margin-right:5%;height:calc(100vh - 100px);overflow-y:scroll;}
+					section.thirdcontainer section.datacontainer div.secondchild {width:45%;height:calc(100vh - 100px);box-shadow:0px 0px 5px silver;overflow-y:scroll;}
 					
-					@media screen and (max-width: 900px) {}
+					@media screen and (max-width: 900px) {
+						section.thirdcontainer section.datacontainer div.firstchild {width: 100%;margin-right: 0;height:auto;overflow-y:hidden;}
+						section.thirdcontainer section.datacontainer div.secondchild {width: 100%;height:auto;overflow-y:hidden;background-color:rgb(245,245,245);margin-top:20px;}
+					}
 				</style>
 				<div>
 					<h2>Today <b>&or;</b></h2>
 					<section class='datacontainer'>
-						<div style='width:50%;margin-right:5%;height:calc(100vh - 100px);overflow-y:scroll;'>
-							<section class='nonchart' style='background-color: aqua;'>
+						<div class='firstchild'>
+							<section class='nonchart' style='background-color: white;'>
 								<div style='width:48%;'>
 									<p style='margin:0;'>SESSIONS</p>
-									<h1 style='margin:0;' class='session'>$10000</h1>
+									<h1 style='margin:0;color:violet' class='session'>$10000</h1>
 								</div>
 								<div style='width:48%;'>
 									<p style='margin:0;'>VIEWS</p>
-									<h1 style='margin:0;' class='views'>$10000</h1>
+									<h1 style='margin:0;color:violet;' class='views'>$10000</h1>
 								</div>
 							</section>
 							
@@ -132,7 +137,7 @@
 									let a = new Svg()	
 							</script>
 							
-							<section style='background-color:white;'>
+							<section style='background-color:white;font-family:poppins;'>
 								<div>
 									<table class='urlsession' style='width:100%;'>
 										
@@ -145,11 +150,11 @@
 								</div>
 							</section>
 						</div>
-						<div style='width:45%;height:calc(100vh - 100px);box-shadow:0px 0px 5px silver;overflow-y:scroll;'>
+						<div class='secondchild'>
 							<section class='nonchart line' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'>
 							
 							</section>
-							<section class='nonchart bar' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;background-color:white;'>
+							<section class='nonchart bar' style='display:inline-block;overflow-x:Scroll;width:100%;padding:0;'>
 							
 							</section>
 							
