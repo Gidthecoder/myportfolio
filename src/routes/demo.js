@@ -171,6 +171,7 @@ router.post('/demo/ecommerce/cartadd', function(req, res, next) {
 	if(req.session.cart) {
 	  req.session.cart.push(req.body)
 	  //req.session.save()
+	  console.log(req.session)
 	  req.session.total += 1
 	  res.send('seen')
 	} else {
@@ -183,11 +184,12 @@ router.post('/demo/ecommerce/cartadd', function(req, res, next) {
 })
 
 router.post('/demo/ecommerce/cartmodify', function(req, res, next) {
-	let filter = req.session.cart.filter(item => {return item.name == req.body.name});
+	let filter = req.session.cart.filter(item => {return item.id == req.body.id});
 	//if req.session.total > computed total, decrease req.session.total
 })
 
 router.post('/demo/ecommerce/cartincrease', function(req, res, next) {
+	console.log(req.body)
 	let filter = req.session.cart.filter(item => {return item.id == req.body.id});
 	let spliceindexofelem = req.session.cart.indexOf(filter[0]);
 	
@@ -237,7 +239,7 @@ router.get('/demo/ecommerce/cartdetails', function(req,res,next){
 							<p style='margin:2px;'>size</p>
 						</section>
 						<section>
-							<p class='modify' style='margin:2px;' data-name='${sessioncart[i].name}' data-amount='${sessioncart[i].amount}' data-pics='${sessioncart[i].pics}'><button class='minus'>-</button><input type='number' value=${sessioncart[i].qty}><button class='plus'>+</button></p>
+							<p class='modify' style='margin:2px;' data-name='${sessioncart[i].name}' data-amount='${sessioncart[i].amount}' data-pics='${sessioncart[i].pics}' data-id='${sessioncart[i].id}'><button class='minus'>-</button><input type='number' value=${sessioncart[i].qty}><button class='plus'>+</button></p>
 						</section>
 					</div>
 					

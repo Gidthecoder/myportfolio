@@ -1,8 +1,6 @@
 <html>
   <head>
-    <style>
-	  b.pjdesc:hover {background-color:silver;}
-	</style>
+    
 	<style>
 		@font-face {
 			font-family: 'Poppins';
@@ -29,15 +27,15 @@
 			<article>
 				<section>
 					<style>
-						header.firstcontainera b.cart i	{color: rgb(50,111,210);cursor:pointer;}
-						header.firstcontainera b.cart i:hover {background-color:rgb(245,245,245);}
-						header.firstcontainera b.cart i:active {background-color: silver;}
+						header.firstcontainera a.cart i	{color: rgb(50,111,210);cursor:pointer;}
+						header.firstcontainera a.cart i:hover {background-color:rgb(245,245,245);}
+						header.firstcontainera a.cart i:active {background-color: silver;}
 						header.firstcontainera 	{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;}
 						header.firstcontainera b.firstchild 		{display:none;flex:1;text-align:left;color: rgb(50,111,210);}
 						
 						
 						header.firstcontainera b.thirdchild 		{color: rgb(50,111,210);cursor:pointer;}
-						header.firstcontainera b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+						header.firstcontainera b , 	header.firstcontainera a.cart	{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
 						header.firstcontainera nav.fourthchild 		{flex:1;text-align:right;padding:0;margin:0;padding-right:50px;}
 						header.firstcontainera nav.fourthchild b.register 		{color:white;background-color: rgb(50,111,210)}
 						header.firstcontainera nav.fourthchild b 		{cursor: pointer;}
@@ -49,21 +47,26 @@
 						<img class='secondchild' src='/images/ecommlogo.svg' width='50' height='40'> 
 						<b class='thirdchild'>PETAL</b>
 						<nav class='fourthchild'>
-							<b>login</b>
-							<b class='register'>Register</b>
+							<a href='/demo/ecommerce/login'><b>login</b></a>
+							<a href='/demo/ecommerce/register'><b class='register'>Register</b></a>
 						</nav>
-						<b class='cart'>  <i class='fas fa-shopping-cart' title='0 items'></i></b>
+						<a class='cart' href='/demo/ecommerce/carts'><i class='fas fa-shopping-cart' title='0 items'></i><span class='cartlength'>0</span></a>
 					</header>
 					<section class='firstcontainerb'>
 					    <style>
 							section.firstcontainerb {display:none;position:absolute;width:50%;right:5px;box-shadow:0px 0px 5px black;background-color:white;}
-							section.firstcontainerb div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+							
 						
-						    section.firstcontainerb div.secondchild {border-top:1px solid silver;border-bottom:1px solid silver;flex:1;text-align:right;padding-right:10px;}
-							section.firstcontainerb div.thirdchild {text-align:right;margin:5px;}
-							section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;display:inline-block;}
-						    section.firstcontainerb div.firstchild div.items div.secondchild {flex:1;align-item:center;}
-							section.firstcontainerb div.thirdchild {padding:10px;}
+						   section.firstcontainerb div.firstchild div.items {display:flex;flex-direction:row;flex-wrap:nowrap;}
+							section.firstcontainerb div.thirdchild {margin:5px;}
+							section.firstcontainerb div.firstchild {overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;}
+							
+							section.firstcontainerb p.thirdchild b{color:white;background-color: rgb(50,111,210);padding:10px;margin:5px;display:inline-block;float:right;}
+							
+							section.firstcontainerb div.firstchild div.items img {width:50px;height:50px;}
+						    section.firstcontainerb div.firstchild div.items div.secondchild {flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;background-color:white;}
+							section.firstcontainerb div.firstchild div.items div.secondchild section {padding:5px;width:50%;} 
+							
 							section.firstcontainerb div.fourthchild {padding:10px;}
 							section.firstcontainerb h3 {font-size:17px;}
 							section.firstcontainerb p,button,input {font-size:14px;}
@@ -72,121 +75,67 @@
 							section.firstcontainerb input {width:50px;padding:5px;}
 							
 							@media screen and (max-width: 900px) {
+								section.firstcontainerb div.firstchild {height: 50vh;}
 								section.firstcontainerb {width: 80%;}
 								section.firstcontainerb h3 {font-size:14px;}
 								section.firstcontainerb p,button,input {font-size:13px;}
 							}
 							@media screen and (max-width: 500px) {
+								section.firstcontainerb div.firstchild {height: 70vh;}
+								section.firstcontainerb div.firstchild div.items div.secondchild {flex-direction:column;}
+								section.firstcontainerb div.firstchild div.items div.secondchild section {width: auto;}
+								section.firstcontainerb input {width:30px;padding:5px;}
 								section.firstcontainerb {width: 99%;right:0px;}
 								section.firstcontainerb h3 {font-size:13px;}
 								section.firstcontainerb p,button,input {font-size:12px;}
+								section.firstcontainerb p.remove {font-size: 10px;}
 							}
 						</style>
-						<div class='firstchild' style='overflow-y:scroll;height:auto;border:3px solid blue;height:30vh;'>
-							<div class='items'>
-								<img src='/images/amz/kitchen.png' style='width:50px;height:50px;'>
-								<div class='secondchild'>
-									<h3>Title</h3>
-									<p>size</p>
-								</div>
-								<div class='thirdchild'>
-									<p>
-										<button>-</button>
-										<input type='number' value='1'>
-										<button>+</button>
-									</p>
-								</div>
-								<div class='fourthchild'>
-									<h3>$23</h3>
-									<p style='text-decoration:underline;'>remove</p>
-								</div>
-							</div>
-							<div class='items'>
-								<img src='/images/amz/kitchen.png' width='50' height='50'>
-								<div class='secondchild'>
-									<h3>Title</h3>
-									<p>size</p>
-								</div>
-								<div class='thirdchild'>
-									<p>
-										<button>-</button>
-										<input type='number' value='1'>
-										<button>+</button>
-									</p>
-								</div>
-								<div class='fourthchild'>
-									<h3>$23</h3>
-									<p style='text-decoration:underline;'>remove</p>
-								</div>
-							</div>
-							<div class='items'>
-								<img src='/images/amz/kitchen.png' width='50' height='50'>
-								<div class='secondchild'>
-									<h3>Title</h3>
-									<p>size</p>
-								</div>
-								<div class='thirdchild'>
-									<p>
-										<button>-</button>
-										<input type='number' value='1'>
-										<button>+</button>
-									</p>
-								</div>
-								<div class='fourthchild'>
-									<h3>$23</h3>
-									<p style='text-decoration:underline;'>remove</p>
-								</div>
-							</div>
-						</div>
-						<div class='secondchild'>
-							<p><b>subtotal:</b> $69</p>
-							<p><b>tax:</b> $10</p>
-						</div>
-						<p class='thirdchild'> <b>checkout</b> </p>
-						<script>
-							let cart = document.querySelector('header.firstcontainera b.cart i')
-							let cartdetails = document.querySelector('.firstcontainerb')
+						<div class='firstchild' >
 							
-							cart.onclick = function(){
-								if(cartdetails.style.display == 'none'){cartdetails.style.display = 'block'}
-								else {cartdetails.style.display = 'none'}
-								
-							}
+						</div>
+						
+						<p class='thirdchild'></p>
+						<script>
+							
+							setTimeout(function(){
+								fetch('/demo/ecommerce/cartlength')
+									.then(res => res.text() )
+									.then(resp => {
+										document.querySelector('span.cartlength').textContent = resp
+									})
+							}, 1000)
+							
 						</script>
 					</section>
 					<header class='secondcontainer' >
 						<style>
 							header.secondcontainer 		{background-color:white;display:flex;flex-direction:row;border-bottom:1px solid black;padding-left:10px;padding-right:10px;padding:10px;}
 							header.secondcontainer div.firstchild 		{flex:1;overflow-y:hidden;overflow-x:Scroll;display:block;white-space:nowrap;margin-right:20px;}
-							header.secondcontainer div.firstchild b 		{cursor:pointer;border: 1px solid white;transition: all 0.5s ease;}
-							header.secondcontainer div.firstchild b:hover 		{border: 1px solid rgb(50,111,210);}
+							header.secondcontainer div.firstchild a 		{cursor:pointer;display:inline-block;text-decoration:none;padding:2px;border: 1px solid white;transition: all 0.5s ease;color: rgb(50,111,210);}
+							header.secondcontainer div.firstchild a:hover 		{border: 1px solid rgb(50,111,210);}
 							header.secondcontainer div.secondchild 		{flex:1;}
-							header.secondcontainer b 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
+							header.secondcontainer a 		{font-size: 18px;display:inline-block;padding:5px;font-family:Poppins-b;}
 							
 							header.secondcontainer input.search 		{width:100%;padding:5px;display:inline-block;font-size:18px;border-radius:14px;outline:none;border: 5px solid rgb(50,111,210);}
 							
 							@media screen and (max-width: 900px) {
 								header.secondcontainer div.firstchild 		{display:none;}
 								header.firstcontainera nav.fourthchild 		{display:none;}
-								header.firstcontainera b.cart 		{flex:1;text-align:right;}
+								header.firstcontainera a.cart 		{flex:1;text-align:right;}
 								header.firstcontainera b.firstchild 		{display:inline-block;}
 							}
 						</style>
 						<div class='firstchild'> 
-							<b>Electronic</b>
-							<b>Shoe</b>
-							<b>Children</b>
-							<b>Skincare</b>
-							<b>Health</b>
-							<b>Tools</b>
-							<b>Books</b>
-							<b>Software</b>
-							<b>Movies</b>
-							<b>Kitchen</b>
-							<b>Cleaning</b>
+							<a href='/demo/ecommerce/cat'><b>Electronic</b></a>
+							<a href='/demo/ecommerce/cat'><b>Children</b></a>
+							<a href='/demo/ecommerce/cat'><b>Skincare</b></a>
+							<a href='/demo/ecommerce/cat'><b>Clothing</b></a>
+							<a href='/demo/ecommerce/cat'><b>Entertainment</b></a>
+							<a href='/demo/ecommerce/cat'><b>Cleaning</b></a>
 						</div>
 						<div class='secondchild'>
-							<input class='search' list='suggest' type='search' placeholder="search products through text, audio, or image"/>
+							<input class='search' list='suggest' type='search' placeholder="i'm looking for"/>
 							<datalist id='suggest'>
 								<option>Jacket</option>
 							</datalist>
@@ -196,28 +145,23 @@
 		  
 				<section class='thirdcontainer'>
 					<style>
-					    section.thirdcontainer {display:none;background-color:white;}
+					    section.thirdcontainer {display:none;}
 						section.thirdcontainer p.link01 		{cursor:pointer;background-color: rgb(50,111,210);color:white;border-radius:14px;text-align:center;}
 						section.thirdcontainer 		{display:none;background-color:white;padding-left:10px;padding-right:10px;}
 						section.thirdcontainer p.link11		{cursor:pointer;border-bottom: 1px solid silver;padding-left:20px;}
 						section.thirdcontainer p.link11:hover		{padding-left:40px;background-color:silver;}
 					</style>
-					<p class='link01' >sign up</p>
-					<p class='link01' >login</p>
-					<p class='link11'><b>Electronic</b></p>
-					<p class='link11'><b>Shoe</b></p>
-					<p class='link11'><b>Children</b></p>
-					<p class='link11'><b>Skincare</b></p>
-					<p class='link11'><b>Health</b></p>
-					<p class='link11'><b>Tools</b></p>
-					<p class='link11'><b>Books</b></p>
-					<p class='link11'><b>Software</b></p>
-					<p class='link11'><b>Movies</b></p>
-					<p class='link11'><b>Kitchen</b></p>
-					<p class='link11'><b>Cleaning</b></p>
+					<a href='/demo/ecommerce/register'><p class='link01' >sign up</p></a>
+					<a href='/demo/ecommerce/login'><p class='link01' >login</p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Electronic</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Children</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Skincare</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Clothing</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Entertainment</b></p></a>
+					<a href='/demo/ecommerce/cat'><p class='link11'><b>Cleaning</b></p></a>
 			
 					<script>
-						let menu = document.querySelector('header.firstcontainera b.firstchild')
+						let menu = document.querySelector('.firstchild')
 						let othernav = document.querySelector('.thirdcontainer')
 			  
 						function open(x) {
@@ -238,6 +182,7 @@
 						}
 					</script>
 				</section>
+				
 				
 				<section class='fourthcontainer'>
 					<style>
@@ -305,7 +250,8 @@
 				
 				<section class='fifthcontainer'>
 					<style>
-						section.fifthcontainer {z-index:1;display:block;height:100vh;overflow-y:scroll;position:fixed;top:0;right:0;width:50%;background-color:white;padding:30px;}
+						.closeit {display:none;}
+						section.fifthcontainer {z-index:1;display:none;height:100vh;overflow-y:scroll;position:fixed;top:0;right:0;width:50%;background-color:white;padding:30px;}
 						
 						@media screen and (max-width: 900px) {
 							section.fifthcontainer {height:50vh;width:70%;margin-left:10%;border-radius:20px 20px 0px 0px;top:auto;right:auto;bottom:0;}

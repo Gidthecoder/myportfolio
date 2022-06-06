@@ -14,8 +14,6 @@
 //ui: 
 	ontent,
 		copywriting
-		figures of speech writing
-		content writing
 		technical writing
 		book inspos
 	layouts,
@@ -25,7 +23,7 @@
 		app,
 		desktop,
 		Games,
-		Books,
+		Books,product packages,
 		OS,
 		Movies,
 		Console,
@@ -34,10 +32,10 @@
 	webapis
 		
 	animation,
-		canvas,
-		svg,
-		css,
-		webgl
+		cartoon/3d
+		illustration/2d
+		css and svg animation
+		//css/svg model with same animation style or svg style or cartoon style
 	page optimization
 	
 //graphics:
@@ -157,4 +155,5 @@
 //others: pm2(branded packages,iot camera analytics)
 
 
-//color, typography, heterogenous alignment(together, far-apart), layout consistency(together, far-apart), content heterogeneity(alignment, content, color)
+//color, typography, alignment, layout, background-image,border-image
+//interactivity: animation, game(ification), chart, actions

@@ -1,10 +1,28 @@
 <html>
   <head>
-    
+    <title>About SPP Real Estate Agency</title>
+	<meta charset='utf-8'>
+	<meta name='description' content='we connect homebuyers to homesellers'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/demo/pro">
+	<meta property="og:description" content="We conect homebuyers to homesellers">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/professional/logo3.svg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_1">
+	<meta name="twitter:description" content="We connect homesellers to homebuyers">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/professional/logo3.svg">
+	<link rel="apple-touch-icon-precomposed" href="/images/professional/logo3.svg">
+	<link rel="icon" type="image/png" href="/images/professional/logo3.svg">
 	<style>
 		@font-face {
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 		}
 		@font-face {
 			font-family: 'Poppins-b';
@@ -18,18 +36,26 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
+		@font-face {
+			font-family: 'Roboto-light';
+			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+		}
 	</style>
 	<style>
 	     /* typography styling */
-		h1 {font-size: 35px;Font-family:Poppins-eb;}
-		h2 {font-size: 30px;Font-family:Poppins-eb;}
-		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;}
-		p, header,footer {font-size:16px;Font-family:Roboto;}
+		h1 {font-size: 35px;Font-family:Poppins-eb;margin:5px;}
+		h2 {font-size: 30px;Font-family:Poppins-eb;margin:5px;}
+		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;margin:5px;}
+		p, header,footer {font-size:16px;Font-family:Roboto-light;margin:5px;}
+		@media screen and (max-width: 800px) {
+			h1,h2 {font-family:Poppins-medium;}
+		}
+		
 		@media screen and (max-width: 400px) {
-			h1 {font-size: 30px;Font-family:Poppins-eb;}
-			h2 {font-size: 25px;Font-family:Poppins-eb;}
-			h3 {font-size: 18px;font-weight:400;Font-family:Poppins;}
-			p, header, footer {font-size:15px;Font-family:Roboto;}
+			h1 {font-size: 25px;}
+			h2 {font-size: 20px;}
+			h3 {font-size: 18px;font-weight:400;}
+			p, header, footer {font-size:15px;}
 		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,66 +67,52 @@
 					body {font-family: sans-serif;padding:0;margin:0;}
 					article {background-color: white;}
 					
-					
+					a {color: black;text-decoration:none;}
 				
+					.contactus {display:inline-block;padding:5px;margin-top:10px;margin-bottom:10px;background-image: linear-gradient(to bottom right, violet, aqua);cursor:pointer;}
+					
 					.firstcontainer {display:flex;flex-direction:row;}
-					.firstcontainer b {padding:10px;display:inline-block;cursor:pointer;transition: all 0.5s ease;}
+					.firstcontainer a {padding:10px;display:inline-block;cursor:pointer;transition: all 0.5s ease;}
 					.firstcontainer .firstchild {width:60px;height:45px;}
-					.firstcontainer .secondchild {padding-left:0px;height:30px;}
+					.firstcontainer .secondchild {padding-left:0px;height:30px;display:inline-block;}
 					.firstcontainer .thirdchild {flex:1;text-align:right;}
-					.firstcontainer .thirdchild a {text-decoration:none;color:black;}
-					.firstcontainer .thirdchild b {border-bottom: 1px solid white;}
-					.firstcontainer .thirdchild b:hover {border-bottom: 1px solid violet;}
+					
+					.firstcontainer .thirdchild a {border-bottom: 1px solid white;}
+					.firstcontainer .thirdchild a:hover {border-bottom: 1px solid violet;}
 					.firstcontainer .fourthchild {display:none;flex:1;text-align:right;padding-right:0px;}
 					
-					.secondcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
-					.secondcontainer .child1 {width:50%;margin-right:15%;}
-					.secondcontainer .child1 .firstchild {color: violet;}
-					.secondcontainer .child1 .child4{display:inline-block;padding:5px;background-image: linear-gradient(to bottom right, violet, aqua);cursor:pointer;}
-					.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-					.secondcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
-					
 					.firstalignment {padding-left:60px;padding-right:60px;}
-					.secondalignment {padding-left:200px;padding-right:200px;}
-					.thirdalignment {padding-left: 120px;padding-right:120px;}
 					
 					.flexattribute {flex-direction:row;}
 					
-					
 					@media screen and (max-width: 800px) {
 						.firstcontainer .thirdchild {display:none;}
-						 
 						.firstcontainer .fourthchild {display:inline-block;}
-						 
 						.firstalignment {padding-left:30px;padding-right:30px;}
-						.secondalignment {padding-left:100px;padding-right:100px;}
-						.thirdalignment {padding-left:60px;padding-right:60px;}
 					}
 					
 					@media screen and (max-width: 600px) {
-						.secondalignment, .firstalignment {padding-left:30px;padding-right:30px;} 
-						
+						.firstalignment {padding-left:30px;padding-right:30px;} 
 						.flexattribute {flex-direction:column;}
-						
 						.firstcontainer .secondchild {font-size: 22px;}
-						
-						.secondcontainer .child1 {width:100%;margin-right:0%;}
-						.secondcontainer .child2 {width:100%;height:50vh;}
-						
 					}
 			  
 					@media screen and (max-width: 600px) {
-						.secondalignment, .firstalignment, .thirdalignment {padding-left:10px;padding-right:10px;} 
+						.firstalignment {padding-left:10px;padding-right:10px;} 
+					}
+					
+					@media screen and (max-width: 450px){
+						.contactus {display:block;text-align:center;}
 					}
 				</style>
 				<header class='firstcontainer firstalignment'>
 					<img class='firstchild' src='/images/professional/logo3.svg' >
-					<b class='secondchild'>Sports</b>
+					<b class='secondchild' style='padding-top:10px;font-family:Poppins-eb;'>SPP</b>
 					<nav class='thirdchild'>
-						<a href='/demo/pro' ><b>HOME</b></a>
-						<a href='/demo/pro/about' style='color:violet;height:20px;'><b>ABOUT</b></a>
-						<a href='#'><b>SERVICES</b></a>
-						<a href='#'><b>PORTFOLIO</b></a>
+						<a href='/demo/pro' style='height:20px;'><b>HOME</b></a>
+						<a href='/demo/pro/about' style='color:violet;'><b>ABOUT</b></a>
+						<a href='/demo/pro/services'><b>SERVICES</b></a>
+						<a href='/demo/pro/blog'><b>BLOG</b></a>
 						<a href='/demo/pro/contact'><b>CONTACT</b></a>
 					</nav>
 					<b class='fourthchild'><img class='img' src='/images/professional/menubar.svg'  style='color:green;width:40px;height:40px;'></b>
@@ -108,18 +120,18 @@
 				<header class='firstcontainerb'>
 					<style>
 						header.firstcontainerb {display:none;transition:all 0.5s ease;background-color:white;padding:10px;outline:2px solid aqua;position:fixed;top:0;bottom:0;left:0;overflow-y:scroll;}
-						header.firstcontainerb p b.close {transition:all 0.5s ease;float:right;display:inline-block;cursor:pointer;background-color:blue;color:white;padding:5px;}
+						header.firstcontainerb p b.close {transition:all 0.5s ease;float:right;display:inline-block;cursor:pointer;background-color:blue;color:white;padding:10px;font-size:20px;}
 						header.firstcontainerb p b.close:hover {background-color:red;}
-						header.firstcontainerb p.nav a {color:black;text-decoration:none;}
-						header.firstcontainerb p.nav a:hover {text-decoration:underline;}
-						header.firstcontainerb p.nav {cursor:pointer;}
+						header.firstcontainerb  a {color:black;text-decoration:none;}
+						header.firstcontainerb  a:hover {text-decoration:underline;background-color:rgb(245,245,245);}
+						header.firstcontainerb p.nav {cursor:pointer;padding:10px;background-color:inherit;font-size:20px;}
 					</style>
 				    <p>.<b class='close'>X</b></p>
-					<p class='nav'><a href='/demo/pro'>HOME</a></p>
-					<p class='nav'><a href='/demo/pro/about'>ABOUT</a></p>
-					<p class='nav'><a href='#'>SERVICES</a></P>
-					<p class='nav'><a href='#'>PORTFOLIO</a></p>
-					<p class='nav'><a href='/demo/pro/contact'>CONTACT</a></p>
+					<a href='/demo/pro'><p class='nav'>HOME</p></a>
+					<a href='/demo/pro/about'><p class='nav'>ABOUT</p></a>
+					<a href='/demo/pro/services'><p class='nav'>SERVICES</P></a>
+					<a href='/demo/pro/blog'><p class='nav'>BLOG</p></a>
+					<a href='/demo/pro/contact'><p class='nav'>CONTACT</p></a>
 					<script>
 						let menubar = document.querySelector('.firstcontainer .fourthchild')
 						let othernav = document.querySelector('header.firstcontainerb')
@@ -138,11 +150,24 @@
 					</script>
 				</header>
 				<section class='secondcontainer firstalignment flexattribute'>
-					<div class='child1' >
-						<h3 class='firstchild'>LOREP IPSUM</h3>
-						<h1>LOPREP IPSUM DOLOR SIT </h1>
-						<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
-						<h3 class='child4'><a href='/demo/pro/contact' style='text-decoration:none;'>CONTACT US</a></h3>
+					<style>
+						.secondcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
+						.secondcontainer .child1 {width:50%;margin-right:15%;}
+						.secondcontainer .child1 .firstchild {color: violet;}
+					
+						.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
+						.secondcontainer .child2 .child1 {background-image: url(/images/travelling.jpg);background-size:100% 100%;width:100%;height:100%;}
+					
+						@media screen and (max-width: 600px) {
+							.secondcontainer .child1 {width:100%;}
+							.secondcontainer .child2 {width:auto;height:50vh;}
+						}
+					</style>
+					<div class='child1'>
+						<h3 class='firstchild'>INTRO</h3>
+						<h1>OUR GOAL IS AIDING COMMUNICATION BETWEEN HOMEOWNERS AND HOMESELLERS.</h1>
+						<p>Get the best home for your budget.</p>
+						<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
 					</div>
 					<div class='child2'>
 						<div class='child1'>.</div>
@@ -152,20 +177,29 @@
 			
 			<section class='thirdcontainer secondalignment flexattribute'>
 				<style>
+					.secondalignment {padding-left: 100px;padding-right:100px;}
 					
 					
-					section.thirdcontainer section.secondchild {margin:0;margin-bottom:15px; border: 0px solid red;border-top-right-radius: 50px;background-color:rgb(245,245,245);border-image: linear-gradient(to right, violet, aqua) 5 round;border-bottom-width:15px;border-style:solid;}
+					@media screen and (max-width: 600px) {
+						.secondalignment {padding-left: 30px;padding-right:30px;}
+					}
+					
+					section.thirdcontainer section.secondchild {margin:0;margin-bottom:15px;margin-top:15px;border: 0px solid red;border-top-right-radius: 50px;background-color:rgb(245,245,245);border-image: linear-gradient(to right, violet, aqua) 5 round;border-bottom-width:15px;border-style:solid;}
 					section.thirdcontainer section.secondchild h2 {border-bottom: 1px solid silver;color:  violet;}
 					section.thirdcontainer section.secondchild div.secondchild {border-left: 10px solid aqua;margin-left:10px;}
-					section.thirdcontainer section.secondchild div.secondchild div.firstchild {border-left: 10px solid red;margin-left:10px;color:black;display:flex;flex-direction:row;padding-left:2%;padding-right:2%;}
+					section.thirdcontainer section.secondchild div.secondchild div.firstchild {border-left: 10px solid red;margin-left:10px;color:black;display:flex;flex-direction:row;margin:10px;padding-left:2%;padding-right:2%;}
 					
 					section.thirdcontainer section.thirdchild {display:flex;flex-direction:row;flex-wrap:nowrap;}
-					section.thirdcontainer section.thirdchild img {display:block;width:100%;height:100%;border-image: linear-gradient(to bottom right, aqua, violet) 5 round;border-width:5px;border-style:solid;}
-					section.thirdcontainer section.thirdchild div.child {width:35%;height:50vh;margin-right:5%;}
-					section.thirdcontainer section.thirdchild div.thirdchild {width:35%;height:50vh;}
+					section.thirdcontainer section.thirdchild img {display:block;width:100%;height:100%;border-width:5px;border-style:solid;}
+					section.thirdcontainer section.thirdchild div.child {width:35%;height:30vh;margin-right:5%;}
+					section.thirdcontainer section.thirdchild div.thirdchild {width:35%;height:30vh;}
 					
-					section.thirdcontainer section.fourthchild {display:flex;flex-direction:row;flex-wrap:nowrap;margin-top:15px;}
-					section.thirdcontainer section.fourthchild div{width:48%;margin-right:4%;text-align:center;}
+					@media screen and (max-width: 450px) {
+						section.thirdcontainer section.thirdchild {flex-direction: column;flex-wrap:wrap;}
+						section.thirdcontainer section.thirdchild div.child {width:100%;}
+						section.thirdcontainer section.thirdchild img.first {border-radius: 20px 20px 0px 0px;}
+						section.thirdcontainer section.thirdchild img.third {border-radius: 0px 0px 20px 20px;}
+					}
 				</style>
 				
 				<section class='secondchild'>
@@ -183,20 +217,17 @@
 				</section>
 				<section class='thirdchild'>
 					<div class='child'>
-						<img src='/images/dcloud.jpg'>
+						<img class='first' src='/images/dcloud.jpg'>
 					</div>
 					<div class='child'>
 						<img src='/images/dcloud.jpg'>
 					</div>
-					<div class='thirdchild'>
-						<img src='/images/dcloud.jpg'>
+					<div class='child thirdchild'>
+						<img class='third' src='/images/dcloud.jpg'>
 					</div>
 					
 				</section>
-				<section class='fourthchild'>
-					<div>hey bro sef</div>
-					<div>lorep ipsum</div>
-				</section>
+				
 			</section>
 			
 			<section class='fourthcontainer secondalignment flexattribute'>

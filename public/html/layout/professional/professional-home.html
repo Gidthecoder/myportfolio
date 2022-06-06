@@ -1,10 +1,28 @@
 <html>
   <head>
-    
+    <title>SPP Real Estate Agency</title>
+	<meta charset='utf-8'>
+	<meta name='description' content='we connect homebuyers to homesellers'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/demo/pro">
+	<meta property="og:description" content="We conect homebuyers to homesellers">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/professional/logo3.svg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_1">
+	<meta name="twitter:description" content="We connect homesellers to homebuyers">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/professional/logo3.svg">
+	<link rel="apple-touch-icon-precomposed" href="/images/professional/logo3.svg">
+	<link rel="icon" type="image/png" href="/images/professional/logo3.svg">
 	<style>
 		@font-face {
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 		}
 		@font-face {
 			font-family: 'Poppins-b';
@@ -29,9 +47,13 @@
 		h2 {font-size: 30px;Font-family:Poppins-eb;margin:5px;}
 		h3 {font-size: 20px;font-weight:400;Font-family:Poppins;margin:5px;}
 		p, header,footer {font-size:16px;Font-family:Roboto-light;margin:5px;}
+		@media screen and (max-width: 800px) {
+			h1,h2 {font-family:Poppins-medium;}
+		}
+		
 		@media screen and (max-width: 400px) {
-			h1 {font-size: 30px;}
-			h2 {font-size: 25px;}
+			h1 {font-size: 25px;}
+			h2 {font-size: 20px;}
 			h3 {font-size: 18px;font-weight:400;}
 			p, header, footer {font-size:15px;}
 		}
@@ -52,7 +74,7 @@
 					.firstcontainer {display:flex;flex-direction:row;}
 					.firstcontainer a {padding:10px;display:inline-block;cursor:pointer;transition: all 0.5s ease;}
 					.firstcontainer .firstchild {width:60px;height:45px;}
-					.firstcontainer .secondchild {padding-left:0px;height:30px;}
+					.firstcontainer .secondchild {padding-left:0px;height:30px;display:inline-block;}
 					.firstcontainer .thirdchild {flex:1;text-align:right;}
 					
 					.firstcontainer .thirdchild a {border-bottom: 1px solid white;}
@@ -67,17 +89,16 @@
 						.firstcontainer .thirdchild {display:none;}
 						.firstcontainer .fourthchild {display:inline-block;}
 						.firstalignment {padding-left:30px;padding-right:30px;}
-						.thirdalignment {padding-left:60px;padding-right:60px;}
 					}
 					
 					@media screen and (max-width: 600px) {
-						.secondalignment, .firstalignment {padding-left:30px;padding-right:30px;} 
+						.firstalignment {padding-left:30px;padding-right:30px;} 
 						.flexattribute {flex-direction:column;}
 						.firstcontainer .secondchild {font-size: 22px;}
 					}
 			  
 					@media screen and (max-width: 600px) {
-						.firstalignment, .thirdalignment {padding-left:10px;padding-right:10px;} 
+						.firstalignment {padding-left:10px;padding-right:10px;} 
 					}
 					
 					@media screen and (max-width: 450px){
@@ -86,12 +107,12 @@
 				</style>
 				<header class='firstcontainer firstalignment'>
 					<img class='firstchild' src='/images/professional/logo3.svg' >
-					<b class='secondchild'>Sports</b>
+					<b class='secondchild' style='padding-top:10px;font-family:Poppins-eb;'>SPP</b>
 					<nav class='thirdchild'>
 						<a href='/demo/pro' style='color:violet;height:20px;'><b>HOME</b></a>
 						<a href='/demo/pro/about'><b>ABOUT</b></a>
-						<a href='#'><b>SERVICES</b></a>
-						<a href='#'><b>PORTFOLIO</b></a>
+						<a href='/demo/pro/services'><b>SERVICES</b></a>
+						<a href='/demo/pro/blog'><b>BLOG</b></a>
 						<a href='/demo/pro/contact'><b>CONTACT</b></a>
 					</nav>
 					<b class='fourthchild'><img class='img' src='/images/professional/menubar.svg'  style='color:green;width:40px;height:40px;'></b>
@@ -99,17 +120,17 @@
 				<header class='firstcontainerb'>
 					<style>
 						header.firstcontainerb {display:none;transition:all 0.5s ease;background-color:white;padding:10px;outline:2px solid aqua;position:fixed;top:0;bottom:0;left:0;overflow-y:scroll;}
-						header.firstcontainerb p b.close {transition:all 0.5s ease;float:right;display:inline-block;cursor:pointer;background-color:blue;color:white;padding:5px;}
+						header.firstcontainerb p b.close {transition:all 0.5s ease;float:right;display:inline-block;cursor:pointer;background-color:blue;color:white;padding:10px;font-size:20px;}
 						header.firstcontainerb p b.close:hover {background-color:red;}
 						header.firstcontainerb  a {color:black;text-decoration:none;}
 						header.firstcontainerb  a:hover {text-decoration:underline;background-color:rgb(245,245,245);}
-						header.firstcontainerb p.nav {cursor:pointer;padding:5px;background-color:inherit;}
+						header.firstcontainerb p.nav {cursor:pointer;padding:10px;background-color:inherit;font-size:20px;}
 					</style>
 				    <p>.<b class='close'>X</b></p>
 					<a href='/demo/pro'><p class='nav'>HOME</p></a>
 					<a href='/demo/pro/about'><p class='nav'>ABOUT</p></a>
-					<a href='#'><p class='nav'>SERVICES</P></a>
-					<a href='#'><p class='nav'>PORTFOLIO</p></a>
+					<a href='/demo/pro/services'><p class='nav'>SERVICES</P></a>
+					<a href='/demo/pro/blog'><p class='nav'>BLOG</p></a>
 					<a href='/demo/pro/contact'><p class='nav'>CONTACT</p></a>
 					<script>
 						let menubar = document.querySelector('.firstcontainer .fourthchild')
@@ -135,17 +156,17 @@
 						.secondcontainer .child1 .firstchild {color: violet;}
 					
 						.secondcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-						.secondcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+						.secondcontainer .child2 .child1 {background-image: url(/images/travelling.jpg);background-size:100% 100%;width:100%;height:100%;}
 					
 						@media screen and (max-width: 600px) {
-							.secondcontainer .child1 {width:100%;margin-right:0%;}
-							.secondcontainer .child2 {width:100%;height:50vh;}
+							.secondcontainer .child1 {width:100%;}
+							.secondcontainer .child2 {width:auto;height:50vh;}
 						}
 					</style>
-					<div class='child1' >
-						<h3 class='firstchild'>LOREP IPSUM</h3>
-						<h1>LOPREP IPSUM DOLOR SIT </h1>
-						<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
+					<div class='child1'>
+						<h3 class='firstchild'>INTRO</h3>
+						<h1>WE CONNECT HOMEOWNERS TO BUYERS</h1>
+						<p>Get the best home for your budget.</p>
 						<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
 					</div>
 					<div class='child2'>
@@ -154,24 +175,46 @@
 				</section>
 			</section>
 			
-			<section class='thirdcontainer secondalignment flexattribute'>
+			<section class='thirdcontainer firstalignment flexattribute'>
 				<style>
 					.secondalignment {padding-left: 100px;padding-right:100px;}
 					
 					.thirdcontainer {padding-top:50px;padding-bottom:50px;background-color:white;}
 					.thirdcontainer div.secondchild {display:flex;flex-direction:row;flex-wrap:nowrap;border: 3px dashed black;padding: 5px;}
-					.thirdcontainer div.secondchild div {width:300px;height:300px;background-color:red;color:white;margin:auto;border-radius:25%;text-align:center;background-image: linear-gradient(to bottom, violet, aqua);}
+					.thirdcontainer div.secondchild div {width:300px;height:300px;background-color:green;color:white;margin:auto;border-radius:25%;text-align:center;background-image: url(/images/dcloud.jpg);background-size: 100% 100%;}
+					.thirdcontainer div.secondchild div section {background-color: rgba(0,0,0,0.5);height:100%;width:100%;border-radius:inherit;}
+					
+					@media screen and (max-width: 900px) {
+						
+						.thirdcontainer div.secondchild {flex-wrap: wrap;}
+						.thirdcontainer div.secondchild div {width:47%;height:40vh;margin-bottom:20px;}
+					}
+					@media screen and (max-width: 600px) {
+						.secondalignment {padding-left: 30px;padding-right:30px;}
+					}
 				</style>
-				<h2 style='text-align:center;'>LOREP IPSUM </h2>
+				<h2 style='text-align:center;'>How We Work.</h2>
 				<div class='secondchild'>
 					<div>
-						<p>The first</p>
+						<section>
+							<h1>ONE</h1>
+							<p>Contact Us through Our Form Link</p>
+							<code>No initial payment required</code>
+						</section>
 					</div>
 					<div>
-						<p>The second</p>
+						<section>
+							<h1>TWO</h1>
+							<p>We Match Your Needs With At Least 3 Houses.</p>
+							<code>Sent to your email.</code>
+						</section>
 					</div>
 					<div>
-						<p>The third</p>
+						<section>
+							<h1>THREE</h1>
+							<p>If Interested, We Nogotiate With The Home Seller On Your Behalf.</p>
+							<code>Payment becomes the final step of negotiation.</code>
+						</section>
 					</div>
 				</div>
 			</section>
@@ -180,48 +223,80 @@
 				<style>
 					.fourthcontainer {padding-top:50px;padding-bottom:50px;background-color:rgb(245,245,245);}
 					.fourthcontainer div.secondchild {display:flex;flex-direction:row;}
-					.fourthcontainer div.secondchild div {border: 1px solid black;width:45%;}
-					.fourthcontainer div.secondchild div h3 {text-align:center;padding:5px;margin:0;background-color:violet;}
+					.fourthcontainer div.secondchild div {width:45%;}
+					.fourthcontainer div.secondchild div h3 {text-align:center;padding:5px;margin:0;background-color:black;}
 					.fourthcontainer div.secondchild div h3 b {border-radius: 25px;padding:5px;border:2px solid white;display:inline-block;}
-					.fourthcontainer div.secondchild div p {padding: 10px;background-color:aqua;margin:0;text-align:center;}
+					.fourthcontainer div.secondchild div p {padding: 10px;border:2px solid violet;margin:0;text-align:center;}
+					
+					@media screen and (max-width: 500px) {
+						.fourthcontainer div.secondchild {flex-direction: column;}
+						.fourthcontainer div.secondchild div {width: 100%;margin-bottom:10px;}
+					}
 				</style>
-				<h2>lorep ipsum </h2>
+				<h2>Our Blog</h2>
 				<div class='secondchild'>
 					<div style='margin-right:auto;'>
-						<h3> <b style=''> <b style='background-color:white;'>Lorep ipsum</b> </b></h3>
-						<img src='/images/dcloud.jpg' style='width:100%;height:30vh;'>
-						<p>lorep ipsum dolor et</p>
+						<h3> <b style=''> <b style='background-color:white;'>Steps To Take Before Buying A Home</b> </b></h3>
+						<img src='/images/paved.jpg' style='width:100%;height:30vh;'>
+						<p>A Home Is Very Important.</p>
 					</div>
 					<div style='margin-left:auto;'>
-						<h3> <b style=''> <b style='background-color:white;'>Lorep ipsum</b> </b></h3>
-						<img src='/images/dcloud.jpg' style='width:100%;height:30vh;'>
-						<p>lorep ipsum dolor et</p>
+						<h3> <b style=''> <b style='background-color:white;'>Why You Need An Agent Before Buying A Home</b> </b></h3>
+						<img src='/images/plant.jpg' style='width:100%;height:30vh;'>
+						<p>An Agent Has A Verified List Of Homes.</p>
 					</div>
 				</div>
 			</section>
 			
 			<section class='fifthcontainer firstalignment flexattribute'>
 				<style>
-					.fifthcontainer {display:flex;padding-top:50px;padding-bottom:50px;background-color:white;}
-					.fifthcontainer .child1 {width:50%;margin-right:15%;}
-					.fifthcontainer .child1 .firstchild {color: violet;}
-					.fifthcontainer .child2 {width:35%;height:50vh;border-image: linear-gradient(to bottom right, violet, aqua) 5 round;border-width:5px;border-style:solid;}
-					.fifthcontainer .child2 .child1 {background-image: url(/images/dcloud.jpg);background-size:100% 100%;width:100%;height:100%;}
+					.fifthcontainer {padding-top:50px;padding-bottom:50px;background-color:white;}
+					.fifthcontainer section.child1 {display:flex;flex-direction:row;flex-wrap:nowrap;}
+					.fifthcontainer section.child1 div.child1 {width:48%;margin-right:2%;padding:5px;}
+					.fifthcontainer section.child1 div.child2 {width:48%;margin-left:2%;}
 					
-					@media screen and (max-width: 600px) {
-						.fifthcontainer .child1 {width:100%;margin-right:0%;}
-						.fifthcontainer .child2 {width:100%;height:50vh;}
+					@media screen and (max-width: 450px) {
+						.fifthcontainer section.child1 {flex-direction:column;}
+						.fifthcontainer section.child1 div.child1, .fifthcontainer section.child1 div.child2 {width:100%;margin-right:auto;margin-left:auto;}
 					}
 				</style>
-				<div class='child1' >
-					<h3 class='firstchild'>LOREP IPSUM</h3>
-					<h1>LOPREP IPSUM DOLOR SIT </h1>
-					<p>You will begin to realise why this exercise is called the dickens pattern with reference to the ghost showing Scrooga some different futures.</p>
-					<h3 class='contactus'><a href='/demo/pro/contact'>CONTACT US</a></h3>
-				</div>
-				<div class='child2'>
-					<div class='child1'>.</div>
-				</div>
+					<section class='child1'>
+						<div class='child1'>
+							<h3 style='border-bottom:1px dashed black;'>What You'll Get</h3>
+							
+							<div style='display:flex;flex-direction:row;'>
+								<div>
+									<p>Integrity</p>
+									<p>Convenience</p>
+									<p>Joy</p>
+									<p>Speed</p>
+									<p>Trust</p>
+									<p>Availability</p>
+								</div>
+								<div style='flex:1;text-align:right;'>
+									<p>YES</p>
+									<p>YES</p>
+									<p>YES</p>
+									<p>YES</p>
+									<p>YES</p>
+									<p>YES</p>
+								</div>
+							</div>
+						</div>
+						<div class='child2'>
+							<div style='border:1px solid silver;'>
+								<h3>Note:</h3>
+								<p>We don't require any payment before we begin searching for your demand. Hence disregard any email requiring any fees from you.</p>
+							</div>
+							<div style='background-color:rgb(245,245,245);'>
+								<h3>OUR GOAL IS HELPING YOU FIND THE PERFECT HOME.</h3>
+							</div>
+						</div>
+					</section>
+					<p><b>We Are Certified Real Estate Agent</b></p>
+					<p style='border-bottom:1px solid black;'>We Understand the importance of getting a good home and spend endless hours i trying to perfect our craft.</p>
+				</style>
+				
 			</section>
 			<section>
 			
@@ -234,30 +309,29 @@
 					.sixthcontainer section.secondchild {display: flex;flex-wrap:nowrap;}
 					.sixthcontainer section.secondchild div {width:30%;margin-right:2%;padding-left:5px;padding-right:5px;margin-bottom: 10px;}
 					
-					.thirdalignment {padding-left: 150px;padding-right:150px;}
 					
 					.sixthcontainer section.secondchild img {height:30vh;width:100%;border-radius: 10px;}
 					@media screen and (max-width: 600px) {
 						.sixthcontainer section.secondchild {flex-wrap: wrap;}
-						.sixthcontainer section.secondchild div{width:43%;margin-right:auto;}
+						.sixthcontainer section.secondchild div{width:45%;margin-right:auto;}
+					}
+					@media screen and (max-width: 300px) {
+						.sixthcontainer section.secondchild div {width:100%;}
 					}
 				</style>
-				<h1 class='firstchild'>LOREP IPSUM</h1>
-				<section class='secondchild thirdalignment' >
+				<h1 class='firstchild'>We Deal With The Best Homeowners</h1>
+				<section class='secondchild secondalignment' >
 					<div class='firstchild'>
-						<img src='/images/professional/dcloud.jpg'>
-						<h3>LOREP IPSUM</h3>
-						<p>Lorep ipsum dolor ets dallor</p>
+						<img src='/images/h.jpg'>
+						<p>Terms and conditions are discussed before payment.</p>
 					</div>
 					<div class='secondchild'>
-						<img src='/images/professional/dcloud.jpg'>
-						<h3>LOREP IPSUM</h3>
-						<p>Lorep ipsum dolor ets dallor</p>
+						<img src='/images/fog.jpg'>
+						<p>monthly utility bills payments are discussed.</p>
 					</div>
 					<div class='thirdchild' >
-						<img src='/images/professional/dcloud.jpg'>
-						<h3>LOREP IPSUM</h3>
-						<p>Lorep ipsum dolor ets dallor</p>
+						<img src='/images/land.jpg'>
+						<p>Security and environment sanity is a top priority.</p>
 					</div>
 				</section>
 			</section>
@@ -280,10 +354,10 @@
 			</div>
 			
 			<div class='secondchild'>
-				<b><a href='#'>about</a> /</b>
-				<b><a href='#'>services</a> /</b>
-				<b><a href='#'>portfolio</a> /</b>
-				<b><a href='#'>blog</a> </b>
+				<b><a href='/demo/pro/about'>about</a> /</b>
+				<b><a href='/demo/pro/services'>services</a> /</b>
+				<b><a href='/demo/pro/blog'>blog</a> /</b>
+				<b><a href='.demo/pro/contact'>contact</a> </b>
 			</div>
 			
 			<div class='thirdchild'>

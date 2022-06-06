@@ -3,10 +3,26 @@
 	<title>GBW homepage</title>
     <meta charset='utf-8'>
 	<meta name='description' content='We build any cloud solution you need whether website, ecommerce store, software for enterprise or webapp'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
+	<meta property="og:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
+	<link rel="icon" type="image/png" href="/images/mylogo.svg">
 	<style>
 		@font-face {
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 		}
 		@font-face {
 			font-family: 'Poppins-b';
@@ -29,34 +45,35 @@
 			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
 		}
 	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body style='padding:0;margin:0;'>
     <div style=''>
-	  <div class='suji' style='background-color: white;'>
+	  <div style='background-color: white;'>
 		<article style=''>
 		  <header>
-			  <a href='/' class='lg'>
-				<img src='/images/mylogo.svg' class='headerimg' >
-				<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
-			  </a>
+			  <span class='lg'>
+				<a href='/' style='display:flex;flex-direction:row;'>
+					<img src='/images/mylogo.svg' class='headerimg' >
+					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+				</a>
+			  </span>
 		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
 		        <style>
 					header {background-color:khaki;display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
-			      .suji nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
-				  .suji nav.navi b:hover {color: rgb(132,51,119);}
-			      .suji b.logo, b.menubar {padding: 10px;font-size:22px;}
-				  .suji b.menubar {display:none;font-family:Poppins-eb;}
-				  .suji .small {width:60%;margin:auto;}
-				  img.headerimg {width: 40px;height: 40px;}
+			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				   nav.navi b:hover {color: rgb(132,51,119);}
+			       b.logo, b.menubar {padding: 10px;font-size:22px;}
+				   b.menubar {display:none;font-family:Poppins-eb;}
+				   .small {width:60%;margin:auto;}
+				  img.headerimg {width: 50px;height: 50px;}
 				  @media screen and (max-width: 900px) {
-				      header a.lg {flex:1;}
-				     .suji b.menubar {display: inline-block;text-align:right;}
-					 .suji nav.navi {display:none;}
-					 .suji .small {width:80%;margin:auto;}
+				      header span.lg {flex:1;}
+				      b.menubar {display: inline-block;text-align:right;}
+					  nav.navi {display:none;}
+					  .small {width:80%;margin:auto;}
 					 header {padding: 5px;position:relative;}
 					 img.headerimg {width: 30px;height: 30px;}
-					 .suji b.logo {font-size: 17px;}
+					  b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
 				     .suji .small {width:90%;margin:auto;}
@@ -76,9 +93,9 @@
 		    
 			<section class='othernav' style='width: 0;'>
 			  <style>
-			    .othernav {background-color:white;transition: all 0.5s ease;background-color: rgb(234,226,16);overflow:hidden;position:absolute;}
-			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
-				.othernav .p:hover {background-color: khaki;padding-left:50px;}
+			    .othernav {background-color:white;transition: all 0.5s ease;background-color: white;overflow:hidden;position:absolute;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto-regular;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
 				.othernav a {color:black;text-decoration:none;}
 			  </style>
 			  <a href='/website' ><p class='p'>Website</p></a>
@@ -117,7 +134,7 @@
 			<section class='firstcontainer'>
 			  <style>
 				section.firstcontainer {padding:10px;padding-top:50px;padding-bottom:50px;color:black;}
-			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;display:inline-block;cursor:pointer;}
+			    b.start {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;display:inline-block;cursor:pointer;}
 			    b.start:hover {background-color: rgba(204,36,142);color:white;}
 				@media screen and (max-width: 450px) {
 					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
@@ -150,8 +167,8 @@
 		  
 		  <section class='small'>
 			<style>
-				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
-				section.demos a {text-decoration:none;margin-right: 10px;}
+				section.demos {display:flex;flex-direction:column;flex-wrap:nowrap;}
+				section.demos a {text-decoration:none;margin-right: 10px;margin-bottom:10px;}
 				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
 				section.demos h2:hover {background-color: rgb(132,51,119);}
 				@media screen and (max-width: 450px) {
@@ -160,8 +177,8 @@
 			</style>
 			<h2 style='text-align:center;'>OUR DEMOS</h2>
 			<section class='demos'>
-				<a href='/demo/pro'><h2>Professional service</h2></a>
-				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
+				<a href='/demo/pro'><h2>Professional service</h2><img src='/images/sppdemo.png' style='width:100%;height:50vh;'></a>
+				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2><img src='/images/petaldemo.png' style='width:100%;height:50vh;'></a>
 			</section>
 		  </section>
 		  
@@ -170,57 +187,44 @@
 		  </section>
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
-			   .suji nav {font-family: Poppins;}
-			   .suji p {font-size: 18px;font-family:Roboto-light;}
-			   .suji h1 {font-size:35px;font-family:Roboto;}
-			   .suji h2 {font-size: 30px;font-family:Poppins-b;}
-			   .suji h3 {font-size: 20px;font-family:Poppins;}
+			    nav {font-family: Poppins;}
+			    p {font-size: 18px;font-family:Roboto-light;}
+			    h1 {font-size:35px;font-family:Roboto;}
+			    h2 {font-size: 30px;font-family:Poppins-b;}
+			    h3 {font-size: 20px;font-family:Poppins;}
 			  @media screen and (max-width: 800px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:32px;}
-			     .suji h2 {font-size: 27px;}
-			     .sujih3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:32px;font-family:Roboto-regular;}
+			      h2 {font-size: 27px;font-family:Poppins-medium;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 600px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:28px;}
-			     .suji h2 {font-size: 23px;}
-			     .suji h3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:28px;}
+			      h2 {font-size: 23px;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 400px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:26px;}
-			     .suji h2 {font-size: 21px;}
-			     .suji h3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:26px;}
+			      h2 {font-size: 21px;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 300px) {
-				 .suji p {font-size: 13px;}
-			     .suji h1 {font-size:22px;}
-			     .suji h2 {font-size: 19px;}
-			     .suji h3 {font-size: 15px;}
+				  p {font-size: 13px;}
+			      h1 {font-size:22px;}
+			      h2 {font-size: 19px;}
+			     h3 {font-size: 15px;}
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
 			 </style>
 		     <h3 style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>WE BRIDGE THE GAP BETWEEN HIRING FREELANCER AND IN-HOUSE DEVELOPER</b></h3>
-			 <p style=''>Freelancers brings skills and expertise to your project for a specified period but:</p>
-			 <ul style='padding-left:30px;'>
-			   <li><p>Requires excessive time in finding and vetting the right candidate</p></li>
-			   <li><p>is subject to communication problems</p></li>
-			 </ul>
-			 <p>in-house brings skills and expertise to your project for long periods but:</p>
-			 <ul style='padding-left:30px;'>
-			   <li><p></p></li>
-			   <li><p>Ties down revenue through salaries, compensations and benefits</p></li>
-			   <li><p>They might lack some technical skills </p></li>
-			 </ul>
-			 <p>Why Not Use a Service That will:</p>
-			 <ul style='padding-left:30px;'>
-			   <li><p>Build your project without any upfront payment</p></li>
-			   <li><p>Manage Your Project For As Long As You Like</p></li>
-			   <li><p>Provide 24/7 Support To Your Business Through Multiple Communication Channels</p></li>
-			   <li><p>Develop Any Software You Need Without Sharing Your Ownership Or Requesting Compensation</p></li>
-			 </ul>
+			 <p>No More Communication Problem.</p>
+			 <p>No More Time-Consuming Vetting</p>
+			 <p>No More Workers Compensation</p>
+			 <p>No More Short-Term Committment</p>
+			 
 			 <a href='/aboutus'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> About us </p></a>
 		  </section>
 		  <section style='margin:auto;margin-top:20px;background-color:khaki;'>
@@ -230,15 +234,13 @@
 			   <div>
 			     <h1>Website Development</h1>
 			     <p>Having a website for your business/service opens it to a wide range of potential customers.</p>
-				 <p>We use the best, most secure technology stack and protocol(PCI,AWS,MVC) to ensure that your business ahead of its competition and scales with increase in customers</p>
-				 <p>Professional Website For Your Services(Construction, Events Planning, Law,..)?, News And Blogs Website? Say No More. Just Sign Up. We'll Give You A Call Within 5 Minutes</p>
+				 <p>Construction? Event Planning? Healthcare? News? Entertainment?</p>
 			     <p>Why waste time learning to use website builders like wix, wordpress when you can have an entire dedicated team at your control.</p>
 			     <a href='/website'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			   <div>
 			     <h1>Ecommerce Development</h1>
-			     <p>Compared to brick and mortal, ecommerce store has the potenti; to reach a wider range of audience and bigger amount of sales at lesser cost. </p>
-				 <p>We'll create every neccessary software to make your ecommerce operations a success.</p>
+			     <p>We'll create every neccessary software to make your ecommerce operations a success.</p>
 				 <p>Whatever products you want to sell whether electronics, food, digital assets, skincare product,... we've got you covered.</p>
 			     <p>Don't spend hours trying to market your product on hyper-competitive Marketplaces(amazon,jumia) where you'll deal with biased algorithms, unhealthy competition, lack of control and excessive charges.</p>
 			     <a href='/ecommerce'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
@@ -247,14 +249,12 @@
 			     <h1>Enterprise Software Development</h1>
 			     <p>A single software solution can't solve the different, ever-complex problems of various businesses. </p>
 				 <p>why spend time trying to learn a software when you can have one built for you.</p>
-				 <p>Whether you need a software for managing inventory, finance, marketing,... we are the best person for the job</p>
-			     <p>Enterprise Softwares from Salesforce CRM or hubspot doesn't give you the customization and experience we give</p>
+				 <p>Enterprise Softwares from Salesforce CRM or hubspot doesn't give you the customization and experience we give</p>
 			     <a href='/enterprise'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
 			   </div>
 			   <div>
 			     <h1>Webapp Development</h1>
-			     <p>Webapp, the highest and most complex product of the web ecosystem can change your business for good. </p>
-				 <p>creating a webapp for you industry not only sets you apart but can be your best path to make millions(or tens/hundreds of millions) of dollar.</p>
+			     <p>Having a webapp can change your business for good. </p>
 				 <p>Creating An Industry-Specific webapp like Ride-hailing-UBER, Home Rentals-Airbnb, Logistics-FedEx,...  is already in our DNA. you have nothing to worry about.</p>
 			     <p>WebApps like uber, facebook are great but you don't have control over your content.</p>
 			     <a href='/webapp'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
@@ -266,6 +266,9 @@
 		    img.img {width:300px;height:190px;}
 			@media screen and (max-width: 400px) {
 			  img.img {width:200px;height:190px;}
+			}
+			@media screen and (max-width: 300px) {
+				img.img {width:100px;height:90px;}
 			}
 		  </style>
 		  <section style='margin:auto;margin-top:20px;background-color:rgb(132,51,119);'>
@@ -351,16 +354,16 @@
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
-			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>akinsanmi20700@gmail.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
 			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
 		</div>
 		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
-			  .suji div.foot {width:45%;}
-			  .sujidiv.foot0 {margin-left:5%;}
+			  div.foot {width:45%;}
+			  div.foot0 {margin-left:5%;}
 			  @media screen and (max-width: 450px) {
-			    .suji div.foot {width:100%;}
-			    .suji div.foot0 {margin-left:0%;}
+			    div.foot {width:100%;}
+			    div.foot0 {margin-left:0%;}
 			  }
 		  </style>
 		</footer>

@@ -2,10 +2,26 @@
   <head>
     <meta charset='utf-8'>
 	<meta name='description' content="Let's build your ecommerce store for you. Payment is made after completion.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
+	<meta property="og:description" content="Let's build your ecommerce store for you. Payment is made after completion.">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="Let's build your ecommerce store for you. Payment is made after completion.">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
+	<link rel="icon" type="image/png" href="/images/mylogo.svg">
 	<style>
 		@font-face {
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 		}
 		@font-face {
 			font-family: 'Poppins-b';
@@ -32,36 +48,35 @@
   </head>
   <body style='padding:0;margin:0;'>
     <div style=''>
-	  <div class='suji' style='background-color: white;'>
+	  <div style='background-color: white;'>
 		<article style=''>
 		  <header>
-			  <a href='/' class='lg'>
-				<img src='/images/mylogo.svg' class='headerimg' >
-				<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
-			  </a>
+			  <span class='lg'>
+				<a href='/' style='display:flex;flex-direction:row;'>
+					<img src='/images/mylogo.svg' class='headerimg' >
+					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+				</a>
+			  </span>
 		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
 		        <style>
 					header {background-color:pink;display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
-			      .suji nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
-				  .suji nav.navi b:hover {color: rgb(132,51,119);}
-			      .suji b.logo, b.menubar {padding: 10px;font-size:22px;}
-				  .suji b.menubar {display:none;font-family:Poppins-eb;}
-				  .suji .small {width:60%;margin:auto;}
-				  .small0 {padding-left:20%;padding-right:20%;}
-				  img.headerimg {width: 40px;height: 40px;}
+			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				   nav.navi b:hover {color: rgb(132,51,119);}
+			       b.logo, b.menubar {padding: 10px;font-size:22px;}
+				   b.menubar {display:none;font-family:Poppins-eb;}
+				   .small {width:60%;margin:auto;}
+				  img.headerimg {width: 50px;height: 50px;}
 				  @media screen and (max-width: 900px) {
-				      header a.lg {flex:1;}
-				     .suji b.menubar {display: inline-block;text-align:right;}
-					 .suji nav.navi {display:none;}
-					 .suji .small {width:80%;margin:auto;}
-					 .small0 {padding-left:10%;padding-right:10%;}
+				      header span.lg {flex:1;}
+				      b.menubar {display: inline-block;text-align:right;}
+					  nav.navi {display:none;}
+					  .small {width:80%;margin:auto;}
 					 header {padding: 5px;position:relative;}
 					 img.headerimg {width: 30px;height: 30px;}
-					 .suji b.logo {font-size: 17px;}
+					  b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
 				     .suji .small {width:90%;margin:auto;}
-					 .small0 {padding-left:5%;padding-right:5%;}
 				  }
 			    </style>
 		        
@@ -78,9 +93,9 @@
 		    
 			<section class='othernav' style='width: 0;'>
 			  <style>
-			    .othernav {transition: all 0.5s ease;background-color: rgb(255, 143, 197);overflow:hidden;position:absolute;}
-			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
-				.othernav .p:hover {background-color: rgb(228,255,153);padding-left:50px;}
+			    .othernav {transition: all 0.5s ease;background-color: white;overflow:hidden;position:absolute;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto-regular;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
 				.othernav a {color:black;text-decoration:none;}
 			  </style>
 			  <a href='/website' ><p class='p'>Website</p></a>
@@ -119,7 +134,7 @@
 			<section class='firstcontainer'>
 			  <style>
 				section.firstcontainer {padding:10px;padding-top:30px;padding-bottom:30px;color:black;background-color: pink;}
-			    b.start {background-color: rgb(132,51,119);color:white;padding:5px;display:inline-block;cursor:pointer;}
+			    b.start {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;display:inline-block;cursor:pointer;}
 			    b.start:hover {background-color: rgba(204,36,142);color:white;}
 				@media screen and (max-width: 450px) {
 					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
@@ -150,7 +165,7 @@
 				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling your ecommerce store</span> </p>
 		  </section>
 		  
-		  <section class='small'>
+		  <section class='small' style='margin-bottom:50px;'>
 			<style>
 				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
 				section.demos a {text-decoration:none;margin-right: 10px;}
@@ -160,7 +175,7 @@
 					section.demos {flex-direction: column;}
 				}
 			</style>
-			<h2 style='text-align:center;'>OUR DEMOS</h2>
+			<h2 style='text-align:center;margin:2px;'>OUR DEMOS</h2>
 			<section class='demos'>
 				<a href='/demo/pro'><h2>Professional service</h2></a>
 				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
@@ -222,34 +237,34 @@
 		  
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
-			   .suji nav {font-family: Poppins;}
-			   .suji p {font-size: 18px;font-family:Roboto-light;}
-			   .suji h1 {font-size:35px;font-family:Roboto;}
-			   .suji h2 {font-size: 30px;font-family:Poppins-b;}
-			   .suji h3 {font-size: 20px;font-family:Poppins;}
+			   nav {font-family: Poppins;}
+			    p {font-size: 18px;font-family:Roboto-light;}
+			    h1 {font-size:35px;font-family:Roboto;}
+			    h2 {font-size: 30px;font-family:Poppins-b;}
+			    h3 {font-size: 20px;font-family:Poppins;}
 			  @media screen and (max-width: 800px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:32px;}
-			     .suji h2 {font-size: 27px;}
-			     .sujih3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:32px;font-family:Roboto-regular;}
+			      h2 {font-size: 27px;font-family:Poppins-medium;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 600px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:28px;}
-			     .suji h2 {font-size: 23px;}
-			     .suji h3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:28px;}
+			      h2 {font-size: 23px;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 400px) {
-				 .suji p {font-size: 15px;}
-			     .suji h1 {font-size:26px;}
-			     .suji h2 {font-size: 21px;}
-			     .suji h3 {font-size: 17px;}
+				  p {font-size: 15px;}
+			      h1 {font-size:26px;}
+			      h2 {font-size: 21px;}
+			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 300px) {
-				 .suji p {font-size: 13px;}
-			     .suji h1 {font-size:22px;}
-			     .suji h2 {font-size: 19px;}
-			     .suji h3 {font-size: 15px;}
+				  p {font-size: 13px;}
+			      h1 {font-size:22px;}
+			      h2 {font-size: 19px;}
+			     h3 {font-size: 15px;}
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
@@ -300,16 +315,16 @@
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
-			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>akinsanmi20700@gmail.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
 			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
 		</div>
 		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
-			  .suji div.foot {width:45%;}
-			  .sujidiv.foot0 {margin-left:5%;}
+			   div.foot {width:45%;}
+			  div.foot0 {margin-left:5%;}
 			  @media screen and (max-width: 450px) {
-			    .suji div.foot {width:100%;}
-			    .suji div.foot0 {margin-left:0%;}
+			    div.foot {width:100%;}
+			    div.foot0 {margin-left:0%;}
 			  }
 		  </style>
 		</footer>

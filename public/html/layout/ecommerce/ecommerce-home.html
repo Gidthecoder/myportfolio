@@ -1,10 +1,28 @@
 <html>
   <head>
-    
+	<title>PETAL Ecommerce Store</title>
+    <meta charset='utf-8'>
+	<meta name='description' content='sell and buy any product.'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/demo/pro">
+	<meta property="og:description" content="Sell and buy any product">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/ecommlogo.svg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="Sell and buy any product">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/ecommlogo.svg">
+	<link rel="apple-touch-icon-precomposed" href="/images/ecommlogo.svg">
+	<link rel="icon" type="image/png" href="/images/ecommlogo.svg">
 	<style>
 		@font-face {
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 		}
 		@font-face {
 			font-family: 'Poppins-b';
@@ -17,6 +35,10 @@
 		@font-face {
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto-light';
+			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
 		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -215,8 +237,8 @@
 						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
 						<h3>$8000</h3>
 						<p> 
-							<b class='add' data-name='Teeth Whitening' data-amount='8000' data-pics='/images/amz/beauty11.png' data-id='1'>Add To Cart</b>
-							<b style='display:none;' class='modify' data-name='Teeth Whitening' data-amount='8000' data-pics='/images/amz/beauty11.png' data-id='1'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
+							<b class='add' data-name='Teeth Whitening paste' data-amount='300' data-pics='/images/amz/beauty11.png' data-id='1'>Add To Cart</b>
+							<b style='display:none;' class='modify' data-name='Teeth Whitening paste' data-amount='300' data-pics='/images/amz/beauty11.png' data-id='1'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
 							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
 						</p>
 					</div>
@@ -234,7 +256,7 @@
 						section.fifthcontainer div.secondchild{display:flex;flex-direction:row;flex-wrap:wrap;}
 						section.fifthcontainer div.secondchild div.kitchen {width: 25%;margin-right:8%;}
 						section.fifthcontainer div.secondchild div.kitchen p.amount {color:rgb(50,111,210);}
-						section.fifthcontainer div.secondchild div.kitchen img {width:100%;height:250px;}
+						section.fifthcontainer div.secondchild div.kitchen img {width:100%;height:30vh;}
 						section.fifthcontainer div.secondchild div.kitchen b.add {transition: all 0.5s ease;cursor:pointer;color:white;background-color: rgb(50,111,210);padding:5px;}
 						section.fifthcontainer div.secondchild div.kitchen b.add:hover {background-color:white;color: rgb(50,111,210);border: 1px solid rgb(50,111,210);}
 						section.fifthcontainer div.secondchild div.kitchen b.add:active {color:white;background-color: rgb(50,111,210);}
@@ -254,33 +276,33 @@
 						<div class='kitchen'>
 							<img src='/images/amz/kitchen.png'>
 							<div class='align'>
-								<h3>Title</h3>
+								<h3>Blender</h3>
 								<p class='amount'>$200</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png' data-id='2'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Kitchen Item 0' data-amount='200' data-pics='/images/amz/kitchen.png' data-id='2'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p>20% off</p>
+								<p><b class='add' data-name='Blender' data-amount='200' data-pics='/images/amz/kitchen.png' data-id='2'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Blender' data-amount='200' data-pics='/images/amz/kitchen.png' data-id='2'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
 						<div class='kitchen'>
 							<img src='/images/amz/kitchen7.png'>
 							<div class='align'>
-								<h3>Title</h3>
+								<h3>Utensils</h3>
 								<p class='amount'>$500</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Kitchen Item 1' data-amount='500' data-pics='/images/amz/kitchen7.png' data-id='3'>Add To Cart</b></p>
-								<p style='display:none;'class='modify' data-name='Kitchen Item 1' data-amount='500' data-pics='/images/amz/kitchen7.png' data-id='3'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p>10% off</p>
+								<p><b class='add' data-name='Utensils' data-amount='500' data-pics='/images/amz/kitchen7.png' data-id='3'>Add To Cart</b></p>
+								<p style='display:none;'class='modify' data-name='Utensils' data-amount='500' data-pics='/images/amz/kitchen7.png' data-id='3'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
 						<div class='kitchen'>
 							<img src='/images/amz/kitchen3.png'>
 							<div class='align'>
-								<h3>Title</h3>
+								<h3>Cooker</h3>
 								<p class='amount'>$900</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Kitchen Item 2' data-amount='900' data-pics='/images/amz/kitchen3.png' data-id='4'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Kitchen Item 2' data-amount='900' data-pics='/images/amz/kitchen3.png' data-id='4'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
+								<p>13% off</p>
+								<p><b class='add' data-name='Cooker' data-amount='900' data-pics='/images/amz/kitchen3.png' data-id='4'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Cooker' data-amount='900' data-pics='/images/amz/kitchen3.png' data-id='4'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
@@ -289,9 +311,9 @@
 		  
 				<section class='sixthcontainer'>
 					<style>
-						section.sixthcontainer {display:flex;flex-direction:row;padding-top:40px;padding-left:10%;padding-right:10%;background-image: linear-gradient(to bottom right, rgb(51,132,142), rgb(50,111,210) )}
-						section.sixthcontainer div {width:48%;margin-right:2%;color:white;}
-						section.sixthcontainer div img {width:100%;height:300px;}
+						section.sixthcontainer {display:flex;flex-direction:row;padding-top:20px;padding-bottom:20px;padding-left:10%;padding-right:10%;background-image: linear-gradient(to bottom right, rgb(51,132,142), rgb(50,111,210) )}
+						section.sixthcontainer div.prod {width:48%;margin-right:2%;color:white;}
+						section.sixthcontainer div img {width:100%;height:50vh;}
 						section.sixthcontainer div b.add {transition: all 0.5s ease;cursor:pointer;background-color:white;color:rgb(50,111,210);display:inline-block;margin-right:20px;padding:5px;}
 						section.sixthcontainer div b.buy {transition: all 0.5s ease;cursor:pointer;background-color:black;color:white;display:inline-block;margin-right:20px;padding:5px;}
 						section.sixthcontainer div b.add:hover {color:white;background-color:rgb(50,111,210);border: 1px solid white;}
@@ -301,7 +323,7 @@
 						
 						@media screen and (max-width: 900px) {
 							section.sixthcontainer {flex-direction:column;height:auto;}
-							section.sixthcontainer div {width:100%;}
+							section.sixthcontainer div.prod {width:calc(100% - 10px);margin-bottom:10px;}
 						}
 						@media screen and (max-width: 600px) {
 							section.sixthcontainer {padding-left:5%;padding-right:5%;}
@@ -310,25 +332,31 @@
 							section.sixthcontainer {padding-left:2%;padding-right:2%;}
 						}
 					</style>
-					<div>
-						<img src='/images/amz/beauty4.png'>
-						<h3>TEETH WHITENING PASTE</h3>
-						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
-						<p> 
-							<b class='add' data-name='Teeth Whitening 1' data-amount='8000' data-pics='/images/amz/beauty4.png' data-id='5'>Add To Cart</b> 
-							<b style='display:none;'  class='modify' data-name='Teeth Whitening 1' data-amount='8000' data-pics='/images/amz/beauty4.png' data-id='5'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></b>
-							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
-						</p>
+					<div class='prod' style='border: 5px solid black;background-color:black;border-radius:10px;'>
+						<div style='padding:5px;background-color:transparent;margin:5px;'>
+							<img src='/images/amz/beauty4.png'>
+							<h3>RADIANT MINT</h3>
+							<p>$134</p>
+							<p>Best at removing surface stains.</p>
+							<p> 
+								<b class='add' data-name='Radiant mint' data-amount='134' data-pics='/images/amz/beauty4.png' data-id='5'>Add To Cart</b> 
+								<b style='display:none;'  class='modify' data-name='RADIANT MINT' data-amount='134' data-pics='/images/amz/beauty4.png' data-id='5'><button class='minusplus minus' >-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></b>
+								<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
+							</p>
+						</div>
 					</div>
-					<div >
-						<img src='/images/amz/toy2.png' >
-						<h3>TEETH WHITENING PASTE</h3>
-						<p>Made with 100% Natural Ingredients, You Have No Worries About Infections.</p>
-						<p> 
-							<b class='add' data-name='Teeth Whitening 2' data-amount='8000' data-pics='/images/amz/toy2.png' data-id='6'>Add To Cart</b> 
-							<b style='display:none;' class='modify' data-name='Teeth Whitening 2' data-amount='8000' data-pics='/images/amz/toy2.png' data-id='6'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
-							<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
-						</p>
+					<div class='prod' style='border: 5px solid black;background-color:black;border-radius:10px;'>
+						<div style='padding:5px;background-color:transparent;margin:5px;'>
+							<img src='/images/amz/toy2.png' >
+							<h3>AVALON</h3>
+							<p>$400</p>
+							<p>Made for children and adult.</p>
+							<p> 
+								<b class='add' data-name='Avalon' data-amount='400' data-pics='/images/amz/toy2.png' data-id='6'>Add To Cart</b> 
+								<b style='display:none;' class='modify' data-name='AVALON' data-amount='400' data-pics='/images/amz/toy2.png' data-id='6'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus' >+</button></b>
+								<b><a href='/demo/ecommerce/desc' style='color:white;'>more</a></b>
+							</p>
+						</div>
 					</div>
 				</section>
 		  
@@ -340,7 +368,7 @@
 						
 						section.seventhcontainer div.secondchild div.cats {cursor:pointer;width: 25%;margin-right:8%;}
 						section.seventhcontainer div.secondchild div.cats div {padding:10px;}
-						section.seventhcontainer div.secondchild div.cats img {width:100%;height:250px;}
+						section.seventhcontainer div.secondchild div.cats img {width:100%;height:30vh;}
 						@media screen and (max-width: 900px) {
 							section.seventhcontainer div.secondchild div.cats {width: 45%;margin-right:5%;}
 						}
@@ -415,7 +443,7 @@
 						section.eightcontainer div.secondchild div.deals {width: 25%;margin-right:8%;}
 						section.eightcontainer div.secondchild div.deals p.amount {color:rgb(50,111,210);}
 						section.eightcontainer div.secondchild div.deals div {padding:10px;}
-						section.eightcontainer div.secondchild div.deals img {width:100%;height:250px;}
+						section.eightcontainer div.secondchild div.deals img {width:100%;height:30vh;}
 						section.eightcontainer div.secondchild div.deals b.add {transition: all 0.5s ease;cursor:pointer;color:white;background-color: rgb(50,111,210);padding:5px;}
 						section.eightcontainer div.secondchild div.deals b.add:hover {background-color:white;color: rgb(50,111,210);border: 1px solid rgb(50,111,210);}
 						section.eightcontainer div.secondchild div.deals b.add:active {color:white;background-color: rgb(50,111,210);}
@@ -435,44 +463,44 @@
 						<div class='deals'>
 							<img src='/images/amz/toy1.png'>
 							<div>
-								<h3>Title</h3>
-								<p class='amount'>$200</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Deals 1' data-amount='200' data-pics='/images/amz/toy1.png' data-id='7'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Deals 1' data-amount='200' data-pics='/images/amz/toy1.png' data-id='7'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<h3>Play-doh</h3>
+								<p class='amount'>$20</p>
+								<p>26% off</p>
+								<p><b class='add' data-name='Play-doh' data-amount='20' data-pics='/images/amz/toy1.png' data-id='7'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Play-doh' data-amount='20' data-pics='/images/amz/toy1.png' data-id='7'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
 						<div class='deals'>
 							<img src='/images/amz/top2.png'>
 							<div>
-								<h3>Title</h3>
-								<p class='amount'>$200</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Deals 2' data-amount='200' data-pics='/images/amz/top2.png' data-id='8'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Deals 2' data-amount='200' data-pics='/images/amz/top2.png' data-id='8'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<h3>Peek-a-Boo Bag</h3>
+								<p class='amount'>$30</p>
+								<p>22% off</p>
+								<p><b class='add' data-name='Peek-a-Boo Bag' data-amount='30' data-pics='/images/amz/top2.png' data-id='8'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Peek-a-Boo Bag' data-amount='30' data-pics='/images/amz/top2.png' data-id='8'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
 						<div class='deals'>
 							<img src='/images/amz/top4.png'>
 							<div>
-								<h3>Title</h3>
-								<p class='amount'>$200</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Deals 3' data-amount='200' data-pics='/images/amz/top4.png' data-id='9'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Deals 3' data-amount='200' data-pics='/images/amz/top4.png' data-id='9'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<h3>Disk player</h3>
+								<p class='amount'>$48</p>
+								<p>10% off</p>
+								<p><b class='add' data-name='Disk player' data-amount='48' data-pics='/images/amz/top4.png' data-id='9'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Disk player' data-amount='48' data-pics='/images/amz/top4.png' data-id='9'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
 						<div class='deals' >
 							<img src='/images/amz/top1.png'>
 							<div>
-								<h3>Title</h3>
-								<p class='amount'>$200</p>
-								<p>Description</p>
-								<p><b class='add' data-name='Deals 4' data-amount='200' data-pics='/images/amz/top1.png' data-id='10'>Add To Cart</b></p>
-								<p style='display:none;' class='modify' data-name='Deals 4' data-amount='200' data-pics='/images/amz/top1.png' data-id='10'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
+								<h3>Handbag</h3>
+								<p class='amount'>$40</p>
+								<p>3% off</p>
+								<p><b class='add' data-name='Handbag' data-amount='40' data-pics='/images/amz/top1.png' data-id='10'>Add To Cart</b></p>
+								<p style='display:none;' class='modify' data-name='Handbag' data-amount='40' data-pics='/images/amz/top1.png' data-id='10'><button class='minusplus minus'>-</button><input class='minusplus' type='number'><button class='minusplus plus'>+</button></p>
 								<p><b><a href='/demo/ecommerce/desc' style='color:black;'>more</a></b></p>
 							</div>
 						</div>
@@ -491,9 +519,9 @@
 					p {font-size: 18px;}
 				}
 				@media screen and (max-width: 600px) {
-					h1 {font-size: 25px;}
-					h2 {font-size: 22px;}
-					h3 {font-size: 18px;}
+					h1 {font-size: 25px;font-family:Roboto-light;}
+					h2 {font-size: 22px;font-family:Poppins-medium;}
+					h3 {font-size: 18px;font-family:Poppins-medium;}
 					p {font-size: 16px;}
 				}
 				@media screen and (max-width: 400px) {

@@ -1,6 +1,185 @@
 <html>
   <body>
-     <section>
+  
+	<div style='position:relative;'>
+		<svg width='100%' height='500' viewBox='0 0 1500 500' xmlns='http://www.w3.org/2000/svg'>
+			<g fill='green' class='circ' transform='translate(-300px,0)'>
+				<ellipse cx='60' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='120' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='180' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='240' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='300' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='360' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='420' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='480' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='540' cy='19.5' rx='20' ry='18'/>
+				<ellipse cx='600' cy='19.5' rx='20' ry='18'/>
+				
+				<ellipse cx='60' cy='68' rx='20' ry='18'/>
+				<ellipse cx='120' cy='68' rx='20' ry='18'/>
+				<ellipse cx='180' cy='68' rx='20' ry='18'/>
+				<ellipse cx='240' cy='68' rx='20' ry='18'/>
+				<ellipse cx='300' cy='68' rx='20' ry='18'/>
+				<ellipse cx='360' cy='68' rx='20' ry='18'/>
+				<ellipse cx='420' cy='68' rx='20' ry='18'/>
+				<ellipse cx='480' cy='68' rx='20' ry='18'/>
+				<ellipse cx='540' cy='68' rx='20' ry='18'/>
+				<ellipse cx='600' cy='68' rx='20' ry='18'/>
+				
+				<ellipse cx='60' cy='118' rx='20' ry='18'/>
+				<ellipse cx='120' cy='118' rx='20' ry='18'/>
+				<ellipse cx='180' cy='118' rx='20' ry='18'/>
+				<ellipse cx='240' cy='118' rx='20' ry='18'/>
+				<ellipse cx='300' cy='118' rx='20' ry='18'/>
+				<ellipse cx='360' cy='118' rx='20' ry='18'/>
+				<ellipse cx='420' cy='118' rx='20' ry='18'/>
+				<ellipse cx='480' cy='118' rx='20' ry='18'/>
+				<ellipse cx='540' cy='118' rx='20' ry='18'/>
+				<ellipse cx='600' cy='118' rx='20' ry='18'/>
+				
+				<ellipse cx='60' cy='168' rx='20' ry='18'/>
+				<ellipse cx='120' cy='168' rx='20' ry='18'/>
+				<ellipse cx='180' cy='168' rx='20' ry='18'/>
+				<ellipse cx='240' cy='168' rx='20' ry='18'/>
+				<ellipse cx='300' cy='168' rx='20' ry='18'/>
+				<ellipse cx='360' cy='168' rx='20' ry='18'/>
+				<ellipse cx='420' cy='168' rx='20' ry='18'/>
+				<ellipse cx='480' cy='168' rx='20' ry='18'/>
+				<ellipse cx='540' cy='168' rx='20' ry='18'/>
+				<ellipse cx='600' cy='168' rx='20' ry='18'/>
+			</g>
+			<style>
+				
+			</style>
+		</svg>
+		<script src='anime.min.js'></script>
+		<script>
+			
+			anime({
+				targets: 'svg g.circ',
+				
+				translateX: {
+					value: [300],
+					duration: 5000
+				},
+				translateY: {
+					value: [200],
+					delay: 1000,
+					duration: 5000
+				},
+				loop:true
+			});
+		</script>
+	</div>
+  
+  
+	<button class='button'>
+		Fancy Button
+		<div class='button_horizontal'>
+		</div>
+		<div class='button_vertical'>
+		</div>
+	</button>
+	<style>
+		button {display:block;position:relative;padding: 1.5em 3em;appearance:none;border:0;background:transparent;color:red;text-transform:uppercase;letter-spacing:.25em;outline:none;cursor:pointer;font-weight:bold;border-radius:0;box-shadow: inset 0 0 0 2px green;transition: background .8s ease;}
+		button:hover {background: rgba(100,0,0,.03);}
+		.button_horizontal, .button_vertical {position: absolute;top: 2px;right: 10px;bottom:2px;left: 10px;transition: transform .8s ease;will-change: transform;}
+		button::before {content: '';position: absolute;border: inherit;}
+		.button_horizontal {border-top: 2px solid blue;border-bottom: 2px solid violet;	}
+		.button_horizontal::before {	top: -12px;bottom: -12px;left: -10px;right: -10px;}
+		.button_horizontal:hover {transform: scaleX(0);}
+		.button_vertical {border-left: 2px solid pink;border-right: 2px solid yellow;}
+		.button_vertical::before {top: -10px;bottom: -10px;left: -12px;right: -12px;}
+		.button_vertical:hover {transform: scaleY(0);}
+	</style>
+	
+	
+	
+	
+	<div class='hero'>
+		<div class='snow'>
+			<svg viewBox='0 0 1024 1536' preserveAspectRatio='xMidYmax slice'>
+				<g fill='blue' fill-opacity='0.20' transform ='translate(55,42)'>
+					<g id='snow-bottom-layer'>
+						<ellipse cx='6' cy='1009.5' rx='20' ry='18'/>
+						<ellipse cx='138' cy='1110.5' rx='20' ry='18'/>
+						<ellipse cx='398' cy='1055.5' rx='6' ry='5.5'/>
+						<ellipse cx='719' cy='1284.5' rx='6' ry='5.5'/>
+						<ellipse cx='760' cy='1155.5' rx='6' ry='5.5'/>
+						<ellipse cx='635' cy='1459.5' rx='6' ry='5.5'/>
+						<ellipse cx='478' cy='1335.5' rx='20' ry='18'/>
+						<ellipse cx='322' cy='1414.5' rx='6' ry='5.5'/>
+						<ellipse cx='247' cy='1234.5' rx='6' ry='5.5'/>
+						<ellipse cx='154' cy='1425.5' rx='20' ry='18'/>
+						<ellipse cx='731' cy='773.5' rx='6' ry='5.5'/>
+						<ellipse cx='599' cy='874.5' rx='6' ry='5.5'/>
+						<ellipse cx='339' cy='819.5' rx='6' ry='5.5'/>
+						<ellipse cx='239' cy='1004.5' rx='20' ry='18'/>
+						<ellipse cx='113' cy='863.5' rx='6' ry='5.5'/>
+						<ellipse cx='102' cy='1223.5' rx='20' ry='18'/>
+						<ellipse cx='395' cy='1155.5' rx='6' ry='5.5'/>
+						<ellipse cx='826' cy='943.5' rx='6' ry='5.5'/>
+						<ellipse cx='626' cy='1054.5' rx='6' ry='5.5'/>
+					</g>
+				</g>
+				<g fill='red' fill-opacity='.3' transform='translate(65,63)'>
+					<g id='snow-top-layer'>
+						<circle cx='8' cy='776' r='18'/>
+						<circle cx='189' cy='925' r='18'/>
+					</g>
+				</g>
+			</svg>
+		</div>
+		<div class='hero__content'>
+			<h1>SVG  SNOW</h1>
+		</div>
+		<style>
+			.hero__content h1 {text-shadow: 3px 5px 10px black;letter-spacing:10px;}
+			.hero {background-image:radial-gradient(50% 176%, khaki 80%, pink 100%);min-height: 30rem;position:relative;overflow:hidden;display:flex;justify-content:center;align-content:center;}
+			.hero__content {position:relative;align-self:center;padding:20px 20px;}
+			.snow {position:absolute;min-width:100vw;min-height:100vh;height:100%;width:100%;top:0;left:0;}
+			.snow svg {position:absolute;width:100%;height:100%;}
+			#snow-top-layer {will-change:transform;transform: translateY(-768px);animation: fall 22.5s infinite linear;}
+			#snow-bottom-layer {wiil-change: transform;transform: translateY(-768px);animation: fall 45s infinite linear;}
+			@keyframes fall {
+				100% {
+					transform: translateY(0);
+				}
+			}
+		</style>
+	</div>
+	
+	<div class='view view-first'>
+		<img src='./b.jpg' />
+		<div class='mask'>
+			<h2>Title</h2>
+			<p>your text</p>
+			<a class='info'>learn more</a>
+		</div>
+		<style>
+			.view {width:300px;height:200px;margin:10px;float:left;border:10px solid red;overflow:hidden;position:relative;text-align:center;box-shadow:1px 1px 2px blue;background: pink url(b.jpg) no-repeat center center;}
+			.view .mask, .view .content {width:300px;height:200px;position:absolute;overflow:hidden;top:0;left:0;}
+			.view img {display:block;position:relative;}
+			.view h2 {text-transform: uppercase;color:khaki;text-align:center;position:relative;font-size:17px;padding:10px;background: rgba(0,0,0,0.8);margin:20px 0 0 0;}
+			.view p {font-style:italic;position:relative;color:red;padding:10px 20px 20px;text-align:center;}
+			.view a.info {display:inline-block;text-decoration:none;padding:7px 14px;background:green;color:violet;text-transform:uppercase;box-shadow:0 0 1px;}
+			.view a.info:hover {box-shadow: 0 0 5px;}
+			
+			.view-first img {transition: all 0.2s linear;}
+			.view-first .mask {opacity: 0;background-color:rgba(219, 127,8,0.7);transition:all 0.4s ease-in-out;}
+			.view-first h2 {transform: translateY(-100px);opacity:0;transition: all 0.2s ease-in-out;}
+			.view-first p {transform: translateY(100px);opacity:0;transition: all 0.2s linear;}
+			.view-first a.info {opacity:0;transition: all 0.2s ease-in-out;}
+			
+			.view-first:hover img {transform: scale(1.1);}
+			.view-first:hover .mask {opacity: 1;}
+			.view-first:hover h2, .view-first:hover p, .view-first:hover a.info {opacity:1;transform:translateY(0px);}
+			.view-first:hover p {transition-delay: 0.1s;}
+			.view-first:hover a.info {transition-delay: 0.2s;}
+		</style>
+	</div>
+	
+     <section >
 	    <script>
 			let data = [{name:'james', sales:300}, {name:'john', sales:1000}];
 			
@@ -72,8 +251,8 @@
 			}
 			console.log( relativefreq( data, 1300 ) )
 			
-			function SD(array){
-				let mean = mean(array)
+			function SD(array, mean){
+				
 				let d = []
 				for(let i=0; i<array.length; i++){
 					d.push(array[i].sales)
@@ -81,7 +260,7 @@
 				let a = Math.sqrt( d.map(x => Math.pow(x - mean, 2) ).reduce( (a, b) => a + b)/ d.length )
 				return a
 			}
-			console.log( SD(data) )
+			console.log( SD(data), mean(data) )
 			
 			function median(array){
 				let arr = []
@@ -322,8 +501,8 @@
 		</script>
 	   
 	 </section>
-	 
-     <div>
+	<section style='display:none;'>
+     <div >
        <b class='prods'>static css animation: hospital->heartbeat</b>
 	  
      </div>
@@ -373,6 +552,7 @@
   </div>
   <div class='linebarchart' style='display:inline-block'></div>
   <div class='animechart' style='display:inline-block;overflow:Scroll;width:500px;'> </div>
+  </section>
   <script src='svgcanvas.js'></script>
   <script>
     
@@ -381,113 +561,7 @@
 	 a.vbarchart({name: 200, age:1000, year:2002, fam: 6000, bb: 990}, document.querySelector('.animechart'), 400 )
 	 a.linechart({name: 200, age:1000, year:2002, fam: 6000, bb: 990}, document.querySelector('.linechart'), 400 )
   </script>
-  <script src='public/javascripts/d3/dist/d3.min.js'></script>
-  <script>
-    
-    
-	  //horizontal barchart	 
-	let hbarchartdata = [1360, 6200, 3380, 4000, 8000];
-	let hbarchart = d3.select('div.hbarchart')
-	   .append('svg')
-	   .attr('width', 500)
-	   .attr('height', 100 * hbarchartdata.length)
-	
-	hbarchart.append('rect')
-	  .attr('x', 0)
-	  .attr('y', 0)
-	  .attr('width', 500)
-	  .attr('height', 500)
-	  .attr('stroke', 'blue')
-	  .attr('fill', 'pink')
-	
-	let hbar = hbarchart.selectAll('g')
-	  .data(hbarchartdata)
-	  .enter()
-	  .append('g')
-	  .attr('transform', function(d, i){
-	    return 'translate(0,' + 100 * i + ')'
-	  })
-	  
-	hbar.append('rect')
-	  .attr('width', function(d, i){
-	    return  500 * (d/Math.max(...hbarchartdata))
-	  })
-	  .attr('height', function(d, i){
-	    return 80
-	  })
-	  
-	  .attr('fill', 'green')
-	
-	hbar.append('text')
-	  .attr('x', function(d, i){
-	    return 30
-	  })
-	  .attr('y', function(d, i){
-	    return  30;
-	  })
-	  .text(function(d){ return d;})
-	  
-	  
-	
-	//piechart
-	let piechartdata = [28, 97, 67, 126, 310, 210, 189];
-	let piechart = d3.select('div.piechart')
-	   .append('svg')
-	   .attr('width', 500)
-	   .attr('height', 500)
-	piechart.append('rect')
-	  .attr('x', 0)
-	  .attr('y', 0)
-	  .attr('width', 500)
-	  .attr('height', 500)
-	  .attr('stroke', 'green')
-	  .attr('fill', 'violet')
-	 
-	let piec =  piechart.append('g').attr('transform', 'translate('  + 500/2 + ',' + 500/2 + ')')
-	let color = ['yellow', 'pink', '#4daf4a', 'red', 'blue', 'orange', 'khaki']
-	let pie = d3.pie()
-	let arc = d3.arc()
-	            .innerRadius(0)
-				.outerRadius(500/2)
-	let arclabel = d3.arc()
-	            .innerRadius((500/2) - 80)
-				.outerRadius(500/2)
-	let arcs = piec.selectAll('.arc')
-				.data(pie(piechartdata))
-				.enter()
-				.append('g')
-				.attr('class', 'arc')
-				
-	arcs.append('path')
-			.attr('fill', function(d, i){return color[i]})
-			.attr('d', arc)
-			
-	arcs.append('text')
-			.attr('transform', function(d, i){return 'translate(' + arclabel.centroid(d) + ')'})
-			.text(function(d) { return d.data})		
-	piechart.append('g')
-	  .attr('transform', 'translate(10, 20)' )
-	  .append('text')
-	  .text('browser statistics')
-	  
-	  function ske(data) {
-	     let max = Math.max(...data)
-		 let maxstring = String(max)
-		 if(maxstring.length == 1){
-			let b = Math.floor(max/1) + 1
-			console.log(`interval 1 at ${b} times`)
-		 } else if (maxstring.length == 2) {
-			let b = Math.floor(max/10) + 1
-			console.log(`interval 10 at ${b} times`)
-		 } else if (maxstring.length == 3) {
-			let b = Math.floor(max/100) + 1
-			console.log(`interval 100 at ${b} times`)
-		 } else if (maxstring.length == 4) {
-			let b = Math.floor(max/1000) + 1
-			console.log(`interval 1000 at ${b} times`)
-		 }
-	  }
-  </script>
+  
   <script>
     //OOP paradigm -- encapsulation, abstraction,inheritance, polymorphism
 	class Person {
