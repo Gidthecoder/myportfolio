@@ -1,0 +1,260 @@
+<html>
+  <head>
+	<title>Page not found - GBW</title>
+    <meta charset='utf-8'>
+	<meta name='description' content='We build any cloud solution you need whether website, ecommerce store, software for enterprise or webapp'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
+	<meta property="og:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/land.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/land.jpg">
+	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
+	<link rel="icon" type="image/png" href="/images/mylogo.svg">
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-medium';
+			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-b';
+			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto-regular';
+			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
+		}
+	</style>
+  </head>
+  <body id='body' style='padding:0;margin:0;'>
+    <div style=''>
+	  <div style='background-color: white;'>
+		<article style=''>
+		  <header>
+			  <span class='lg'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
+					<img src='/images/mylogo.svg' class='headerimg' >
+					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+				</a>
+			  </span>
+		      <nav class='navi'>
+		        <style>
+					header {background-color: white;border-bottom:1px solid silver;display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
+			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				   nav.navi b:hover {color: rgb(132,51,119);}
+			       b.logo, b.menubar {padding: 10px;font-size:22px;}
+				   b.menubar {display:none;font-family:Poppins-eb;}
+				   .small {width:60%;margin:auto;}
+				  img.headerimg {width: 50px;height: 50px;}
+				  
+				  @media screen and (max-width: 900px) {
+				      header span.lg {flex:1;}
+				      b.menubar {display: inline-block;text-align:right;}
+					  nav.navi {display:none;}
+					  .small {width:80%;margin:auto;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
+					 img.headerimg {width: 30px;height: 30px;}
+					  b.logo {font-size: 17px;}
+				  }
+				  @media screen and (max-width: 450px) {
+				      .small {width:90%;margin:auto;}
+				  }
+			    </style>
+		        
+			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
+				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
+		      </nav>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
+		  </header>
+		  <section style=''>
+		    
+			<section class='othernav' style='width:0px;'>
+			  <style>
+			    .othernav {height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;z-index:2;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
+				.othernav a {color:black;text-decoration:none;}
+			  </style>
+			  <a href='/website' ><p class='p'>Website</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
+			  <a href='/pricing'><p class='p'>Pricing</p></a>
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
+			</section>
+			<script>
+			
+			  let menu = document.querySelector('.menubar')
+			  let othernav = document.querySelector('.othernav')
+			  
+			  function open(x) {
+				if(x.matches) {
+					othernav.style.display = 'none'
+				} 
+			  }
+			  let x = window.matchMedia("(min-width: 901px)")
+			  open(x)
+			  x.addListener(open)
+			
+			  menu.onclick = function (e){
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
+					e.target.style.backgroundColor = 'white'
+					othernav.style.width = '100%'
+					
+					body.style.overflow = 'hidden'
+					
+				} else {
+					e.target.style.backgroundColor = 'transparent'
+					
+					othernav.style.width = '0px'
+					
+					body.style.overflowY = 'scroll'
+				}
+			  }
+			</script>
+			
+				
+			
+			<section style='text-align:center;'>
+			  <h1>404</h1>
+			  <p>The page you're looking for doesn't exist</p>
+		  </section>
+		  
+		  <style>
+				nav {font-family: Poppins;}
+			
+			    p,table,tr,th,td {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:135px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
+			  @media screen and (max-width: 800px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:100px;}
+			      h2 {font-size: 27px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 830px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:80px;}
+			      h2 {font-size: 27px;}
+			      h3 {font-size: 17px;}
+			  }
+			    @media screen and (max-width: 240px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:70px;}
+			      h2 {font-size: 27px;}
+			      h3 {font-size: 17px;}
+			  } 
+			   footer p {font-family: Poppins;}
+		  </style>
+			 
+		
+		  
+		</article>
+		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
+		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
+		    <h1 style='margin:0;color:rgb(132,51,119);font-size:22px;'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
+		  </div>
+		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
+		    <div class='foot foot0'>
+		      <h3>USEFUL LINKS</h3>
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
+		    </div>
+		    <div class='foot' style=''>
+		      <h3>SERVICES </h3>
+			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
+		    </div>
+		  </div>
+		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
+		      <h3>Contact</h3>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
+		  </div>
+		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
+		  <style>
+			  div.foot {width:45%;}
+			  div.foot0 {margin-left:5%;}
+			  @media screen and (max-width: 450px) {
+			    div.foot {width:100%;}
+			    div.foot0 {margin-left:0%;}
+			  }
+		  </style>
+		</footer>
+	  </div>
+
+	</div>
+	<script>
+		function animate( t1name, t2name, t3name, t4name){
+			let t1,t2,t3,t4
+			t1 = anime({targets: t1name,duration: 2000,x: '-50%',direction: 'normal',easing: 'easeInQuad'}); //1
+			t2 = anime({targets: t2name,duration: 2000,x: '100%',direction: 'normal',easing: 'easeInQuad'}); //2
+			t3 = anime({targets: t3name,duration: 100,delay: 2000,width: '0%',direction: 'normal',easing: 'easeInQuad'}); //3
+			t4 = anime({targets: t4name,delay: 3000,duration:50,width: '0%',direction: 'normal',easing: 'easeInQuad'}); //4
+		}
+		function noanimate(t1name, t2name, t3name, t4name){
+			let t1,t2,t3,t4
+			t1 = anime({targets: t1name,duration: 100,delay: 100,x: '0%',direction: 'normal',easing: 'easeInQuad'});//3
+			t2 = anime({targets: t2name,duration: 100,delay: 100,x: '50%',direction: 'normal',easing: 'easeInQuad'});//2
+			t3 = anime({targets: t3name,duration: 100,width: '100%',direction: 'normal',easing: 'easeInQuad'}); //1
+			t4 = anime({targets: t4name,delay: 200,duration:50,width: '100%',direction: 'normal',easing: 'easeInQuad'}); //4
+		}
+	</script>
+	<script>
+			let viewdetails = document.querySelectorAll('.viewdetails b')
+			viewdetails.forEach(function (element){
+				element.onclick = function(e){
+					if(e.target.parentElement.nextElementSibling.style.display == 'none'){
+						e.target.textContent = 'hide details -'
+						e.target.parentElement.nextElementSibling.style.display = 'block'
+					} else {
+						e.target.textContent = 'show details +'
+						e.target.parentElement.nextElementSibling.style.display = 'none'
+					}
+				}
+			})
+			let frontendlink = document.querySelectorAll('section.pricing p.links span');
+			let frontendcontent = document.querySelectorAll('section.pricing div.content');
+			frontendlink.forEach(function (element){
+				element.onclick = function(e){
+					for(let i=0; i<frontendcontent.length; i++){
+						if(e.target.dataset.name == frontendcontent[i].dataset.name){
+							for(let b=0; b<frontendlink.length; b++){
+								frontendlink[b].style.color = 'black'
+								frontendlink[b].style.backgroundColor = 'white'
+							}
+							e.target.style.backgroundColor = 'rgb(132,51,119)'
+							e.target.style.color = 'white'
+							
+							frontendcontent[i].scrollIntoView();
+							scrollBy(0, -150)
+						}
+					}
+				}
+			})
+	 </script>
+  </body>
+</html>

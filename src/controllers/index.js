@@ -25,28 +25,21 @@ class Index {
 		res.sendFile(path.join(__dirname, '..','..','/public/html/websitepage.html'));
 	}
 	
-	servicespage(req, res, path, next){
-		res.sendFile(path.join(__dirname, '..','..','/public/html/services.html'));
-	}
-	
-	ecommercePage(req, res, path, next){
-		res.sendFile(path.join(__dirname, '..','..','/public/html/ecommercepage.html'));
-	}
 	
 	pricingpage(req, res, path, next){
 		res.sendFile(path.join(__dirname, '..','..','/public/html/pricing.html'));
 	}
 	
-	enterprisePage(req, res, path, next){
-		res.sendFile(path.join(__dirname, '..','..','/public/html/enterprisepage.html'));
+	tutorPage(req, res, path, next){
+		res.sendFile(path.join(__dirname, '..','..','/public/html/tutorpage.html'));
 	}
 	
-	webappPage(req, res, path, next){
-		res.sendFile(path.join(__dirname, '..','..','/public/html/webapppage.html'));
+	frontendPage(req, res, path, next){
+		res.sendFile(path.join(__dirname, '..','..','/public/html/frontendpage.html'));
 	}
 	
-	aboutPage(req, res, path, next){
-		res.sendFile(path.join(__dirname, '..','..','/public/html/aboutpage.html'));
+	portfolioPage(req, res, path, next){
+		res.sendFile(path.join(__dirname, '..','..','/public/html/portfoliopage.html'));
 	}
 	
 	loggedpage(req, res, path, file, next){

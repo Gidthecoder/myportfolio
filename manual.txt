@@ -12,10 +12,6 @@
 //questions: nodejs speed, html speed, security, paradigm, marketing, successful business
 //ROADMAP
 //ui: 
-	ontent,
-		copywriting
-		technical writing
-		book inspos
 	layouts,
 		General,
 		Graphics,
@@ -23,19 +19,19 @@
 		app,
 		desktop,
 		Games,
-		Books,product packages,
+		Books,
+		product packages,
 		OS,
 		Movies,
 		Console,
 		TVs
 		Decoder
-	webapis
+	plugins
 		
 	animation,
 		cartoon/3d
 		illustration/2d
-		css and svg animation
-		//css/svg model with same animation style or svg style or cartoon style
+		
 	page optimization
 	
 //graphics:
@@ -107,6 +103,7 @@
 //marketing: 
 	CRO, 
 		proft of work and proof of trust
+		pricing
 		pics of yourself on website,social platform,...anywhere
 		portfolios and clients
 		gamification analytics
@@ -115,8 +112,6 @@
 			audio,
 			video,
 			text
-		in-store experience
-			music
 	networking with targets on social and physical platforms, 	
 		social media: facebook, twitter
 		forums: reddit, quora
@@ -154,6 +149,3 @@
 //competitor research on the above
 //others: pm2(branded packages,iot camera analytics)
 
-
-//color, typography, alignment, layout, background-image,border-image
-//interactivity: animation, game(ification), chart, actions

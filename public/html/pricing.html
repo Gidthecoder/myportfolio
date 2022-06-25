@@ -5,14 +5,14 @@
 	<title>GBW's pricing page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:title" content="GBW">
-	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/pricing">
 	<meta property="og:description" content="Browse through our flexible pricing options created to ease your burden.">
-	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="GBW">
 	<meta name="twitter:site" content="@GBW_0_3">
 	<meta name="twitter:description" content="Browse through our flexible pricing options created to ease your burden.">
-	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/">
 	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
 	<link rel="icon" type="image/png" href="/images/mylogo.svg">
 	<style>
@@ -20,10 +20,7 @@
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Poppins-b';
-			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
-		}
+		
 		@font-face {
 			font-family: 'Poppins-eb';
 			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
@@ -32,78 +29,69 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Roboto-light';
-			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Roboto-regular';
-			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
-		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body style='padding:0;margin:0;'>
+  <body id='body' style='padding:0;margin:0;scroll-behaviour:scroll;'>
     <div style=''>
 	  <div style='background-color: white;'>
 		<article style=''>
 		  <header>
 			  <span class='lg'>
-				<a href='/' style='display:flex;flex-direction:row;'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
 					<img src='/images/mylogo.svg' class='headerimg' >
 					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
 				</a>
 			  </span>
-		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
+		      <nav class='navi'>
 		        <style>
-					header {background-color:rgb(228,255,153);display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
+					header {background-color: white;border:2px solid rgb(132,51,119);display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
 			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
 				   nav.navi b:hover {color: rgb(132,51,119);}
 			       b.logo, b.menubar {padding: 10px;font-size:22px;}
 				   b.menubar {display:none;font-family:Poppins-eb;}
 				   .small {width:60%;margin:auto;}
 				  img.headerimg {width: 50px;height: 50px;}
+				  
 				  @media screen and (max-width: 900px) {
 				      header span.lg {flex:1;}
 				      b.menubar {display: inline-block;text-align:right;}
 					  nav.navi {display:none;}
 					  .small {width:80%;margin:auto;}
-					 header {padding: 5px;position:relative;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
 					 img.headerimg {width: 30px;height: 30px;}
 					  b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
-				     .suji .small {width:90%;margin:auto;}
+				      .small {width:90%;margin:auto;}
 				  }
 			    </style>
 		        
 			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
-			    <b><a href='/ecommerce' style='color:black;text-decoration:none;'>Ecommerce</a></b>
-			    <b><a href='/enterprise' style='color:black;text-decoration:none;'>Enterprise </a></b>
-				<b><a href='/webapp' style='color:black;text-decoration:none;'>Webapp </a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
 				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
-				<a href='mailto:giddyconnect@outlook.com'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</b></a>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
 		      </nav>
 		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
 		  </header>
-		  <section style='background-color: khaki;background-size:200px 200px;'>
-		    
-			<section class='othernav' style='width: 0;'>
+		  <section>
+		    <section class='othernav' style='width:0px;'>
 			  <style>
-			    .othernav {transition: all 0.5s ease;background-color: white;overflow:hidden;position:absolute;}
-			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto-regular;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+			    .othernav {height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;z-index:2;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
 				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
 				.othernav a {color:black;text-decoration:none;}
 			  </style>
 			  <a href='/website' ><p class='p'>Website</p></a>
-			  <a href='/ecommerce'><p class='p'>Ecommerce</p></a>
-			  <a href='/enterprise'><p class='p'>Enterprise</p></a>
-			  <a href='/webapp'><p class='p'>Webapp</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
 			  <a href='/pricing'><p class='p'>Pricing</p></a>
-			  <a href='mailto:giddyconnect@outlook.com'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</p></a>
-			  
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
 			</section>
 			<script>
+			
 			  let menu = document.querySelector('.menubar')
 			  let othernav = document.querySelector('.othernav')
 			  
@@ -117,95 +105,617 @@
 			  x.addListener(open)
 			
 			  menu.onclick = function (e){
-				if(othernav.style.width == '0px'){
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
 					e.target.style.backgroundColor = 'white'
 					othernav.style.width = '100%'
 					
+					body.style.overflow = 'hidden'
+					
 				} else {
 					e.target.style.backgroundColor = 'transparent'
+					
 					othernav.style.width = '0px'
 					
+					body.style.overflowY = 'scroll'
 				}
 			  }
 			</script>
-			<section class='firstcontainer'>
+			
+			<section class='firstcontainer' id='contact'>
 			  <style>
-				section.firstcontainer {padding:10px;padding-top:30px;padding-bottom:30px;color:black;background-color: rgb(228,255,153);}
-			    b.start {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;display:inline-block;cursor:pointer;}
-			    b.start:hover {background-color: rgba(204,36,142);color:white;}
-				@media screen and (max-width: 450px) {
-					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
-					b.start {width:60%;display:block;margin:auto;text-align:center;}
+				section.firstcontainer {padding-top:30px;padding-bottom:30px;padding-left:50px;padding-right:50px;color:black;background-color: white;}
+			   
+				section.firstcontainer a {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    
+				section.firstcontainer a {background-color: transparent;color:white;padding:10px;padding-left:15px;padding-right:15px;margin-bottom:5px;text-decoration:none;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    section.firstcontainer a.mail {background-color:rgb(170,0,0);}
+				section.firstcontainer a.whatsapp {border:2px solid rgb(0,255,0);color:rgb(0,255,0);}
+				section.firstcontainer a.callus {background-color: black;}
+				section.firstcontainer a.telegram {background-color: rgb(42,127,255);}
+				section.firstcontainer a.twitter {background-color: rgb(0,0,255);}
+				section.firstcontainer a.facebook {background-color: rgb(0,0,255);}
+				section.firstcontainer a.linkedin {background-color: rgb(42,127,255);}
+				
+				@media screen and (max-width: 900px) {
+					section.firstcontainer {padding-left:10px;padding-right:10px;padding-top: 10px;padding-bottom:10px;}
 				}
 			  </style>
-			  <h1 style='margin:2px;'>Our cloud solutions doesn't require upfront payment before building.</h1>
+			  <h1 style='margin:2px;'>Our solutions doesn't require upfront payment before we begin work.</h1>
 			  <p>Browse through our pricing plan created to ease your burden.</p>
-			  <p ><a href='mailto:giddyconnect@outlook.com' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Send A Mail</b></a></p>
-			  <p> <a href='tel:+2347014728658' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Call us</b></a></p>
+			  <p>All of our pricing plans are flexible and customizable</p>
+			  <p>If interested in paying in paying in a different currency(dollars, pounds,...) contact us</p>
+			  <p style='text-align:left;'>
+					<a class='mail' href='mailto:giddyconnect@outlook.com'><b>Send A Mail</b></a>
+					<a class='whatsapp' href='https://wa.me/07014728658'><b>Whatsapp</b></a>
+					<a class='callus' href='tel:+2347014728658' ><b>Call us</b></a>
+					<a class='telegram' href='https://t.me/GBw34' ><b>Telegram</b></a>
+					<a class='twitter' href='https://twitter.com/G_B_W_03' ><b>Twitter</b></a>
+					<a class='facebook' href='https://web.facebook.com/GBW-100780432667709/' ><b>Facebook</b></a>
+					<a class='linkedin' href='https://www.linkedin.com/company/g-b-w/'  ><b>Linkedin</b></a>
+				</p>
 			</section>
 		  </section>
 		  
-		  <section class='small' style='background-color: rgb(255,221,173);margin-top:20px;padding:5px;border-radius: 10px;'>
-			<h2 style='text-align:center;'>NO UPFRONT PAYMENT REQUIRED</h2>
-			<p>Our job starts the moment you contact us, share your project details and we've agreed on the possible range of price.</p>
-			<p>we only receive payment when you've reviewed the work and you're satisfied with it.</p>
-		  </section>
-		  
-		  <section class='small' style='background-color: rgb(203,189,255);margin-top:20px;padding:5px;border-radius: 10px;'>
-			<h2 style='text-align:center;'>PRICING METHODS</h2>
-			<h3>Fixed pricing</h3>
-			<p>Projects that uses this pricing method are mostly changes to web designs or adding functionalites to your project's source code</p>
-			<h3>plan-based pricing</h3>
-			<p>This pricing is used for projects where recurring payments are needed for specific functionalites to keep running. eg third-party apis, web hosting and cloud computing.</p>
-		  </section>
-		  
-		  <section class='small howwework' style='margin-top:20px;'>
-				<style>
-					section.howwework p {border-left: 2px solid violet;margin:0;padding:10px 0px 10px 0px;display:flex;flex-direction:row;}
-					section.howwework p b.number {font-size: 25px;font-family:Poppins-eb;position:relative;right:20px;background-color:white;padding:5px 10px 5px 10px;border-radius:50%;border:1px solid violet;}
-					
-					@media screen and (max-width: 450px) {
-						section.howwework.small {width:60%;}
-					}
-				</style>
-				<h2>HOW WE WORK</h2>
-				<p><span><b class='number'>1</b></span> <span>Contact us through our communication channels: emails, phone no, whatsapp, telegram, slack</span> </p>
-				<p><span><b class='number'>2</b></span> <span>We get The neccessary information needed to build/modify your webapp</span> </p>
-				<p><span><b class='number'>3</b></span> <span>We'll continually communicate until you're satisfied</span> </p>
-				<p><span><b class='number'>4</b></span> <span>Make your payment when satisfied with the job</span> </p>
-				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling any of your webapp</span> </p>
-		  </section>
-		  
-		  <section class='small'>
+		  <section class='small plans' style='display:flex;flex-direction:row;flex-wrap:wrap;background-color: rgb(255,221,173);margin-top:20px;padding:5px;border-radius: 10px;'>
+			<h2 class='a'><a href='#frontend'>Frontend</a></h2>
+			<h2 class='a'><a href='#tutorial'>Tutoring</a></h2>
+			<h2 class='b'><a href='#website'>Website</a></h2>
 			<style>
-				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
-				section.demos a {text-decoration:none;margin-right: 10px;}
-				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
-				section.demos h2:hover {background-color: rgb(132,51,119);}
-				@media screen and (max-width: 450px) {
-					section.demos {flex-direction: column;}
+				section.plans h2 {transition: all 0.5s ease;padding:20px;text-align:center;margin:0;}
+				section.plans h2 a {display: block;color:black;text-decoration:none;}
+				section.plans h2:hover {background-color: rgb(245,163,86);}
+				section.plans h2.a {flex:1;}
+				section.plans h2.b {width: 100%;}
+			</style>
+		  </section>
+		  
+		  <section class='small' style='border: 1px solid silver;margin-top:20px;padding:5px;border-radius: 10px;'>
+			<style>
+				h3.frontendlink {white-space:nowrap;overflow-x:scroll;border-bottom: 1px solid silver;margin:0;}
+				h3.frontendlink span {cursor:pointer;display:inline-block;margin-right:10px;padding:5px;transition: all 0.5s ease;}
+				h3.frontendlink span:hover {background-color: silver;}
+				section.frontendcontent {display:flex;flex-direction:column;padding:10px;width:100%;flex-shrink:0;}
+				section.frontendcontent div.fbasic {width:50%;margin:auto;margin-bottom:10px;padding:10px;box-shadow:5px 5px 10px;text-align:center;}
+				section.frontendcontent div.fbasic p.seedetails {cursor:pointer;color: rgb(132,51,119);text-decoration:underline;}
+				section.frontendcontent div.fbasic a.signup {cursor:pointer;display:inline-block;padding:10px;color:white;background-color: rgb(132,51,119);}
+				section.frontendcontent div.fbasic div.fbasicoptions {display: none;flex-direction:row;text-align:left;}
+				section.frontendcontent div.fbasic div.fbasicoptions div.a {flex: 1;margin-right:10px;text-align:center;}
+				
+				div.ftcontainer {white-space:nowrap;display:flex;flex-direction:row;flex-wrap:nowrap;overflow-x:hidden;}
+				
+				@media screen and (max-width: 750px) {
+					section.frontendcontent div.fbasic {width:70%;}
 				}
 			</style>
-			<h2 style='text-align:center;'>OUR DEMOS</h2>
-			<section class='demos'>
-				<a href='/demo/pro'><h2>Professional service</h2></a>
-				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
-			</section>
+			
+			<h2 id='frontend' style='text-align:center;margin:2px;color:white;background-color:black;'>FRONTEND</h2>
+			<h3 class='frontendlink'><span data-name='htmlcss' style='color:white;background-color:rgb(132,51,119);'>HTML/CSS Development </span> <span data-name='landing'>Landing Page</span> <span data-name='psdhtml'>Web design to html</span> <span data-name='jsplugin'>Javascript Plugins</span> </h3>
+			<div class='ftcontainer'>
+			  <section class='frontendcontent' data-name='htmlcss' style='white-space:normal;'>
+				<div>
+					<p>HTML/CSS is the creation and styling of webpages with HTML and CSS</p>
+				</div>
+				
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>7000 <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>responsive - yes</p>
+							<p>Revision - 2</p>
+							<p>images - yes</p>
+							<p>Content - basic</p>
+							<p>Design - basic</p>
+							<p>SEO - broken links, keyword research</p>
+							<p>Interactivity - Basic</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>15000 <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>responsive - yes</p>
+							<p>Revision - 4</p>
+							<p>images - yes</p>
+							<p>Content - basic</p>
+							<p>Design - basic</p>
+							<p>SEO - broken links, keyword research, SERP, Competitor Research</p>
+							<p>Interactivity - Basic</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='landing' style='white-space:normal;'>
+				<div>
+					<p>Landing pages are used to increase conversion(sales, Enrollment, Newsletters) on webpages. It's mostly used in ads campaigns</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(Landing page)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>5000 <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>responsive - yes</p>
+							<p>Revision - 2</p>
+							<p>images - yes</p>
+							<p>Content - Basic</p>
+							<p>Design - Basic</p>
+							<p>Interactivity - Basic</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(Landing page)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>10000 <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>responsive - yes</p>
+							<p>Revision - 2</p>
+							<p>images - yes</p>
+							<p>Content - basic</p>
+							<p>Design - basic</p>
+							<p>Interactivity - Advanced</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/page</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='psdhtml' style='white-space:normal;'>
+				<div>
+					<p>Web design to HTML means converting web designs in image format to HTML</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(Web Design-HTML)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>3000 <span style='font-size:15px;font-family:Poppins;'>naira/file</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(Web Design-HTML)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>8000 <span style='font-size:15px;font-family:Poppins;'>naira/file</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/file</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='jsplugin' style='white-space:normal;'>
+				<div>
+					<p>JS plugins is used for applying interactivity to your webpage.</p>
+					<p>Whatver ideas you've envision on your website, we'll turn it into reality</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(JS plugins)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>10000 <span style='font-size:15px;font-family:Poppins;'>naira/plugin</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(JS plugins)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>20000 <span style='font-size:15px;font-family:Poppins;'>naira/plugin</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/plugin</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			</div>
 		  </section>
 		  
+		  <section class='small' style='border: 1px solid silver;margin-top:20px;padding:5px;border-radius: 10px;'>
+			<h2 id='tutorial' style='text-align:center;margin:2px;color:white;background-color:black;'>Tutoring</h2>
+			<h3 class='frontendlink'><span data-name='frontend' style='color:white;background-color:rgb(132,51,119);'>Frontend </span>  <span data-name='backend'>Backend</span> </h3>
+			<div class='ftcontainer'>
+			  <section class='frontendcontent' data-name='frontend' style='white-space:normal;'>
+				<div>
+					<p>Frontend web development deals with HTML,CSS,JS and every other client-side libraries.</p>
+					<p>students must be above age 10 </p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(Frontend)</b></p>
+					<div style='border: 2px solid silver;'>
+						<p><b>Price:</b> 50k per student</p>
+						<p><b>Duration:</b> 3 hours/week</p>
+						<p><b>Channel:</b> Online</p>
+					</div>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>HTML - Advanced</p><p>CSS - Advanced</p><p>JS - Basics(Intro, Dom)</p><p>Web Design - Basic</p><p>React/Angular/Vue - No</p><p>Testing - No</p><p>Practice Questions - 3</p><p>Software Engineering Principles- Basic</p> <p>Frontend Libraries - Basic(Animation)</p> <p>Custom Projects - professional website and ecommerce store</p> <p>Custom Library - CSS styling</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Advanced(Frontend)</b></p>
+					<div style='border: 2px solid silver;'>
+						<p><b>Price:</b> 90k per student</p>
+						<p><b>Duration:</b> 6 hours/week</p>
+						<p><b>Channel:</b> Online</p>
+					</div>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>HTML - Advanced</p><p>CSS - Advanced</p><p>JS - Advanced(Intro, Dom)</p><p>Web Design - Advanced</p><p>React/Angular/Vue - Advanced</p><p>Testing - Advanced</p><p>Practice Questions - 3</p><p>Software Engineering Principles - Basic</p> <p>Frontend Libraries - Advanced(Animation</p> <p>Custom Projects - professional website and ecommerce store</p> <p>Custom Library - CSS styling, DOM Manipulation</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/plugin</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			 <section class='frontendcontent' data-name='backend' style='white-space:normal;'>
+				<div>
+					<p>Backend web development deals with Web servers, Database, File storage, algorithms and every other server-side libraries.</p>
+					<p>students must be above age 10 </p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(Backend)</b></p>
+					<div style='border: 2px solid silver;'>
+						<p><b>Price:</b> 50k per student</p>
+						<p><b>Duration:</b> 3 hours/week</p>
+						<p><b>Channel:</b> Online</p>
+					</div>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Language - Nodejs(Express)</p><p>Database Optimization - Mongodb Basics</p><p>Command Line - Basic</p><p>Version Control - Git and Github Basics</p><p>CI/CD - Basic</p> <p>Cybersecurity - Basic</p> <p>Server-side optimization - Basic(DSA, caching, load balancing, Microservice, Containers)</p> <p>Practice questions - 4 per session</p> <p>Backend Libraries and API - session store, cryptography, social login</p> <p>Custom Projects - Portfolio, Ecommerce Site, Enterprise Software</p> <p>Custom Libraries - Http Server, Restful API</p> <p>software engineering Principles - Basic</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Advanced(Backend)</b></p>
+					<div style='border: 2px solid silver;'>
+						<p><b>Price:</b> 90k per student</p>
+						<p><b>Duration:</b> 6 hours/week</p>
+						<p><b>Channel:</b> Online</p>
+					</div>
+					<p class='seedetails' >show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Language - Nodejs(Express)</p><p>Database Optimization - Mongodb Basics</p><p>Command Line - Advanced</p><p>Version Control - Git and Github Advanced</p><p>CI/CD - Advanced</p> <p>Cybersecurity - Advanced</p> <p>Server-side optimization - Advanced(DSA, caching, load balancing, Microservice, Containers)</p> <p>Practice questions - 4 per session</p> <p>Backend Libraries and API - session store, cryptography, social login</p> <p>Custom Projects - Portfolio, Ecommerce Site, Enterprise Software</p> <p>Custom Libraries - Http Server, Restful API</p> <p>software engineering Principles - Advanced</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/plugin</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  
+			</div>
+		  </section>
 		  
+		  <section class='small' style='border: 1px solid silver;margin-top:20px;padding:5px;border-radius: 10px;'>
+			<h2 id='website' style='text-align:center;margin:2px;color:white;background-color:black;'>Website</h2>
+			<h3 class='frontendlink'><span data-name='website' style='color:white;background-color:rgb(132,51,119);'>Website</span> <span data-name='ecommerce'>Ecommerce</span> <span data-name='enterprise'>Enterprise</span> <span data-name='webapp'>Webapp</span></h3>
+			<div class='ftcontainer'>
+			  <section class='frontendcontent' data-name='website' style='white-space:normal;'>
+				<div>
+					<p>Websites can be for offering professional services eg consulting, schooling, medical service, Real estate,...</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(website)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>150000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - For Small And Medium Businesses</p>
+							<p>file storage/CDN - 5gb</p>
+							<p>web analytics - Basic</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - Basic</p> 
+							<p>User Interface customization - free for 2</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 2</p>
+							<p>Backend plugins - free for 2</p>
+							<p>SEO - Basic</p>
+							<p>CRO - Basic</p>
+							<p>Marketing Infographics - free for 2</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(Website)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>320000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - For Large Businesses</p>
+							<p>file storage/CDN - 10gb</p>
+							<p>web analytics - Advanced</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Advanced</p>
+							<p>Logging Report - Advanced</p> 
+							<p>User Interface customization - free for 4</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 4</p>
+							<p>Backend plugins - free for 4</p>
+							<p>SEO - Basic</p>
+							<p>CRO - Advanced</p>
+							<p>Marketing Infographics - free for 4</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='ecommerce' style='white-space:normal;'>
+				<div>
+					<p>Ecommerce can be for selling physical and digital products. eg books, clothing, foods, electronics,...</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(ecommerce)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>200000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - for small and medium business</p>
+							<p>file storage/CDN - 5gb</p>
+							<p>web analytics - Basic</p>
+							<p>Inventory Management - Basic</p>
+							<p>Shipping Integration - Yes</p>
+							<p>Payment integration - yes</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - Basic</p>
+							<p>User Interface customization - free for 2</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 2</p>
+							<p>Backend plugins - free for 2</p>
+							<p>SEO - Basic</p>
+							<p>CRO - Basic</p>
+							<p>Marketing Infographics - free for 2</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(ecommerce)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>400000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - for large business</p>
+							<p>file storage/CDN - 10gb</p>
+							<p>web analytics - Advanced</p>
+							<p>Inventory Management - Advanced</p>
+							<p>Shipping Integration - Yes</p>
+							<p>Payment integration - yes</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - Basic</p>
+							<p>User Interface customization - free for 4</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 4</p>
+							<p>Backend plugins - free for 4</p>
+							<p>SEO - Advanced</p>
+							<p>CRO - Advanced</p>
+							<p>Marketing Infographics - free for 4</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='enterprise' style='white-space:normal;'>
+				<div>
+					<p>Enterprise softwares are used within business environment to increase productivity. eg HR management, Learning management system, ...</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(enterprise)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>100000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - for small and mediium business</p>
+							<p>file storage/CDN - 5gb</p>
+							<p>web analytics - Basic</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p> accounts - 5</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - Basic</p>
+							<p>User Interface customization - 2 times</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 2</p>
+							<p>Backend plugins - free for 2</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(enterprise)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>200000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - for large business</p>
+							<p>file storage/CDN - 10gb</p>
+							<p>web analytic - Advanced</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p> accounts - 10</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - Basic</p>
+							<p>User Interface customization - 4 times</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 4</p>
+							<p>Backend plugins - free for 4</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			  <section class='frontendcontent' data-name='webapp' style='white-space:normal;'>
+				<div>
+					<p>Webapps are used to offer your platform/website to specific audiences for a fee. eg freelancing platform, video sharing platform</p>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Basic(webapp)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>500000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - For medium Businesses</p>
+							<p>file storage/CDN - 20gb</p>
+							<p>web analytics(google analytics) - Basic</p>
+							<p>Payment Integration - yes</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - yes</p> 
+							<p>User Interface customization - 2 times</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 2</p>
+							<p>Backend plugins - free for 2</p>
+							<p>SEO - yes</p>
+							<p>CRO - yes(A/B test)</p>
+							<p>Marketing Infographics - free for 2</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Professional(webapp)</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>1100000 <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p class='seedetails'>show details +</p>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+					<div class='fbasicoptions'>
+						<div class='a'>
+							<p>Hosting - For large Businesses</p>
+							<p>file storage/CDN - 50gb</p>
+							<p>web analytics - Advanced</p>
+							<p>Payment Integration - yes</p>
+							<p>database - yes</p>
+							<p>Domain Name - yes</p>
+							<p>Pages - unlimited</p>
+							<p>SSL certificate - yes</p>
+							<p>performance report - Basic</p>
+							<p>Logging Report - yes</p> 
+							<p>User Interface customization - 4 times</p>
+							<p>Security - yes</p>
+							<p>Frontend plugins - free for 4</p>
+							<p>Backend plugins - free for 4</p>
+							<p>SEO - yes</p>
+							<p>CRO - yes</p>
+							<p>Marketing Infographics - free for 4</p>
+						</div>
+					</div>
+				</div>
+				<div class='fbasic'>
+					<p style='margin:2px;'><b>Custom</b></p>
+					<h1 style='margin:2px;border-bottom:1px solid silver;'>? <span style='font-size:15px;font-family:Poppins;'>naira/month</span></h1>
+					<p><a class='signup' href='#contact'>contact us for a discount</a></p>
+				</div>
+			  </section>
+			</div>
+		  </section>
 		  
+		  <script>
+			let seedetails = document.querySelectorAll('.seedetails')
+			seedetails.forEach(function (element){
+				element.onclick = function(e){
+					if(e.target.nextElementSibling.nextElementSibling.style.display == 'none'){
+						e.target.textContent = 'hide details -'
+						e.target.nextElementSibling.nextElementSibling.style.display = 'flex'
+					} else {
+						e.target.textContent = 'show details +'
+						e.target.nextElementSibling.nextElementSibling.style.display = 'none'
+					}
+				}
+			})
+			let frontendlink = document.querySelectorAll('.frontendlink span');
+			let frontendcontent = document.querySelectorAll('.frontendcontent');
+			frontendlink.forEach(function (element){
+				element.onclick = function(e){
+					for(let i=0; i<frontendcontent.length; i++){
+						if(e.target.dataset.name == frontendcontent[i].dataset.name){
+							for(let b=0; b<frontendlink.length; b++){
+								frontendlink[b].style.color = 'black'
+								frontendlink[b].style.backgroundColor = 'white'
+							}
+							e.target.style.backgroundColor = 'rgb(132,51,119)'
+							e.target.style.color = 'white'
+							
+							frontendcontent[i].scrollIntoView();
+							scrollBy(0, -150)
+						}
+					}
+				}
+			})
+		  </script>
+	
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
 			    nav {font-family: Poppins;}
-			    p {font-size: 18px;font-family:Roboto-light;}
-			    h1 {font-size:35px;font-family:Roboto;}
-			    h2 {font-size: 30px;font-family:Poppins-b;}
-			    h3 {font-size: 20px;font-family:Poppins;}
+			
+			    p,table,tr,th,td {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:35px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
 			  @media screen and (max-width: 800px) {
 				  p {font-size: 15px;}
-			      h1 {font-size:32px;font-family:Roboto-regular;}
-			      h2 {font-size: 27px;font-family:Poppins-medium;}
+			      h1 {font-size:32px;}
+			      h2 {font-size: 27px;}
 			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 600px) {
@@ -216,6 +726,7 @@
 			  }
 			  @media screen and (max-width: 400px) {
 				  p {font-size: 15px;}
+				  table,tr,th,td {font-size: 12px;}
 			      h1 {font-size:26px;}
 			      h2 {font-size: 21px;}
 			      h3 {font-size: 17px;}
@@ -227,7 +738,8 @@
 			     h3 {font-size: 15px;}
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
-			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
+			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }   
+			   footer p {font-family: Poppins;}
 			 </style>
 		  </section>
 		  
@@ -238,39 +750,26 @@
 			}
 		  </style>
 		  
-		  <section class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
-		    <img src='/images/f.jpg' style='width:100%;height:50vh;display:block;border-radius:30px;'>
-			<h2>MIGRATION</h2>
-			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just contact us.</p>
-			<p><a href='mailto:giddyconnect@outlook.com' style='color:white;text-decoration:none;'><b class='start'>contact</b></a></p>
-		  </section>
 		  
-		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
-			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
-			  <p>make money while referring clients to our channel.</p>
-			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
-		  </section>
 		  
 		  
 		</article>
 		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
 		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
-		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' style='width:50px;height:50px' > GBW</h1>
-			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
 		  </div>
 		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
 		    <div class='foot foot0'>
 		      <h3>USEFUL LINKS</h3>
-			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
-			  <!--<p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
-			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>-->
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
 		    </div>
 		    <div class='foot' style=''>
 		      <h3>SERVICES </h3>
 			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
-			  <p><a href='/ecommerce' style='color:white;text-decoration:none;'>Ecommerce</a></p>
-			  <p><a href='/enterprise' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
-			  <p><a href='/webapp' style='color:white;text-decoration:none;'>Webapp</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
 		    </div>
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>

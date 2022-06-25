@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+	<meta name='description' content="we have expertise in building any kind of website">
+	<title>portfolio page - GBW</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/portfolio">
+	<meta property="og:description" content="Browse through our flexible pricing options created to ease your burden.">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="Browse through our flexible pricing options created to ease your burden.">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/">
+	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
+	<link rel="icon" type="image/png" href="/images/mylogo.svg">
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+		
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body id='body' style='padding:0;margin:0;scroll-behaviour:scroll;'>
+    <div style=''>
+	  <div style='background-color: white;'>
+		<article style=''>
+		  <header>
+			  <span class='lg'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
+					<img src='/images/mylogo.svg' class='headerimg' >
+					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+				</a>
+			  </span>
+		      <nav class='navi'>
+		        <style>
+					header {background-color: white;border:2px solid rgb(132,51,119);display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
+			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				   nav.navi b:hover {color: rgb(132,51,119);}
+			       b.logo, b.menubar {padding: 10px;font-size:22px;}
+				   b.menubar {display:none;font-family:Poppins-eb;}
+				   .small {width:60%;margin:auto;}
+				  img.headerimg {width: 50px;height: 50px;}
+				  
+				  @media screen and (max-width: 900px) {
+				      header span.lg {flex:1;}
+				      b.menubar {display: inline-block;text-align:right;}
+					  nav.navi {display:none;}
+					  .small {width:80%;margin:auto;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
+					 img.headerimg {width: 30px;height: 30px;}
+					  b.logo {font-size: 17px;}
+				  }
+				  @media screen and (max-width: 450px) {
+				      .small {width:90%;margin:auto;}
+				  }
+			    </style>
+		        
+			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
+				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
+		      </nav>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
+		  </header>
+		  <section>
+		    <section class='othernav' style='width:0px;'>
+			  <style>
+			    .othernav {height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;z-index:2;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
+				.othernav a {color:black;text-decoration:none;}
+			  </style>
+			  <a href='/website' ><p class='p'>Website</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
+			  <a href='/pricing'><p class='p'>Pricing</p></a>
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
+			</section>
+			<script>
+			
+			  let menu = document.querySelector('.menubar')
+			  let othernav = document.querySelector('.othernav')
+			  
+			  function open(x) {
+				if(x.matches) {
+					othernav.style.display = 'none'
+				} 
+			  }
+			  let x = window.matchMedia("(min-width: 901px)")
+			  open(x)
+			  x.addListener(open)
+			
+			  menu.onclick = function (e){
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
+					e.target.style.backgroundColor = 'white'
+					othernav.style.width = '100%'
+					
+					body.style.overflow = 'hidden'
+					
+				} else {
+					e.target.style.backgroundColor = 'transparent'
+					
+					othernav.style.width = '0px'
+					
+					body.style.overflowY = 'scroll'
+				}
+			  }
+			</script>
+			
+			<section class='firstcontainer'>
+			  <style>
+				section.firstcontainer {padding-top:30px;padding-bottom:30px;padding-left:50px;padding-right:50px;color:black;background-color: white;}
+			   
+				section.firstcontainer a {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    
+				section.firstcontainer a {background-color: transparent;color:white;padding:10px;padding-left:15px;padding-right:15px;margin-bottom:5px;text-decoration:none;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    section.firstcontainer a.mail {background-color:rgb(170,0,0);}
+				section.firstcontainer a.whatsapp {border:2px solid rgb(0,255,0);color:rgb(0,255,0);}
+				section.firstcontainer a.callus {background-color: black;}
+				section.firstcontainer a.telegram {background-color: rgb(42,127,255);}
+				section.firstcontainer a.twitter {background-color: rgb(0,0,255);}
+				section.firstcontainer a.facebook {background-color: rgb(0,0,255);}
+				section.firstcontainer a.linkedin {background-color: rgb(42,127,255);}
+				
+				@media screen and (max-width: 900px) {
+					section.firstcontainer {padding-left:10px;padding-right:10px;padding-top: 10px;padding-bottom:10px;}
+				}
+			  </style>
+			  <h1 style='margin:2px;'>We are the best person for any web development job.</h1>
+			  <p>No Upfront Payment required. Make 10% when you refer someone to our platform.</p>
+			  <p style='text-align:left;'>
+					<a class='mail' href='mailto:giddyconnect@outlook.com'><b>Send A Mail</b></a>
+					<a class='whatsapp' href='https://wa.me/07014728658'><b>Whatsapp</b></a>
+					<a class='callus' href='tel:+2347014728658' ><b>Call us</b></a>
+					<a class='telegram' href='https://t.me/GBw34' ><b>Telegram</b></a>
+					<a class='twitter' href='https://twitter.com/G_B_W_03' ><b>Twitter</b></a>
+					<a class='facebook' href='https://web.facebook.com/GBW-100780432667709/' ><b>Facebook</b></a>
+					<a class='linkedin' href='https://www.linkedin.com/company/g-b-w/'  ><b>Linkedin</b></a>
+				</p>
+			</section>
+		  </section>
+		  
+		  <section class='small portfolio'>
+			<style>
+				section.small.portfolio img {width:100%;height:80vh;margin-bottom:20px;}
+				section.small.portfolio h1{border-bottom: 1px solid black;}
+				@media screen and (max-width: 900px) {
+					section.small.portfolio img {width:100%;height:70vh;}
+				}
+				@media screen and (max-width: 700px) {
+					section.small.portfolio img {width:100%;height:60vh;}
+				}
+				@media screen and (max-width: 500px) {
+					section.small.portfolio img {width:100%;height:50vh;}
+				}
+				@media screen and (max-width: 350px) {
+					section.small.portfolio img {width:100%;height:40vh;}
+				}
+			</style>
+			<h1>Portfolio</h1>
+			<h2 class='a'>Website - Real Estate Agency</h2>
+			<img src='/images/portfolio/professional demo.svg'>
+			<img src='/images/portfolio/professional demo1.svg'>
+			<h2 class='a'>Ecommerce</h2>
+			<img src='/images/portfolio/ecommerce.svg'>
+			<img src='/images/portfolio/ecommerce1.svg'>
+			<h2 class='a'>Enterprise software - CRM</h2>
+			<img src='/images/portfolio/CRM.svg'>
+			<img src='/images/portfolio/CRM2.svg'>
+			<h2 class='a'>Webapp - Web Analytics</h2>
+			<img src='/images/portfolio/analytics.svg'>
+		  </section>
+		  
+		  
+		  
+		  <section class='small' style='margin-top:20px;position:relative;'>
+		     <style>
+			    nav {font-family: Poppins;}
+			
+			    p,table,tr,th,td {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:35px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
+			  @media screen and (max-width: 800px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:32px;}
+			      h2 {font-size: 27px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 600px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:28px;}
+			      h2 {font-size: 23px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 400px) {
+				  p {font-size: 15px;}
+				  table,tr,th,td {font-size: 12px;}
+			      h1 {font-size:26px;}
+			      h2 {font-size: 21px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 300px) {
+				  p {font-size: 13px;}
+			      h1 {font-size:22px;}
+			      h2 {font-size: 19px;}
+			     h3 {font-size: 15px;}
+			  }
+			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
+			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }   
+			   footer p {font-family: Poppins;}
+			 </style>
+		  </section>
+		  
+		  <style>
+		    img.img {width:300px;height:190px;}
+			@media screen and (max-width: 400px) {
+			  img.img {width:200px;height:190px;}
+			}
+		  </style>
+		  
+		  
+		  
+		  
+		</article>
+		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
+		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
+		  </div>
+		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
+		    <div class='foot foot0'>
+		      <h3>USEFUL LINKS</h3>
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
+		    </div>
+		    <div class='foot' style=''>
+		      <h3>SERVICES </h3>
+			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
+		    </div>
+		  </div>
+		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
+		      <h3>Contact</h3>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
+		</div>
+		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
+		  <style>
+			  div.foot {width:45%;}
+			  div.foot0 {margin-left:5%;}
+			  @media screen and (max-width: 450px) {
+			    div.foot {width:100%;}
+			    div.foot0 {margin-left:0%;}
+			  }
+		  </style>
+		</footer>
+	  </div>
+
+	</div>
+	
+	
+  </body>
+</html>

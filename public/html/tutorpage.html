@@ -1,0 +1,382 @@
+<html>
+  <head>
+	<title>Tutor page - GBW</title>
+    <meta charset='utf-8'>
+	<meta name='description' content='We build any cloud solution you need whether website, ecommerce store, software for enterprise or webapp'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="GBW">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/tutor/">
+	<meta property="og:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="GBW">
+	<meta name="twitter:site" content="@GBW_0_3">
+	<meta name="twitter:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/">
+	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
+	<link rel="icon" type="image/png" href="/images/mylogo.svg">
+	<style>
+		@font-face {
+			font-family: 'Poppins';
+			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+		}
+		
+		@font-face {
+			font-family: 'Poppins-eb';
+			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+		}
+		
+	</style>
+  </head>
+  <body id='body' style='padding:0;margin:0;'>
+    <div style=''>
+	  <div style='background-color: white;'>
+		<article style=''>
+		   <header>
+			  <span class='lg'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
+					<img src='/images/mylogo.svg' class='headerimg' >
+					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
+				</a>
+			  </span>
+		      <nav class='navi'>
+		        <style>
+					header {background-color: rgb(175,233,198);border-bottom:1px solid silver;display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
+			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
+				   nav.navi b:hover {color: rgb(132,51,119);}
+			       b.logo, b.menubar {padding: 10px;font-size:22px;}
+				   b.menubar {display:none;font-family:Poppins-eb;}
+				   .small {width:60%;margin:auto;}
+				  img.headerimg {width: 50px;height: 50px;}
+				  
+				  @media screen and (max-width: 900px) {
+				      header span.lg {flex:1;}
+				      b.menubar {display: inline-block;text-align:right;}
+					  nav.navi {display:none;}
+					  .small {width:80%;margin:auto;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
+					 img.headerimg {width: 30px;height: 30px;}
+					  b.logo {font-size: 17px;}
+				  }
+				  @media screen and (max-width: 450px) {
+				      .small {width:90%;margin:auto;}
+				  }
+			    </style>
+		        
+			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
+				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
+		      </nav>
+		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
+		  </header>
+		  <section style='background-image: linear-gradient(to bottom, rgb(175,233,198), white);background-size:100% 100%;'>
+		    
+			<section class='othernav' style='width:0px;'>
+			  <style>
+			    .othernav {height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;z-index:2;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
+				.othernav a {color:black;text-decoration:none;}
+			  </style>
+			  <a href='/website' ><p class='p'>Website</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
+			  <a href='/pricing'><p class='p'>Pricing</p></a>
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
+			</section>
+			<script>
+			
+			  let menu = document.querySelector('.menubar')
+			  let othernav = document.querySelector('.othernav')
+			  
+			  function open(x) {
+				if(x.matches) {
+					othernav.style.display = 'none'
+				} 
+			  }
+			  let x = window.matchMedia("(min-width: 901px)")
+			  open(x)
+			  x.addListener(open)
+			
+			  menu.onclick = function (e){
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
+					e.target.style.backgroundColor = 'white'
+					othernav.style.width = '100%'
+					
+					body.style.overflow = 'hidden'
+					
+				} else {
+					e.target.style.backgroundColor = 'transparent'
+					
+					othernav.style.width = '0px'
+					
+					body.style.overflowY = 'scroll'
+				}
+			  }
+			</script>
+			<section class='firstcontainer'>
+			  <style>
+				section.firstcontainer {display:flex;flex-direction:row;flex-wrap:wrap;padding:10px;padding-top:10px;padding-bottom:10px;padding-left:50px;padding-right:50px;color:black;}
+				
+				section.firstcontainer div.content {width:58%;margin-left:auto;}
+				section.firstcontainer div.img {width:40%;}
+				
+			    section.firstcontainer a {background-color: transparent;color:white;padding:10px;padding-left:15px;padding-right:15px;margin-bottom:5px;text-decoration:none;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    section.firstcontainer a.mail {background-color:rgb(170,0,0);}
+				section.firstcontainer a.whatsapp {border:2px solid rgb(0,255,0);color:rgb(0,255,0);}
+				section.firstcontainer a.callus {background-color: black;}
+				section.firstcontainer a.telegram {background-color: rgb(42,127,255);}
+				section.firstcontainer a.twitter {background-color: rgb(0,0,255);}
+				section.firstcontainer a.facebook {background-color: rgb(0,0,255);}
+				section.firstcontainer a.linkedin {background-color: rgb(42,127,255);}
+				
+				@media screen and (max-width: 900px) {
+					section.firstcontainer {flex-direction: column;padding-left:0px;padding-right:0px;}
+					section.firstcontainer div.content {width:auto;order:1;padding-left:10px;padding-right:10px;}
+					section.firstcontainer div.img {width:100%;order:2;}
+				}
+				
+				@media screen and (max-width: 450px) {
+					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
+					b.start {width:60%;display:block;margin:auto;text-align:center;}
+				}
+			  </style>
+			  <div class='img'>
+				<img src='/images/plant.jpg' style='width:100%;height:50vh;'>
+			  </div>
+			  <div class='content' >
+				<h1>We help students and professional become pro in coding.</h1>
+				<p>Connect with a tutor. we'll reply in less than 1 minutes.</p>
+				<p><button id='copy'>copy message</button><input readonly value='Hi, i need your tutoring service'/> </p>
+				<p style='text-align:left;'>
+					<a class='mail' href='mailto:giddyconnect@outlook.com'><b>Send A Mail</b></a>
+					<a class='whatsapp' href='https://wa.me/07014728658'><b>Whatsapp</b></a>
+					<a class='callus' href='tel:+2347014728658' ><b>Call us</b></a>
+					<a class='telegram' href='https://t.me/GBw34' ><b>Telegram</b></a>
+					<a class='twitter' href='https://twitter.com/G_B_W_03' ><b>Twitter</b></a>
+					<a class='facebook' href='https://web.facebook.com/GBW-100780432667709/' ><b>Facebook</b></a>
+					<a class='linkedin' href='https://www.linkedin.com/company/g-b-w/'  ><b>Linkedin</b></a>
+				</p>
+			  </div>
+			  <script>
+					copy.onclick = function(e){
+						e.target.nextElementSibling.select();
+						e.target.nextElementSibling.setSelectionRange(0, 99999);
+						navigator.clipboard.writeText(e.target.nextElementSibling.value)
+					}
+			  </script>
+			</section>
+		  </section>
+		  
+		  <style>
+			nav {font-family: Poppins;}
+			
+			    p,table,tr,th,td {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:35px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
+			  @media screen and (max-width: 800px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:32px;}
+			      h2 {font-size: 27px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 600px) {
+				  p {font-size: 15px;}
+			      h1 {font-size:28px;}
+			      h2 {font-size: 23px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 400px) {
+				  p {font-size: 15px;}
+				  table,tr,th,td {font-size: 12px;}
+			      h1 {font-size:26px;}
+			      h2 {font-size: 21px;}
+			      h3 {font-size: 17px;}
+			  }
+			  @media screen and (max-width: 300px) {
+				  p {font-size: 13px;}
+			      h1 {font-size:22px;}
+			      h2 {font-size: 19px;}
+			     h3 {font-size: 15px;}
+			  }
+			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
+			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }   
+			   footer p {font-family: Poppins;}
+		  </style>
+			 
+		  <section class='setusapart'>
+				<style>
+					section.setusapart {display:flex;flex-direction:row;flex-wrap:wrap;padding:10px;margin-left:50px;margin-right:50px;border-radius:30px;border:2px solid black;}
+					section.setusapart h1 {width:100%;text-align:center;}
+					section.setusapart div.services {width:30%;margin:auto;background-color:white;border-radius:10px;}
+					
+					@media screen and (max-width: 650px) {
+						section.setusapart {flex-direction: column;}
+						section.setusapart div.services {width:auto;margin:1px;}
+					}
+				</style>
+				 
+				<h1>What sets us apart</h1>
+				<div class='services'>
+					<h3>Live Coding</h3>
+					<p>Learn how to code thorogh zoom. Get response for every action you take.</p>
+				</div>
+				<div class='services' >
+					<h3>Hands-on Learning</h3>
+					<p>Learn something new and start coding immediately.</p>
+				</div>
+				<div class='services' >
+					<h3>Dedicated Help</h3>
+					<p>Whether you get a syntax error or find it difficult to set up a program, we have someone to help</p>
+				</div>
+		  </section>
+		  
+		  <style>
+		    img.img {width:300px;height:190px;}
+			@media screen and (max-width: 400px) {
+			  img.img {width:200px;height:190px;}
+			}
+			@media screen and (max-width: 300px) {
+				img.img {width:100px;height:90px;}
+			}
+		  </style>
+		  
+		  <section class='paywhensa'>
+			<style>
+				section.paywhensa {padding-left:50px;padding-right:50px;margin-top:40px;}
+				section.paywhensa div.content {display:flex;flex-direction:row;}
+				section.paywhensa div.content img {width:50%;height:50vh;}
+				section.paywhensa div.content div {width:45%;margin:auto;}
+				@media screen and (max-width: 900px) {
+					section.paywhensa {padding-left:10px;padding-right:10px}
+				}
+				
+				@media screen and (max-width: 650px) {
+					section.paywhensa {padding-left:0px;padding-right:0px;}
+					section.paywhensa div.content {flex-direction: column;}
+					section.paywhensa div.content img {width:100%;}
+					section.paywhensa div.content div {width: auto;padding-left:10px;padding-right:10px;}
+				}
+			</style>
+			<div class='content'>
+				<img src='/images/f.jpg' >
+				<div>
+					<h2>Our topics</h2>
+					<h3>Frontend Development</h3>
+					<p>learn how web pages are created.</p>
+					<h3>Backend Development</h3>
+					<p>Learning about web servers, database, backend programming languages and their technologies.</p>
+				</div>
+			</div>
+		  </section>
+		  
+		  <section class='pricing' id='pricing'>
+			<style>
+				section.pricing {padding-left:50px;padding-right:50px;}
+				section.pricing a {font-size: 35px;}
+				@media screen and (max-width: 900px) {
+					section.pricing {padding-left:10px;padding-right:10px;}
+				}
+				@media screen and (max-width: 400px) {
+					section.pricing a {font-size: 25px;}
+				}
+			</style>
+			<h2>Pricing</h2>
+			<a href='/pricing#tutor'>view pricing &rarr;</a>
+		  </section>
+		  
+		  <section class='affiliate' style='color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+			<style>
+				section.affiliate {padding:50px;margin-bottom:10px;}
+				@media screen and (max-width: 900px) {
+					section.affiliate {padding:10px;}
+				}
+			</style>
+			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
+			  <p>make money while referring clients to our channel.</p>
+			  <p><a href='#contact'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Contact Us To Become A Partner</b></a></p>
+		  </section>
+		  
+		</article>
+		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
+		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
+		  </div>
+		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
+		    <div class='foot foot0'>
+		      <h3>USEFUL LINKS</h3>
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
+		    </div>
+		    <div class='foot' style=''>
+		      <h3>SERVICES </h3>
+			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
+		    </div>
+		  </div>
+		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
+		      <h3>Contact</h3>
+			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
+			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
+		  </div>
+		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
+		  <style>
+			  div.foot {width:45%;}
+			  div.foot0 {margin-left:5%;}
+			  @media screen and (max-width: 450px) {
+			    div.foot {width:100%;}
+			    div.foot0 {margin-left:0%;}
+			  }
+		  </style>
+		</footer>
+	  </div>
+
+	</div>
+	
+	<script>
+			let viewdetails = document.querySelectorAll('.viewdetails b')
+			viewdetails.forEach(function (element){
+				element.onclick = function(e){
+					
+					if(e.target.parentElement.nextElementSibling.style.display == 'none'){
+						e.target.textContent = 'hide details -'
+						e.target.parentElement.nextElementSibling.style.display = 'block'
+					} else {
+						e.target.textContent = 'show details +'
+						e.target.parentElement.nextElementSibling.style.display = 'none'
+					}
+				}
+			})
+			let frontendlink = document.querySelectorAll('section.pricing p.links span');
+			let frontendcontent = document.querySelectorAll('section.pricing div.content');
+			frontendlink.forEach(function (element){
+				element.onclick = function(e){
+					for(let i=0; i<frontendcontent.length; i++){
+						if(e.target.dataset.name == frontendcontent[i].dataset.name){
+							for(let b=0; b<frontendlink.length; b++){
+								frontendlink[b].style.color = 'black'
+								frontendlink[b].style.backgroundColor = 'white'
+							}
+							e.target.style.backgroundColor = 'rgb(132,51,119)'
+							e.target.style.color = 'white'
+							
+							frontendcontent[i].scrollIntoView();
+							scrollBy(0, -150)
+						}
+					}
+				}
+			})
+	 </script>
+  </body>
+</html>

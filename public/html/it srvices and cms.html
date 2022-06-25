@@ -2,17 +2,17 @@
   <head>
 	<title>GBW homepage</title>
     <meta charset='utf-8'>
-	<meta name='description' content='We build any cloud solution you need whether website, ecommerce store, software for enterprise or webapp'>
+	<meta name='description' content='We build websites, we design user interfaces and we tutor coding'>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:title" content="GBW">
 	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
-	<meta property="og:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
-	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
-	<meta name="twitter:card" content="summary">
+	<meta property="og:description" content="'We build websites, we design user interfaces and we tutor coding">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/">
+	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="GBW">
 	<meta name="twitter:site" content="@GBW_0_3">
-	<meta name="twitter:description" content="We Build Websites, Ecommerce Stores, Enterprise Softwares And Webapps">
-	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta name="twitter:description" content="'We build websites, we design user interfaces and we tutor coding">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/">
 	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
 	<link rel="icon" type="image/png" href="/images/mylogo.svg">
 	<style>
@@ -20,14 +20,7 @@
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Poppins-medium';
-			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Poppins-b';
-			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
-		}
+		
 		@font-face {
 			font-family: 'Poppins-eb';
 			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
@@ -36,77 +29,71 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Roboto-light';
-			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Roboto-regular';
-			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
-		}
+		
 	</style>
   </head>
-  <body style='padding:0;margin:0;'>
+  <body id='body' style='padding:0;margin:0;'>
     <div style=''>
 	  <div style='background-color: white;'>
 		<article style=''>
 		  <header>
 			  <span class='lg'>
-				<a href='/' style='display:flex;flex-direction:row;'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
 					<img src='/images/mylogo.svg' class='headerimg' >
 					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
 				</a>
 			  </span>
-		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
+		      <nav class='navi'>
 		        <style>
-					header {background-color:khaki;display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
+					header {background-color:rgb(255,204,170);border-bottom:1px solid silver;display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
 			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
 				   nav.navi b:hover {color: rgb(132,51,119);}
 			       b.logo, b.menubar {padding: 10px;font-size:22px;}
 				   b.menubar {display:none;font-family:Poppins-eb;}
 				   .small {width:60%;margin:auto;}
 				  img.headerimg {width: 50px;height: 50px;}
+				  
 				  @media screen and (max-width: 900px) {
 				      header span.lg {flex:1;}
 				      b.menubar {display: inline-block;text-align:right;}
 					  nav.navi {display:none;}
 					  .small {width:80%;margin:auto;}
-					 header {padding: 5px;position:relative;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
 					 img.headerimg {width: 30px;height: 30px;}
 					  b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
-				     .suji .small {width:90%;margin:auto;}
+				      .small {width:90%;margin:auto;}
 				  }
 			    </style>
 		        
 			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
-			    <b><a href='/ecommerce' style='color:black;text-decoration:none;'>Ecommerce</a></b>
-			    <b><a href='/enterprise' style='color:black;text-decoration:none;'>Enterprise </a></b>
-				<b><a href='/webapp' style='color:black;text-decoration:none;'>Webapp </a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
 				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
-				<a href='mailto:giddyconnect@outlook.com'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</b></a>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
 		      </nav>
 		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
 		  </header>
-		  <section style='background-color: khaki;background-size:200px 200px;'>
+		  <section style='background-color: rgb(255,204,170);'>
 		    
-			<section class='othernav' style='width: 0;'>
+			<section class='othernav' style='width:0px;'>
 			  <style>
-			    .othernav {background-color:white;transition: all 0.5s ease;background-color: white;overflow:hidden;position:absolute;}
-			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto-regular;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+			    .othernav {background-color:white;height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
 				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
 				.othernav a {color:black;text-decoration:none;}
 			  </style>
 			  <a href='/website' ><p class='p'>Website</p></a>
-			  <a href='/ecommerce'><p class='p'>Ecommerce</p></a>
-			  <a href='/enterprise'><p class='p'>Enterprise</p></a>
-			  <a href='/webapp'><p class='p'>Webapp</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
 			  <a href='/pricing'><p class='p'>Pricing</p></a>
-			  <a href='mailto:giddyconnect@outlook.com'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</p></a>
-			  
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
 			</section>
+			<script src='/javascripts/anime.min.js'></script>
 			<script>
+			
 			  let menu = document.querySelector('.menubar')
 			  let othernav = document.querySelector('.othernav')
 			  
@@ -120,82 +107,106 @@
 			  x.addListener(open)
 			
 			  menu.onclick = function (e){
-				if(othernav.style.width == '0px'){
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
 					e.target.style.backgroundColor = 'white'
 					othernav.style.width = '100%'
 					
+					body.style.overflow = 'hidden'
+					
 				} else {
 					e.target.style.backgroundColor = 'transparent'
+					
 					othernav.style.width = '0px'
 					
+					body.style.overflowX = 'scroll'
 				}
 			  }
 			</script>
+			
 			<section class='firstcontainer'>
 			  <style>
-				section.firstcontainer {padding:10px;padding-top:50px;padding-bottom:50px;color:black;}
-			    b.start {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;display:inline-block;cursor:pointer;}
-			    b.start:hover {background-color: rgba(204,36,142);color:white;}
+				section.firstcontainer {display:flex;flex-direction:row;flex-wrap:wrap;padding:10px;padding-top:10px;padding-bottom:10px;padding-left:50px;padding-right:50px;color:black;}
+				
+				section.firstcontainer div.content {width:60%;}
+				section.firstcontainer div.img {width:40%;}
+				section.firstcontainer div.wework {position:relative;top:50px;width:60%;margin:auto;display:flex;flex-direction:row;flex-wrap:wrap;background-color:rgb(26,26,26);color:white;padding:10px;border-radius:15px;}
+				section.firstcontainer div.wework div {width: 50%;}
+				
+				section.firstcontainer div.content p.wedo {font-size: 30px;}
+				
+			    section.firstcontainer a {background-color: transparent;color:white;padding:10px;padding-left:15px;padding-right:15px;margin-bottom:5px;text-decoration:none;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    section.firstcontainer a.mail {background-color:rgb(170,0,0);}
+				section.firstcontainer a.whatsapp {border:2px solid rgb(0,255,0);color:rgb(0,255,0);}
+				section.firstcontainer a.callus {background-color: black;}
+				section.firstcontainer a.telegram {background-color: rgb(42,127,255);}
+				section.firstcontainer a.twitter {background-color: rgb(0,0,255);}
+				section.firstcontainer a.facebook {background-color: rgb(0,0,255);}
+				section.firstcontainer a.linkedin {background-color: rgb(42,127,255);}
+				
+				@media screen and (max-width: 900px) {
+					section.firstcontainer {flex-direction: column;padding-left:10px;padding-right:10px;}
+					section.firstcontainer div.wework {order: 3;}
+					section.firstcontainer div.wework {flex-direction: column;}
+					section.firstcontainer div.wework div {width: auto;}
+					section.firstcontainer div.content p.wedo {font-size: 25px;margin:4px;}
+					section.firstcontainer div.content {width:auto;order:2;}
+					section.firstcontainer div.img {width:100%;order:1;}
+				}
+				
 				@media screen and (max-width: 450px) {
+					section.firstcontainer div.content p.wedo {font-size: 20px;}
 					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
-					b.start {width:60%;display:block;margin:auto;text-align:center;}
 				}
 			  </style>
-			  <h1 style=''>WE BUILD: WEBSITE, ECOMMERCE STORE, AND ENTERPRISE SOFTWARE</h1>
-			  <p style=''>Get The Best Website For any kind of business within 1 week.No payment until job is completed.</p>
-			  <p ><a href='mailto:giddyconnect@outlook.com' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Send A Mail</b></a></p>
-			  <p> <a href='tel:+2347014728658' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Call us</b></a></p>
-			</section>
-		  </section>
-		  
-		  <section class='small howwework' style='margin-top:20px;'>
-				<style>
-					section.howwework p {border-left: 2px solid violet;margin:0;padding:10px 0px 10px 0px;display:flex;flex-direction:row;}
-					section.howwework p b.number {font-size: 25px;font-family:Poppins-eb;position:relative;right:20px;background-color:white;padding:5px 10px 5px 10px;border-radius:50%;border:1px solid violet;}
-					
-					@media screen and (max-width: 450px) {
-						section.howwework.small {width:60%;}
+			  <div class='content' >
+				<p class='wedo'>We build and manage websites.</p>
+				<p class='wedo'>We design and apply frontend plugins to HTML pages</p>
+				<p class='wedo'>We Teach Coding</p>
+				<h3 id='contact'>Contact Us</h3>
+				<p><button id='copy'>copy message</button><input readonly value='Hi, i need your service'/> </p>
+				<p style='text-align:left;'>
+					<a class='mail' href='mailto:giddyconnect@outlook.com'><b>Send A Mail</b></a>
+					<a class='whatsapp' href='https://wa.me/07014728658'><b>Whatsapp</b></a>
+					<a class='callus' href='tel:+2347014728658' ><b>Call us</b></a>
+					<a class='telegram' href='https://t.me/GBw34' ><b>Telegram</b></a>
+					<a class='twitter' href='https://twitter.com/G_B_W_03' ><b>Twitter</b></a>
+					<a class='facebook' href='https://web.facebook.com/GBW-100780432667709/' ><b>Facebook</b></a>
+					<a class='linkedin' href='https://www.linkedin.com/company/g-b-w/'  ><b>Linkedin</b></a>
+				</p>
+			  </div>
+			  <script>
+					copy.onclick = function(e){
+						e.target.nextElementSibling.select();
+						e.target.nextElementSibling.setSelectionRange(0, 99999);
+						navigator.clipboard.writeText(e.target.nextElementSibling.value)
 					}
-				</style>
-				<h2>HOW WE WORK</h2>
-				<p><span><b class='number'>1</b></span> <span>Contact us through our communication channels: emails, phone no, whatsapp, telegram, slack</span> </p>
-				<p><span><b class='number'>2</b></span> <span>We get The neccessary information needed to build/modify your website</span> </p>
-				<p><span><b class='number'>3</b></span> <span>We'll continually communicate until you're satisfied</span> </p>
-				<p><span><b class='number'>4</b></span> <span>Make your payment when satisfied with the job</span> </p>
-				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling any of your website, webapps and enterprise software</span> </p>
-		  </section>
-		  
-		  <section class='small'>
-			<style>
-				section.demos {display:flex;flex-direction:column;flex-wrap:nowrap;}
-				section.demos a {text-decoration:none;margin-right: 10px;margin-bottom:10px;}
-				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
-				section.demos h2:hover {background-color: rgb(132,51,119);}
-				@media screen and (max-width: 450px) {
-					section.demos {flex-direction: column;}
-				}
-			</style>
-			<h2 style='text-align:center;'>OUR DEMOS</h2>
-			<section class='demos'>
-				<a href='/demo/pro'><h2>Professional service</h2><img src='/images/sppdemo.png' style='width:100%;height:50vh;'></a>
-				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2><img src='/images/petaldemo.png' style='width:100%;height:50vh;'></a>
+			  </script>
+			  <div class='img'>
+				<img src='/images/clothing.jpg' style='width:100%;height:50vh;'>
+			  </div>
+			  <div class='wework'>
+				<h2 style='width:100%;text-align:center;'>How we work</h2>
+				<div>
+					<p>Contact us and share your project details</p>
+				</div>
+				<div>
+					<p>Once satisfied with the job, payment is made accordfing to our pricing</p>
+				</div>
+			  </div>
 			</section>
 		  </section>
 		  
-		  <section class='small' style='margin-top:20px;position:relative;'>
-		    <img src='/images/c.jpg' style='width:100%;height:50vh;display:block;' alt='picture of building'>
-		  </section>
-		  <section class='small' style='margin-top:20px;position:relative;'>
-		     <style>
+		  <style>
 			    nav {font-family: Poppins;}
-			    p {font-size: 18px;font-family:Roboto-light;}
-			    h1 {font-size:35px;font-family:Roboto;}
-			    h2 {font-size: 30px;font-family:Poppins-b;}
-			    h3 {font-size: 20px;font-family:Poppins;}
+			    p {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:35px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
 			  @media screen and (max-width: 800px) {
 				  p {font-size: 15px;}
-			      h1 {font-size:32px;font-family:Roboto-regular;}
-			      h2 {font-size: 27px;font-family:Poppins-medium;}
+			      h1 {font-size:32px;}
+			      h2 {font-size: 27px;}
 			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 600px) {
@@ -218,50 +229,69 @@
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
+			   footer p {font-family: Poppins;}
 			 </style>
-		     <h3 style='border-bottom: 1px solid silver;padding-bottom: 10px;color:rgb(132,51,119);font-size:20px;'><b>WE BRIDGE THE GAP BETWEEN HIRING FREELANCER AND IN-HOUSE DEVELOPER</b></h3>
-			 <p>No More Communication Problem.</p>
-			 <p>No More Time-Consuming Vetting</p>
-			 <p>No More Workers Compensation</p>
-			 <p>No More Short-Term Committment</p>
 			 
-			 <a href='/aboutus'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> About us </p></a>
+		  <section class='ourservices'>
+				<style>
+					section.ourservices {display:flex;flex-direction:row;flex-wrap:wrap;background-color:rgb(26,26,26);padding:10px;padding-left:50px;padding-right:50px;position:relative;margin-top:70px;}
+					section.ourservices h2 {color: white;text-align:center;width:100%;}
+					section.ourservices a {display:block;}
+					section.ourservices a{display:block;transition:all 0.5s ease;width:32%;color:black;padding:10px;margin:auto;margin-bottom:10px;background-color:white;border-radius:10px;}
+					
+					section.ourservices a:hover {color:white;background-color:black;}
+					@media screen and (max-width: 900px) {
+						section.ourservices {padding-left:10px;padding-right:10px;}
+						section.ourservices {flex-direction: column;}
+						section.ourservices a {width: calc(100% - 20px);}
+					}
+				</style>
+				 <!--<div class='door' style='position:absolute;top:0;left:0;width:100%;bottom:0;right:0;z-index:1;'>
+					<svg  class='door' width='100%' height='100%' style='margin-top:10px;'>
+						<rect x='0' y='0' width='100%' height='100%' fill='transparent'/>
+						<svg class='door1' x='0%' width='50%'  viewBox='0 0 900 900' preserveAspectRatio='none'>
+							<g transform='translate(0,0)' width=''>
+								<rect x='10px' y='10px' width='calc(100% - 20px)' height='calc(100% - 20px)' fill='rgb(255,142,69)' stroke='rgb(185,91,0)' stroke-width='10px' ry='30px' rx='30px' stroke-linejoin='round'/>
+							</g>
+							<g transform='translate(40,40)'>
+								<rect x='0px' y='0%' width='calc(100% - 80px)' height='calc(40% - 20px)' fill='rgb(255,142,69)' stroke='black' stroke-width='10px' />
+								<rect x='0px' y='45%' width='calc(100% - 80px)' height='calc(50% - 40px)' fill='rgb(255,142,69)' stroke='black' stroke-width='10px' />
+								<circle r='10' cx='calc(100% - 80px)' cy='40%'>
+							</g>
+						</svg>
+						<svg class='door2' x='50%' width='50%' viewBox='0 0 900 900' preserveAspectRatio='none'>
+							<g transform='translate(0,0)'>
+								<rect x='10px' y='10px' width='calc(100% - 20px)' height='calc(100% - 20px)' fill='rgb(255,142,69)' stroke='rgb(185,91,0)' stroke-width='10px' ry='30px' rx='30px' stroke-linejoin='round'/>
+							</g>
+							<g transform='translate(40,40)'>
+								<rect x='0px' y='0%' width='calc(100% - 80px)' height='calc(40% - 20px)' fill='rgb(255,142,69)' stroke='black' stroke-width='10px' />
+								<rect x='0px' y='45%' width='calc(100% - 80px)' height='calc(50% - 40px)' fill='rgb(255,142,69)' stroke='black' stroke-width='10px' />
+								<circle r='10' cx='0' cy='40%'>
+							</g>
+						</svg>
+					</svg>
+				 </div>-->
+				<h2>Our Services</h2>
+				<a href='/website'>
+					<div class='services'>
+						<h3>Website Development</h3>
+						<p>Website, Ecommerce, Enterprise Software, Webapp</p>
+					</div>
+				</a>
+				<a href='/frontend'>
+					<div class='services' >
+						<h3>Frontend Development</h3>
+						<p>Page redesign, PSD to HTML, landing pages, plugins</p>
+					</div>
+				</a>
+				<a href='/tutor'>
+					<div class='services' >
+						<h3>Tutoring</h3>
+						<p>Frontend and Backend development</p>
+					</div>
+				</a>
 		  </section>
-		  <section style='margin:auto;margin-top:20px;background-color:khaki;'>
-		     <img src='/images/fog.jpg' style='width:100%;height:50vh;display:block;' alt='fog'>
-			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;'>
-			   <h3 style='border-bottom: 1px solid black;padding-bottom: 10px;color: rgb(132,51,119);'><b>OUR SERVICES</b></h3>
-			   <div>
-			     <h1>Website Development</h1>
-			     <p>Having a website for your business/service opens it to a wide range of potential customers.</p>
-				 <p>Construction? Event Planning? Healthcare? News? Entertainment?</p>
-			     <p>Why waste time learning to use website builders like wix, wordpress when you can have an entire dedicated team at your control.</p>
-			     <a href='/website'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
-			   </div>
-			   <div>
-			     <h1>Ecommerce Development</h1>
-			     <p>We'll create every neccessary software to make your ecommerce operations a success.</p>
-				 <p>Whatever products you want to sell whether electronics, food, digital assets, skincare product,... we've got you covered.</p>
-			     <p>Don't spend hours trying to market your product on hyper-competitive Marketplaces(amazon,jumia) where you'll deal with biased algorithms, unhealthy competition, lack of control and excessive charges.</p>
-			     <a href='/ecommerce'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
-			   </div>
-			   <div>
-			     <h1>Enterprise Software Development</h1>
-			     <p>A single software solution can't solve the different, ever-complex problems of various businesses. </p>
-				 <p>why spend time trying to learn a software when you can have one built for you.</p>
-				 <p>Enterprise Softwares from Salesforce CRM or hubspot doesn't give you the customization and experience we give</p>
-			     <a href='/enterprise'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
-			   </div>
-			   <div>
-			     <h1>Webapp Development</h1>
-			     <p>Having a webapp can change your business for good. </p>
-				 <p>Creating An Industry-Specific webapp like Ride-hailing-UBER, Home Rentals-Airbnb, Logistics-FedEx,...  is already in our DNA. you have nothing to worry about.</p>
-			     <p>WebApps like uber, facebook are great but you don't have control over your content.</p>
-			     <a href='/webapp'><p class='aboutus' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:7px;'> LEARN MORE </p></a>
-			   </div>
-			 </div>
-			 
-		  </section>
+		  
 		  <style>
 		    img.img {width:300px;height:190px;}
 			@media screen and (max-width: 400px) {
@@ -271,92 +301,108 @@
 				img.img {width:100px;height:90px;}
 			}
 		  </style>
-		  <section style='margin:auto;margin-top:20px;background-color:rgb(132,51,119);'>
-		    
-		     <div class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
-			   <h3 style='color: white;'>OUR CORE VALUES</h3>
-			   <div>
-			     <p><img class='img' src='/images/start/convenience.svg' style='color:green;'></p>
-			     <h2 style='color:white;'>CONVENIENCE</h2>
-				 <p style='color:white;'>Run Your website without breaking a sweat. Focus On Improving Product We'll do the rest</p>
-			   </div>
-			   <div>
-			     <p><img class='img' src='/images/start/personalized.svg'  style='color:green;'></p>
-			     <h2 style='color:white;'>PERSONALIZATION</h2>
-				 <p style='color:white;'> Enrich Your Website With Features(Themes, AI, Computer Graphics) According To Your Taste. Create Custom Solution According To Your Business Needs</p>
-			   </div>
-			   <div>
-			     <p><img class='img' src='/images/start/speed.svg'  style='color:green;'></p>
-			     <h2 style='color:white;'>SPEED AND RELIABIILITY</h2>
-				 <p style='color:white;'>Get Your Website And Software Within Hours, Days Or At Most 2 Weeks.</p>
-			   </div>
-			   <div>
-			     <p><img class='img' src='/images/start/centralize.svg' style='color:green;'></p>
-			     <h2 style='color:white;'>CENTRALIZATION</h2>
-				 <p style='color:white;'>Integrate All Necessary Softwares From A SIngle Source Of Truth. Access Your Website/Functionality From Anywhere In The World.</p>
-			   </div>
-			   <div>
-			     <p><img class='img'  src='/images/start/scalable.svg' style='color:green;'></p>
-			     <h2 style='color:white;'>SCALABLE</h2>
-				 <p style='color:white;'>Scale Without Incurring Extra Expenses On Workers, Adminstration, Cybersecurity, Monitoring, Hardware And Infrastructure</p>
-			   </div>
-			   <div>
-			     <p><img class='img' src='/images/start/chart.svg' style='color:green;'></p>
-			     <h2 style='color:white;'>ANALYTICS</h2>
-				 <p style='color:white;'>Improve Your Decision Making With Custom Website Analytics</p>
-			   </div>
-			   <div>
-			     <p><img class='img' src='/images/start/support.svg' style='color:green;'></p>
-			     <h2 style='color:white;'>CUSTOMER SUPPORT</h2>
-				 <p style='color:white;'>Send Your Question,Request And Jobs Across Multiple Communication Channels. Emails? Live Chat? Calls? Informal Channels(Telegram,Whatsapp, DMs)?</p>
-			   </div>
-			   <style>
-			     .suji p.aboutus0 {color:white;border: 1px solid white;transition:all 0.5s ease;}
-				 .suji p.aboutus0:hover {background-color:white;color: rgb(21,4,4)}
-			   </style>
-			    <a href='/aboutus'><p class='aboutus0' style='display:inline-block;padding:10px;padding-left:15px;padding-right:15px;border-radius:9px;'> LEARN MORE </p></a>
-			 </div>
-		  </section>
-		  <section class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
-		    <img src='/images/f.jpg' style='width:100%;height:50vh;display:block;border-radius:30px;'>
-			<h2>MIGRATION</h2>
-			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just contact us.</p>
-			<p><a href='mailto:akinsanmi20700@gmail.com' style='color:white;text-decoration:none;'><b class='start'>contact</b></a></p>
+		  
+		  <section class='paywhensa'>
+			<style>
+				section.paywhensa {background-color:rgb(26,26,26);}
+				section.paywhensa section{color:white;width:60%;margin:auto;margin-top:40px;}
+				section.paywhensa div.content {display:flex;flex-direction:row;}
+				section.paywhensa div.content img {width:50%;height:50vh;position:relative;bottom:20px;}
+				section.paywhensa h1 {width:45%;margin:auto;}
+				
+				@media screen and (max-width: 900px) {
+					section.paywhensa section {width: auto;padding-left:10px;padding-right:10px;}
+					section.paywhensa div.content {flex-direction: column;}
+					section.paywhensa div.content img {width:100%;}
+					section.paywhensa h1 {width: auto;text-align:left;}
+				}
+			</style>
+			<section>
+				<div class='content'>
+					<img src='/images/b.jpg' >
+					<h1>Pay Only When Satisfied With The Job</h1>
+				</div>
+			</section>
 		  </section>
 		  
-		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+		  <section class='stack'>
+			<style>
+				section.stack {background-color: rgb(255,204,170);border: 2px solid black;margin-top:20px;padding-left:50px;padding-right:50px;text-align:center;}
+				
+			</style>
+			<h2>Our Tech Stack</h2>
+			<p>HTML,  CSS,  JAVASCRIPT,  NODEJS,  EXPRESSJS, REACT, ANGULAR, VUE,  GIT,  GITHUB, HEROKU, AWS, MONGODB, GOOGLE SEARCH CONSOLE,...</p>
+		  </section>
+		  
+		  <section class='ourporfolio'>
+			<style>
+				section.ourporfolio {display:flex;flex-direction:row;flex-wrap:wrap;border:2px solid black;margin-top:20px;margin-bottom:20px;padding-left:50px;padding-right:50px;}
+				section.ourporfolio h2 {width: 100%;}
+				section.ourporfolio p {text-align: center;}
+				section.ourporfolio div{width: 47%;margin:auto;}
+				section.ourporfolio img {height: 50vh;width:100%;}
+				
+				@media screen and (max-width: 900px) {
+					section.ourporfolio {padding-left: 10px;padding-right:10px;}
+					section.ourporfolio div {width: 100%;}
+				}
+			</style>
+			<h2>Our Portfolio</h2>
+			<div>
+				<img src='/images/portfolio/demo-pro.svg'>
+				<p>Website - Real estate Agency</p>
+			</div>
+			<div>
+				<img src='/images/portfolio/demo-ecommerce.svg'>
+				<p>Ecommerce</p>
+			</div>
+			<div>
+				<img src='/images/portfolio/CRM.svg'>
+				<p>Enterprise Software - CRM</p>
+			</div>
+			<div>
+				<img src='/images/portfolio/analytics.svg'>
+				<p>Webapp - Web Analytics</p>
+			</div>
+		  </section>
+		  
+		  <section class='affiliate' style='color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+			<style>
+				section.affiliate {padding:50px;}
+				@media screen and (max-width: 900px) {
+					section.affiliate {padding:10px;}
+				}
+			</style>
 			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
 			  <p>make money while referring clients to our channel.</p>
-			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
+			  <p><a href='#contact'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Contact Us To Become A Partner</b></a></p>
 		  </section>
 		  
 		  
 		</article>
 		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
 		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
-		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > GBW</h1>
-			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
 		  </div>
 		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
 		    <div class='foot foot0'>
 		      <h3>USEFUL LINKS</h3>
-			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
-			  <!--<p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
-			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>-->
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
 		    </div>
 		    <div class='foot' style=''>
 		      <h3>SERVICES </h3>
 			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
-			  <p><a href='/ecommerce' style='color:white;text-decoration:none;'>Ecommerce</a></p>
-			  <p><a href='/enterprise' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
-			  <p><a href='/webapp' style='color:white;text-decoration:none;'>Webapp</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
 		    </div>
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
 			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
 			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
-		</div>
+		  </div>
 		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
 			  div.foot {width:45%;}
@@ -370,7 +416,39 @@
 	  </div>
 
 	</div>
-	
+	<script>
+		function animate( t1name, t2name, t3name, t4name){
+			let t1,t2,t3,t4
+			t1 = anime({targets: t1name,duration: 2000,x: '-50%',direction: 'normal',easing: 'easeInQuad'}); //1
+			t2 = anime({targets: t2name,duration: 2000,x: '100%',direction: 'normal',easing: 'easeInQuad'}); //2
+			t3 = anime({targets: t3name,duration: 100,delay: 2000,width: '0%',direction: 'normal',easing: 'easeInQuad'}); //3
+			t4 = anime({targets: t4name,delay: 3000,duration:50,width: '0%',direction: 'normal',easing: 'easeInQuad'}); //4
+		}
+		function noanimate(t1name, t2name, t3name, t4name){
+			let t1,t2,t3,t4
+			t1 = anime({targets: t1name,duration: 100,delay: 100,x: '0%',direction: 'normal',easing: 'easeInQuad'});//3
+			t2 = anime({targets: t2name,duration: 100,delay: 100,x: '50%',direction: 'normal',easing: 'easeInQuad'});//2
+			t3 = anime({targets: t3name,duration: 100,width: '100%',direction: 'normal',easing: 'easeInQuad'}); //1
+			t4 = anime({targets: t4name,delay: 200,duration:50,width: '100%',direction: 'normal',easing: 'easeInQuad'}); //4
+		}
+		
+		/*let ourservices = document.querySelector('.ourservices');
+		function callbackserv(entries, observer){
+			let t1,t2,t3,t4
+			entries.forEach( (entry)=>{
+				if(entry.isIntersecting){
+					console.log('it is intersecting')
+					animate('.ourservices svg.door svg.door1','.ourservices svg.door svg.door2','.ourservices svg.door','.ourservices div.door')
+				} else {
+					//noanimate('.ourservices svg.door svg.door1','.ourservices svg.door svg.door2','.ourservices svg.door','.ourservices div.door')
+				}
+			})
+		}
+		let ioserv = new IntersectionObserver(callbackserv)
+		ioserv.observe(ourservices)
+		*/
+		
+	</script>
 	
   </body>
 </html>

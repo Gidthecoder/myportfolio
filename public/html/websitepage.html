@@ -2,17 +2,17 @@
   <head>
     <meta charset='utf-8'>
 	<meta name='description' content="Let's help you create a website that'll convert. Payment is made after completion.">
-	<title>GBW's Website page</title>
+	<title>Website Development Page - GBW</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:title" content="GBW">
-	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/">
+	<meta property="og:url" content="https://giddy-builds-websites.herokuapp.com/website">
 	<meta property="og:description" content="Let's help you create a website that'll convert. Payment is made after completion.">
-	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta property="og:image" content="https://giddy-builds-websites.herokuapp.com/images/">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="GBW">
 	<meta name="twitter:site" content="@GBW_0_3">
 	<meta name="twitter:description" content="Let's help you create a website that'll convert. Payment is made after completion.">
-	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/mylogo.svg">
+	<meta name="twitter:image" content="https://giddy-builds-websites.herokuapp.com/images/">
 	<link rel="apple-touch-icon-precomposed" href="/images/mylogo.svg">
 	<link rel="icon" type="image/png" href="/images/mylogo.svg">
 	<style>
@@ -20,14 +20,7 @@
 			font-family: 'Poppins';
 			src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Poppins-medium';
-			src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Poppins-b';
-			src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
-		}
+		
 		@font-face {
 			font-family: 'Poppins-eb';
 			src: url('/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
@@ -36,78 +29,71 @@
 			font-family: 'Roboto';
 			src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 		}
-		@font-face {
-			font-family: 'Roboto-light';
-			src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Roboto-regular';
-			src: url('/fonts/Roboto/Roboto-regular.ttf') format('truetype');
-		}
+		
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body style='padding:0;margin:0;'>
+  <body id='body' style='padding:0;margin:0;'>
     <div style=''>
 	  <div style='background-color: white;'>
 		<article style=''>
 		  <header>
 			  <span class='lg'>
-				<a href='/' style='display:flex;flex-direction:row;'>
+				<a href='/' style='display:flex;flex-direction:row;width:100px;'>
 					<img src='/images/mylogo.svg' class='headerimg' >
 					<b class='logo' style='color:rgb(132,51,119);font-family:Poppins-eb;'>GBW</b>
 				</a>
 			  </span>
-		      <nav class='navi' style='flex:1;text-align:right;padding-right:50px;'>
+		      <nav class='navi'>
 		        <style>
-					header {background-color:rgb(228,255,153);display:flex;flex-direction:row;color:black;position:sticky;top:0;z-index:2;}
+					header {background-color:white;border-bottom:1px solid silver;display:flex;flex-direction:row;padding-left:50px;padding-right:50px;color:black;position:sticky;top:0;z-index:2;}
+					nav.navi {flex:1;text-align:right;font-family:Poppins;}
 			       nav.navi b{display:inline-block;padding: 10px;font-size:22px;transition: all 0.5s ease;cursor:pointer;}
 				   nav.navi b:hover {color: rgb(132,51,119);}
 			       b.logo, b.menubar {padding: 10px;font-size:22px;}
 				   b.menubar {display:none;font-family:Poppins-eb;}
 				   .small {width:60%;margin:auto;}
 				  img.headerimg {width: 50px;height: 50px;}
+				  
 				  @media screen and (max-width: 900px) {
 				      header span.lg {flex:1;}
 				      b.menubar {display: inline-block;text-align:right;}
 					  nav.navi {display:none;}
 					  .small {width:80%;margin:auto;}
-					 header {padding: 5px;position:relative;}
+					 header {padding-top:10px;padding-left:10px;padding-right:10px;position:relative;}
 					 img.headerimg {width: 30px;height: 30px;}
 					  b.logo {font-size: 17px;}
 				  }
 				  @media screen and (max-width: 450px) {
-				     .suji .small {width:90%;margin:auto;}
+				      .small {width:90%;margin:auto;}
 				  }
 			    </style>
 		        
 			    <b><a href='/website' style='color:black;text-decoration:none;'>Website</a></b>
-			    <b><a href='/ecommerce' style='color:black;text-decoration:none;'>Ecommerce</a></b>
-			    <b><a href='/enterprise' style='color:black;text-decoration:none;'>Enterprise </a></b>
-				<b><a href='/webapp' style='color:black;text-decoration:none;'>Webapp </a></b>
+			    <b><a href='/tutor' style='color:black;text-decoration:none;'>Tutor</a></b>
+			    <b><a href='/frontend' style='color:black;text-decoration:none;'>Frontend </a></b>
 				<b><a href='/pricing' style='color:black;text-decoration:none;'>Pricing</a></b>
-				<a href='mailto:giddyconnect@outlook.com'><b style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</b></a>
+				<b><a href='/portfolio' style='color:black;text-decoration:none;'>Portfolio</a></b>
 		      </nav>
 		      <b class='menubar' style='margin:0;margin-right:5px;padding:0;cursor:pointer;'><img class=' headerimg' src='/images/menubar.svg'  style='color:green;'></p></b>
 		  </header>
-		  <section style='background-color: khaki;background-size:200px 200px;'>
+		  <section>
 		    
-			<section class='othernav' style='width: 0;'>
+			<section class='othernav' style='width:0px;'>
 			  <style>
-			    .othernav {transition: all 0.5s ease;background-color: white;overflow:hidden;position:absolute;}
-			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;font-family:Roboto-regular;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
+			    .othernav {height:100%;background-color: white;overflow:hidden;position:absolute;font-family:Poppins;transition:all 0.5s ease;z-index:2;}
+			    .othernav p.p {margin:5px;padding:10px 5px 10px 5px;cursor:pointer;font-size: 22px;border-bottom:1px solid silver;}
 				.othernav .p:hover {background-color: rgb(245,245,245);padding-left:50px;}
 				.othernav a {color:black;text-decoration:none;}
 			  </style>
 			  <a href='/website' ><p class='p'>Website</p></a>
-			  <a href='/ecommerce'><p class='p'>Ecommerce</p></a>
-			  <a href='/enterprise'><p class='p'>Enterprise</p></a>
-			  <a href='/webapp'><p class='p'>Webapp</p></a>
+			  <a href='/tutor'><p class='p'>Tutor</p></a>
+			  <a href='/frontend'><p class='p'>Frontend</p></a>
 			  <a href='/pricing'><p class='p'>Pricing</p></a>
-			  <a href='mailto:giddyconnect@outlook.com'><p class='p' style='border-bottom: 2px solid rgb(132,51,119);color: rgb(132,51,119);'>Contact</p></a>
-			  
+			  <a href='/portfolio'><p class='p'>Portfolio</p></a>
 			</section>
 			<script>
+			
 			  let menu = document.querySelector('.menubar')
 			  let othernav = document.querySelector('.othernav')
 			  
@@ -121,92 +107,158 @@
 			  x.addListener(open)
 			
 			  menu.onclick = function (e){
-				if(othernav.style.width == '0px'){
-					e.target.style.backgroundColor = 'white'
+				let img = document.querySelector('img.anim1')
+				if(othernav.style.width == '0px' || othernav.style.width == '0%'){
+					e.target.style.backgroundColor = 'silver'
 					othernav.style.width = '100%'
+					
+					body.style.overflow = 'hidden'
 					
 				} else {
 					e.target.style.backgroundColor = 'transparent'
+					
 					othernav.style.width = '0px'
 					
+					body.style.overflowY = 'scroll'
 				}
 			  }
 			</script>
-			<section class='firstcontainer'>
+			<section class='firstcontainer' id='contact'>
 			  <style>
-				section.firstcontainer {padding:10px;padding-top:30px;padding-bottom:30px;color:black;background-color: rgb(228,255,153);}
-			    b.start {background-color: rgb(132,51,119);color:white;padding:10px;padding-left:15px;padding-right:15px;display:inline-block;cursor:pointer;}
-			    b.start:hover {background-color: rgba(204,36,142);color:white;}
+				section.firstcontainer {padding:10px;padding-top:10px;padding-bottom:10px;padding-left:50px;padding-right:50px;color:black;}
+				section.firstcontainer h1 {color: rgb(132,51,119);}
+				
+			    section.firstcontainer a {background-color: transparent;color:white;padding:10px;padding-left:15px;padding-right:15px;margin-bottom:5px;text-decoration:none;border:1px solid black;transition: all 0.5s ease;display:inline-block;cursor:pointer;}
+			    section.firstcontainer a.mail {background-color:rgb(170,0,0);}
+				section.firstcontainer a.whatsapp {border:2px solid rgb(0,255,0);color:rgb(0,255,0);}
+				section.firstcontainer a.callus {background-color: black;}
+				section.firstcontainer a.telegram {background-color: rgb(42,127,255);}
+				section.firstcontainer a.twitter {background-color: rgb(0,0,255);}
+				section.firstcontainer a.facebook {background-color: rgb(0,0,255);}
+				section.firstcontainer a.linkedin {background-color: rgb(42,127,255);}
+				
+				@media screen and (max-width: 900px) {
+					section.firstcontainer {flex-direction: column;padding-left:10px;padding-right:10px;}
+					
+				}
+				
 				@media screen and (max-width: 450px) {
 					section.firstcontainer {padding-top: 10px;padding-bottom:10px;}
 					b.start {width:60%;display:block;margin:auto;text-align:center;}
 				}
 			  </style>
-			  <h1 style='margin:2px;'>Let's Create A Website For Your Professional Services.</h1>
-			  <p>No upfront payment required</p>
-			  <p ><a href='mailto:giddyconnect@outlook.com' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Send A Mail</b></a></p>
-			  <p> <a href='tel:+23407014728658' style='text-decoration:none;color:white;'><b class='start' style='border:1px solid black;transition: all 0.5s ease;'>Call us</b></a></p>
+			  <div class='' >
+				<h1>We build and manage websites.</h1>
+				<p>Run your business without looking for the best talent. Because we are the best talent. No Upfront Payment Required.</p>
+				<h3 id='contact'>Contact Us</h3>
+				<p><button id='copy'>copy message</button><input readonly value='Hi, i need your website development service'/> </p>
+				<p style='text-align:left;'>
+					<a class='mail' href='mailto:giddyconnect@outlook.com'><b>Send A Mail</b></a>
+					<a class='whatsapp' href='https://wa.me/07014728658'><b>Whatsapp</b></a>
+					<a class='callus' href='tel:+2347014728658' ><b>Call us</b></a>
+					<a class='telegram' href='https://t.me/GBw34' ><b>Telegram</b></a>
+					<a class='twitter' href='https://twitter.com/G_B_W_03' ><b>Twitter</b></a>
+					<a class='facebook' href='https://web.facebook.com/GBW-100780432667709/' ><b>Facebook</b></a>
+					<a class='linkedin' href='https://www.linkedin.com/company/g-b-w/'  ><b>Linkedin</b></a>
+				</p>
+			  </div>
+			  
+			  <script>
+					copy.onclick = function(e){
+						e.target.nextElementSibling.select();
+						e.target.nextElementSibling.setSelectionRange(0, 99999);
+						navigator.clipboard.writeText(e.target.nextElementSibling.value)
+					}
+			  </script>
 			</section>
 		  </section>
 		  
-		  <section class='small howwework' style='margin-top:20px;'>
+		  <section class='small portfolio' style='margin-top:20px;position:relative;'>
 				<style>
-					section.howwework p {border-left: 2px solid violet;margin:0;padding:10px 0px 10px 0px;display:flex;flex-direction:row;}
-					section.howwework p b.number {font-size: 25px;font-family:Poppins-eb;position:relative;right:20px;background-color:white;padding:5px 10px 5px 10px;border-radius:50%;border:1px solid violet;}
+					section.small.portfolio {display:flex;flex-direction:row;flex-wrap:wrap;}
+					section.small.portfolio h2.check {width: 100%;text-align:center;}
+					section.small.portfolio p.priport a {display:inline-block;margin-left:10px;margin-right:10px;color: rgb(132,51,119);}
+					section.small.portfolio p.priport {text-align:center;}
+					section.small.portfolio div {width: calc(50% - 40px);padding:10px;border-radius:40px;border: 3px solid black;background-color: rgba(238,215,244);}
 					
-					@media screen and (max-width: 450px) {
-						section.howwework.small {width:60%;}
+					@media screen and (max-width: 900px) {
+						section.small.portfolio {flex-direction: column;}
+						section.small.portfolio div.a {width: calc(100% - 40px);margin-left: auto;}
+						section.small.portfolio div.b {width: calc(90% - 40px);margin-left: auto;}
+						section.small.portfolio div.c {width: calc(80% - 40px);margin-left: auto;}
+						section.small.portfolio div.d {width: calc(70% - 40px);margin-left: auto;}
 					}
+					
 				</style>
-				<h2>HOW WE WORK</h2>
-				<p><span><b class='number'>1</b></span> <span>Contact us through our communication channels: emails, phone no, whatsapp, telegram, slack</span> </p>
-				<p><span><b class='number'>2</b></span> <span>We get The neccessary information needed to build/modify your website</span> </p>
-				<p><span><b class='number'>3</b></span> <span>We'll continually communicate until you're satisfied</span> </p>
-				<p><span><b class='number'>4</b></span> <span>Make your payment when satisfied with the job</span> </p>
-				<p><span><b class='number'>5</b></span> <span>If interested, we can set up custom pricing plans for managing, modifying and scaling any of your website, webapps and enterprise software</span> </p>
+				<h2 class='check'>Check out the websites we create</h2>
+				<div class='a'>
+					<h2>Websites</h2>
+					<p>To offer and showcase your services</p>
+					<p class='priport'> <a href='#pricing'>view pricing</a> | <a href='/portfolio'>portfolio</a> </p>
+				</div>
+				<div class='b'>
+					<h2>Ecommerce</h2>
+					<p>To sell your physical and digital product</p>
+					<p class='priport'> <a href='#pricing'>view pricing</a> | <a href='/portfolio'>portfolio</a> </p>
+				</div>
+				<div class='c'>
+					<h2>Enterprise Software</h2>
+					<p>To Increase productivity, reduce cost and run business operations.</p>
+					<p class='priport'> <a href='#pricing' >view pricing</a> | <a href='/portfolio' >portfolio</a> </p>
+				</div>
+				<div class='d'>
+					<h2>Webapp</h2>
+					<p>To offer your platform to users for a fee.</p>
+					<p class='priport'> <a href='#pricing'>view pricing</a> | <a href='/portfolio'>portfolio</a> </p>
+				</div>
 		  </section>
 		  
-		  <section class='small' style='margin-bottom:50px;'>
+		  <section class='small hww'>
 			<style>
-				section.demos {display:flex;flex-direction:row;flex-wrap:nowrap;}
-				section.demos a {text-decoration:none;margin-right: 10px;}
-				section.demos h2 {color: white;background-color: violet;text-align:center;transition: all 0.5s ease;margin:3px;padding:5px;border-radius: 20px;}
-				section.demos h2:hover {background-color: rgb(132,51,119);}
-				@media screen and (max-width: 450px) {
-					section.demos {flex-direction: column;}
+				section.hww {text-align:center;}
+				section.hww div {width: 50%;margin:auto;text-align:left;}
+				section.hww p::before {content: 'h';padding-right:10px;margin-right:10px;border-radius:50%;background-color:black;}
+				
+				@media screen and (max-width: 900px) {
+					section.hww div{width: auto;}
+					section.hww {text-align:left;padding-left:10px;padding-right:10px;}
 				}
 			</style>
-			<h2 style='text-align:center;margin:2px;'>OUR DEMOS</h2>
-			<section class='demos'>
-				<a href='/demo/pro'><h2>Professional service</h2></a>
-				<a href='/demo/ecommerce'><h2>Ecommerce Marketplace</h2></a>
-			</section>
-		  </section>
-		  
-		  <section class='small' style='margin-top:20px;position:relative;color:black;border: 1px solid silver;padding:10px;padding-bottom:20px;'>
-		    <h1>No need to worry About Monitoring Or Security.</h1>
-			<p>focus on improving your services while we handle the website</p>
-			<div style='display:flex;flex-direction:row;'>
-				<img src='/images/land.jpg' style='width:50%;height:30vh;border-radius: 20px 0px 0px 20px;'>
-				<img src='/images/green-2.jpg' style='width:50%;height:30vh;border-radius: 0px 20px 20px 0px;'>
+			<h2>How we work</h2>
+			<div>
+				<p>Contact us through any of our channels</p>
+				<p>We talk about the project</p>
+				<p>You test project when job is completed </p>
+				<p>Payment is received when you're satisfied.</p>
 			</div>
 		  </section>
 		  
-		  <section style='padding-left:10px;text-align:center;'>
-			<h1>HAVING A WEBSITE CAN CHANGE HOW YOU INTERACT WITH POTENTIAL CLIENTS</h1>
+		  <section class='pricing' id='pricing'>
+			<style>
+				section.pricing {padding-left:50px;padding-right:50px;}
+				section.pricing a {font-size: 35px;}
+				@media screen and (max-width: 900px) {
+					section.pricing {padding-left:10px;padding-right:10px;}
+				}
+				@media screen and (max-width: 400px) {
+					section.pricing a {font-size: 25px;}
+				}
+			</style>
+			<h2>Pricing</h2>
+			<a href='/pricing#website'>view pricing &rarr;</a>
 		  </section>
 		  
 		  <section class='small' style='margin-top:20px;position:relative;'>
 		     <style>
-			   nav {font-family: Poppins;}
-			    p {font-size: 18px;font-family:Roboto-light;}
-			    h1 {font-size:35px;font-family:Roboto;}
-			    h2 {font-size: 30px;font-family:Poppins-b;}
-			    h3 {font-size: 20px;font-family:Poppins;}
+			    nav {font-family: Poppins;}
+			    p,table,tr,th,td {font-size: 18px;font-family:sans-serif;font-style:italic;}
+			    h1 {font-size:35px;margin:4px;font-family:poppins-eb;}
+			    h2 {font-size: 30px;margin:4px;font-family:Poppins-eb;}
+			    h3 {font-size: 20px;margin:4px;font-family:Poppins-eb;}
 			  @media screen and (max-width: 800px) {
 				  p {font-size: 15px;}
-			      h1 {font-size:32px;font-family:Roboto-regular;}
-			      h2 {font-size: 27px;font-family:Poppins-medium;}
+			      h1 {font-size:32px;}
+			      h2 {font-size: 27px;}
 			      h3 {font-size: 17px;}
 			  }
 			  @media screen and (max-width: 600px) {
@@ -217,6 +269,7 @@
 			  }
 			  @media screen and (max-width: 400px) {
 				  p {font-size: 15px;}
+				  table,tr,th,td {font-size: 12px;}
 			      h1 {font-size:26px;}
 			      h2 {font-size: 21px;}
 			      h3 {font-size: 17px;}
@@ -229,82 +282,64 @@
 			  }
 			   p.aboutus {border:1px solid rgb(132,51,119);color:rgb(132,51,119);transition:all 0.5s ease;font-weight:500;cursor:pointer;}
 			   p.aboutus:hover {background-color:rgb(132,51,119);color:white; }
+			   footer p {font-family: Poppins;}
 			 </style>
 		  </section>
-		  <section style='margin:auto;margin-top:20px;background-color:rgb(228,255,153);'>
-		     <img src='/images/paved.jpg' style='width:100%;height:50vh;display:block;'>
-			 <div class='small' style='margin-top:0px;position:relative;padding-top:20px;padding-bottom:50px;'>
-			   <h3 style='border-bottom: 1px solid black;padding-bottom: 10px;color: rgb(132,51,119);'><b>BENEFITS OF HAVING A WEBSITE WITH US</b></h3>
-			   <div>
-			     <h1>24/7 support</h1>
-			     <p>Offers Your Services online with a dedicated team at your service.</p>
-				 <p>No matter the problem we have a solution for you</p>
-			   </div>
-			   <div>
-			     <h1>Affordable and scalable</h1>
-			     <p>Unlike physical building with limited area, we can make your website accomodate millions of visitors without having a server overload.</p>
-				 <p>Add any features to your website without doing any work.</p>
-			   </div>
-			   <div>
-			     <h1>Conversion-driven Approach</h1>
-			     <p>From UI to content to animation, our goal is ensuring your websites converts.</p>
-				 <p>Whether you need visitors to click on ads, sign up for paid newsletter, Hire you for your services, read content,...</p>
-			   </div>
-			   <div>
-			     <h1>Customization</h1>
-			     <p>Easily add features without wasting time scouring for the right talent.</p>
-				 <p>If you need functionalities that'll analyze web data, communicate in realtime, send emails,... then you've come to right place.</p>
-			   </div>
-			 </div>
-			 
-		  </section>
-		  <style>
-		    img.img {width:300px;height:190px;}
-			@media screen and (max-width: 400px) {
-			  img.img {width:200px;height:190px;}
-			}
-		  </style>
 		  
-		  <section class='small' style='margin-top:20px;position:relative;padding-top:50px;padding-bottom:50px;'>
-		    <img src='/images/f.jpg' style='width:100%;height:50vh;display:block;border-radius:30px;'>
-			<h2>MIGRATION</h2>
-			<p>whether you use Wordpress, Shopify, Magneto, Php or Ruby Or nodejs projects We Have Various Teams With Entire Goal Is Helping Your Migration Process. Just contact us.</p>
-			<p><a href='mailto:akinsanmi20700@gmail.com' style='color:white;text-decoration:none;'><b class='start'>contact</b></a></p>
+		  <section class='goals'>
+			<style>
+				section.goals div {padding:10px;padding-left:50px;padding-right:50px;background-color: rgb(0,128,0);color:white;}
+				section.goals img {width:100%;height:40vh;}
+				
+				@media screen and (max-width: 900px) {
+					section.goals div {padding-left:10px;padding-right:10px;}
+				}
+			</style>
+			<img src='/images/fog.jpg'>
+			<div>
+				<p>conversion goals</p>
+				<h1>Whatever you need</h1>
+				<p>Achieve your goals at a faster rate than others. Whether you want to increase monthly sales by 50% or reduce expenses by 70%.  </p>
+			</div>
 		  </section>
 		  
-		  <section style='padding:10px;padding-top:50px;padding-bottom:50px;color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+		  <section class='affiliate' style='color:white;background-image: url(/images/h.jpg);background-size:200px 200px;'>
+			<style>
+				section.affiliate {padding:50px;margin-top:20px;}
+				@media screen and (max-width: 900px) {
+					section.affiliate {padding:10px;}
+				}
+			</style>
 			  <h1 style='margin:0;'>AFFILIATE PROGRAM</h1>
 			  <p>make money while referring clients to our channel.</p>
-			  <p><a href='/affiliate'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Become A Partner</b></a></p>
+			  <p><a href='#contact'  style='color:white;text-decoration:none;'><b style='color:white;background-color:black;padding:5px;cursor:pointer;'>Contact Us To Become A Partner</b></a></p>
 		  </section>
 		  
 		  
 		</article>
 		<footer style='background-color:rgb(23,7,20);color:white;padding-left:10px;padding-right:10px;'>
 		  <div style='border-bottom: 2px solid white;padding-bottom:5px;text-align:center;'>
-		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='60' height='50' > GBW</h1>
-			<p>CUSTUMER SATISFACTION IS OUR GOAL</p>
+		    <h1 style='margin:0;color:rgb(132,51,119);'><img src='/images/mylogo.svg' width='50' height='40' > GBW</h1>
 		  </div>
 		  <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
 		    <div class='foot foot0'>
 		      <h3>USEFUL LINKS</h3>
-			  <p><a href='/aboutus' style='color:white;text-decoration:none;'>About</a></p>
-			  <!--<p><a href='/terms' style='color:white;text-decoration:none;'>Terms And Condition</a></p>
-			  <p><a href='/privacypolicy' style='color:white;text-decoration:none;'>Privacy Policy</a></p>-->
+			  <p><a href='/portfolio' style='color:white;text-decoration:none;'>portfolio</a></p>
+			  <p><a href='/pricing' style='color:white;text-decoration:none;'>pricing</a></p>
+			  
 		    </div>
 		    <div class='foot' style=''>
 		      <h3>SERVICES </h3>
 			  <p><a href='/website' style='color:white;text-decoration:none;'>Websites</a></p>
-			  <p><a href='/ecommerce' style='color:white;text-decoration:none;'>Ecommerce</a></p>
-			  <p><a href='/enterprise' style='color:white;text-decoration:none;'>Enterprise Software</a></p>
-			  <p><a href='/webapp' style='color:white;text-decoration:none;'>Webapp</a></p>
+			  <p><a href='/tutor' style='color:white;text-decoration:none;'>Tutor</a></p>
+			  <p><a href='/frontend' style='color:white;text-decoration:none;'>Frontend</a></p>
 		    </div>
 		  </div>
 		  <div style='border-bottom: 1px solid white;margin-bottom:10px;text-align:center;'>
 		      <h3>Contact</h3>
 			  <p><a href='mailto:giddyconnect@outlook.com' style='color:white;'>giddyconnect@outlook.com</a> |  <a href='tel:+2347014728658' style='color:white;'>07014728658</a> </p>
 			  <p> <a href='https://web.facebook.com/GBW-100780432667709/' style='color:white;'>facebook</a>  |  <a href='https://twitter.com/G_B_W_03' style='color:white;'>twitter</a>  |   <a href='https://www.linkedin.com/company/g-b-w/' style='color:white;'>linkedin</a> |  <a href='https://wa.me/07014728658' style='color:white;'>whatsapp</a> | <a href='https://t.me/GBw34' style='color:white;'>telegram</a>  </p>
-		</div>
+		  </div>
 		  <p style='text-align:center;margin:0;'>&copy;2022 GBW. All Rights Reserved</p>
 		  <style>
 			  div.foot {width:45%;}

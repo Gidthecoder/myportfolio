@@ -1,8 +1,89 @@
 <html>
   <body>
-  
+	<script src='anime.min.js'></script>
+    <style> table,tr,th {border: 1px solid black;} </style>
+	<div>
+		<table style='width:100%;'>
+			<tr> keyframes, stagger and ease
+				<th style='width:30%;'>transform <input type='color'></th>
+				<th style='width:70%;'> 
+					<div class='selector' style='background-color:rgb(255,194,194);text-align:left;'>
+						<svg xmlns='http://www.w3.org/2000/svg'>
+							<rect x='0' y='0' width='50px' height='50px' rx='20px' ry='50px' >
+						</svg>
+						<script>
+							anime({
+								targets: '.selector rect',
+								 keyframes: [
+									{y: -40},
+									{x: 250},
+									{y: 40},
+									{x: 0},
+									{y: 0}
+								],
+								duration: 3000,
+								delay:0,
+								endDelay:0,
+								direction: 'alternate',
+								easing: 'easeInOutExpo',
+								loop: true
+							});
+						</script>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th style='width:30%;'>nodelist</th>
+				<th style='width:70%;'> 
+					<div class='nodelist' style='background-color:rgb(255,194,194);height:30vh;text-align:left;'>
+						<p style='width:0;background-color:black;'>hey</p>
+						<p style='width:0;background-color:black;'>hey</p>
+						<p style='width:0;background-color:black;'>hey</p>
+						<script>
+							anime({
+								targets: document.querySelectorAll('.nodelist p'),
+								width: [
+									{value: '10%', easing: 'easeOutSine', duration: 500},
+									{value: '100%', easing: 'easeInOutQuad', duration: 1200}
+								],
+								delay: anime.stagger(200, {grid: [1, 3], from: 'center'}),
+								direction: 'reverse',
+								loop: true
+							});
+						</script>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th style='width:30%;'>array</th>
+				<th style='width:70%;'> 
+					<div class='array' style='background-color:rgb(255,194,194);height:30vh;text-align:left;'>
+						<p style='display:inline-block;background-color:black;padding:5px;position:relative;left:20px;bottom:0px;'>h</p>
+						<svg width='50' height='50'>
+							<path d='M0, 0 v 50 h60 Z' fill='none' stroke='red' stroke-width='5'/>
+						</svg>
+						
+						<script>
+							var path = anime.path('.array svg path');
+
+							anime({
+								targets: '.array p',
+								translateX: path('x'),
+								translateY: path('y'),
+								rotate: path('angle'),
+								easing: 'linear',
+								duration: 2000,
+								loop: true
+							});
+						</script>
+					</div>
+				</th>
+			</tr>
+		</table>
+	</div>
+	
 	<div style='position:relative;'>
-		<svg width='100%' height='500' viewBox='0 0 1500 500' xmlns='http://www.w3.org/2000/svg'>
+		<svg width='100%' height='500' xmlns='http://www.w3.org/2000/svg'>
 			<g fill='green' class='circ' transform='translate(-300px,0)'>
 				<ellipse cx='60' cy='19.5' rx='20' ry='18'/>
 				<ellipse cx='120' cy='19.5' rx='20' ry='18'/>
@@ -15,44 +96,12 @@
 				<ellipse cx='540' cy='19.5' rx='20' ry='18'/>
 				<ellipse cx='600' cy='19.5' rx='20' ry='18'/>
 				
-				<ellipse cx='60' cy='68' rx='20' ry='18'/>
-				<ellipse cx='120' cy='68' rx='20' ry='18'/>
-				<ellipse cx='180' cy='68' rx='20' ry='18'/>
-				<ellipse cx='240' cy='68' rx='20' ry='18'/>
-				<ellipse cx='300' cy='68' rx='20' ry='18'/>
-				<ellipse cx='360' cy='68' rx='20' ry='18'/>
-				<ellipse cx='420' cy='68' rx='20' ry='18'/>
-				<ellipse cx='480' cy='68' rx='20' ry='18'/>
-				<ellipse cx='540' cy='68' rx='20' ry='18'/>
-				<ellipse cx='600' cy='68' rx='20' ry='18'/>
-				
-				<ellipse cx='60' cy='118' rx='20' ry='18'/>
-				<ellipse cx='120' cy='118' rx='20' ry='18'/>
-				<ellipse cx='180' cy='118' rx='20' ry='18'/>
-				<ellipse cx='240' cy='118' rx='20' ry='18'/>
-				<ellipse cx='300' cy='118' rx='20' ry='18'/>
-				<ellipse cx='360' cy='118' rx='20' ry='18'/>
-				<ellipse cx='420' cy='118' rx='20' ry='18'/>
-				<ellipse cx='480' cy='118' rx='20' ry='18'/>
-				<ellipse cx='540' cy='118' rx='20' ry='18'/>
-				<ellipse cx='600' cy='118' rx='20' ry='18'/>
-				
-				<ellipse cx='60' cy='168' rx='20' ry='18'/>
-				<ellipse cx='120' cy='168' rx='20' ry='18'/>
-				<ellipse cx='180' cy='168' rx='20' ry='18'/>
-				<ellipse cx='240' cy='168' rx='20' ry='18'/>
-				<ellipse cx='300' cy='168' rx='20' ry='18'/>
-				<ellipse cx='360' cy='168' rx='20' ry='18'/>
-				<ellipse cx='420' cy='168' rx='20' ry='18'/>
-				<ellipse cx='480' cy='168' rx='20' ry='18'/>
-				<ellipse cx='540' cy='168' rx='20' ry='18'/>
-				<ellipse cx='600' cy='168' rx='20' ry='18'/>
 			</g>
 			<style>
 				
 			</style>
 		</svg>
-		<script src='anime.min.js'></script>
+		
 		<script>
 			
 			anime({
@@ -178,6 +227,28 @@
 			.view-first:hover a.info {transition-delay: 0.2s;}
 		</style>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
      <section >
 	    <script>
